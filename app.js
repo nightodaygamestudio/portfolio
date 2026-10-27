@@ -6,27 +6,25 @@ const ADMIN_PIN = "1996";
 
 const portfolioData = {
   defaultLang: "en",
-  defaultTheme: "light",
-  perspective: "studio",
-  aboutTab: "pitch", // "pitch" (Overview) or "story" (Who Am I Origin Story)
+  defaultTheme: "dark", // Dark Mode (Liquid Obsidian) as default
   portraitImageUrl: "",
   customCSS: "",
 
   // Updated 2026 Personal "Who Am I" Story (EN & DE)
   originStory: {
     en: [
-      "I am <strong>Jan Jelle Klingberg</strong>, better known as <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). I am <strong>30 years old</strong> and come from <strong>Franconia, Germany</strong> (based in Roth near Nuremberg, and frequently in the Upper Palatinate near Cham). Since my childhood — as long as I can remember — I have been a passionate video game fan fascinated by how virtual worlds work.",
-      "While I started building in Unity in 2016, a pivotal technical spark came in <strong>2018</strong> when I discovered how to root Android systems. That inspired me to dive deep into <strong>reverse engineering games and manipulating game values</strong> — dissecting mechanics under the hood and deciding to pursue my dream of starting my own indie studio.",
-      "<div class='story-quote-highlight'>\"Du sollst doch nicht schon wieder die <strong>Nacht zum Tag</strong> machen!\" — My mother's classic reminder not to stay up too late, take care of my eyes, and get enough sleep. Directly translating 'Nacht zum Tag' gave birth to <strong>Nightoday Game Studio</strong>.</div>",
-      "My second major inspiration is the legendary <strong>Bethesda Game Studios</strong>, who practically saved my life with <em>The Elder Scrolls V: Skyrim</em> when I lived in a children's home and only had one single hour of 'media time' per day — an hour I invested almost every single day into that masterpiece.",
-      "Having completed my formal training in <strong>Game Design & Game Production at the Games Academy (2024–2026)</strong> and self-published commercial titles on Steam and Google Play under <strong>Nightoday Game Studio</strong> / <strong>Klingberg Entertainment</strong>, my goal is to bring my rapid prototyping and technical design skills into an ambitious studio — and ultimately grow into a <strong>Lead Game Designer or Game Director</strong>. Thank you for your interest! If you have any questions or want to collaborate, feel free to contact me."
+      "I am <strong>Jan Jelle Klingberg</strong>, better known as <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). I am <strong>30 years old</strong> and come from <strong>Franconia, Germany</strong> — living in <strong>Roth (Middle Franconia)</strong> and frequently in the <strong>Upper Palatinate (near Cham)</strong>. Since my childhood — actually as long as I can remember — I have been a passionate video game fan fascinated by the gaming world.",
+      "While I started working with Unity in 2016, a major technical spark came in <strong>2018</strong> when I discovered how to root Android systems. That inspired me to delve into <strong>reverse engineering of games and manipulating game values</strong> — understanding how games tick under the hood and deciding to pursue my dream of starting my own indie game studio.",
+      "<div class='story-quote-highlight'>\"Du sollst doch nicht schon wieder die <strong>Nacht zum Tag</strong> machen!\" — The name <strong>Nightoday Game Studio</strong> came to me easily, inspired by my mother (who often reminded me not to stay up too late, take care of my eyes, and get enough sleep) and the direct translation of 'Nacht zum Tag'.</div>",
+      "My second huge inspiration is the legendary <strong>Bethesda Game Studios</strong>, who practically saved my life with <em>Skyrim</em> when I lived in a children's home and only had one single hour of 'media time' per day. I invested almost every single day of that hour into that masterpiece.",
+      "My goal is to gain as much experience as possible and grow my career toward becoming a <strong>Lead Game Designer or Game Director</strong>. Having trained in <strong>Game Design & Game Production at the Games Academy (2024–2026)</strong> and published my own titles on Steam and Google Play under <strong>Nightoday Game Studio</strong> and <strong>Klingberg Entertainment</strong>, I am ready to translate my passion into innovative projects that excite players. Thank you for your interest — if you have any questions or are interested in collaborating, feel free to contact me!"
     ],
     de: [
-      "Ich bin <strong>Jan Jelle Klingberg</strong>, besser bekannt als <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). Ich bin <strong>30 Jahre alt</strong> und komme aus <strong>Franken</strong> (wohnhaft in Roth bei Nürnberg und regelmäßig in der Oberpfalz bei Cham). Seit meiner Kindheit – eigentlich solange ich denken kann – bin ich leidenschaftlicher Gamer und fasziniert davon, wie Spielsysteme im Innersten funktionieren.",
-      "Neben meiner aktiven Arbeit mit Unity (seit 2016) war <strong>2018</strong> ein technischer Schlüsselmoment: Ich entdeckte das Rooten von Android-Systemen, was mich zum <strong>Reverse Engineering von Spielen und der Manipulation von Spielwerten</strong> inspirierte. Genau damals fiel der Entschluss, meinen Traum vom eigenen Indie-Game-Studio wahr zu machen.",
-      "<div class='story-quote-highlight'>„Du sollst doch nicht schon wieder die <strong>Nacht zum Tag</strong> machen!“ — Die klassische Ermahnung meiner Mutter, nicht zu lange wach zu bleiben, auf meine Augen zu achten und genug zu schlafen. Aus der direkten Übersetzung von „Nacht zum Tag“ wurde <strong>Nightoday Game Studio</strong> geboren.</div>",
-      "Meine zweite große Inspiration sind die legendären <strong>Bethesda Game Studios</strong>, die mir mit <em>Skyrim</em> im Grunde das Leben gerettet haben, als ich in einem Kinderheim lebte und pro Tag nur eine einzige Stunde „Medienzeit“ hatte – eine Stunde, die ich fast jeden einzelnen Tag in dieses Meisterwerk investierte.",
-      "Nach meiner Ausbildung in <strong>Game Design & Game Production an der Games Academy (2024–2026)</strong> und meinen eigenen Releases auf Steam und im Google Play Store (unter <strong>Nightoday Game Studio</strong> / <strong>Klingberg Entertainment</strong>) ist es mein Ziel, so viel Praxiserfahrung wie möglich zu sammeln und meinen Weg bis zum <strong>Lead Game Designer oder Game Director</strong> zu gehen. Vielen Dank für dein Interesse – bei Fragen oder Interesse an einer Zusammenarbeit freue ich mich jederzeit über eine Nachricht!"
+      "Ich bin <strong>Jan Jelle Klingberg</strong>, besser bekannt als <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). Ich bin <strong>30 Jahre alt</strong> und komme aus <strong>Franken</strong> – wohnhaft in <strong>Roth (Mittelfranken)</strong> und regelmäßig in der <strong>Oberpfalz (Raum Cham)</strong>. Seit meiner Kindheit – eigentlich solange ich denken kann – bin ich leidenschaftlicher Videospielfan und fasziniert von der Welt der Games.",
+      "Neben meiner aktiven Arbeit mit Unity (seit 2016) war <strong>2018</strong> ein prägender Meilenstein: Ich entdeckte das Rooten von Android-Systemen, was mich zum <strong>Reverse Engineering von Spielen und der Manipulation von Spielwerten</strong> inspirierte. Damals fasste ich den Entschluss, meinen Traum vom eigenen Indie-Game-Studio zu verwirklichen.",
+      "<div class='story-quote-highlight'>„Du sollst doch nicht schon wieder die <strong>Nacht zum Tag</strong> machen!“ — Der Name <strong>Nightoday Game Studio</strong> entstand aus dieser klassischen Erinnerung meiner Mutter, nicht zu lange wach zu bleiben, auf meine Augen zu achten und genug zu schlafen. Aus der direkten Übersetzung von „Nacht zum Tag“ wurde mein Studio-Name geboren.</div>",
+      "Meine zweite große Inspiration sind die legendären <strong>Bethesda Game Studios</strong>, die mir mit <em>Skyrim</em> im Grunde das Leben gerettet haben, als ich in einem Kinderheim war und pro Tag nur eine einzige Stunde „Medienzeit“ hatte – eine Stunde, die ich fast jeden Tag in dieses Meisterwerk investierte.",
+      "Mein Ziel ist es, so viel Erfahrung wie möglich zu sammeln und meine Karriere bis zum <strong>Lead Game Designer oder Game Director</strong> auszubauen. Mit meiner Ausbildung in <strong>Game Design & Game Production an der Games Academy (2024–2026)</strong> und eigenen Releases auf Steam und im Google Play Store unter <strong>Nightoday Game Studio</strong> und <strong>Klingberg Entertainment</strong> freue ich mich darauf, komplexe Probleme kreativ zu lösen und Spieler zu begeistern. Vielen Dank für dein Interesse – bei Fragen oder Interesse an einer Zusammenarbeit melde dich gerne jederzeit!"
     ]
   },
 
@@ -181,24 +179,20 @@ const portfolioData = {
   ]
 };
 
+// Merged, Single Unified Copy for Studios, Clients & Visitors (EN & DE)
 const uiStrings = {
   en: {
-    navSubrole: "Technical Game Designer • Lead Vision • Producer",
+    navSubrole: "Technical Game Designer • Nightoday Game Studio",
     navAbout: "About Me",
+    navOrigin: "Who Am I",
     navProjects: "Hero Projects",
-    navLab: "Rapid Prototyping & Itch.io",
-    perspStudio: "🎯 For Game Studios & Recruiters",
-    perspIndie: "🚀 Klingberg Entertainment & Nightoday",
-    tabPitch: "⚡ Overview",
-    tabStory: "📖 Who Am I (Origin)",
-    storyBadge: "Who Am I • Personal Origin",
-    storyHeading: "From Reverse Engineering & Skyrim to Nightoday Game Studio",
-    statusStudio: "Available for Technical Game Design, Prototyping & Unity Roles",
-    statusIndie: "Klingberg Entertainment • Nightoday Game Studio • Indie & Custom Dev",
-    headlineStudio: 'I don\'t just write concepts on paper — <span class="gradient-text">I ship playable systems in record time.</span>',
-    headlineIndie: 'Turning night into day: <span class="gradient-text">From 3h prototypes to Steam & Mobile releases.</span>',
-    leadStudio: "I am Jan Jelle Klingberg (better known as JJampion). With active Unity experience since 2016, a deep fascination for reverse engineering game systems since 2018, and formal training in Game Design & Game Production at the Games Academy, I bridge creative vision and fast technical execution.",
-    leadIndie: "Under Klingberg Entertainment and Nightoday Game Studio, I develop captivating PC, Web, and Mobile games. Born from my mother's saying ('turning night into day') and a lifelong love for masterpieces like Skyrim, I build games that excite players.",
+    navLab: "Rapid Prototyping",
+    heroStatus: "Technical Game Designer • Founder of Nightoday Game Studio & Klingberg Entertainment",
+    heroHeadline: "I don't just write concepts on paper — I ship playable systems & commercial games in record time.",
+    heroLead: "I love playing games, but I love building them even more. With active Unity experience since 2016, a formal education in Game Design & Game Production at the Games Academy, and self-published titles on Steam and Google Play under Nightoday Game Studio & Klingberg Entertainment, I unite creative game design, rapid 3-hour prototyping, and rock-solid technical execution.",
+    factLocation: "<strong>Location:</strong> 30 years old • Roth (Middle Franconia) & near Cham (Upper Palatinate).",
+    factEdu: "<strong>Education:</strong> Game Design & Game Production at Games Academy (2024–2026).",
+    factStudio: "<strong>Studio & Vision:</strong> <em>Nightoday Game Studio</em> & <em>Klingberg Entertainment</em> • Path to Lead Game Designer.",
     stat1: "Active Unity License & C#",
     stat2: "Trijam (3-Hour Game Jam)",
     stat3: "Self-Published Store Pipelines",
@@ -206,13 +200,14 @@ const uiStrings = {
     ctaSteam: "Grimoire Garden on Steam",
     ctaItch: "All Projects on itch.io",
     ctaPlay: "Google Play Store",
-    profileRole: "Technical Game Designer • Rapid Prototyper • Game Producer",
-    factLocation: "<strong>Location:</strong> 30 years old, from Franconia (Roth near Nuremberg) & Upper Palatinate (near Cham).",
-    factEdu: "<strong>Education:</strong> Game Design & Game Production at Games Academy (2024–2026).",
-    factStudio: "<strong>Studio & Goal:</strong> Founder of <em>Nightoday Game Studio</em> / <em>Klingberg Entertainment</em> • Path to Lead Game Designer / Director.",
-    portraitRoleTag: "JJampion • Unity Since 2016",
-    portraitBtn: "📷 Upload Portrait (Admin)",
-    projectsEyebrow: "Proven Production & Technical Design",
+    ctaOriginBtn: "Read My Origin Story →",
+    portraitRoleTag: "JJampion",
+    portraitBtn: "📷 Photo",
+    storyBadge: "02 • Who Am I & Personal Origin",
+    storyHeading: "From Reverse Engineering & Skyrim to Nightoday Game Studio",
+    backAboutBtn: "Back to Overview",
+    nextProjectsBtn: "Explore Hero Projects →",
+    projectsEyebrow: "03 • Proven Production & Technical Design",
     projectsHeading: "Hero Projects & Deep System Case Studies",
     addProjectBtn: "Add / Edit Projects & Itch.io Widgets",
     designHeader: "🎯 Game Design & Player Experience",
@@ -220,27 +215,22 @@ const uiStrings = {
     widgetHeader: "🕹️ Official Store & Itch.io Access",
     widgetEditBtn: "Edit <iframe> / Link",
     itchOpenBtn: "Play / View on itch.io ↗",
-    labEyebrow: "3-Hour Trijams & Single-File HTML Architecture",
+    labEyebrow: "04 • 3-Hour Trijams & Single-File HTML Architecture",
     labHeading: "Rapid Prototyping Lab & Itch.io Showcase",
     visitItch: "Visit jjampion.itch.io"
   },
   de: {
-    navSubrole: "Technical Game Designer • Lead Vision • Producer",
+    navSubrole: "Technical Game Designer • Nightoday Game Studio",
     navAbout: "Über Mich",
+    navOrigin: "Wer ich bin",
     navProjects: "Hero-Projekte",
-    navLab: "Rapid Prototyping & Itch.io",
-    perspStudio: "🎯 Für Game Studios & Recruiter",
-    perspIndie: "🚀 Klingberg Entertainment & Nightoday",
-    tabPitch: "⚡ Übersicht",
-    tabStory: "📖 Wer ich bin (Story)",
-    storyBadge: "Wer ich bin • Meine Geschichte",
-    storyHeading: "Vom Reverse Engineering & Skyrim zum Nightoday Game Studio",
-    statusStudio: "Bereit für Technical Game Design, Prototyping & Unity-Positionen",
-    statusIndie: "Klingberg Entertainment • Nightoday Game Studio • Indie & Auftragsarbeiten",
-    headlineStudio: 'Ich baue nicht nur Konzepte auf Papier — <span class="gradient-text">ich liefere spielbare Systeme in Rekordzeit.</span>',
-    headlineIndie: 'Die Nacht zum Tag machen: <span class="gradient-text">Vom 3h-Prototyp zum Steam- & Play-Store-Release.</span>',
-    leadStudio: "Ich bin Jan Jelle Klingberg (besser bekannt als JJampion). Mit aktiver Unity-Praxis seit 2016, meiner Faszination für Reverse Engineering (seit 2018) und meiner Ausbildung in Game Design & Game Production an der Games Academy verbinde ich kreative Konzepte mit extrem schneller technischer Umsetzung.",
-    leadIndie: "Unter Klingberg Entertainment und Nightoday Game Studio entwickle ich PC-, Web- und Mobile-Games. Inspiriert vom Spruch meiner Mutter (‚die Nacht zum Tag machen‘) und Meisterwerken wie Skyrim erschaffe ich Spiele, die Spieler fesseln.",
+    navLab: "Rapid Prototyping",
+    heroStatus: "Technical Game Designer • Gründer von Nightoday Game Studio & Klingberg Entertainment",
+    heroHeadline: "Ich baue nicht nur Konzepte auf Papier — ich liefere spielbare Systeme & fertige Releases in Rekordzeit.",
+    heroLead: "Ich liebe es, Spiele zu spielen – aber noch mehr liebe ich es, sie zu entwickeln. Mit aktiver Unity-Erfahrung seit 2016, meiner Ausbildung in Game Design & Game Production an der Games Academy sowie eigenen Releases auf Steam und im Google Play Store unter Nightoday Game Studio & Klingberg Entertainment verbinde ich kreatives Game Design, 3-Stunden-Prototyping und saubere technische Umsetzung.",
+    factLocation: "<strong>Standort:</strong> 30 Jahre alt • Roth (Mittelfranken) & Raum Cham (Oberpfalz).",
+    factEdu: "<strong>Ausbildung:</strong> Game Design & Game Production an der Games Academy (2024–2026).",
+    factStudio: "<strong>Studio & Ziel:</strong> <em>Nightoday Game Studio</em> & <em>Klingberg Entertainment</em> • Weg zum Lead Game Designer.",
     stat1: "Aktive Unity-Lizenz & C#",
     stat2: "Trijam (3-Stunden Game Jam)",
     stat3: "Eigene Steam & Play Releases",
@@ -248,13 +238,14 @@ const uiStrings = {
     ctaSteam: "Grimoire Garden auf Steam",
     ctaItch: "Alle Projekte auf itch.io",
     ctaPlay: "Google Play Store",
-    profileRole: "Technical Game Designer • Rapid Prototyper • Game Producer",
-    factLocation: "<strong>Standort:</strong> 30 Jahre alt, aus Franken (Roth bei Nürnberg) & regelmäßig in der Oberpfalz (Raum Cham).",
-    factEdu: "<strong>Ausbildung:</strong> Game Design & Game Production an der Games Academy (2024–2026).",
-    factStudio: "<strong>Studio & Ziel:</strong> Gründer von <em>Nightoday Game Studio</em> / <em>Klingberg Entertainment</em> • Ziel: Lead Game Designer / Director.",
-    portraitRoleTag: "JJampion • Unity seit 2016",
-    portraitBtn: "📷 Foto ändern (Admin)",
-    projectsEyebrow: "Praxiserprobte Production & Technical Design",
+    ctaOriginBtn: "Meine Story lesen →",
+    portraitRoleTag: "JJampion",
+    portraitBtn: "📷 Foto",
+    storyBadge: "02 • Wer ich bin & Meine Geschichte",
+    storyHeading: "Vom Reverse Engineering & Skyrim zum Nightoday Game Studio",
+    backAboutBtn: "Zurück zur Übersicht",
+    nextProjectsBtn: "Zu den Hero-Projekten →",
+    projectsEyebrow: "03 • Praxiserprobte Production & Technical Design",
     projectsHeading: "Hero-Projekte & System-Fallstudien",
     addProjectBtn: "Projekte & Itch.io-Widgets bearbeiten",
     designHeader: "🎯 Game Design & Spielerlebnis",
@@ -262,23 +253,22 @@ const uiStrings = {
     widgetHeader: "🕹️ Store & Itch.io Direktzugang",
     widgetEditBtn: "<iframe> / Link bearbeiten",
     itchOpenBtn: "Auf itch.io ansehen ↗",
-    labEyebrow: "3-Stunden Trijams & Single-File HTML Architektur",
+    labEyebrow: "04 • 3-Stunden Trijams & Single-File HTML Architektur",
     labHeading: "Rapid Prototyping Lab & Itch.io Showcase",
     visitItch: "Zu jjampion.itch.io"
   }
 };
 
-const stageOrder = ["about", "hero-projects", "prototyping-lab"];
+// 4 Ordered Stages: 01 About -> 02 Origin -> 03 Hero Projects -> 04 Rapid Prototyping
+const stageOrder = ["about", "origin", "hero-projects", "prototyping-lab"];
 let currentLang = portfolioData.defaultLang || "en";
-let currentTheme = portfolioData.defaultTheme || "light";
-let currentPerspective = portfolioData.perspective || "studio";
-let currentAboutTab = portfolioData.aboutTab || "pitch";
+let currentTheme = portfolioData.defaultTheme || "dark";
 let currentSection = "about";
 let isAdminUnlocked = false;
 let isStageTransitioning = false;
 
 /* ==========================================================================
-   1. EXCLUSIVE MIDDLE-CENTERED STAGE NAVIGATION + SCROLL-TO-SWITCH
+   1. EXCLUSIVE MIDDLE-CENTERED 4-STAGE NAVIGATION + SCROLL-TO-SWITCH
    ========================================================================== */
 function switchSection(sectionId) {
   if (!stageOrder.includes(sectionId)) return;
@@ -286,6 +276,7 @@ function switchSection(sectionId) {
 
   const navMap = {
     "about": "nav-about",
+    "origin": "nav-origin",
     "hero-projects": "nav-projects",
     "prototyping-lab": "nav-lab"
   };
@@ -325,7 +316,7 @@ function stepStage(direction) {
   setTimeout(() => { isStageTransitioning = false; }, 680);
 }
 
-// Wheel Scroll-to-Switch (Smart boundary detection)
+// Wheel Scroll-to-Switch
 let wheelAccumulator = 0;
 let wheelResetTimer = null;
 
@@ -333,14 +324,6 @@ window.addEventListener("wheel", (e) => {
   const cmsOpen = document.getElementById("cms-backdrop").classList.contains("open");
   const pinOpen = document.getElementById("pin-modal-backdrop").classList.contains("open");
   if (cmsOpen || pinOpen || isStageTransitioning) return;
-
-  // Allow internal scroll inside the story box if hovered
-  const storyBox = e.target.closest(".story-content-box");
-  if (storyBox && storyBox.scrollHeight > storyBox.clientHeight) {
-    const atTop = storyBox.scrollTop <= 2;
-    const atBottom = storyBox.scrollTop + storyBox.clientHeight >= storyBox.scrollHeight - 2;
-    if ((e.deltaY > 0 && !atBottom) || (e.deltaY < 0 && !atTop)) return;
-  }
 
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
@@ -469,8 +452,8 @@ window.addEventListener("pointermove", (e) => {
 
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    const tiltX = ((centerY - y) / centerY) * 1.4;
-    const tiltY = ((x - centerX) / centerX) * 1.4;
+    const tiltX = ((centerY - y) / centerY) * 1.1;
+    const tiltY = ((x - centerX) / centerX) * 1.1;
     card.style.setProperty("--tilt-x", `${tiltX.toFixed(2)}deg`);
     card.style.setProperty("--tilt-y", `${tiltY.toFixed(2)}deg`);
     rafPending = false;
@@ -490,7 +473,7 @@ document.addEventListener("visibilitychange", () => {
 });
 
 /* ==========================================================================
-   4. LANGUAGE, THEME, PERSPECTIVE & ABOUT-TAB CONTROLLERS
+   4. LANGUAGE & THEME CONTROLLERS
    ========================================================================== */
 function triggerMorphAnimation(targetId, callback) {
   const box = document.getElementById(targetId);
@@ -499,7 +482,7 @@ function triggerMorphAnimation(targetId, callback) {
   setTimeout(() => {
     callback();
     box.classList.remove("morphing");
-  }, 160);
+  }, 150);
 }
 
 function setLanguage(lang) {
@@ -510,8 +493,7 @@ function setLanguage(lang) {
   document.getElementById("lang-en-btn").classList.toggle("active", lang === "en");
   document.getElementById("lang-de-btn").classList.toggle("active", lang === "de");
 
-  const activeBox = currentAboutTab === "pitch" ? "about-pitch-view" : "about-story-view";
-  triggerMorphAnimation(activeBox, () => renderAll());
+  triggerMorphAnimation("about-morph-box", () => renderAll());
 }
 
 function toggleTheme() {
@@ -533,32 +515,6 @@ function applyTheme() {
   }
 }
 
-function setPerspective(persp) {
-  currentPerspective = persp;
-  portfolioData.perspective = persp;
-  document.getElementById("persp-studio-btn").classList.toggle("active", persp === "studio");
-  document.getElementById("persp-indie-btn").classList.toggle("active", persp === "indie");
-  triggerMorphAnimation("about-pitch-view", () => renderHeroStrings());
-}
-
-function setAboutTab(tab) {
-  currentAboutTab = tab;
-  portfolioData.aboutTab = tab;
-  document.getElementById("tab-pitch-btn").classList.toggle("active", tab === "pitch");
-  document.getElementById("tab-story-btn").classList.toggle("active", tab === "story");
-
-  const pitchView = document.getElementById("about-pitch-view");
-  const storyView = document.getElementById("about-story-view");
-
-  if (tab === "pitch") {
-    storyView.style.display = "none";
-    pitchView.style.display = "block";
-  } else {
-    pitchView.style.display = "none";
-    storyView.style.display = "block";
-  }
-}
-
 /* ==========================================================================
    5. RENDER FUNCTIONS
    ========================================================================== */
@@ -566,29 +522,17 @@ function renderHeroStrings() {
   const t = uiStrings[currentLang];
   document.getElementById("nav-subrole").textContent = t.navSubrole;
   document.getElementById("nav-about").textContent = t.navAbout;
+  document.getElementById("nav-origin").textContent = t.navOrigin;
   document.getElementById("nav-projects").textContent = t.navProjects;
   document.getElementById("nav-lab").textContent = t.navLab;
 
-  document.getElementById("persp-studio-btn").textContent = t.perspStudio;
-  document.getElementById("persp-indie-btn").textContent = t.perspIndie;
-  document.getElementById("tab-pitch-btn").textContent = t.tabPitch;
-  document.getElementById("tab-story-btn").textContent = t.tabStory;
+  document.getElementById("hero-status-text").textContent = t.heroStatus;
+  document.getElementById("hero-headline").textContent = t.heroHeadline;
+  document.getElementById("hero-lead-text").textContent = t.heroLead;
 
-  if (currentPerspective === "studio") {
-    document.getElementById("hero-status-text").textContent = t.statusStudio;
-    document.getElementById("hero-headline").innerHTML = t.headlineStudio;
-    document.getElementById("hero-lead-text").textContent = t.leadStudio;
-  } else {
-    document.getElementById("hero-status-text").textContent = t.statusIndie;
-    document.getElementById("hero-headline").innerHTML = t.headlineIndie;
-    document.getElementById("hero-lead-text").textContent = t.leadIndie;
-  }
-
-  // Render Origin Story ("Who Am I")
-  document.getElementById("story-badge").textContent = t.storyBadge;
-  document.getElementById("story-heading").textContent = t.storyHeading;
-  const paragraphs = (portfolioData.originStory && portfolioData.originStory[currentLang]) || portfolioData.originStory.en;
-  document.getElementById("story-paragraphs").innerHTML = paragraphs.map(p => `<p>${p}</p>`).join("");
+  document.getElementById("fact-location").innerHTML = t.factLocation;
+  document.getElementById("fact-edu").innerHTML = t.factEdu;
+  document.getElementById("fact-studio").innerHTML = t.factStudio;
 
   document.getElementById("stat-1-label").textContent = t.stat1;
   document.getElementById("stat-2-label").textContent = t.stat2;
@@ -598,12 +542,18 @@ function renderHeroStrings() {
   document.getElementById("cta-steam").textContent = t.ctaSteam;
   document.getElementById("cta-itch").textContent = t.ctaItch;
   document.getElementById("cta-play").textContent = t.ctaPlay;
+  document.getElementById("cta-origin-btn").textContent = t.ctaOriginBtn;
 
-  document.getElementById("profile-role-line").textContent = t.profileRole;
-  document.getElementById("fact-location").innerHTML = t.factLocation;
-  document.getElementById("fact-edu").innerHTML = t.factEdu;
-  document.getElementById("fact-studio").innerHTML = t.factStudio;
+  // Stage 02: Origin Story
+  document.getElementById("story-badge").textContent = t.storyBadge;
+  document.getElementById("story-heading").textContent = t.storyHeading;
+  document.getElementById("back-about-btn").textContent = t.backAboutBtn;
+  document.getElementById("next-projects-btn").textContent = t.nextProjectsBtn;
 
+  const paragraphs = (portfolioData.originStory && portfolioData.originStory[currentLang]) || portfolioData.originStory.en;
+  document.getElementById("story-paragraphs").innerHTML = paragraphs.map(p => `<p>${p}</p>`).join("");
+
+  // Stage 03 & 04 Headers
   document.getElementById("projects-eyebrow").textContent = t.projectsEyebrow;
   document.getElementById("projects-heading").textContent = t.projectsHeading;
   document.getElementById("add-project-top-btn").textContent = t.addProjectBtn;
@@ -619,21 +569,14 @@ function renderPortrait() {
   const t = uiStrings[currentLang];
 
   if (portfolioData.portraitImageUrl && portfolioData.portraitImageUrl.trim() !== "") {
-    container.innerHTML = `
-      <img src="${portfolioData.portraitImageUrl}" alt="Jan Jelle Klingberg (JJampion)" />
-      <div class="portrait-overlay-badge">
-        <span style="font-size:0.78rem; font-weight:800;">Jan J. Klingberg</span>
-        <span style="font-size:0.72rem; color:var(--accent-primary); font-weight:800;">JJampion</span>
-      </div>
-    `;
+    container.innerHTML = `<img src="${portfolioData.portraitImageUrl}" alt="Jan Jelle Klingberg (JJampion)" />`;
     navAvatar.innerHTML = `<img src="${portfolioData.portraitImageUrl}" alt="JJK" />`;
   } else {
     container.innerHTML = `
       <div class="portrait-visitor-monogram">
         <div class="portrait-initials-ring">JJK</div>
-        <div style="font-weight:800; font-size:1.05rem;">Jan Jelle Klingberg</div>
-        <div style="font-size:0.78rem; color:var(--accent-primary); font-weight:700;">${t.portraitRoleTag}</div>
-        <button class="pill-btn admin-only" style="margin-top:6px;" onclick="document.getElementById('cms-portrait-file').click()">
+        <div style="font-size:0.74rem; color:var(--accent-primary); font-weight:800;">${t.portraitRoleTag}</div>
+        <button class="pill-btn admin-only" style="padding:4px 10px; font-size:0.7rem;" onclick="document.getElementById('cms-portrait-file').click()">
           ${t.portraitBtn}
         </button>
       </div>
@@ -660,10 +603,10 @@ function renderWidgetSlot(project) {
   } else if (project.steamAppId && project.steamAppId.trim() !== "") {
     embedContent = `
       <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:center;">
-        <div class="iframe-responsive-wrapper" style="flex: 1 1 540px;">
+        <div class="iframe-responsive-wrapper" style="flex: 1 1 520px;">
           <iframe src="https://store.steampowered.com/widget/${project.steamAppId}/" frameborder="0" width="646" height="190" loading="lazy"></iframe>
         </div>
-        <div class="itch-launch-card" style="flex: 1 1 360px;">
+        <div class="itch-launch-card" style="flex: 1 1 320px;">
           <div class="itch-launch-thumb">
             ${project.coverImageUrl ? `<img src="${project.coverImageUrl}" alt="${project.title}" loading="lazy" />` : `itch.io`}
           </div>
@@ -722,11 +665,11 @@ function renderInteractiveDemo(demoType) {
         </div>
         <div class="taskbar-sim-stage">
           <div>
-            <span style="font-size:0.76rem; color:#94a3b8;">Type word on keyboard:</span>
+            <span style="font-size:0.76rem; color:#94a3b8;">Type word:</span>
             <span class="goblin-word" id="gg-active-word">IGNIS</span>
           </div>
-          <input type="text" id="gg-typing-input" placeholder="Type spell here (no spacebar)..." 
-            style="padding:6px 10px; border-radius:6px; border:1px solid #38bdf8; background:#07090e; color:#fff; font-family:var(--font-mono); font-size:0.82rem;"
+          <input type="text" id="gg-typing-input" placeholder="Type spell (no space)..." 
+            style="padding:6px 10px; border-radius:6px; border:1px solid #38bdf8; background:#07090e; color:#fff; font-family:var(--font-mono); font-size:0.82rem; width:180px; max-width:100%;"
             oninput="checkGrimoireTyping(this)" />
         </div>
       </div>
@@ -739,9 +682,9 @@ function renderInteractiveDemo(demoType) {
           <span>🟢 ASCII MATRIX LOCKPICK ARENA (Trijam 1st Place)</span>
           <span>Layer 01 / 10</span>
         </div>
-        <div style="font-family:var(--font-mono); color:#34d399; background:#020604; padding:12px; border-radius:8px; text-align:center; letter-spacing:0.12em; font-size:0.8rem;">
-          [ 01001100 ] === (  GAP  ) === [ 01000011 ]<br/>
-          <span style="color:#a7f3d0;">▲ PLAYER NODE — TIMING SHOT THROUGH RING GAP ▲</span>
+        <div style="font-family:var(--font-mono); color:#34d399; background:#020604; padding:12px; border-radius:8px; text-align:center; letter-spacing:0.08em; font-size:0.78rem; overflow-x:auto;">
+          [ 01001100 ] === ( GAP ) === [ 01000011 ]<br/>
+          <span style="color:#a7f3d0;">▲ TIMING SHOT THROUGH RING GAP ▲</span>
         </div>
       </div>
     `;
@@ -751,7 +694,7 @@ function renderInteractiveDemo(demoType) {
       <div class="interactive-box">
         <div class="sim-header">
           <span>🌍 20-LANGUAGE CUSTOM LOCALIZATION PREVIEW</span>
-          <span>Custom Font Shader Ready</span>
+          <span>Custom Font Shader</span>
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
           <button class="pill-btn" style="padding:3px 9px; font-size:0.72rem;" onclick="setPairLang('EN: Match 8 Hidden Planet Pairs!')">EN</button>
@@ -761,7 +704,7 @@ function renderInteractiveDemo(demoType) {
           <button class="pill-btn" style="padding:3px 9px; font-size:0.72rem;" onclick="setPairLang('BN: ৮টি গ্রহের জোড়া খুঁজে বের করুন!')">বাংলা</button>
           <button class="pill-btn" style="padding:3px 9px; font-size:0.72rem;" onclick="setPairLang('ID: Temukan 8 Pasang Kartu Planet!')">ID</button>
         </div>
-        <div id="pair-lang-output" style="font-weight:700; color:#38bdf8; font-size:0.86rem;">
+        <div id="pair-lang-output" style="font-weight:700; color:#38bdf8; font-size:0.85rem;">
           EN: Match 8 Hidden Planet Pairs!
         </div>
       </div>
@@ -788,8 +731,8 @@ function renderProjects() {
     const imageHtml = proj.coverImageUrl && proj.coverImageUrl.trim() !== ""
       ? `<img src="${proj.coverImageUrl}" alt="${proj.title}" loading="lazy" />`
       : `<div class="image-artwork-fallback">
-           <div style="font-weight:800; font-size:1.2rem; letter-spacing:-0.02em;">${proj.title}</div>
-           <div style="font-size:0.8rem; color:#94a3b8;">${(proj.badges || []).slice(0, 2).join(" • ")}</div>
+           <div style="font-weight:800; font-size:1.15rem; letter-spacing:-0.02em;">${proj.title}</div>
+           <div style="font-size:0.78rem; color:#94a3b8;">${(proj.badges || []).slice(0, 2).join(" • ")}</div>
            <button class="pill-btn admin-only" style="margin-top:8px;" onclick="openCMSForProject('${proj.id}')">📷 Add Screenshot / GIF</button>
          </div>`;
 
@@ -839,8 +782,8 @@ function renderProjects() {
         <div>
           ${labImageHtml}
           <div class="project-badges">${badgesHtml}</div>
-          <h3 class="project-title" style="font-size:1.26rem;">${proj.title}</h3>
-          <p class="project-pitch" style="font-size:0.89rem; margin-bottom:12px;">${pitch}</p>
+          <h3 class="project-title" style="font-size:1.22rem;">${proj.title}</h3>
+          <p class="project-pitch" style="font-size:0.88rem; margin-bottom:12px;">${pitch}</p>
         </div>
         ${renderWidgetSlot(proj)}
       </article>
@@ -989,7 +932,6 @@ function applyCustomCSS(cssText) {
   if (styleEl) styleEl.textContent = cssText;
 }
 
-// Fetches current app.js and replaces portfolioData with the updated state
 async function buildUpdatedAppJSString() {
   const res = await fetch("app.js", { cache: "no-store" });
   const rawJS = await res.text();
@@ -1095,6 +1037,5 @@ window.addEventListener("DOMContentLoaded", () => {
     openPinModal();
   }
   setLanguage(portfolioData.defaultLang || "en");
-  setAboutTab(portfolioData.aboutTab || "pitch");
   switchSection("about");
 });
