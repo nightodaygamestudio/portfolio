@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jan Jelle Klingberg (JJampion) | Technical Game Designer & Rapid Prototyper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Jan Jelle Klingberg (JJampion) | Technical Game Designer & Founder of Nightoday Game Studio</title>
   <!-- Externe CSS-Datei -->
   <link rel="stylesheet" href="styles.css" />
   <!-- Dynamisches Custom-CSS aus dem CMS -->
@@ -18,11 +18,12 @@
     <div class="orb orb-3"></div>
   </div>
 
-  <!-- Right-Side 3D Stage Dots Indicator -->
+  <!-- Right-Side 3D Stage Dots Indicator (4 Stages) -->
   <div class="stage-dots-nav" aria-label="Stage Navigation">
     <button class="stage-dot active" id="dot-about" onclick="switchSection('about')" data-label="01 • About Me"></button>
-    <button class="stage-dot" id="dot-hero-projects" onclick="switchSection('hero-projects')" data-label="02 • Hero Projects"></button>
-    <button class="stage-dot" id="dot-prototyping-lab" onclick="switchSection('prototyping-lab')" data-label="03 • Rapid Prototyping"></button>
+    <button class="stage-dot" id="dot-origin" onclick="switchSection('origin')" data-label="02 • Who Am I"></button>
+    <button class="stage-dot" id="dot-hero-projects" onclick="switchSection('hero-projects')" data-label="03 • Hero Projects"></button>
+    <button class="stage-dot" id="dot-prototyping-lab" onclick="switchSection('prototyping-lab')" data-label="04 • Rapid Prototyping"></button>
   </div>
 
   <!-- Floating Admin Status Pill (Invisible to normal visitors) -->
@@ -39,21 +40,22 @@
       <div class="brand" onclick="handleSecretLogoClick()" title="Jan Jelle Klingberg aka JJampion">
         <div class="brand-avatar" id="nav-avatar">JJ</div>
         <div>
-          <div style="display:flex; align-items:center; gap:6px;">
+          <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
             <span>Jan Jelle Klingberg</span>
             <span class="phonetic-pill">JJampion</span>
           </div>
           <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;" id="nav-subrole">
-            Technical Game Designer & Producer
+            Technical Game Designer • Nightoday Game Studio
           </div>
         </div>
       </div>
 
-      <!-- Exclusive Stage View Switchers -->
+      <!-- Exclusive 4-Stage View Switchers -->
       <ul class="nav-links">
         <li><a id="nav-about" class="active-nav" onclick="switchSection('about')">About Me</a></li>
+        <li><a id="nav-origin" onclick="switchSection('origin')">Who Am I</a></li>
         <li><a id="nav-projects" onclick="switchSection('hero-projects')">Hero Projects</a></li>
-        <li><a id="nav-lab" onclick="switchSection('prototyping-lab')">Rapid Prototyping & Itch.io</a></li>
+        <li><a id="nav-lab" onclick="switchSection('prototyping-lab')">Rapid Prototyping</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -63,10 +65,10 @@
           <button class="lang-btn" id="lang-de-btn" onclick="setLanguage('de')">DE</button>
         </div>
 
-        <!-- Theme Switcher (Default: Liquid Pearl -> Toggle to Liquid Obsidian) -->
+        <!-- Theme Switcher (Default: Dark / Liquid Obsidian -> Toggle to Liquid Pearl) -->
         <button class="pill-btn" id="theme-toggle-btn" onclick="toggleTheme()">
-          <span id="theme-icon">🌙</span>
-          <span id="theme-label">Liquid Obsidian</span>
+          <span id="theme-icon">☀️</span>
+          <span id="theme-label">Liquid Pearl</span>
         </button>
 
         <!-- CMS Button: STRICTLY HIDDEN FOR VISITORS (.admin-only) -->
@@ -78,92 +80,95 @@
   </div>
 
   <!-- ==========================================================================
-       MIDDLE-CENTERED STAGE CONTAINER (ONLY ONE SECTION VISIBLE AT ANY TIME)
+       MIDDLE-CENTERED STAGE CONTAINER (ONLY ONE STAGE VISIBLE AT ANY TIME)
        ========================================================================== -->
   <main class="stage-container" id="top">
 
-    <!-- STAGE 01: ABOUT ME & ORIGIN STORY (ACTIVE & MIDDLE-CENTERED BY DEFAULT) -->
+    <!-- STAGE 01: CENTERED PORTRAIT + UNIFIED ABOUT ME OVERVIEW -->
     <section class="stage-section active-section is-entered" id="about">
-      <div class="hero-grid">
+      <div class="about-centered-card liquid-glass hover-lift">
+        <div id="about-morph-box" class="morph-container about-inner-stack">
 
-        <!-- Left 3D Glass Slab: Pitch, Perspective Switcher & "Who Am I" Story Tab -->
-        <div class="hero-main-card liquid-glass hover-lift">
-          <div>
-            <!-- Top Row: Perspective Toggle + Sub-Tab (Executive Pitch vs. Who Am I Story) -->
-            <div class="top-controls-row">
-              <div class="perspective-switcher">
-                <button class="perspective-btn active" id="persp-studio-btn" onclick="setPerspective('studio')">
-                  🎯 For Game Studios & Recruiters
-                </button>
-                <button class="perspective-btn" id="persp-indie-btn" onclick="setPerspective('indie')">
-                  🚀 Klingberg Entertainment & Nightoday
-                </button>
-              </div>
+          <!-- 1. Centered Portrait Frame at the Top -->
+          <div class="portrait-center-wrapper">
+            <div class="portrait-frame-centered" id="portrait-container"></div>
+          </div>
 
-              <div class="perspective-switcher">
-                <button class="perspective-btn active" id="tab-pitch-btn" onclick="setAboutTab('pitch')">
-                  ⚡ Overview
-                </button>
-                <button class="perspective-btn" id="tab-story-btn" onclick="setAboutTab('story')">
-                  📖 Who Am I (Origin)
-                </button>
-              </div>
+          <!-- 2. Identity & Status Badge -->
+          <div class="identity-center-block">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span id="hero-status-text">Technical Game Designer & Founder of Nightoday Game Studio / Klingberg Entertainment</span>
             </div>
 
-            <!-- SUB-VIEW A: EXECUTIVE PITCH (DEFAULT) -->
-            <div id="about-pitch-view" class="morph-container">
-              <div class="status-badge">
-                <span class="status-dot"></span>
-                <span id="hero-status-text">Available for Technical Game Design, Prototyping & Unity Roles</span>
-              </div>
-
-              <h1 class="hero-title" id="hero-headline">
-                I don't just write concepts on paper — <span class="gradient-text">I ship playable systems in record time.</span>
-              </h1>
-
-              <p class="hero-lead" id="hero-lead-text">
-                I love playing games, but I love making them even more. With active Unity experience since 2016, a formal background in Game Design & Game Production at the Games Academy, and multiple solo releases on Steam and Google Play, I bridge the gap between creative vision, rapid prototyping, and rock-solid technical execution.
-              </p>
-
-              <div class="hero-stats-row">
-                <div class="stat-mini">
-                  <div class="stat-mini-value">Since 2016</div>
-                  <div class="stat-mini-label" id="stat-1-label">Active Unity License & C#</div>
-                </div>
-                <div class="stat-mini">
-                  <div class="stat-mini-value">1st & 2x 2nd</div>
-                  <div class="stat-mini-label" id="stat-2-label">Trijam (3-Hour Game Jam)</div>
-                </div>
-                <div class="stat-mini">
-                  <div class="stat-mini-value">Steam & Play</div>
-                  <div class="stat-mini-label" id="stat-3-label">Self-Published Store Pipelines</div>
-                </div>
-                <div class="stat-mini">
-                  <div class="stat-mini-value">20+ Langs</div>
-                  <div class="stat-mini-label" id="stat-4-label">Custom Tooling & Localization</div>
-                </div>
-              </div>
+            <div class="name-phonetic-row">
+              <h1 class="hero-name-title">Jan Jelle Klingberg</h1>
+              <span class="phonetic-tag">JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
             </div>
 
-            <!-- SUB-VIEW B: WHO AM I & THE NIGHTODAY ORIGIN STORY -->
-            <div id="about-story-view" class="morph-container" style="display:none;">
-              <div class="story-header-row">
-                <span class="badge highlight" id="story-badge">Who Am I • Personal Origin</span>
-                <span class="phonetic-tag">JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
+            <p class="hero-subtitle- gradient-text" id="hero-headline">
+              I don't just write concepts on paper — I ship playable systems & commercial games in record time.
+            </p>
+
+            <p class="hero-lead-centered" id="hero-lead-text">
+              I love playing games, but I love building them even more. With active Unity experience since 2016, a formal education in Game Design & Game Production at the Games Academy, and self-published commercial titles on Steam and Google Play under Nightoday Game Studio & Klingberg Entertainment, I unite creative game design, rapid 3-hour prototyping, and rock-solid technical execution.
+            </p>
+          </div>
+
+          <!-- 3. Key Bio Facts (3 Columns on Desktop, 1 Column on Mobile) -->
+          <div class="bio-facts-grid">
+            <div class="bio-fact-card">
+              <span class="bio-fact-icon">📍</span>
+              <div id="fact-location">
+                <strong>Location:</strong> 30 years old • Roth (Middle Franconia) & near Cham (Upper Palatinate).
               </div>
-
-              <h2 class="story-title" id="story-heading">
-                From Reverse Engineering & Skyrim to Nightoday Game Studio
-              </h2>
-
-              <div class="story-content-box" id="story-paragraphs">
-                <!-- Populated dynamically in EN or DE via app.js -->
+            </div>
+            <div class="bio-fact-card">
+              <span class="bio-fact-icon">🎓</span>
+              <div id="fact-edu">
+                <strong>Education:</strong> Game Design & Game Production at Games Academy (2024–2026).
+              </div>
+            </div>
+            <div class="bio-fact-card">
+              <span class="bio-fact-icon">🌙</span>
+              <div id="fact-studio">
+                <strong>Studio & Vision:</strong> <em>Nightoday Game Studio</em> & <em>Klingberg Entertainment</em> • Path to Lead Game Designer.
               </div>
             </div>
           </div>
 
-          <!-- Bottom CTA Bar -->
-          <div class="hero-cta-row">
+          <!-- 4. Key Metrics Row -->
+          <div class="hero-stats-row">
+            <div class="stat-mini">
+              <div class="stat-mini-value">Since 2016</div>
+              <div class="stat-mini-label" id="stat-1-label">Active Unity License & C#</div>
+            </div>
+            <div class="stat-mini">
+              <div class="stat-mini-value">1st & 2x 2nd</div>
+              <div class="stat-mini-label" id="stat-2-label">Trijam (3-Hour Game Jam)</div>
+            </div>
+            <div class="stat-mini">
+              <div class="stat-mini-value">Steam & Play</div>
+              <div class="stat-mini-label" id="stat-3-label">Self-Published Store Pipelines</div>
+            </div>
+            <div class="stat-mini">
+              <div class="stat-mini-value">20+ Langs</div>
+              <div class="stat-mini-label" id="stat-4-label">Custom Tooling & Localization</div>
+            </div>
+          </div>
+
+          <!-- 5. Core Tech Pills -->
+          <div class="skill-pills-centered">
+            <span class="skill-pill">Unity (Since 2016)</span>
+            <span class="skill-pill">C# & Reverse Engineering</span>
+            <span class="skill-pill">GameMaker / Godot / Unreal</span>
+            <span class="skill-pill">Single-File HTML5</span>
+            <span class="skill-pill">Steamworks SDK</span>
+            <span class="skill-pill">Android Studio & Play SDK</span>
+          </div>
+
+          <!-- 6. Action Buttons -->
+          <div class="hero-cta-row-centered">
             <a href="https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/" target="_blank" rel="noopener" class="pill-btn primary">
               🎮 <span id="cta-steam">Grimoire Garden on Steam</span>
             </a>
@@ -173,57 +178,51 @@
             <a href="https://play.google.com/store/apps/details?id=gg.nightodaygamestudio.mc&hl=de" target="_blank" rel="noopener" class="pill-btn">
               📱 <span id="cta-play">Google Play Store</span>
             </a>
+            <button class="pill-btn" onclick="switchSection('origin')">
+              📖 <span id="cta-origin-btn">Read My Origin Story →</span>
+            </button>
             <a href="mailto:contact@janjelle.dev" class="pill-btn">
               ✉️ <span id="cta-mail">contact@janjelle.dev</span>
             </a>
           </div>
+
         </div>
-
-        <!-- Right 3D Glass Slab: Dedicated Personal Presentation & Square Portrait Box -->
-        <aside class="profile-showcase-card liquid-glass hover-lift">
-          <div class="portrait-frame" id="portrait-container"></div>
-
-          <div class="profile-identity">
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap;">
-              <h2 id="profile-name">Jan J. Klingberg</h2>
-              <span class="phonetic-tag">/ ˈdʒeɪˈtʃæm.pi.ən /</span>
-            </div>
-            <p id="profile-role-line">Technical Game Designer • Rapid Prototyper • Game Producer</p>
-          </div>
-
-          <div class="profile-bio-facts">
-            <div class="bio-fact-item">
-              <span>📍</span>
-              <span id="fact-location"><strong>Location:</strong> 30 years old, from Franconia (Roth near Nuremberg) & Upper Palatinate (near Cham).</span>
-            </div>
-            <div class="bio-fact-item">
-              <span>🎓</span>
-              <span id="fact-edu"><strong>Education:</strong> Game Design & Game Production at Games Academy (since April 2024).</span>
-            </div>
-            <div class="bio-fact-item">
-              <span>🌙</span>
-              <span id="fact-studio"><strong>Studio & Label:</strong> Founder of <em>Nightoday Game Studio</em> & <em>Klingberg Entertainment</em>.</span>
-            </div>
-          </div>
-
-          <div class="skill-pills">
-            <span class="skill-pill">Unity (Since 2016)</span>
-            <span class="skill-pill">C# & Reverse Engineering</span>
-            <span class="skill-pill">GameMaker / Godot / Unreal</span>
-            <span class="skill-pill">Single-File HTML5</span>
-            <span class="skill-pill">Steamworks SDK</span>
-            <span class="skill-pill">Android Studio & Play SDK</span>
-          </div>
-        </aside>
-
       </div>
     </section>
 
-    <!-- STAGE 02: HERO PROJECTS SECTION -->
+    <!-- STAGE 02: DEDICATED "WHO AM I" & NIGHTODAY ORIGIN STORY -->
+    <section class="stage-section" id="origin">
+      <div class="origin-stage-card liquid-glass hover-lift">
+        <div class="origin-header">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
+            <span class="badge highlight" id="story-badge">02 • Who Am I & Personal Origin</span>
+            <span class="phonetic-tag">JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
+          </div>
+          <h2 class="section-title" id="story-heading">
+            From Reverse Engineering & Skyrim to Nightoday Game Studio
+          </h2>
+        </div>
+
+        <div class="origin-story-body" id="story-paragraphs">
+          <!-- Populated dynamically in EN or DE via app.js -->
+        </div>
+
+        <div class="origin-footer-row">
+          <button class="pill-btn" onclick="switchSection('about')">
+            ← <span id="back-about-btn">Back to Overview</span>
+          </button>
+          <button class="pill-btn primary" onclick="switchSection('hero-projects')">
+            🚀 <span id="next-projects-btn">Explore Hero Projects →</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAGE 03: HERO PROJECTS SECTION -->
     <section class="stage-section" id="hero-projects">
       <div class="section-header">
         <div>
-          <div class="section-eyebrow" id="projects-eyebrow">Proven Production & Technical Design</div>
+          <div class="section-eyebrow" id="projects-eyebrow">03 • Proven Production & Technical Design</div>
           <h2 class="section-title" id="projects-heading">Hero Projects & Deep System Case Studies</h2>
         </div>
         <button class="pill-btn admin-only" onclick="toggleCMS()">
@@ -234,11 +233,11 @@
       <div class="projects-stack" id="hero-projects-container"></div>
     </section>
 
-    <!-- STAGE 03: RAPID PROTOTYPING LAB & ITCH.IO SECTION -->
+    <!-- STAGE 04: RAPID PROTOTYPING LAB & ITCH.IO SECTION -->
     <section class="stage-section" id="prototyping-lab">
       <div class="section-header">
         <div>
-          <div class="section-eyebrow" id="lab-eyebrow">3-Hour Trijams & Single-File HTML Architecture</div>
+          <div class="section-eyebrow" id="lab-eyebrow">04 • 3-Hour Trijams & Single-File HTML Architecture</div>
           <h2 class="section-title" id="lab-heading">Rapid Prototyping Lab & Itch.io Showcase</h2>
         </div>
         <a href="https://jjampion.itch.io/" target="_blank" rel="noopener" class="pill-btn">
