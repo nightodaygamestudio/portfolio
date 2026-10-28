@@ -5,21 +5,19 @@
 const ADMIN_PIN = "1996";
 
 const portfolioData = {
-  defaultLang: "en",
-  defaultTheme: "dark", // Dark Mode (Liquid Obsidian) as default
-  portraitImageUrl: "",
-  customCSS: "",
-
-  // Updated 2026 Personal "Who Am I" Story (EN & DE)
-  originStory: {
-    en: [
+  "defaultLang": "en",
+  "defaultTheme": "dark",
+  "portraitImageUrl": "",
+  "customCSS": "",
+  "originStory": {
+    "en": [
       "I am <strong>Jan Jelle Klingberg</strong>, better known as <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). I am <strong>30 years old</strong> and come from <strong>Franconia, Germany</strong> — living in <strong>Roth (Middle Franconia)</strong> and frequently in the <strong>Upper Palatinate (near Cham)</strong>. Since my childhood — actually as long as I can remember — I have been a passionate video game fan fascinated by the gaming world.",
       "While I started working with Unity in 2016, a major technical spark came in <strong>2018</strong> when I discovered how to root Android systems. That inspired me to delve into <strong>reverse engineering of games and manipulating game values</strong> — understanding how games tick under the hood and deciding to pursue my dream of starting my own indie game studio.",
       "<div class='story-quote-highlight'>\"Du sollst doch nicht schon wieder die <strong>Nacht zum Tag</strong> machen!\" — The name <strong>Nightoday Game Studio</strong> came to me easily, inspired by my mother (who often reminded me not to stay up too late, take care of my eyes, and get enough sleep) and the direct translation of 'Nacht zum Tag'.</div>",
       "My second huge inspiration is the legendary <strong>Bethesda Game Studios</strong>, who practically saved my life with <em>Skyrim</em> when I lived in a children's home and only had one single hour of 'media time' per day. I invested almost every single day of that hour into that masterpiece.",
       "My goal is to gain as much experience as possible and grow my career toward becoming a <strong>Lead Game Designer or Game Director</strong>. Having trained in <strong>Game Design & Game Production at the Games Academy (2024–2026)</strong> and published my own titles on Steam and Google Play under <strong>Nightoday Game Studio</strong> and <strong>Klingberg Entertainment</strong>, I am ready to translate my passion into innovative projects that excite players. Thank you for your interest — if you have any questions or are interested in collaborating, feel free to contact me!"
     ],
-    de: [
+    "de": [
       "Ich bin <strong>Jan Jelle Klingberg</strong>, besser bekannt als <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). Ich bin <strong>30 Jahre alt</strong> und komme aus <strong>Franken</strong> – wohnhaft in <strong>Roth (Mittelfranken)</strong> und regelmäßig in der <strong>Oberpfalz (Raum Cham)</strong>. Seit meiner Kindheit – eigentlich solange ich denken kann – bin ich leidenschaftlicher Videospielfan und fasziniert von der Welt der Games.",
       "Neben meiner aktiven Arbeit mit Unity (seit 2016) war <strong>2018</strong> ein prägender Meilenstein: Ich entdeckte das Rooten von Android-Systemen, was mich zum <strong>Reverse Engineering von Spielen und der Manipulation von Spielwerten</strong> inspirierte. Damals fasste ich den Entschluss, meinen Traum vom eigenen Indie-Game-Studio zu verwirklichen.",
       "<div class='story-quote-highlight'>„Du sollst doch nicht schon wieder die <strong>Nacht zum Tag</strong> machen!“ — Der Name <strong>Nightoday Game Studio</strong> entstand aus dieser klassischen Erinnerung meiner Mutter, nicht zu lange wach zu bleiben, auf meine Augen zu achten und genug zu schlafen. Aus der direkten Übersetzung von „Nacht zum Tag“ wurde mein Studio-Name geboren.</div>",
@@ -27,153 +25,176 @@ const portfolioData = {
       "Mein Ziel ist es, so viel Erfahrung wie möglich zu sammeln und meine Karriere bis zum <strong>Lead Game Designer oder Game Director</strong> auszubauen. Mit meiner Ausbildung in <strong>Game Design & Game Production an der Games Academy (2024–2026)</strong> und eigenen Releases auf Steam und im Google Play Store unter <strong>Nightoday Game Studio</strong> und <strong>Klingberg Entertainment</strong> freue ich mich darauf, komplexe Probleme kreativ zu lösen und Spieler zu begeistern. Vielen Dank für dein Interesse – bei Fragen oder Interesse an einer Zusammenarbeit melde dich gerne jederzeit!"
     ]
   },
-
-  heroProjects: [
+  "heroProjects": [
     {
-      id: "grimoire-garden",
-      title: "Grimoire Garden: A Taskbar Tale",
-      badges: ["Published on Steam", "Windows OS Integration", "Unity (C#)", "59 Steam Achievements"],
-      coverImageUrl: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4560080/header.jpg",
-      itchUrl: "https://jjampion.itch.io/",
-      steamAppId: "4560080",
-      itchWidgetCode: "",
-      pitch: {
-        en: "A cozy second-screen taskbar game blending idle farming, deep skill-tree progression, and seamless 'No-Spacebar' typing combat right at the bottom edge of your Windows desktop.",
-        de: "Ein Cozy-Second-Screen-Taskbar-Game, das Idle-Farming, tiefgehende Skill-Tree-Progression und nahtlosen 'No-Spacebar'-Typing-Combat direkt am unteren Rand des Windows-Desktops vereint."
+      "id": "grimoire-garden",
+      "title": "Grimoire Garden: A Taskbar Tale",
+      "badges": [
+        "Published on Steam",
+        "Windows OS Integration",
+        "Unity (C#)",
+        "59 Steam Achievements"
+      ],
+      "coverImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4560080/header.jpg",
+      "itchUrl": "https://jjampion.itch.io/",
+      "steamAppId": "4560080",
+      "itchWidgetCode": "",
+      "pitch": {
+        "en": "A cozy second-screen taskbar game blending idle farming, deep skill-tree progression, and seamless 'No-Spacebar' typing combat right at the bottom edge of your Windows desktop.",
+        "de": "Ein Cozy-Second-Screen-Taskbar-Game, das Idle-Farming, tiefgehende Skill-Tree-Progression und nahtlosen 'No-Spacebar'-Typing-Combat direkt am unteren Rand des Windows-Desktops vereint."
       },
-      designHighlights: {
-        en: [
+      "designHighlights": {
+        "en": [
           "Frictionless Multi-Modal Loop: Switch anytime via global hotkeys (Alt+G) between Cozy, Combat, and Auto modes.",
           "Skill-Based Minigames: 'No-Spacebar' spellcasting against goblins & a Pong-inspired Skeleton Boss fight rewarding Tier 1–20 Bone Meal Fever buffs.",
           "Deep Meta-Progression: Crop investment skill tree, 3 Daily Quests with rerolls, 9-slot Bonus Stash, and an ascending companion (Sparrow Jack Jr.) up to Level 11."
         ],
-        de: [
+        "de": [
           "Reibungslose Multi-Mode-Loop: Nahtloser Wechsel per Hotkey (Alt+G) zwischen Cozy-, Combat- und Auto-Modus.",
           "Skill-basierte Minigames: 'No-Spacebar'-Typing-Combat gegen Goblins & ein Pong-inspirierter Skeleton-Bosskampf für Tier 1–20 Bone-Meal-Fever-Buffs.",
           "Tiefe Meta-Progression: Ernte-Investitions-Skilltree, 3 Daily Quests mit Rerolls, 9-Slot Bonus Stash und Companion-System (Jack Jr.) mit Ascension bis Level 11."
         ]
       },
-      techHighlights: {
-        en: [
+      "techHighlights": {
+        "en": [
           "OS-Level Desktop Integration: Multi-monitor selection, dynamic scaling, and automatic Windows taskbar auto-hide detection.",
           "Global Input Hooks & Boss Panic Button: Tracks global keystrokes/clicks outside the window to hatch Jack Jr. Includes instant Ctrl+Alt+I panic hide (hides window + taskbar icon).",
           "Full Steamworks Pipeline: Offline time-delta calculation (Scarecrow/Dance Powder) and 59 tracked Steam Achievements."
         ],
-        de: [
+        "de": [
           "OS-Level Desktop-Integration: Multi-Monitor-Auswahl, dynamische Skalierung und automatische Erkennung einer sich ausblendenden Windows-Taskleiste.",
           "Global Input Hooks & Panic-Button: Erfasst globale Klicks/Tastenanschläge außerhalb des Spiels zum Ausbrüten von Jack Jr. Inklusive Ctrl+Alt+I Boss-Button (versteckt Spiel + Taskbar-Icon sofort).",
           "Komplette Steamworks-Pipeline: Zeitbasierte Offline-Wachstumsberechnung und 59 getrackte Steam-Achievements."
         ]
       },
-      demoType: "grimoire"
+      "demoType": "grimoire"
     },
     {
-      id: "core-dump",
-      title: "Core Dump",
-      badges: ["🏆 1st Place Winner (Trijam 3h Jam)", "Unity WebGL & Android Port", "ASCII Matrix Aesthetic"],
-      coverImageUrl: "",
-      itchUrl: "https://jjampion.itch.io/",
-      steamAppId: "",
-      itchWidgetCode: "",
-      pitch: {
-        en: "Built in just 3 hours for the Trijam theme 'The Forbidden Door' (1st Place Winner) and expanded with an Android port. A fast-paced circular hacking shooter where you breach rotating security rings.",
-        de: "Entstanden in nur 3 Stunden zum Trijam-Thema 'The Forbidden Door' (1. Platz Gewinner) und aktuell als Android-Port erweitert. Ein rasanter Kreis-Arena-Shooter im ASCII-Hacker-Stil."
+      "id": "core-dump",
+      "title": "Core Dump",
+      "badges": [
+        "🏆 1st Place Winner (Trijam 3h Jam)",
+        "Unity WebGL & Android Port",
+        "ASCII Matrix Aesthetic"
+      ],
+      "coverImageUrl": "",
+      "itchUrl": "https://jjampion.itch.io/",
+      "steamAppId": "",
+      "itchWidgetCode": "",
+      "pitch": {
+        "en": "Built in just 3 hours for the Trijam theme 'The Forbidden Door' (1st Place Winner) and expanded with an Android port. A fast-paced circular hacking shooter where you breach rotating security rings.",
+        "de": "Entstanden in nur 3 Stunden zum Trijam-Thema 'The Forbidden Door' (1. Platz Gewinner) und aktuell als Android-Port erweitert. Ein rasanter Kreis-Arena-Shooter im ASCII-Hacker-Stil."
       },
-      designHighlights: {
-        en: [
+      "designHighlights": {
+        "en": [
           "Creative Theme Translation: Interpreted 'The Forbidden Door' as a digital system backdoor inspired by Starfield's lockpicking, turned into real-time circular arcade action across 10 Security Layers.",
           "3 Distinct Game Modes: Standard Campaign (4 hits / 25% HP loss), One-Life Hardcore Mode, and the endless 'Persistent Threat' mode with active/passive upgrades every 5 levels.",
           "Telegraphed Hazard Design: Rotating laser crosses during Lockdown phases, expanding 'Pizza-Slice' AoE zones on the player's position, and core counter-projectiles."
         ],
-        de: [
+        "de": [
           "Kreative Themen-Übersetzung: 'The Forbidden Door' als System-Hintertür interpretiert – inspiriert vom Starfield-Lockpicking, übersetzt in Echtzeit-Kreis-Action über 10 Security-Layer.",
           "3 Spielmodi: Kampagne (4 Leben / 25 %-Schritte), Hardcore-Modus (1 Leben) und der endlose 'Persistent Threat'-Modus mit aktiven/passiven Upgrades alle 5 Level.",
           "Lesbares Hazard-Design: Rotierende Plus-Laser in Lockdown-Phasen, wachsende 'Pizza-Slice'-AoE-Attacken auf der Spielerposition und feindliche Core-Projektile."
         ]
       },
-      techHighlights: {
-        en: [
+      "techHighlights": {
+        "en": [
           "Radical 3-Hour Scope Management: Used procedural-feeling green/black ASCII glyphs instead of hand-drawn sprites to invest 100% of jam time into 3Cs, pacing, and game feel.",
           "Cross-Platform Android Port: Re-engineered circular movement and active ability triggers for mobile touch controls via Android Studio + Highscore Leaderboard."
         ],
-        de: [
+        "de": [
           "Radikales 3-Stunden-Scope-Management: Bewusster Einsatz von Schwarz-Grün-ASCII-Zeichen statt handgezeichneten Sprites, um 100 % der Jam-Zeit in Game Feel und Balancing zu stecken.",
           "Cross-Platform Android-Port: Umsetzung der mobilen Version über Android Studio inklusive Touch-Steuerung, aktivem Skill-Button und Leaderboard."
         ]
       },
-      demoType: "coredump"
+      "demoType": "coredump"
     },
     {
-      id: "pair-pursuit",
-      title: "Pair Pursuit",
-      badges: ["Google Play Store & itch.io", "Custom 20-Language Localization", "Local Photo UGC System"],
-      coverImageUrl: "",
-      itchUrl: "https://jjampion.itch.io/",
-      steamAppId: "",
-      itchWidgetCode: "",
-      pitch: {
-        en: "A competitive mobile & web memory game paying homage to the classic New Super Mario Bros. DS minigames — engineered with a custom 20-language localization architecture and local photo deck builder.",
-        de: "Ein kompetitives Mobile- & Web-Memory-Spiel als Hommage an die legendären New Super Mario Bros. DS-Minispiele – mit eigenem 20-Sprachen-Lokalisierungssystem und lokalem Foto-Deck-Builder."
+      "id": "pair-pursuit",
+      "title": "Pair Pursuit",
+      "badges": [
+        "Google Play Store & itch.io",
+        "Custom 20-Language Localization",
+        "Local Photo UGC System"
+      ],
+      "coverImageUrl": "",
+      "itchUrl": "https://jjampion.itch.io/",
+      "steamAppId": "",
+      "itchWidgetCode": "",
+      "pitch": {
+        "en": "A competitive mobile & web memory game paying homage to the classic New Super Mario Bros. DS minigames — engineered with a custom 20-language localization architecture and local photo deck builder.",
+        "de": "Ein kompetitives Mobile- & Web-Memory-Spiel als Hommage an die legendären New Super Mario Bros. DS-Minispiele – mit eigenem 20-Sprachen-Lokalisierungssystem und lokalem Foto-Deck-Builder."
       },
-      designHighlights: {
-        en: [
+      "designHighlights": {
+        "en": [
           "Cognitive Load Balancing: Every 5 levels across 5 difficulties, 4 new cards are added — but a subset is briefly pre-revealed at the start so players always hunt for 8 unknown cards while testing short-term memory.",
           "Competitive Time-Attack: Unlocking a difficulty tier also unlocks a single-run Time Attack mode backed by global Google Play Games Leaderboards."
         ],
-        de: [
+        "de": [
           "Kognitives Load-Balancing: Alle 5 Level kommen 4 Karten hinzu, wovon jedoch ein Teil zu Beginn kurz aufgedeckt wird – man sucht immer nach 8 unbekannten Karten, während das Kurzzeitgedächtnis mitwächst.",
           "Kompetitiver Time-Attack: Jede freigeschaltete Schwierigkeitsstufe schaltet einen Time-Attack-Modus mit globalen Google Play Games Leaderboards frei."
         ]
       },
-      techHighlights: {
-        en: [
+      "techHighlights": {
+        "en": [
           "Smart UGC Production Shortcut: Built native device gallery integration so players can use any local photo (pets, family, cars) as custom card pairs (100% local privacy) instead of manually creating 20 static themes.",
           "Custom 20-Language System & Engine Migration: Supports EU & global languages (Japanese, Chinese, Korean, Bengali, Bahasa Indonesia) including custom font-shader debugging after a major Unity upgrade."
         ],
-        de: [
+        "de": [
           "Smarter UGC-Production-Hebel: Lokale Smartphone-Galerie-Anbindung erlaubt eigene Fotos als Kartenpaare (100 % lokal gespeichert) und adressiert jede Zielgruppe ohne Asset-Bloat.",
           "Eigenes 20-Sprachen-System & Unity-Upgrade: Unterstützt die 20 wichtigsten Sprachen (inkl. Japanisch, Chinesisch, Koreanisch, Bengalisch, Bahasa Indonesia) samt Font-Shader-Debugging."
         ]
       },
-      demoType: "pairpursuit"
+      "demoType": "pairpursuit"
     }
   ],
-
-  labProjects: [
+  "labProjects": [
     {
-      id: "trijam-runner-ups",
-      title: "2x 2nd Place Trijam Prototypes",
-      badges: ["🥈 2x 2nd Place Winner", "3-Hour Rapid Prototyping", "Unity & WebGL"],
-      coverImageUrl: "",
-      itchUrl: "https://jjampion.itch.io/",
-      itchWidgetCode: "",
-      pitch: {
-        en: "Two award-winning 3-hour Game Jam prototypes demonstrating ultra-fast theme interpretation, immediate 'Find the Fun' iteration, and bug-free WebGL delivery under extreme time pressure.",
-        de: "Zwei preisgekrönte 3-Stunden-Prototypen beim Trijam: Fokus auf extrem schnelle Themen-Analyse, 'Find the Fun' in den ersten 30 Minuten und sauberen WebGL-Release unter Zeitdruck."
+      "id": "trijam-runner-ups",
+      "title": "2x 2nd Place Trijam Prototypes",
+      "badges": [
+        "🥈 2x 2nd Place Winner",
+        "3-Hour Rapid Prototyping",
+        "Unity & WebGL"
+      ],
+      "coverImageUrl": "",
+      "itchUrl": "https://jjampion.itch.io/",
+      "itchWidgetCode": "",
+      "pitch": {
+        "en": "Two award-winning 3-hour Game Jam prototypes demonstrating ultra-fast theme interpretation, immediate 'Find the Fun' iteration, and bug-free WebGL delivery under extreme time pressure.",
+        "de": "Zwei preisgekrönte 3-Stunden-Prototypen beim Trijam: Fokus auf extrem schnelle Themen-Analyse, 'Find the Fun' in den ersten 30 Minuten und sauberen WebGL-Release unter Zeitdruck."
       }
     },
     {
-      id: "google-play-release",
-      title: "Nightoday Mobile Release (Google Play Live)",
-      badges: ["Google Play Store", "Live-Ops & Keystore Management", "Android SDK"],
-      coverImageUrl: "",
-      itchUrl: "https://play.google.com/store/apps/details?id=gg.nightodaygamestudio.mc&hl=de",
-      itchWidgetCode: "",
-      pitch: {
-        en: "Published commercial Android build maintained with updated Google Play Target SDK requirements, structured keystore security, and end-to-end store compliance.",
-        de: "Selbstständig im Google Play Store veröffentlichtes Android-Spiel inklusive Pflege aktueller Target-SDK-Vorgaben, strukturiertem Keystore-Management und Store-Compliance."
+      "id": "google-play-release",
+      "title": "Nightoday Mobile Release (Google Play Live)",
+      "badges": [
+        "Google Play Store",
+        "Live-Ops & Keystore Management",
+        "Android SDK"
+      ],
+      "coverImageUrl": "",
+      "itchUrl": "https://play.google.com/store/apps/details?id=gg.nightodaygamestudio.mc&hl=de",
+      "itchWidgetCode": "",
+      "pitch": {
+        "en": "Published commercial Android build maintained with updated Google Play Target SDK requirements, structured keystore security, and end-to-end store compliance.",
+        "de": "Selbstständig im Google Play Store veröffentlichtes Android-Spiel inklusive Pflege aktueller Target-SDK-Vorgaben, strukturiertem Keystore-Management und Store-Compliance."
       }
     },
     {
-      id: "single-file-html-engines",
-      title: "Single-File HTML5 & Multi-Engine Experiments",
-      badges: ["Vanilla HTML/JS/CSS", "Godot / Unreal / GameMaker 2", "Zero-Dependency Architecture"],
-      coverImageUrl: "",
-      itchUrl: "https://jjampion.itch.io/",
-      itchWidgetCode: "",
-      pitch: {
-        en: "Self-contained web games built inside a single HTML file without external engine overhead, plus cross-engine prototypes exploring Godot, Unreal Engine, and GameMaker Studio 2.",
-        de: "Komplette Web-Games innerhalb einer einzigen HTML-Datei ohne Engine-Abhängigkeiten sowie Ausflüge in Godot, Unreal Engine und GameMaker Studio 2."
+      "id": "single-file-html-engines",
+      "title": "Single-File HTML5 & Multi-Engine Experiments",
+      "badges": [
+        "Vanilla HTML/JS/CSS",
+        "Godot / Unreal / GameMaker 2",
+        "Zero-Dependency Architecture"
+      ],
+      "coverImageUrl": "",
+      "itchUrl": "https://jjampion.itch.io/",
+      "itchWidgetCode": "",
+      "pitch": {
+        "en": "Self-contained web games built inside a single HTML file without external engine overhead, plus cross-engine prototypes exploring Godot, Unreal Engine, and GameMaker Studio 2.",
+        "de": "Komplette Web-Games innerhalb einer einzigen HTML-Datei ohne Engine-Abhängigkeiten sowie Ausflüge in Godot, Unreal Engine und GameMaker Studio 2."
       }
     }
   ]
