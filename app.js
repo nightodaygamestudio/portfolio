@@ -427,7 +427,7 @@ async function verifyAdminPin() {
 
   const isMatch = hasCustomHash
     ? (enteredSha256 === portfolioData.adminPinHash)
-    : (computeObfuscatedDigest(entered) === 0x172325);
+    : (computeObfuscatedDigest(entered) === 0x172345);
 
   if (isMatch) {
     isAdminUnlocked = true;
