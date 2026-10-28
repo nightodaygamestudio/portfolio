@@ -3,58 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Jan Jelle Klingberg (JJampion) | Technical Game Designer & Founder of Nightoday Game Studio</title>
-  <!-- Externe CSS-Datei -->
+  <title>Jan Jelle Klingberg (aka JJampion) | Junior Technical Game Designer</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Dynamisches Custom-CSS aus dem CMS -->
   <style id="custom-user-css"></style>
 </head>
 <body>
 
-  <!-- GPU-Accelerated Ambient Liquid Orbs -->
+  <!-- Ambient Background Orbs -->
   <div class="ambient-canvas">
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
   </div>
 
-  <!-- Right-Side 3D Stage Dots Indicator (4 Stages) -->
+  <!-- Right-Side Stage Dots Indicator (4 Stages) -->
   <div class="stage-dots-nav" aria-label="Stage Navigation">
     <button class="stage-dot active" id="dot-about" onclick="switchSection('about')" data-label="01 • About Me"></button>
     <button class="stage-dot" id="dot-origin" onclick="switchSection('origin')" data-label="02 • Who Am I"></button>
-    <button class="stage-dot" id="dot-hero-projects" onclick="switchSection('hero-projects')" data-label="03 • Hero Projects"></button>
-    <button class="stage-dot" id="dot-prototyping-lab" onclick="switchSection('prototyping-lab')" data-label="04 • Rapid Prototyping"></button>
+    <button class="stage-dot" id="dot-hero-projects" onclick="switchSection('hero-projects')" data-label="03 • Hero Project"></button>
+    <button class="stage-dot" id="dot-prototyping-lab" onclick="switchSection('prototyping-lab')" data-label="04 • Projects & Itch.io"></button>
   </div>
 
-  <!-- Floating Admin Status Pill (Invisible to normal visitors) -->
+  <!-- Floating Admin Status Pill (Invisible to regular visitors) -->
   <div class="admin-status-bar admin-only">
-    <span>🔓 Admin Mode Active</span>
+    <span>🔓 CMS Active</span>
     <button class="pill-btn primary" style="padding:5px 12px; font-size:0.76rem;" onclick="toggleCMS()">⚙️ Open CMS</button>
-    <button class="pill-btn" style="padding:5px 10px; font-size:0.76rem;" onclick="lockAdminMode()">🔒 Exit</button>
+    <button class="pill-btn" style="padding:5px 10px; font-size:0.76rem;" onclick="lockAdminMode()">🔒 Lock</button>
   </div>
 
   <!-- STICKY NAVIGATION BAR -->
   <div class="navbar-wrapper">
     <nav class="navbar liquid-glass">
-      <!-- Secret Trigger: Click 5x rapidly on the brand logo to open Admin PIN prompt -->
+      <!-- Click 5x rapidly on the brand area to open CMS Unlock prompt -->
       <div class="brand" onclick="handleSecretLogoClick()" title="Jan Jelle Klingberg aka JJampion">
         <div class="brand-avatar" id="nav-avatar">JJ</div>
         <div>
-          <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap;">
             <span>Jan Jelle Klingberg</span>
-            <span class="phonetic-pill">JJampion</span>
+            <span class="phonetic-pill">aka JJampion</span>
           </div>
           <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;" id="nav-subrole">
-            Technical Game Designer • Nightoday Game Studio
+            Junior Technical Game Designer
           </div>
         </div>
       </div>
 
-      <!-- Exclusive 4-Stage View Switchers -->
+      <!-- 4-Stage Navigation Links -->
       <ul class="nav-links">
         <li><a id="nav-about" class="active-nav" onclick="switchSection('about')">About Me</a></li>
         <li><a id="nav-origin" onclick="switchSection('origin')">Who Am I</a></li>
-        <li><a id="nav-projects" onclick="switchSection('hero-projects')">Hero Projects</a></li>
+        <li><a id="nav-projects" onclick="switchSection('hero-projects')">Hero Project</a></li>
         <li><a id="nav-lab" onclick="switchSection('prototyping-lab')">Rapid Prototyping</a></li>
       </ul>
 
@@ -65,57 +63,57 @@
           <button class="lang-btn" id="lang-de-btn" onclick="setLanguage('de')">DE</button>
         </div>
 
-        <!-- Theme Switcher (Default: Dark / Liquid Obsidian -> Toggle to Liquid Pearl) -->
+        <!-- Theme Switcher (Obsidian / Pearl) -->
         <button class="pill-btn" id="theme-toggle-btn" onclick="toggleTheme()">
           <span id="theme-icon">☀️</span>
-          <span id="theme-label">Liquid Pearl</span>
+          <span id="theme-label">Pearl</span>
         </button>
 
-        <!-- CMS Button: STRICTLY HIDDEN FOR VISITORS (.admin-only) -->
+        <!-- CMS Button (Hidden for visitors) -->
         <button class="pill-btn primary admin-only" onclick="toggleCMS()">
-          ⚙️ <span>CMS Studio</span>
+          ⚙️ <span>CMS</span>
         </button>
       </div>
     </nav>
   </div>
 
   <!-- ==========================================================================
-       MIDDLE-CENTERED STAGE CONTAINER (ONLY ONE STAGE VISIBLE AT ANY TIME)
+       MIDDLE-CENTERED STAGE CONTAINER
        ========================================================================== -->
   <main class="stage-container" id="top">
 
-    <!-- STAGE 01: CENTERED PORTRAIT + UNIFIED ABOUT ME OVERVIEW -->
+    <!-- STAGE 01: CENTERED PORTRAIT -> NAME/ALIAS -> GREEN ROLE -> PITCH -->
     <section class="stage-section active-section is-entered" id="about">
       <div class="about-centered-card liquid-glass hover-lift">
         <div id="about-morph-box" class="morph-container about-inner-stack">
 
-          <!-- 1. Centered Portrait Frame at the Top -->
+          <!-- 1. Centered Portrait Frame at Top -->
           <div class="portrait-center-wrapper">
             <div class="portrait-frame-centered" id="portrait-container"></div>
           </div>
 
-          <!-- 2. Identity & Status Badge -->
+          <!-- 2. Name + aka JJampion + Phonetic -> Then Green Role Description -> Then Headline -->
           <div class="identity-center-block">
-            <div class="status-badge">
-              <span class="status-dot"></span>
-              <span id="hero-status-text">Technical Game Designer & Founder of Nightoday Game Studio / Klingberg Entertainment</span>
-            </div>
-
             <div class="name-phonetic-row">
               <h1 class="hero-name-title">Jan Jelle Klingberg</h1>
-              <span class="phonetic-tag">JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
+              <span class="phonetic-tag">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
             </div>
 
-            <p class="hero-subtitle- gradient-text" id="hero-headline">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span id="hero-status-text">Junior Technical Game Designer • Creator of Nightoday Game Studio</span>
+            </div>
+
+            <p class="hero-subtitle gradient-text" id="hero-headline">
               I don't just write concepts on paper — I ship playable systems & commercial games in record time.
             </p>
 
             <p class="hero-lead-centered" id="hero-lead-text">
-              I love playing games, but I love building them even more. With active Unity experience since 2016, a formal education in Game Design & Game Production at the Games Academy, and self-published commercial titles on Steam and Google Play under Nightoday Game Studio & Klingberg Entertainment, I unite creative game design, rapid 3-hour prototyping, and rock-solid technical execution.
+              I love playing games, but I love building them even more. With active Unity experience since 2016, a formal education in Game Design & Game Production at the Games Academy, and self-published titles on Steam and Google Play under Nightoday Game Studio, I unite creative game design, rapid 3-hour prototyping, and solid technical execution.
             </p>
           </div>
 
-          <!-- 3. Key Bio Facts (3 Columns on Desktop, 1 Column on Mobile) -->
+          <!-- 3. Key Bio Facts -->
           <div class="bio-facts-grid">
             <div class="bio-fact-card">
               <span class="bio-fact-icon">📍</span>
@@ -132,7 +130,7 @@
             <div class="bio-fact-card">
               <span class="bio-fact-icon">🌙</span>
               <div id="fact-studio">
-                <strong>Studio & Vision:</strong> <em>Nightoday Game Studio</em> & <em>Klingberg Entertainment</em> • Path to Lead Game Designer.
+                <strong>Studio & Vision:</strong> <em>Nightoday Game Studio</em> • Fast Prototyping & Path to Lead Game Designer.
               </div>
             </div>
           </div>
@@ -190,13 +188,13 @@
       </div>
     </section>
 
-    <!-- STAGE 02: DEDICATED "WHO AM I" & NIGHTODAY ORIGIN STORY -->
+    <!-- STAGE 02: DEDICATED "WHO AM I" & NIGHTODAY ORIGIN STORY (CRISP TEXT) -->
     <section class="stage-section" id="origin">
       <div class="origin-stage-card liquid-glass hover-lift">
         <div class="origin-header">
           <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
             <span class="badge highlight" id="story-badge">02 • Who Am I & Personal Origin</span>
-            <span class="phonetic-tag">JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
+            <span class="phonetic-tag">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
           </div>
           <h2 class="section-title" id="story-heading">
             From Reverse Engineering & Skyrim to Nightoday Game Studio
@@ -212,40 +210,46 @@
             ← <span id="back-about-btn">Back to Overview</span>
           </button>
           <button class="pill-btn primary" onclick="switchSection('hero-projects')">
-            🚀 <span id="next-projects-btn">Explore Hero Projects →</span>
+            🚀 <span id="next-projects-btn">View Hero Project →</span>
           </button>
         </div>
       </div>
     </section>
 
-    <!-- STAGE 03: HERO PROJECTS SECTION -->
+    <!-- STAGE 03: HERO PROJECT (MIDDLE-CENTERED GRIMOIRE GARDEN ON STEAM) -->
     <section class="stage-section" id="hero-projects">
-      <div class="section-header">
+      <div class="section-header centered-header">
         <div>
-          <div class="section-eyebrow" id="projects-eyebrow">03 • Proven Production & Technical Design</div>
-          <h2 class="section-title" id="projects-heading">Hero Projects & Deep System Case Studies</h2>
+          <div class="section-eyebrow" id="projects-eyebrow">03 • Flagship Steam Release</div>
+          <h2 class="section-title" id="projects-heading">Hero Project Spotlight</h2>
         </div>
-        <button class="pill-btn admin-only" onclick="toggleCMS()">
-          ➕ <span id="add-project-top-btn">Add / Edit Projects & Itch.io Widgets</span>
-        </button>
       </div>
 
-      <div class="projects-stack" id="hero-projects-container"></div>
+      <div class="hero-project-centered-wrapper" id="hero-projects-container">
+        <!-- Populated dynamically via app.js -->
+      </div>
     </section>
 
-    <!-- STAGE 04: RAPID PROTOTYPING LAB & ITCH.IO SECTION -->
+    <!-- STAGE 04: RAPID PROTOTYPING & ITCH.IO TILE GRID (UNLIMITED PROJECTS) -->
     <section class="stage-section" id="prototyping-lab">
       <div class="section-header">
         <div>
-          <div class="section-eyebrow" id="lab-eyebrow">04 • 3-Hour Trijams & Single-File HTML Architecture</div>
-          <h2 class="section-title" id="lab-heading">Rapid Prototyping Lab & Itch.io Showcase</h2>
+          <div class="section-eyebrow" id="lab-eyebrow">04 • Game Jams, Mobile & Web Architecture</div>
+          <h2 class="section-title" id="lab-heading">Projects & Rapid Prototyping Showcase</h2>
         </div>
-        <a href="https://jjampion.itch.io/" target="_blank" rel="noopener" class="pill-btn">
-          🔗 <span id="visit-itch-label">Visit jjampion.itch.io</span>
-        </a>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="pill-btn primary admin-only" onclick="toggleCMS()">
+            ➕ <span id="add-project-top-btn">Manage Projects</span>
+          </button>
+          <a href="https://jjampion.itch.io/" target="_blank" rel="noopener" class="pill-btn">
+            🔗 <span id="visit-itch-label">Visit jjampion.itch.io</span>
+          </a>
+        </div>
       </div>
 
-      <div class="lab-grid" id="lab-projects-container"></div>
+      <div class="lab-grid" id="lab-projects-container">
+        <!-- Populated dynamically as a responsive tile grid via app.js -->
+      </div>
     </section>
 
   </main>
@@ -260,20 +264,20 @@
   </footer>
 
   <!-- ==========================================================================
-       STEALTH ADMIN PIN MODAL (Always pops up on Shortcut / Logo click)
+       CMS UNLOCK MODAL (SHA-256 Protected)
        ========================================================================== -->
   <div class="pin-modal-backdrop" id="pin-modal-backdrop">
     <div class="pin-modal liquid-glass">
       <div style="font-size:1.8rem;">🔐</div>
-      <h3 style="font-size:1.15rem; font-weight:800;">Stealth CMS Unlock</h3>
+      <h3 style="font-size:1.15rem; font-weight:800;">CMS Unlock</h3>
       <p style="font-size:0.82rem; color:var(--text-secondary);">
-        Enter your personal admin PIN to unlock live editing & GitHub Pages publishing.
+        Enter your admin PIN to unlock portfolio management.
       </p>
       <input type="password" class="cms-input" id="admin-pin-input" placeholder="Enter PIN" style="text-align:center; font-size:1rem; letter-spacing:0.15em;" onkeydown="if(event.key==='Enter') verifyAdminPin()" />
-      <div id="pin-error-msg" style="font-size:0.76rem; color:#e11d48; font-weight:700; display:none;">Incorrect PIN.</div>
+      <div id="pin-error-msg" style="font-size:0.76rem; color:#f43f5e; font-weight:700; display:none;">Incorrect PIN.</div>
       <div style="display:flex; gap:8px; justify-content:center; margin-top:4px;">
         <button class="pill-btn" onclick="closePinModal()">Cancel</button>
-        <button class="pill-btn primary" onclick="verifyAdminPin()">Unlock CMS</button>
+        <button class="pill-btn primary" onclick="verifyAdminPin()">Unlock</button>
       </div>
     </div>
   </div>
@@ -284,22 +288,22 @@
   <div class="cms-drawer-backdrop" id="cms-backdrop">
     <div class="cms-drawer">
       <div style="display:flex; justify-content:space-between; align-items:center;">
-        <h3 style="font-size:1.25rem; font-weight:800;">⚙️ Portfolio CMS Studio</h3>
+        <h3 style="font-size:1.2rem; font-weight:800;">⚙️ Portfolio CMS</h3>
         <button class="pill-btn" onclick="toggleCMS()">✕ Close</button>
       </div>
 
-      <!-- 0. Direct GitHub Pages Cloud Push (Updates app.js directly in your Repo) -->
-      <div class="cms-group" style="border-color: rgba(52, 211, 153, 0.45);">
-        <label style="color: var(--accent-success);">🚀 0€ GitHub Pages Live-Publish (Syncs app.js)</label>
+      <!-- 1. Repository Deployment -->
+      <div class="cms-group">
+        <label style="color: var(--accent-success);">1. Repository Deployment (GitHub API)</label>
         <p style="font-size:0.75rem; color:var(--text-muted);">
-          Your token is saved <strong>only in your local browser storage</strong>. Clicking Push updates <code>app.js</code> directly in your GitHub repository.
+          Uploads new images directly into the <code>assets/</code> folder of your repository and updates <code>app.js</code>.
         </p>
-        <input type="text" class="cms-input" id="gh-repo" placeholder="GitHub Repo (e.g. jjampion/jjampion.github.io)" />
-        <input type="text" class="cms-input" id="gh-branch" placeholder="Branch (default: main)" value="main" />
-        <input type="password" class="cms-input" id="gh-token" placeholder="GitHub Personal Access Token (ghp_...)" />
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <input type="text" class="cms-input" id="gh-repo" placeholder="nightodaygamestudio/portfolio" value="nightodaygamestudio/portfolio" />
+        <input type="text" class="cms-input" id="gh-branch" placeholder="Branch (e.g. main)" value="main" />
+        <input type="password" class="cms-input" id="gh-token" placeholder="GitHub Personal Access Token (github_pat_...)" />
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:4px;">
           <button class="pill-btn primary" style="flex:1; justify-content:center;" onclick="publishDirectlyToGitHub()">
-            🚀 Push Live to GitHub (app.js)
+            🚀 Publish to GitHub
           </button>
           <button class="pill-btn" onclick="exportAppJS()">
             ⬇️ Download app.js
@@ -308,55 +312,72 @@
         <div id="gh-status-msg" style="font-size:0.76rem; font-family:var(--font-mono); color:var(--accent-primary);"></div>
       </div>
 
-      <!-- 1. Portrait Image Settings -->
+      <!-- 2. Portrait Image Upload (Real file upload to assets/) -->
       <div class="cms-group">
-        <label>1. Personal Portrait Photo (URL or Local File Upload)</label>
-        <input type="text" class="cms-input" id="cms-portrait-url" placeholder="e.g. assets/jan-portrait.jpg or https://..." oninput="updatePortraitFromInput(this.value)" />
-        <div style="display:flex; gap:8px; align-items:center; margin-top:4px;">
-          <input type="file" id="cms-portrait-file" accept="image/*" style="font-size:0.78rem;" onchange="handlePortraitFileUpload(event)" />
+        <label>2. Personal Portrait Photo (Uploads to <code>assets/</code> in Repo)</label>
+        <input type="text" class="cms-input" id="cms-portrait-url" placeholder="assets/portrait.jpg or https://..." oninput="updatePortraitFromInput(this.value)" />
+        <div style="display:flex; gap:8px; align-items:center; margin-top:4px; flex-wrap:wrap;">
+          <input type="file" id="cms-portrait-file" accept="image/*" style="font-size:0.78rem; max-width:240px;" onchange="handlePortraitFileUpload(event)" />
           <button class="pill-btn" onclick="updatePortraitFromInput('')">Reset</button>
+        </div>
+        <div id="portrait-upload-hint" style="font-size:0.73rem; color:var(--text-muted);"></div>
+      </div>
+
+      <!-- 3. Unlimited Projects Tile Manager (Add / Edit / Reorder / Delete) -->
+      <div class="cms-group">
+        <label>3. Projects & Itch.io Tiles Manager (<span id="cms-projects-count">0</span> Projects)</label>
+        <p style="font-size:0.75rem; color:var(--text-muted);">
+          Click <strong>Edit</strong> on any project below to modify it, or fill out the form to add a new project tile.
+        </p>
+
+        <!-- Live List of All Projects -->
+        <div class="cms-project-list" id="cms-project-list"></div>
+
+        <hr style="border:none; border-top:1px solid var(--glass-border); margin:6px 0;" />
+
+        <label id="cms-form-mode-label" style="color:var(--accent-primary);">➕ Add New Project Tile</label>
+        <input type="hidden" id="edit-proj-id" value="" />
+        <input type="text" class="cms-input" id="new-proj-title" placeholder="Game Title (e.g. Core Dump)" />
+        <input type="text" class="cms-input" id="new-proj-badges" placeholder="Badges comma-separated (e.g. 🏆 1st Place Trijam, Unity, WebGL)" />
+        <textarea class="cms-textarea" id="new-proj-pitch-en" placeholder="Short Description (English)" style="min-height:56px;"></textarea>
+        <textarea class="cms-textarea" id="new-proj-pitch-de" placeholder="Kurzbeschreibung (Deutsch)" style="min-height:56px;"></textarea>
+
+        <label>Cover Image (URL or File Upload to <code>assets/projects/</code>):</label>
+        <input type="text" class="cms-input" id="new-proj-img" placeholder="assets/projects/game.png or https://img.itch.zone/..." />
+        <input type="file" id="new-proj-img-file" accept="image/*" style="font-size:0.76rem;" onchange="handleProjectImageFileUpload(event)" />
+
+        <label>Direct Itch.io / Store URL:</label>
+        <input type="text" class="cms-input" id="new-proj-link" placeholder="https://jjampion.itch.io/..." />
+
+        <label>Optional: Itch.io <code>&lt;iframe&gt;</code> Widget Code:</label>
+        <textarea class="cms-textarea" id="new-proj-widget" placeholder='<iframe frameborder="0" src="https://itch.io/embed/..." width="552" height="167"></iframe>'></textarea>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="pill-btn primary" style="flex:1;" onclick="saveOrAddProjectTile()">
+            💾 <span id="cms-save-proj-btn-text">Add Project to Grid</span>
+          </button>
+          <button class="pill-btn" onclick="resetProjectForm()">Clear / Cancel</button>
         </div>
       </div>
 
-      <!-- 2. Edit Existing Project Image & Itch.io Widget -->
+      <!-- 4. Security: Change Admin PIN (Stored as SHA-256 Hash) -->
       <div class="cms-group">
-        <label>2. Update Project Image or Itch.io Widget (&lt;iframe&gt;)</label>
-        <select class="cms-input" id="cms-project-select" onchange="loadProjectIntoCMS()"></select>
-
-        <label>Project Screenshot / Cover Image URL:</label>
-        <input type="text" class="cms-input" id="cms-proj-img" placeholder="https://img.itch.zone/... or assets/cover.png" />
-
-        <label>Direct Itch.io / Store Link:</label>
-        <input type="text" class="cms-input" id="cms-proj-link" placeholder="https://jjampion.itch.io/..." />
-
-        <label>Itch.io Widget Embed Code (Paste full <code>&lt;iframe ...&gt;&lt;/iframe&gt;</code> from itch.io):</label>
-        <textarea class="cms-textarea" id="cms-proj-widget" placeholder='<iframe frameborder="0" src="https://itch.io/embed/YOUR_GAME_ID" width="552" height="167"></iframe>'></textarea>
-
-        <button class="pill-btn primary" onclick="saveSelectedProjectChanges()">💾 Apply to Selected Project</button>
+        <label>4. Change Admin PIN (SHA-256 Encrypted)</label>
+        <div style="display:flex; gap:8px;">
+          <input type="password" class="cms-input" id="cms-new-pin" placeholder="New PIN / Password" />
+          <button class="pill-btn" onclick="updateAdminPinHash()">Set Hash</button>
+        </div>
+        <div id="pin-hash-status" style="font-size:0.74rem; color:var(--accent-success);"></div>
       </div>
 
-      <!-- 3. Add a Brand New Project / Itch.io Game -->
+      <!-- 5. Custom CSS -->
       <div class="cms-group">
-        <label>3. Add New Project / Itch.io Game Card</label>
-        <input type="text" class="cms-input" id="new-proj-title" placeholder="Game Title (e.g. Trijam Prototype)" />
-        <input type="text" class="cms-input" id="new-proj-badges" placeholder="Badges comma-separated (e.g. 2nd Place Trijam, Unity, WebGL)" />
-        <input type="text" class="cms-input" id="new-proj-pitch-en" placeholder="Short Pitch (English)" />
-        <input type="text" class="cms-input" id="new-proj-pitch-de" placeholder="Kurzbeschreibung (Deutsch)" />
-        <input type="text" class="cms-input" id="new-proj-img" placeholder="Cover Image URL (optional)" />
-        <input type="text" class="cms-input" id="new-proj-link" placeholder="Direct itch.io URL (e.g. https://jjampion.itch.io/my-game)" />
-        <textarea class="cms-textarea" id="new-proj-widget" placeholder='Optional: Paste itch.io <iframe src="https://itch.io/embed/..."></iframe> here'></textarea>
-        <button class="pill-btn" onclick="addNewProjectFromCMS()">➕ Add Project to Portfolio</button>
-      </div>
-
-      <!-- 4. Custom CSS -->
-      <div class="cms-group">
-        <label>4. Custom CSS Override</label>
+        <label>5. Custom CSS Override</label>
         <textarea class="cms-textarea" id="cms-custom-css" placeholder="/* Add custom CSS rules here */" oninput="applyCustomCSS(this.value)"></textarea>
       </div>
     </div>
   </div>
 
-  <!-- Externe JavaScript-Datei -->
   <script src="app.js" defer></script>
 </body>
 </html>
