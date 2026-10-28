@@ -150,8 +150,8 @@ const portfolioData = {
   ],
   "labProjects": [
     {
-      "id": "proj-1793180194004",
-      "title": "Test",
+      "id": "proj-1793180375188",
+      "title": "TEST",
       "badges": [
         "test"
       ],
