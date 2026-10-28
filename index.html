@@ -21,14 +21,23 @@
     <button class="stage-dot active" id="dot-about" onclick="switchSection('about')" data-label="01 • About Me"></button>
     <button class="stage-dot" id="dot-origin" onclick="switchSection('origin')" data-label="02 • Who Am I"></button>
     <button class="stage-dot" id="dot-hero-projects" onclick="switchSection('hero-projects')" data-label="03 • Hero Project"></button>
-    <button class="stage-dot" id="dot-prototyping-lab" onclick="switchSection('prototyping-lab')" data-label="04 • Projects & Itch.io"></button>
+    <button class="stage-dot" id="dot-prototyping-lab" onclick="switchSection('prototyping-lab')" data-label="04 • Rapid Prototyping"></button>
   </div>
 
-  <!-- Floating Admin Status Pill (Invisible to regular visitors) -->
+  <!-- Floating Admin Bar (With Direct On-Page Text Edit Toggle & 1-Click GitHub Save) -->
   <div class="admin-status-bar admin-only">
-    <span>🔓 CMS Active</span>
-    <button class="pill-btn primary" style="padding:5px 12px; font-size:0.76rem;" onclick="toggleCMS()">⚙️ Open CMS</button>
-    <button class="pill-btn" style="padding:5px 10px; font-size:0.76rem;" onclick="lockAdminMode()">🔒 Lock</button>
+    <button class="pill-btn" id="inline-edit-toggle-btn" style="padding:5px 12px; font-size:0.76rem;" onclick="toggleInlineEditMode()">
+      ✏️ Live-Edit: ON
+    </button>
+    <button class="pill-btn primary" id="quick-save-gh-btn" style="padding:5px 12px; font-size:0.76rem;" onclick="publishDirectlyToGitHub()">
+      🚀 Save to GitHub
+    </button>
+    <button class="pill-btn" style="padding:5px 12px; font-size:0.76rem;" onclick="toggleCMS()">
+      ⚙️ Open CMS
+    </button>
+    <button class="pill-btn" style="padding:5px 10px; font-size:0.76rem;" onclick="lockAdminMode()">
+      🔒 Lock
+    </button>
   </div>
 
   <!-- STICKY NAVIGATION BAR -->
@@ -39,10 +48,10 @@
         <div class="brand-avatar" id="nav-avatar">JJ</div>
         <div>
           <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap;">
-            <span>Jan Jelle Klingberg</span>
-            <span class="phonetic-pill">aka JJampion</span>
+            <span id="brand-name-display" data-edit-ui="brandName">Jan Jelle Klingberg</span>
+            <span class="phonetic-pill" id="brand-alias-display" data-edit-ui="brandAlias">aka JJampion</span>
           </div>
-          <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;" id="nav-subrole">
+          <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;" id="nav-subrole" data-edit-ui="navSubrole">
             Junior Technical Game Designer
           </div>
         </div>
@@ -95,20 +104,20 @@
           <!-- 2. Name + aka JJampion + Phonetic -> Then Green Role Description -> Then Headline -->
           <div class="identity-center-block">
             <div class="name-phonetic-row">
-              <h1 class="hero-name-title">Jan Jelle Klingberg</h1>
-              <span class="phonetic-tag">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
+              <h1 class="hero-name-title" id="hero-main-name" data-edit-ui="heroName">Jan Jelle Klingberg</h1>
+              <span class="phonetic-tag" id="hero-phonetic-tag" data-edit-ui="heroPhonetic">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
             </div>
 
             <div class="status-badge">
               <span class="status-dot"></span>
-              <span id="hero-status-text">Junior Technical Game Designer • Creator of Nightoday Game Studio</span>
+              <span id="hero-status-text" data-edit-ui="heroStatus">Junior Technical Game Designer • Creator of Nightoday Game Studio</span>
             </div>
 
-            <p class="hero-subtitle gradient-text" id="hero-headline">
+            <p class="hero-subtitle gradient-text" id="hero-headline" data-edit-ui="heroHeadline">
               I don't just write concepts on paper — I ship playable systems & commercial games in record time.
             </p>
 
-            <p class="hero-lead-centered" id="hero-lead-text">
+            <p class="hero-lead-centered" id="hero-lead-text" data-edit-ui="heroLead">
               I love playing games, but I love building them even more. With active Unity experience since 2016, a formal education in Game Design & Game Production at the Games Academy, and self-published titles on Steam and Google Play under Nightoday Game Studio, I unite creative game design, rapid 3-hour prototyping, and solid technical execution.
             </p>
           </div>
@@ -117,70 +126,63 @@
           <div class="bio-facts-grid">
             <div class="bio-fact-card">
               <span class="bio-fact-icon">📍</span>
-              <div id="fact-location">
+              <div id="fact-location" data-edit-ui="factLocation" data-edit-html="true">
                 <strong>Location:</strong> 30 years old • Roth (Middle Franconia) & near Cham (Upper Palatinate).
               </div>
             </div>
             <div class="bio-fact-card">
               <span class="bio-fact-icon">🎓</span>
-              <div id="fact-edu">
+              <div id="fact-edu" data-edit-ui="factEdu" data-edit-html="true">
                 <strong>Education:</strong> Game Design & Game Production at Games Academy (2024–2026).
               </div>
             </div>
             <div class="bio-fact-card">
               <span class="bio-fact-icon">🌙</span>
-              <div id="fact-studio">
+              <div id="fact-studio" data-edit-ui="factStudio" data-edit-html="true">
                 <strong>Studio & Vision:</strong> <em>Nightoday Game Studio</em> • Fast Prototyping & Path to Lead Game Designer.
               </div>
             </div>
           </div>
 
-          <!-- 4. Key Metrics Row -->
+          <!-- 4. Key Metrics Row (Both Values & Labels are directly editable) -->
           <div class="hero-stats-row">
             <div class="stat-mini">
-              <div class="stat-mini-value">Since 2016</div>
-              <div class="stat-mini-label" id="stat-1-label">Active Unity License & C#</div>
+              <div class="stat-mini-value" id="stat-1-val" data-edit-ui="stat1Val">Since 2016</div>
+              <div class="stat-mini-label" id="stat-1-label" data-edit-ui="stat1">Active Unity License & C#</div>
             </div>
             <div class="stat-mini">
-              <div class="stat-mini-value">1st & 2x 2nd</div>
-              <div class="stat-mini-label" id="stat-2-label">Trijam (3-Hour Game Jam)</div>
+              <div class="stat-mini-value" id="stat-2-val" data-edit-ui="stat2Val">1st & 2x 2nd</div>
+              <div class="stat-mini-label" id="stat-2-label" data-edit-ui="stat2">Trijam (3-Hour Game Jam)</div>
             </div>
             <div class="stat-mini">
-              <div class="stat-mini-value">Steam & Play</div>
-              <div class="stat-mini-label" id="stat-3-label">Self-Published Store Pipelines</div>
+              <div class="stat-mini-value" id="stat-3-val" data-edit-ui="stat3Val">Steam & Play</div>
+              <div class="stat-mini-label" id="stat-3-label" data-edit-ui="stat3">Self-Published Store Pipelines</div>
             </div>
             <div class="stat-mini">
-              <div class="stat-mini-value">20+ Langs</div>
-              <div class="stat-mini-label" id="stat-4-label">Custom Tooling & Localization</div>
+              <div class="stat-mini-value" id="stat-4-val" data-edit-ui="stat4Val">20+ Langs</div>
+              <div class="stat-mini-label" id="stat-4-label" data-edit-ui="stat4">Custom Tooling & Localization</div>
             </div>
           </div>
 
-          <!-- 5. Core Tech Pills -->
-          <div class="skill-pills-centered">
-            <span class="skill-pill">Unity (Since 2016)</span>
-            <span class="skill-pill">C# & Reverse Engineering</span>
-            <span class="skill-pill">GameMaker / Godot / Unreal</span>
-            <span class="skill-pill">Single-File HTML5</span>
-            <span class="skill-pill">Steamworks SDK</span>
-            <span class="skill-pill">Android Studio & Play SDK</span>
-          </div>
+          <!-- 5. Core Tech Pills (Rendered dynamically from portfolioData.skillPills) -->
+          <div class="skill-pills-centered" id="skill-pills-container"></div>
 
           <!-- 6. Action Buttons -->
           <div class="hero-cta-row-centered">
-            <a href="https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/" target="_blank" rel="noopener" class="pill-btn primary">
-              🎮 <span id="cta-steam">Grimoire Garden on Steam</span>
+            <a href="https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/" id="link-steam-btn" target="_blank" rel="noopener" class="pill-btn primary">
+              🎮 <span id="cta-steam" data-edit-ui="ctaSteam">Grimoire Garden on Steam</span>
             </a>
-            <a href="https://jjampion.itch.io/" target="_blank" rel="noopener" class="pill-btn">
-              🕹️ <span id="cta-itch">All Projects on itch.io</span>
+            <a href="https://jjampion.itch.io/" id="link-itch-btn" target="_blank" rel="noopener" class="pill-btn">
+              🕹️ <span id="cta-itch" data-edit-ui="ctaItch">All Projects on itch.io</span>
             </a>
-            <a href="https://play.google.com/store/apps/details?id=gg.nightodaygamestudio.mc&hl=de" target="_blank" rel="noopener" class="pill-btn">
-              📱 <span id="cta-play">Google Play Store</span>
+            <a href="https://play.google.com/store/apps/details?id=gg.nightodaygamestudio.mc&hl=de" id="link-play-btn" target="_blank" rel="noopener" class="pill-btn">
+              📱 <span id="cta-play" data-edit-ui="ctaPlay">Google Play Store</span>
             </a>
             <button class="pill-btn" onclick="switchSection('origin')">
-              📖 <span id="cta-origin-btn">Read My Origin Story →</span>
+              📖 <span id="cta-origin-btn" data-edit-ui="ctaOriginBtn">Read My Origin Story →</span>
             </button>
-            <a href="mailto:contact@janjelle.dev" class="pill-btn">
-              ✉️ <span id="cta-mail">contact@janjelle.dev</span>
+            <a href="mailto:contact@janjelle.dev" id="link-mail-btn" class="pill-btn">
+              ✉️ <span id="cta-mail" data-edit-ui="ctaMail">contact@janjelle.dev</span>
             </a>
           </div>
 
@@ -188,29 +190,29 @@
       </div>
     </section>
 
-    <!-- STAGE 02: DEDICATED "WHO AM I" & NIGHTODAY ORIGIN STORY (CRISP TEXT) -->
+    <!-- STAGE 02: DEDICATED "WHO AM I" & NIGHTODAY ORIGIN STORY (DIRECTLY EDITABLE) -->
     <section class="stage-section" id="origin">
       <div class="origin-stage-card liquid-glass hover-lift">
         <div class="origin-header">
           <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
-            <span class="badge highlight" id="story-badge">02 • Who Am I & Personal Origin</span>
-            <span class="phonetic-tag">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
+            <span class="badge highlight" id="story-badge" data-edit-ui="storyBadge">02 • Who Am I & Personal Origin</span>
+            <span class="phonetic-tag" id="story-phonetic-tag" data-edit-ui="heroPhonetic">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
           </div>
-          <h2 class="section-title" id="story-heading">
+          <h2 class="section-title" id="story-heading" data-edit-ui="storyHeading">
             From Reverse Engineering & Skyrim to Nightoday Game Studio
           </h2>
         </div>
 
         <div class="origin-story-body" id="story-paragraphs">
-          <!-- Populated dynamically in EN or DE via app.js -->
+          <!-- Populated dynamically in EN or DE via app.js (Each paragraph is directly editable!) -->
         </div>
 
         <div class="origin-footer-row">
           <button class="pill-btn" onclick="switchSection('about')">
-            ← <span id="back-about-btn">Back to Overview</span>
+            ← <span id="back-about-btn" data-edit-ui="backAboutBtn">Back to Overview</span>
           </button>
           <button class="pill-btn primary" onclick="switchSection('hero-projects')">
-            🚀 <span id="next-projects-btn">View Hero Project →</span>
+            🚀 <span id="next-projects-btn" data-edit-ui="nextProjectsBtn">View Hero Project →</span>
           </button>
         </div>
       </div>
@@ -220,13 +222,13 @@
     <section class="stage-section" id="hero-projects">
       <div class="section-header centered-header">
         <div>
-          <div class="section-eyebrow" id="projects-eyebrow">03 • Flagship Steam Release</div>
-          <h2 class="section-title" id="projects-heading">Hero Project Spotlight</h2>
+          <div class="section-eyebrow" id="projects-eyebrow" data-edit-ui="projectsEyebrow">03 • Flagship Steam Release</div>
+          <h2 class="section-title" id="projects-heading" data-edit-ui="projectsHeading">Hero Project Spotlight</h2>
         </div>
       </div>
 
       <div class="hero-project-centered-wrapper" id="hero-projects-container">
-        <!-- Populated dynamically via app.js -->
+        <!-- Populated dynamically via app.js (All texts & highlights directly editable!) -->
       </div>
     </section>
 
@@ -234,15 +236,15 @@
     <section class="stage-section" id="prototyping-lab">
       <div class="section-header">
         <div>
-          <div class="section-eyebrow" id="lab-eyebrow">04 • Game Jams, Mobile & Web Architecture</div>
-          <h2 class="section-title" id="lab-heading">Projects & Rapid Prototyping Showcase</h2>
+          <div class="section-eyebrow" id="lab-eyebrow" data-edit-ui="labEyebrow">04 • Game Jams, Mobile & Web Architecture</div>
+          <h2 class="section-title" id="lab-heading" data-edit-ui="labHeading">Projects & Rapid Prototyping Showcase</h2>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
           <button class="pill-btn primary admin-only" onclick="toggleCMS()">
-            ➕ <span id="add-project-top-btn">Manage Projects</span>
+            ➕ <span id="add-project-top-btn" data-edit-ui="addProjectBtn">Manage Projects</span>
           </button>
-          <a href="https://jjampion.itch.io/" target="_blank" rel="noopener" class="pill-btn">
-            🔗 <span id="visit-itch-label">Visit jjampion.itch.io</span>
+          <a href="https://jjampion.itch.io/" id="visit-itch-link" target="_blank" rel="noopener" class="pill-btn">
+            🔗 <span id="visit-itch-label" data-edit-ui="visitItch">Visit jjampion.itch.io</span>
           </a>
         </div>
       </div>
@@ -255,11 +257,11 @@
   </main>
 
   <!-- ==========================================================================
-       FOOTER
+       FOOTER (DIRECTLY EDITABLE)
        ========================================================================== -->
   <footer>
     <div class="container">
-      <p id="footer-text">© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved.</p>
+      <p id="footer-text" data-edit-ui="footerText">© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved.</p>
     </div>
   </footer>
 
@@ -271,7 +273,7 @@
       <div style="font-size:1.8rem;">🔐</div>
       <h3 style="font-size:1.15rem; font-weight:800;">CMS Unlock</h3>
       <p style="font-size:0.82rem; color:var(--text-secondary);">
-        Enter your admin PIN to unlock portfolio management.
+        Enter your admin PIN to unlock live on-page editing & portfolio management.
       </p>
       <input type="password" class="cms-input" id="admin-pin-input" placeholder="Enter PIN" style="text-align:center; font-size:1rem; letter-spacing:0.15em;" onkeydown="if(event.key==='Enter') verifyAdminPin()" />
       <div id="pin-error-msg" style="font-size:0.76rem; color:#f43f5e; font-weight:700; display:none;">Incorrect PIN.</div>
@@ -283,7 +285,7 @@
   </div>
 
   <!-- ==========================================================================
-       INTEGRATED CMS STUDIO DRAWER
+       INTEGRATED CMS STUDIO DRAWER (FULL NO-CODE CONTROL)
        ========================================================================== -->
   <div class="cms-drawer-backdrop" id="cms-backdrop">
     <div class="cms-drawer">
@@ -292,11 +294,15 @@
         <button class="pill-btn" onclick="toggleCMS()">✕ Close</button>
       </div>
 
+      <div style="padding:10px 14px; border-radius:10px; background:rgba(52, 211, 153, 0.12); border:1px solid rgba(52, 211, 153, 0.35); font-size:0.78rem; color:var(--text-secondary);">
+        💡 <strong>Tip:</strong> When unlocked, you can click directly on <strong>any text on the webpage</strong> to rewrite it in the active language (EN or DE), then click <strong>Publish to GitHub</strong> below!
+      </div>
+
       <!-- 1. Repository Deployment -->
       <div class="cms-group">
         <label style="color: var(--accent-success);">1. Repository Deployment (GitHub API)</label>
         <p style="font-size:0.75rem; color:var(--text-muted);">
-          Uploads new images directly into the <code>assets/</code> folder of your repository and updates <code>app.js</code>.
+          Saves all text edits, projects, and uploaded images directly into your GitHub repository.
         </p>
         <input type="text" class="cms-input" id="gh-repo" placeholder="nightodaygamestudio/portfolio" value="nightodaygamestudio/portfolio" />
         <input type="text" class="cms-input" id="gh-branch" placeholder="Branch (e.g. main)" value="main" />
@@ -312,30 +318,52 @@
         <div id="gh-status-msg" style="font-size:0.76rem; font-family:var(--font-mono); color:var(--accent-primary);"></div>
       </div>
 
-      <!-- 2. Portrait Image Upload (Real file upload to assets/) -->
+      <!-- 2. Portrait Image, Skill Pills & Profile Links -->
       <div class="cms-group">
-        <label>2. Personal Portrait Photo (Uploads to <code>assets/</code> in Repo)</label>
-        <input type="text" class="cms-input" id="cms-portrait-url" placeholder="assets/portrait.jpg or https://..." oninput="updatePortraitFromInput(this.value)" />
-        <div style="display:flex; gap:8px; align-items:center; margin-top:4px; flex-wrap:wrap;">
-          <input type="file" id="cms-portrait-file" accept="image/*" style="font-size:0.78rem; max-width:240px;" onchange="handlePortraitFileUpload(event)" />
+        <label>2. Portrait Photo, Skills & Profile URLs</label>
+        <label>Portrait Photo (Uploads to <code>assets/</code>):</label>
+        <input type="text" class="cms-input" id="cms-portrait-url" placeholder="assets/portrait.jpg" oninput="updatePortraitFromInput(this.value)" />
+        <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+          <input type="file" id="cms-portrait-file" accept="image/*" style="font-size:0.76rem; max-width:240px;" onchange="handlePortraitFileUpload(event)" />
           <button class="pill-btn" onclick="updatePortraitFromInput('')">Reset</button>
         </div>
-        <div id="portrait-upload-hint" style="font-size:0.73rem; color:var(--text-muted);"></div>
+        <div id="portrait-upload-hint" style="font-size:0.73rem; color:var(--accent-success);"></div>
+
+        <label>Skill Pills (Comma-separated):</label>
+        <input type="text" class="cms-input" id="cms-skill-pills" placeholder="Unity (Since 2016), C#, ..." oninput="updateSkillPillsFromCMS(this.value)" />
+
+        <label>External Profile Links (Steam, Itch.io, Google Play, Email):</label>
+        <input type="text" class="cms-input" id="cms-link-steam" placeholder="Steam URL" oninput="updateLinksFromCMS()" />
+        <input type="text" class="cms-input" id="cms-link-itch" placeholder="Itch.io URL" oninput="updateLinksFromCMS()" />
+        <input type="text" class="cms-input" id="cms-link-play" placeholder="Google Play URL" oninput="updateLinksFromCMS()" />
+        <input type="text" class="cms-input" id="cms-link-email" placeholder="mailto:contact@janjelle.dev" oninput="updateLinksFromCMS()" />
       </div>
 
-      <!-- 3. Unlimited Projects Tile Manager (Add / Edit / Reorder / Delete) -->
+      <!-- 3. Stage 03: Hero Project Editor -->
       <div class="cms-group">
-        <label>3. Projects & Itch.io Tiles Manager (<span id="cms-projects-count">0</span> Projects)</label>
-        <p style="font-size:0.75rem; color:var(--text-muted);">
-          Click <strong>Edit</strong> on any project below to modify it, or fill out the form to add a new project tile.
-        </p>
+        <label>3. Hero Project Editor (Stage 03 Spotlight)</label>
+        <input type="text" class="cms-input" id="cms-hero-title" placeholder="Hero Project Title" />
+        <input type="text" class="cms-input" id="cms-hero-badges" placeholder="Badges (comma-separated)" />
+        <input type="text" class="cms-input" id="cms-hero-steam-id" placeholder="Steam App ID (e.g. 4560080)" />
+        <input type="text" class="cms-input" id="cms-hero-img" placeholder="Hero Cover Image URL or assets/..." />
+        <input type="file" id="cms-hero-img-file" accept="image/*" style="font-size:0.76rem;" onchange="handleHeroImageFileUpload(event)" />
+        <label>Hero Pitch (Current Language: <span id="cms-hero-lang-indicator">EN</span>):</label>
+        <textarea class="cms-textarea" id="cms-hero-pitch" style="min-height:56px;"></textarea>
+        <label>Game Design Highlights (One bullet point per line):</label>
+        <textarea class="cms-textarea" id="cms-hero-design" style="min-height:76px;"></textarea>
+        <label>Technical Highlights (One bullet point per line):</label>
+        <textarea class="cms-textarea" id="cms-hero-tech" style="min-height:76px;"></textarea>
+        <button class="pill-btn primary" onclick="saveHeroProjectFromCMS()">💾 Apply Hero Project Changes</button>
+      </div>
 
-        <!-- Live List of All Projects -->
+      <!-- 4. Stage 04: Unlimited Projects & Itch.io Tile Manager -->
+      <div class="cms-group">
+        <label>4. Projects & Itch.io Tiles Manager (<span id="cms-projects-count">0</span> Tiles)</label>
         <div class="cms-project-list" id="cms-project-list"></div>
 
         <hr style="border:none; border-top:1px solid var(--glass-border); margin:6px 0;" />
 
-        <label id="cms-form-mode-label" style="color:var(--accent-primary);">➕ Add New Project Tile</label>
+        <label id="cms-form-mode-label" style="color:var(--accent-secondary);">➕ Add New Project Tile</label>
         <input type="hidden" id="edit-proj-id" value="" />
         <input type="text" class="cms-input" id="new-proj-title" placeholder="Game Title (e.g. Core Dump)" />
         <input type="text" class="cms-input" id="new-proj-badges" placeholder="Badges comma-separated (e.g. 🏆 1st Place Trijam, Unity, WebGL)" />
@@ -360,9 +388,19 @@
         </div>
       </div>
 
-      <!-- 4. Security: Change Admin PIN (Stored as SHA-256 Hash) -->
+      <!-- 5. Stage 02: Who Am I Story Paragraphs Editor -->
       <div class="cms-group">
-        <label>4. Change Admin PIN (SHA-256 Encrypted)</label>
+        <label>5. "Who Am I" Origin Story Editor (Active Language: <span id="cms-story-lang-indicator">EN</span>)</label>
+        <p style="font-size:0.73rem; color:var(--text-muted);">
+          Separate paragraphs with a blank line (HTML tags like <code>&lt;strong&gt;</code> or <code>&lt;em&gt;</code> are supported).
+        </p>
+        <textarea class="cms-textarea" id="cms-origin-story-textarea" style="min-height:140px;"></textarea>
+        <button class="pill-btn" onclick="saveOriginStoryFromCMS()">💾 Update Origin Story Text</button>
+      </div>
+
+      <!-- 6. Security: Change Admin PIN (Stored as SHA-256 Hash) -->
+      <div class="cms-group">
+        <label>6. Change Admin PIN (SHA-256 Encrypted)</label>
         <div style="display:flex; gap:8px;">
           <input type="password" class="cms-input" id="cms-new-pin" placeholder="New PIN / Password" />
           <button class="pill-btn" onclick="updateAdminPinHash()">Set Hash</button>
@@ -370,9 +408,9 @@
         <div id="pin-hash-status" style="font-size:0.74rem; color:var(--accent-success);"></div>
       </div>
 
-      <!-- 5. Custom CSS -->
+      <!-- 7. Custom CSS -->
       <div class="cms-group">
-        <label>5. Custom CSS Override</label>
+        <label>7. Custom CSS Override</label>
         <textarea class="cms-textarea" id="cms-custom-css" placeholder="/* Add custom CSS rules here */" oninput="applyCustomCSS(this.value)"></textarea>
       </div>
     </div>
