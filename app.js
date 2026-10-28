@@ -1,14 +1,128 @@
 /* ==========================================================================
-   JAN JELLE KLINGBERG (aka JJAMPION) — PORTFOLIO & CMS CONTROLLER (app.js)
+   JAN JELLE KLINGBERG (aka JJAMPION) — FULL LIVE-EDIT CMS CONTROLLER (app.js)
    ========================================================================== */
 
+// === PORTFOLIO_DATA_START ===
 const portfolioData = {
   defaultLang: "en",
   defaultTheme: "dark",
   portraitImageUrl: "assets/portrait.jpg",
-  // Stores custom SHA-256 hash when set via CMS (no plaintext password in code)
   adminPinHash: "",
   customCSS: "",
+
+  links: {
+    steam: "https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/",
+    itch: "https://jjampion.itch.io/",
+    play: "https://play.google.com/store/apps/details?id=gg.nightodaygamestudio.mc&hl=de",
+    email: "mailto:contact@janjelle.dev"
+  },
+
+  skillPills: [
+    "Unity (Since 2016)",
+    "C# & Reverse Engineering",
+    "GameMaker / Godot / Unreal",
+    "Single-File HTML5",
+    "Steamworks SDK",
+    "Android Studio & Play SDK"
+  ],
+
+  // All UI Strings (EN & DE) are stored inside portfolioData so every single word is editable & saved!
+  ui: {
+    en: {
+      brandName: "Jan Jelle Klingberg",
+      brandAlias: "aka JJampion",
+      navSubrole: "Junior Technical Game Designer",
+      navAbout: "About Me",
+      navOrigin: "Who Am I",
+      navProjects: "Hero Project",
+      navLab: "Rapid Prototyping",
+      heroName: "Jan Jelle Klingberg",
+      heroPhonetic: "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /",
+      heroStatus: "Junior Technical Game Designer • Creator of Nightoday Game Studio",
+      heroHeadline: "I don't just write concepts on paper — I ship playable systems & commercial games in record time.",
+      heroLead: "I love playing games, but I love building them even more. With active Unity experience since 2016, a formal education in Game Design & Game Production at the Games Academy, and self-published titles on Steam and Google Play under Nightoday Game Studio, I unite creative game design, rapid 3-hour prototyping, and solid technical execution.",
+      factLocation: "<strong>Location:</strong> 30 years old • Roth (Middle Franconia) & near Cham (Upper Palatinate).",
+      factEdu: "<strong>Education:</strong> Game Design & Game Production at Games Academy (2024–2026).",
+      factStudio: "<strong>Studio & Vision:</strong> <em>Nightoday Game Studio</em> • Fast Prototyping & Path to Lead Game Designer.",
+      stat1Val: "Since 2016",
+      stat1: "Active Unity License & C#",
+      stat2Val: "1st & 2x 2nd",
+      stat2: "Trijam (3-Hour Game Jam)",
+      stat3Val: "Steam & Play",
+      stat3: "Self-Published Store Pipelines",
+      stat4Val: "20+ Langs",
+      stat4: "Custom Tooling & Localization",
+      ctaSteam: "Grimoire Garden on Steam",
+      ctaItch: "All Projects on itch.io",
+      ctaPlay: "Google Play Store",
+      ctaOriginBtn: "Read My Origin Story →",
+      ctaMail: "contact@janjelle.dev",
+      portraitRoleTag: "aka JJampion",
+      portraitBtn: "📷 Photo",
+      storyBadge: "02 • Who Am I & Personal Origin",
+      storyHeading: "From Reverse Engineering & Skyrim to Nightoday Game Studio",
+      backAboutBtn: "Back to Overview",
+      nextProjectsBtn: "View Hero Project →",
+      projectsEyebrow: "03 • Flagship Steam Release",
+      projectsHeading: "Hero Project Spotlight",
+      addProjectBtn: "Manage Projects",
+      designHeader: "🎯 Game Design & Player Experience",
+      techHeader: "⚙️ Technical Design & Production",
+      steamWidgetLabel: "Available on Steam • Grimoire Garden: A Taskbar Tale",
+      itchOpenBtn: "Play / View Project ↗",
+      labEyebrow: "04 • Game Jams, Mobile & Web Architecture",
+      labHeading: "Projects & Rapid Prototyping Showcase",
+      visitItch: "Visit jjampion.itch.io",
+      footerText: "© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved."
+    },
+    de: {
+      brandName: "Jan Jelle Klingberg",
+      brandAlias: "aka JJampion",
+      navSubrole: "Junior Technical Game Designer",
+      navAbout: "Über Mich",
+      navOrigin: "Wer ich bin",
+      navProjects: "Hero-Projekt",
+      navLab: "Rapid Prototyping",
+      heroName: "Jan Jelle Klingberg",
+      heroPhonetic: "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /",
+      heroStatus: "Junior Technical Game Designer • Creator von Nightoday Game Studio",
+      heroHeadline: "Ich baue nicht nur Konzepte auf Papier — ich liefere spielbare Systeme & fertige Releases in Rekordzeit.",
+      heroLead: "Ich liebe es, Spiele zu spielen – aber noch mehr liebe ich es, sie zu entwickeln. Mit aktiver Unity-Erfahrung seit 2016, meiner Ausbildung in Game Design & Game Production an der Games Academy sowie eigenen Releases auf Steam und im Google Play Store unter Nightoday Game Studio verbinde ich kreatives Game Design, 3-Stunden-Prototyping und saubere technische Umsetzung.",
+      factLocation: "<strong>Standort:</strong> 30 Jahre alt • Roth (Mittelfranken) & Raum Cham (Oberpfalz).",
+      factEdu: "<strong>Ausbildung:</strong> Game Design & Game Production an der Games Academy (2024–2026).",
+      factStudio: "<strong>Studio & Ziel:</strong> <em>Nightoday Game Studio</em> • Fast Prototyping & Weg zum Lead Game Designer.",
+      stat1Val: "Seit 2016",
+      stat1: "Aktive Unity-Lizenz & C#",
+      stat2Val: "1. & 2x 2.",
+      stat2: "Trijam (3-Stunden Game Jam)",
+      stat3Val: "Steam & Play",
+      stat3: "Eigene Steam & Play Releases",
+      stat4Val: "20+ Sprachen",
+      stat4: "Eigenes Localization-System",
+      ctaSteam: "Grimoire Garden auf Steam",
+      ctaItch: "Alle Projekte auf itch.io",
+      ctaPlay: "Google Play Store",
+      ctaOriginBtn: "Meine Story lesen →",
+      ctaMail: "contact@janjelle.dev",
+      portraitRoleTag: "aka JJampion",
+      portraitBtn: "📷 Foto",
+      storyBadge: "02 • Wer ich bin & Meine Geschichte",
+      storyHeading: "Vom Reverse Engineering & Skyrim zum Nightoday Game Studio",
+      backAboutBtn: "Zurück zur Übersicht",
+      nextProjectsBtn: "Zum Hero-Projekt →",
+      projectsEyebrow: "03 • Flaggschiff Steam-Release",
+      projectsHeading: "Hero-Projekt im Fokus",
+      addProjectBtn: "Projekte verwalten",
+      designHeader: "🎯 Game Design & Spielerlebnis",
+      techHeader: "⚙️ Technical Design & Production",
+      steamWidgetLabel: "Auf Steam verfügbar • Grimoire Garden: A Taskbar Tale",
+      itchOpenBtn: "Projekt ansehen / spielen ↗",
+      labEyebrow: "04 • Game Jams, Mobile & Web Architektur",
+      labHeading: "Projekte & Rapid Prototyping Showcase",
+      visitItch: "Zu jjampion.itch.io",
+      footerText: "© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved."
+    }
+  },
 
   originStory: {
     en: [
@@ -27,7 +141,6 @@ const portfolioData = {
     ]
   },
 
-  // Stage 03: Single Middle-Centered Flagship Hero Project
   heroProjects: [
     {
       id: "grimoire-garden",
@@ -66,7 +179,6 @@ const portfolioData = {
     }
   ],
 
-  // Stage 04: Unlimited Projects & Prototyping Tile Grid
   labProjects: [
     {
       id: "core-dump",
@@ -130,92 +242,16 @@ const portfolioData = {
     }
   ]
 };
-
-const uiStrings = {
-  en: {
-    navSubrole: "Junior Technical Game Designer",
-    navAbout: "About Me",
-    navOrigin: "Who Am I",
-    navProjects: "Hero Project",
-    navLab: "Rapid Prototyping",
-    heroStatus: "Junior Technical Game Designer • Creator of Nightoday Game Studio",
-    heroHeadline: "I don't just write concepts on paper — I ship playable systems & commercial games in record time.",
-    heroLead: "I love playing games, but I love building them even more. With active Unity experience since 2016, a formal education in Game Design & Game Production at the Games Academy, and self-published titles on Steam and Google Play under Nightoday Game Studio, I unite creative game design, rapid 3-hour prototyping, and solid technical execution.",
-    factLocation: "<strong>Location:</strong> 30 years old • Roth (Middle Franconia) & near Cham (Upper Palatinate).",
-    factEdu: "<strong>Education:</strong> Game Design & Game Production at Games Academy (2024–2026).",
-    factStudio: "<strong>Studio & Vision:</strong> <em>Nightoday Game Studio</em> • Fast Prototyping & Path to Lead Game Designer.",
-    stat1: "Active Unity License & C#",
-    stat2: "Trijam (3-Hour Game Jam)",
-    stat3: "Self-Published Store Pipelines",
-    stat4: "Custom Tooling & Localization",
-    ctaSteam: "Grimoire Garden on Steam",
-    ctaItch: "All Projects on itch.io",
-    ctaPlay: "Google Play Store",
-    ctaOriginBtn: "Read My Origin Story →",
-    portraitRoleTag: "aka JJampion",
-    portraitBtn: "📷 Photo",
-    storyBadge: "02 • Who Am I & Personal Origin",
-    storyHeading: "From Reverse Engineering & Skyrim to Nightoday Game Studio",
-    backAboutBtn: "Back to Overview",
-    nextProjectsBtn: "View Hero Project →",
-    projectsEyebrow: "03 • Flagship Steam Release",
-    projectsHeading: "Hero Project Spotlight",
-    addProjectBtn: "Manage Projects",
-    designHeader: "🎯 Game Design & Player Experience",
-    techHeader: "⚙️ Technical Design & Production",
-    steamWidgetLabel: "Available on Steam • Grimoire Garden: A Taskbar Tale",
-    itchOpenBtn: "Play / View Project ↗",
-    labEyebrow: "04 • Game Jams, Mobile & Web Architecture",
-    labHeading: "Projects & Rapid Prototyping Showcase",
-    visitItch: "Visit jjampion.itch.io"
-  },
-  de: {
-    navSubrole: "Junior Technical Game Designer",
-    navAbout: "Über Mich",
-    navOrigin: "Wer ich bin",
-    navProjects: "Hero-Projekt",
-    navLab: "Rapid Prototyping",
-    heroStatus: "Junior Technical Game Designer • Creator von Nightoday Game Studio",
-    heroHeadline: "Ich baue nicht nur Konzepte auf Papier — ich liefere spielbare Systeme & fertige Releases in Rekordzeit.",
-    heroLead: "Ich liebe es, Spiele zu spielen – aber noch mehr liebe ich es, sie zu entwickeln. Mit aktiver Unity-Erfahrung seit 2016, meiner Ausbildung in Game Design & Game Production an der Games Academy sowie eigenen Releases auf Steam und im Google Play Store unter Nightoday Game Studio verbinde ich kreatives Game Design, 3-Stunden-Prototyping und saubere technische Umsetzung.",
-    factLocation: "<strong>Standort:</strong> 30 Jahre alt • Roth (Mittelfranken) & Raum Cham (Oberpfalz).",
-    factEdu: "<strong>Ausbildung:</strong> Game Design & Game Production an der Games Academy (2024–2026).",
-    factStudio: "<strong>Studio & Ziel:</strong> <em>Nightoday Game Studio</em> • Fast Prototyping & Weg zum Lead Game Designer.",
-    stat1: "Aktive Unity-Lizenz & C#",
-    stat2: "Trijam (3-Stunden Game Jam)",
-    stat3: "Eigene Steam & Play Releases",
-    stat4: "Eigenes Localization-System",
-    ctaSteam: "Grimoire Garden auf Steam",
-    ctaItch: "Alle Projekte auf itch.io",
-    ctaPlay: "Google Play Store",
-    ctaOriginBtn: "Meine Story lesen →",
-    portraitRoleTag: "aka JJampion",
-    portraitBtn: "📷 Foto",
-    storyBadge: "02 • Wer ich bin & Meine Geschichte",
-    storyHeading: "Vom Reverse Engineering & Skyrim zum Nightoday Game Studio",
-    backAboutBtn: "Zurück zur Übersicht",
-    nextProjectsBtn: "Zum Hero-Projekt →",
-    projectsEyebrow: "03 • Flaggschiff Steam-Release",
-    projectsHeading: "Hero-Projekt im Fokus",
-    addProjectBtn: "Projekte verwalten",
-    designHeader: "🎯 Game Design & Spielerlebnis",
-    techHeader: "⚙️ Technical Design & Production",
-    steamWidgetLabel: "Auf Steam verfügbar • Grimoire Garden: A Taskbar Tale",
-    itchOpenBtn: "Projekt ansehen / spielen ↗",
-    labEyebrow: "04 • Game Jams, Mobile & Web Architektur",
-    labHeading: "Projekte & Rapid Prototyping Showcase",
-    visitItch: "Zu jjampion.itch.io"
-  }
-};
+// === PORTFOLIO_DATA_END ===
 
 const stageOrder = ["about", "origin", "hero-projects", "prototyping-lab"];
 let currentLang = portfolioData.defaultLang || "en";
 let currentTheme = portfolioData.defaultTheme || "dark";
 let currentSection = "about";
 let isAdminUnlocked = false;
+let isInlineEditActive = true;
 let isStageTransitioning = false;
 
-// Queue for real binary image files to upload to GitHub repo's assets/ folder
 let pendingRepoFiles = {};
 let localPreviewBlobUrls = {};
 
@@ -319,7 +355,7 @@ window.addEventListener("touchend", (e) => {
 }, { passive: true });
 
 /* ==========================================================================
-   2. SHA-256 CMS UNLOCK LOGIC (NO PLAINTEXT PIN IN SOURCE CODE)
+   2. SHA-256 CMS UNLOCK & DIRECT ON-PAGE LIVE TEXT EDITING
    ========================================================================== */
 let logoClickCount = 0;
 let logoClickTimer = null;
@@ -342,8 +378,9 @@ window.addEventListener("keydown", (e) => {
     return;
   }
 
-  const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : "";
-  if (["input", "textarea", "select"].includes(activeTag)) return;
+  const activeEl = document.activeElement;
+  const activeTag = activeEl ? activeEl.tagName.toLowerCase() : "";
+  if (["input", "textarea", "select"].includes(activeTag) || (activeEl && activeEl.isContentEditable)) return;
 
   if (e.key === "PageDown") {
     e.preventDefault();
@@ -394,8 +431,10 @@ async function verifyAdminPin() {
 
   if (isMatch) {
     isAdminUnlocked = true;
-    document.body.classList.add("admin-unlocked");
+    isInlineEditActive = true;
+    document.body.classList.add("admin-unlocked", "inline-edit-active");
     closePinModal();
+    applyInlineEditability();
     openCMSDrawerDirectly();
   } else {
     document.getElementById("pin-error-msg").style.display = "block";
@@ -416,12 +455,73 @@ async function updateAdminPinHash() {
 
 function lockAdminMode() {
   isAdminUnlocked = false;
-  document.body.classList.remove("admin-unlocked");
+  document.body.classList.remove("admin-unlocked", "inline-edit-active");
   document.getElementById("cms-backdrop").classList.remove("open");
+  applyInlineEditability();
+}
+
+function toggleInlineEditMode() {
+  if (!isAdminUnlocked) return;
+  isInlineEditActive = !isInlineEditActive;
+  document.body.classList.toggle("inline-edit-active", isInlineEditActive);
+  const btn = document.getElementById("inline-edit-toggle-btn");
+  if (btn) {
+    btn.textContent = isInlineEditActive ? "✏️ Live-Edit: ON" : "✏️ Live-Edit: OFF";
+  }
+  applyInlineEditability();
+}
+
+function markUnsavedIndicator() {
+  const saveBtn = document.getElementById("quick-save-gh-btn");
+  if (saveBtn) {
+    saveBtn.innerHTML = "🚀 Save Changes to GitHub *";
+  }
+}
+
+// Activates contenteditable on all page elements when Admin + Live-Edit is ON
+function applyInlineEditability() {
+  const canEdit = isAdminUnlocked && isInlineEditActive;
+
+  // 1. Standard UI Strings ([data-edit-ui])
+  document.querySelectorAll("[data-edit-ui]").forEach(el => {
+    if (canEdit) {
+      el.setAttribute("contenteditable", "true");
+      el.setAttribute("spellcheck", "false");
+      if (!el.dataset.boundInline) {
+        el.dataset.boundInline = "true";
+        el.addEventListener("click", (e) => {
+          // Prevent parent link/button navigation while editing text in admin mode
+          if (isAdminUnlocked && isInlineEditActive && el.closest("a")) {
+            e.preventDefault();
+          }
+        });
+        el.addEventListener("blur", () => {
+          const key = el.getAttribute("data-edit-ui");
+          const useHtml = el.getAttribute("data-edit-html") === "true";
+          if (portfolioData.ui && portfolioData.ui[currentLang]) {
+            portfolioData.ui[currentLang][key] = useHtml ? el.innerHTML.trim() : el.textContent.trim();
+            markUnsavedIndicator();
+          }
+        });
+      }
+    } else {
+      el.removeAttribute("contenteditable");
+    }
+  });
+
+  // 2. Dynamic Elements (Origin Story paragraphs, Skill Pills, Hero Project & Lab Tiles)
+  document.querySelectorAll("[data-edit-dynamic]").forEach(el => {
+    if (canEdit) {
+      el.setAttribute("contenteditable", "true");
+      el.setAttribute("spellcheck", "false");
+    } else {
+      el.removeAttribute("contenteditable");
+    }
+  });
 }
 
 /* ==========================================================================
-   3. AMBIENT SPOTLIGHT TRACKING (CRISP 2D — NO BLURRY 3D FONT ROTATION)
+   3. AMBIENT SPOTLIGHT TRACKING
    ========================================================================== */
 let rafPending = false;
 window.addEventListener("pointermove", (e) => {
@@ -462,7 +562,12 @@ function setLanguage(lang) {
   document.getElementById("lang-en-btn").classList.toggle("active", lang === "en");
   document.getElementById("lang-de-btn").classList.toggle("active", lang === "de");
 
-  triggerMorphAnimation("about-morph-box", () => renderAll());
+  triggerMorphAnimation("about-morph-box", () => {
+    renderAll();
+    if (document.getElementById("cms-backdrop").classList.contains("open")) {
+      populateCMSEditors();
+    }
+  });
 }
 
 function toggleTheme() {
@@ -485,42 +590,76 @@ function applyTheme() {
 }
 
 /* ==========================================================================
-   5. RENDER FUNCTIONS
+   5. RENDER FUNCTIONS (WITH FULL INLINE EDIT BINDINGS)
    ========================================================================== */
 function renderHeroStrings() {
-  const t = uiStrings[currentLang];
+  const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
+
+  // Navigation & Brand
+  document.getElementById("brand-name-display").textContent = t.brandName || "Jan Jelle Klingberg";
+  document.getElementById("brand-alias-display").textContent = t.brandAlias || "aka JJampion";
   document.getElementById("nav-subrole").textContent = t.navSubrole;
   document.getElementById("nav-about").textContent = t.navAbout;
   document.getElementById("nav-origin").textContent = t.navOrigin;
   document.getElementById("nav-projects").textContent = t.navProjects;
   document.getElementById("nav-lab").textContent = t.navLab;
 
+  // Stage 01: Identity & Pitch
+  document.getElementById("hero-main-name").textContent = t.heroName || "Jan Jelle Klingberg";
+  document.getElementById("hero-phonetic-tag").textContent = t.heroPhonetic || "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /";
+  document.getElementById("story-phonetic-tag").textContent = t.heroPhonetic || "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /";
   document.getElementById("hero-status-text").textContent = t.heroStatus;
   document.getElementById("hero-headline").textContent = t.heroHeadline;
   document.getElementById("hero-lead-text").textContent = t.heroLead;
 
+  // Bio Facts
   document.getElementById("fact-location").innerHTML = t.factLocation;
   document.getElementById("fact-edu").innerHTML = t.factEdu;
   document.getElementById("fact-studio").innerHTML = t.factStudio;
 
+  // 4 Stats (Values + Labels)
+  document.getElementById("stat-1-val").textContent = t.stat1Val || "Since 2016";
   document.getElementById("stat-1-label").textContent = t.stat1;
+  document.getElementById("stat-2-val").textContent = t.stat2Val || "1st & 2x 2nd";
   document.getElementById("stat-2-label").textContent = t.stat2;
+  document.getElementById("stat-3-val").textContent = t.stat3Val || "Steam & Play";
   document.getElementById("stat-3-label").textContent = t.stat3;
+  document.getElementById("stat-4-val").textContent = t.stat4Val || "20+ Langs";
   document.getElementById("stat-4-label").textContent = t.stat4;
 
+  // Skill Pills (Editable inline)
+  const pillsContainer = document.getElementById("skill-pills-container");
+  pillsContainer.innerHTML = (portfolioData.skillPills || []).map((pill, idx) =>
+    `<span class="skill-pill" data-edit-dynamic="true" onblur="updateSingleSkillPill(${idx}, this.textContent)">${pill}</span>`
+  ).join("");
+
+  // Action Buttons & External URLs
   document.getElementById("cta-steam").textContent = t.ctaSteam;
   document.getElementById("cta-itch").textContent = t.ctaItch;
   document.getElementById("cta-play").textContent = t.ctaPlay;
   document.getElementById("cta-origin-btn").textContent = t.ctaOriginBtn;
+  document.getElementById("cta-mail").textContent = t.ctaMail || "contact@janjelle.dev";
 
+  if (portfolioData.links) {
+    document.getElementById("link-steam-btn").href = portfolioData.links.steam || "#";
+    document.getElementById("link-itch-btn").href = portfolioData.links.itch || "#";
+    document.getElementById("link-play-btn").href = portfolioData.links.play || "#";
+    document.getElementById("link-mail-btn").href = portfolioData.links.email || "mailto:contact@janjelle.dev";
+    document.getElementById("visit-itch-link").href = portfolioData.links.itch || "https://jjampion.itch.io/";
+  }
+
+  // Stage 02: Origin Story
   document.getElementById("story-badge").textContent = t.storyBadge;
   document.getElementById("story-heading").textContent = t.storyHeading;
   document.getElementById("back-about-btn").textContent = t.backAboutBtn;
   document.getElementById("next-projects-btn").textContent = t.nextProjectsBtn;
 
   const paragraphs = (portfolioData.originStory && portfolioData.originStory[currentLang]) || portfolioData.originStory.en;
-  document.getElementById("story-paragraphs").innerHTML = paragraphs.map(p => `<p>${p}</p>`).join("");
+  document.getElementById("story-paragraphs").innerHTML = paragraphs.map((p, idx) =>
+    `<div data-edit-dynamic="true" onblur="updateOriginParagraphInline(${idx}, this.innerHTML)">${p}</div>`
+  ).join("");
 
+  // Stage 03 & 04 Headers + Footer
   document.getElementById("projects-eyebrow").textContent = t.projectsEyebrow;
   document.getElementById("projects-heading").textContent = t.projectsHeading;
   document.getElementById("add-project-top-btn").textContent = t.addProjectBtn;
@@ -528,6 +667,27 @@ function renderHeroStrings() {
   document.getElementById("lab-eyebrow").textContent = t.labEyebrow;
   document.getElementById("lab-heading").textContent = t.labHeading;
   document.getElementById("visit-itch-label").textContent = t.visitItch;
+  document.getElementById("footer-text").textContent = t.footerText || "© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved.";
+}
+
+function updateSingleSkillPill(index, newText) {
+  const cleaned = newText.trim();
+  if (cleaned) {
+    portfolioData.skillPills[index] = cleaned;
+  } else {
+    portfolioData.skillPills.splice(index, 1);
+    renderHeroStrings();
+    applyInlineEditability();
+  }
+  markUnsavedIndicator();
+}
+
+function updateOriginParagraphInline(index, newHtml) {
+  if (!portfolioData.originStory[currentLang]) {
+    portfolioData.originStory[currentLang] = [];
+  }
+  portfolioData.originStory[currentLang][index] = newHtml.trim();
+  markUnsavedIndicator();
 }
 
 function resolveDisplayImageUrl(path) {
@@ -539,7 +699,7 @@ function resolveDisplayImageUrl(path) {
 function renderPortrait() {
   const container = document.getElementById("portrait-container");
   const navAvatar = document.getElementById("nav-avatar");
-  const t = uiStrings[currentLang];
+  const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
   const displayUrl = resolveDisplayImageUrl(portfolioData.portraitImageUrl);
 
   if (displayUrl && displayUrl.trim() !== "") {
@@ -560,40 +720,42 @@ function renderPortrait() {
 }
 
 function renderProjects() {
-  const t = uiStrings[currentLang];
+  const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
   const heroContainer = document.getElementById("hero-projects-container");
   const labContainer = document.getElementById("lab-projects-container");
 
-  // Stage 03: Middle-Centered Flagship Hero Project (Grimoire Garden on Steam)
+  // Stage 03: Middle-Centered Flagship Hero Project (All parts inline-editable!)
   const hero = portfolioData.heroProjects[0];
   if (hero) {
     const pitch = (hero.pitch && hero.pitch[currentLang]) || (hero.pitch && hero.pitch.en) || "";
     const designList = (hero.designHighlights && hero.designHighlights[currentLang]) || (hero.designHighlights && hero.designHighlights.en) || [];
     const techList = (hero.techHighlights && hero.techHighlights[currentLang]) || (hero.techHighlights && hero.techHighlights.en) || [];
-    const badgesHtml = (hero.badges || []).map((b, idx) => `<span class="${idx === 0 ? 'badge highlight' : 'badge'}">${b}</span>`).join("");
+    const badgesHtml = (hero.badges || []).map((b, idx) =>
+      `<span class="${idx === 0 ? 'badge highlight' : 'badge'}" data-edit-dynamic="true" onblur="updateHeroBadgeInline(${idx}, this.textContent)">${b}</span>`
+    ).join("");
     const coverUrl = resolveDisplayImageUrl(hero.coverImageUrl);
 
     heroContainer.innerHTML = `
       <article class="project-card-centered liquid-glass hover-lift">
         <div class="project-badges-centered">${badgesHtml}</div>
-        <h3 class="project-title">${hero.title}</h3>
-        <p class="project-pitch-centered">${pitch}</p>
+        <h3 class="project-title" data-edit-dynamic="true" onblur="updateHeroFieldInline('title', this.textContent)">${hero.title}</h3>
+        <p class="project-pitch-centered" data-edit-dynamic="true" onblur="updateHeroFieldInline('pitch', this.textContent)">${pitch}</p>
 
         ${coverUrl ? `<div class="hero-cover-showcase"><img src="${coverUrl}" alt="${hero.title}" loading="lazy" /></div>` : ""}
 
         <div class="highlights-columns">
           <div class="highlight-box">
-            <h4>${t.designHeader}</h4>
-            <ul>${designList.map(item => `<li>${item}</li>`).join("")}</ul>
+            <h4 data-edit-ui="designHeader">${t.designHeader}</h4>
+            <ul>${designList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline('designHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
           </div>
           <div class="highlight-box">
-            <h4>${t.techHeader}</h4>
-            <ul>${techList.map(item => `<li>${item}</li>`).join("")}</ul>
+            <h4 data-edit-ui="techHeader">${t.techHeader}</h4>
+            <ul>${techList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline('techHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
           </div>
         </div>
 
         <div class="steam-widget-centered-box">
-          <span style="font-size:0.78rem; color:var(--text-muted); font-weight:700;">🎮 ${t.steamWidgetLabel}</span>
+          <span style="font-size:0.78rem; color:var(--text-muted); font-weight:700;" data-edit-ui="steamWidgetLabel">${t.steamWidgetLabel}</span>
           <div class="iframe-centered-wrapper">
             <iframe src="https://store.steampowered.com/widget/${hero.steamAppId || '4560080'}/" frameborder="0" width="646" height="190" loading="lazy"></iframe>
           </div>
@@ -602,12 +764,12 @@ function renderProjects() {
     `;
   }
 
-  // Stage 04: Responsive Kachel / Tile Grid for Unlimited Projects
+  // Stage 04: Responsive Tile Grid for Unlimited Projects (Titles & descriptions inline-editable!)
   labContainer.innerHTML = portfolioData.labProjects.map((proj, index) => {
     const pitch = (proj.pitch && proj.pitch[currentLang]) || (proj.pitch && proj.pitch.en) || "";
-    const badgesHtml = (proj.badges || []).map(b => {
+    const badgesHtml = (proj.badges || []).map((b, bIdx) => {
       const isAward = b.includes("1st") || b.includes("2nd") || b.includes("🏆") || b.includes("🥈");
-      return `<span class="${isAward ? 'badge award' : 'badge'}">${b}</span>`;
+      return `<span class="${isAward ? 'badge award' : 'badge'}" data-edit-dynamic="true" onblur="updateLabBadgeInline(${index}, ${bIdx}, this.textContent)">${b}</span>`;
     }).join("");
 
     const coverUrl = resolveDisplayImageUrl(proj.coverImageUrl);
@@ -617,7 +779,12 @@ function renderProjects() {
 
     let footerWidgetHtml = "";
     if (proj.itchWidgetCode && proj.itchWidgetCode.trim() !== "") {
-      footerWidgetHtml = `<div class="iframe-centered-wrapper" style="justify-content:flex-start;">${proj.itchWidgetCode}</div>`;
+      footerWidgetHtml = `
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div class="iframe-centered-wrapper" style="justify-content:flex-start;">${proj.itchWidgetCode}</div>
+          <button class="pill-btn admin-only" style="align-self:flex-end; padding:4px 10px; font-size:0.72rem;" onclick="editProjectInCMS(${index})">✏️ Edit Tile</button>
+        </div>
+      `;
     } else {
       footerWidgetHtml = `
         <div class="itch-launch-card">
@@ -638,27 +805,140 @@ function renderProjects() {
         <div>
           ${labImageHtml}
           <div class="project-badges">${badgesHtml}</div>
-          <h3 class="project-title" style="font-size:1.25rem; margin-bottom:6px;">${proj.title}</h3>
-          <p style="font-size:0.88rem; color:var(--text-secondary);">${pitch}</p>
+          <h3 class="project-title" style="font-size:1.25rem; margin-bottom:6px;" data-edit-dynamic="true" onblur="updateLabFieldInline(${index}, 'title', this.textContent)">${proj.title}</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);" data-edit-dynamic="true" onblur="updateLabFieldInline(${index}, 'pitch', this.textContent)">${pitch}</p>
         </div>
         ${footerWidgetHtml}
       </article>
     `;
   }).join("");
+
+  applyInlineEditability();
+}
+
+// Inline Edit Helpers for Hero Project & Lab Project Tiles
+function updateHeroFieldInline(field, val) {
+  const hero = portfolioData.heroProjects[0];
+  if (!hero) return;
+  if (field === "title") hero.title = val.trim();
+  if (field === "pitch") hero.pitch[currentLang] = val.trim();
+  markUnsavedIndicator();
+}
+
+function updateHeroBadgeInline(badgeIdx, val) {
+  const hero = portfolioData.heroProjects[0];
+  if (!hero || !hero.badges) return;
+  hero.badges[badgeIdx] = val.trim();
+  markUnsavedIndicator();
+}
+
+function updateHeroHighlightInline(listKey, itemIdx, val) {
+  const hero = portfolioData.heroProjects[0];
+  if (!hero || !hero[listKey] || !hero[listKey][currentLang]) return;
+  hero[listKey][currentLang][itemIdx] = val.trim();
+  markUnsavedIndicator();
+}
+
+function updateLabFieldInline(projIdx, field, val) {
+  const proj = portfolioData.labProjects[projIdx];
+  if (!proj) return;
+  if (field === "title") proj.title = val.trim();
+  if (field === "pitch") {
+    if (!proj.pitch) proj.pitch = { en: "", de: "" };
+    proj.pitch[currentLang] = val.trim();
+  }
+  markUnsavedIndicator();
+}
+
+function updateLabBadgeInline(projIdx, badgeIdx, val) {
+  const proj = portfolioData.labProjects[projIdx];
+  if (!proj || !proj.badges) return;
+  proj.badges[badgeIdx] = val.trim();
+  markUnsavedIndicator();
 }
 
 /* ==========================================================================
-   6. CMS STUDIO: REAL REPO IMAGE UPLOAD (assets/) & UNLIMITED PROJECT MANAGER
+   6. CMS STUDIO DRAWER CONTROLLERS
    ========================================================================== */
 function openCMSDrawerDirectly() {
   const backdrop = document.getElementById("cms-backdrop");
   backdrop.classList.add("open");
+  populateCMSEditors();
   renderCMSProjectList();
-  document.getElementById("cms-portrait-url").value = portfolioData.portraitImageUrl || "";
-  document.getElementById("cms-custom-css").value = portfolioData.customCSS || "";
   document.getElementById("gh-repo").value = localStorage.getItem("jjk_gh_repo") || "nightodaygamestudio/portfolio";
   document.getElementById("gh-branch").value = localStorage.getItem("jjk_gh_branch") || "main";
   document.getElementById("gh-token").value = localStorage.getItem("jjk_gh_token") || "";
+}
+
+function populateCMSEditors() {
+  document.getElementById("cms-portrait-url").value = portfolioData.portraitImageUrl || "";
+  document.getElementById("cms-skill-pills").value = (portfolioData.skillPills || []).join(", ");
+  document.getElementById("cms-custom-css").value = portfolioData.customCSS || "";
+
+  if (portfolioData.links) {
+    document.getElementById("cms-link-steam").value = portfolioData.links.steam || "";
+    document.getElementById("cms-link-itch").value = portfolioData.links.itch || "";
+    document.getElementById("cms-link-play").value = portfolioData.links.play || "";
+    document.getElementById("cms-link-email").value = portfolioData.links.email || "";
+  }
+
+  // Hero Project Editor
+  const hero = portfolioData.heroProjects[0];
+  if (hero) {
+    document.getElementById("cms-hero-lang-indicator").textContent = currentLang.toUpperCase();
+    document.getElementById("cms-hero-title").value = hero.title || "";
+    document.getElementById("cms-hero-badges").value = (hero.badges || []).join(", ");
+    document.getElementById("cms-hero-steam-id").value = hero.steamAppId || "4560080";
+    document.getElementById("cms-hero-img").value = hero.coverImageUrl || "";
+    document.getElementById("cms-hero-pitch").value = (hero.pitch && hero.pitch[currentLang]) || "";
+    document.getElementById("cms-hero-design").value = ((hero.designHighlights && hero.designHighlights[currentLang]) || []).join("\n");
+    document.getElementById("cms-hero-tech").value = ((hero.techHighlights && hero.techHighlights[currentLang]) || []).join("\n");
+  }
+
+  // Origin Story Editor
+  document.getElementById("cms-story-lang-indicator").textContent = currentLang.toUpperCase();
+  const storyArr = (portfolioData.originStory && portfolioData.originStory[currentLang]) || [];
+  document.getElementById("cms-origin-story-textarea").value = storyArr.join("\n\n");
+}
+
+function updateSkillPillsFromCMS(val) {
+  portfolioData.skillPills = val.split(",").map(s => s.trim()).filter(Boolean);
+  renderHeroStrings();
+  applyInlineEditability();
+  markUnsavedIndicator();
+}
+
+function updateLinksFromCMS() {
+  portfolioData.links = {
+    steam: document.getElementById("cms-link-steam").value.trim(),
+    itch: document.getElementById("cms-link-itch").value.trim(),
+    play: document.getElementById("cms-link-play").value.trim(),
+    email: document.getElementById("cms-link-email").value.trim()
+  };
+  renderHeroStrings();
+  markUnsavedIndicator();
+}
+
+function saveHeroProjectFromCMS() {
+  const hero = portfolioData.heroProjects[0];
+  if (!hero) return;
+  hero.title = document.getElementById("cms-hero-title").value.trim();
+  hero.badges = document.getElementById("cms-hero-badges").value.split(",").map(s => s.trim()).filter(Boolean);
+  hero.steamAppId = document.getElementById("cms-hero-steam-id").value.trim();
+  hero.coverImageUrl = document.getElementById("cms-hero-img").value.trim();
+  hero.pitch[currentLang] = document.getElementById("cms-hero-pitch").value.trim();
+  hero.designHighlights[currentLang] = document.getElementById("cms-hero-design").value.split("\n").map(s => s.trim()).filter(Boolean);
+  hero.techHighlights[currentLang] = document.getElementById("cms-hero-tech").value.split("\n").map(s => s.trim()).filter(Boolean);
+  renderProjects();
+  markUnsavedIndicator();
+}
+
+function saveOriginStoryFromCMS() {
+  const raw = document.getElementById("cms-origin-story-textarea").value;
+  portfolioData.originStory[currentLang] = raw.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+  renderHeroStrings();
+  applyInlineEditability();
+  markUnsavedIndicator();
 }
 
 function toggleCMS() {
@@ -701,6 +981,7 @@ function moveProjectTile(index, direction) {
   portfolioData.labProjects[targetIdx] = temp;
   renderProjects();
   renderCMSProjectList();
+  markUnsavedIndicator();
 }
 
 function deleteProjectTile(index) {
@@ -710,6 +991,7 @@ function deleteProjectTile(index) {
   portfolioData.labProjects.splice(index, 1);
   renderProjects();
   renderCMSProjectList();
+  markUnsavedIndicator();
 }
 
 function editProjectInCMS(index) {
@@ -786,15 +1068,16 @@ function saveOrAddProjectTile() {
   renderProjects();
   renderCMSProjectList();
   resetProjectForm();
+  markUnsavedIndicator();
 }
 
 function updatePortraitFromInput(url) {
   portfolioData.portraitImageUrl = url.trim();
   document.getElementById("cms-portrait-url").value = portfolioData.portraitImageUrl;
   renderPortrait();
+  markUnsavedIndicator();
 }
 
-// Queues real binary image file for upload into GitHub repository's assets/ folder
 function handlePortraitFileUpload(event) {
   const file = event.target.files[0];
   if (!file) return;
@@ -809,8 +1092,26 @@ function handlePortraitFileUpload(event) {
 
     portfolioData.portraitImageUrl = repoPath;
     document.getElementById("cms-portrait-url").value = repoPath;
-    document.getElementById("portrait-upload-hint").textContent = `✓ Queued as real file '${repoPath}'. Click 'Publish to GitHub' above to upload to repo.`;
+    document.getElementById("portrait-upload-hint").textContent = `✓ Queued '${repoPath}'. Click 'Publish to GitHub' to upload.`;
     renderPortrait();
+    markUnsavedIndicator();
+  };
+  reader.readAsDataURL(file);
+}
+
+function handleHeroImageFileUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const cleanName = file.name.toLowerCase().replace(/[^a-z0-9.]/g, "-");
+  const repoPath = `assets/projects/${cleanName}`;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const base64Data = e.target.result.split(",")[1];
+    pendingRepoFiles[repoPath] = base64Data;
+    localPreviewBlobUrls[repoPath] = URL.createObjectURL(file);
+    document.getElementById("cms-hero-img").value = repoPath;
+    markUnsavedIndicator();
   };
   reader.readAsDataURL(file);
 }
@@ -826,8 +1127,8 @@ function handleProjectImageFileUpload(event) {
     const base64Data = e.target.result.split(",")[1];
     pendingRepoFiles[repoPath] = base64Data;
     localPreviewBlobUrls[repoPath] = URL.createObjectURL(file);
-
     document.getElementById("new-proj-img").value = repoPath;
+    markUnsavedIndicator();
   };
   reader.readAsDataURL(file);
 }
@@ -836,6 +1137,7 @@ function applyCustomCSS(cssText) {
   portfolioData.customCSS = cssText;
   const styleEl = document.getElementById("custom-user-css");
   if (styleEl) styleEl.textContent = cssText;
+  markUnsavedIndicator();
 }
 
 async function uploadSingleFileToGitHub(repo, branch, token, filePath, base64Content, commitMsg) {
@@ -874,9 +1176,19 @@ async function uploadSingleFileToGitHub(repo, branch, token, filePath, base64Con
   }
 }
 
-async function buildUpdatedAppJSString() {
-  const res = await fetch("app.js", { cache: "no-store" });
-  const rawJS = await res.text();
+async function buildUpdatedAppJSString(sourceOverride) {
+  let rawJS = sourceOverride;
+  if (!rawJS) {
+    const res = await fetch("app.js", { cache: "no-store" });
+    rawJS = await res.text();
+  }
+  const replacementBlock = `// === PORTFOLIO_DATA_START ===\nconst portfolioData = ${JSON.stringify(portfolioData, null, 2)};\n// === PORTFOLIO_DATA_END ===`;
+  if (rawJS.includes("// === PORTFOLIO_DATA_START ===")) {
+    return rawJS.replace(
+      /\/\/ === PORTFOLIO_DATA_START ===[\s\S]*?\/\/ === PORTFOLIO_DATA_END ===/,
+      replacementBlock
+    );
+  }
   return rawJS.replace(
     /const portfolioData = \{[\s\S]*?\n\};/,
     `const portfolioData = ${JSON.stringify(portfolioData, null, 2)};`
@@ -897,13 +1209,19 @@ async function exportAppJS() {
 }
 
 async function publishDirectlyToGitHub() {
-  const repo = document.getElementById("gh-repo").value.trim();
-  const branch = document.getElementById("gh-branch").value.trim() || "main";
-  const token = document.getElementById("gh-token").value.trim();
+  const repoInput = document.getElementById("gh-repo");
+  const branchInput = document.getElementById("gh-branch");
+  const tokenInput = document.getElementById("gh-token");
+
+  const repo = (repoInput && repoInput.value.trim()) || localStorage.getItem("jjk_gh_repo") || "nightodaygamestudio/portfolio";
+  const branch = (branchInput && branchInput.value.trim()) || localStorage.getItem("jjk_gh_branch") || "main";
+  const token = (tokenInput && tokenInput.value.trim()) || localStorage.getItem("jjk_gh_token") || "";
   const statusEl = document.getElementById("gh-status-msg");
+  const quickSaveBtn = document.getElementById("quick-save-gh-btn");
 
   if (!repo || !token) {
-    statusEl.textContent = "⚠️ Please enter Repository and GitHub Token.";
+    openCMSDrawerDirectly();
+    if (statusEl) statusEl.textContent = "⚠️ Please enter Repository and GitHub Token first.";
     return;
   }
 
@@ -912,10 +1230,12 @@ async function publishDirectlyToGitHub() {
   localStorage.setItem("jjk_gh_token", token);
 
   try {
-    // 1. Upload any queued image files directly into the repository's assets/ folder
+    if (quickSaveBtn) quickSaveBtn.textContent = "⏳ Saving to GitHub...";
+
+    // 1. Upload any queued binary image files to assets/
     const filePaths = Object.keys(pendingRepoFiles);
     for (const filePath of filePaths) {
-      statusEl.textContent = `⏳ Uploading file ${filePath} to repository...`;
+      if (statusEl) statusEl.textContent = `⏳ Uploading ${filePath}...`;
       await uploadSingleFileToGitHub(
         repo,
         branch,
@@ -927,8 +1247,8 @@ async function publishDirectlyToGitHub() {
       delete pendingRepoFiles[filePath];
     }
 
-    // 2. Fetch and update app.js in the repository
-    statusEl.textContent = "⏳ Updating app.js in repository...";
+    // 2. Fetch and update app.js
+    if (statusEl) statusEl.textContent = "⏳ Updating app.js in repository...";
     const apiUrl = `https://api.github.com/repos/${repo}/contents/app.js`;
     const getRes = await fetch(`${apiUrl}?ref=${branch}`, {
       headers: {
@@ -937,21 +1257,13 @@ async function publishDirectlyToGitHub() {
       }
     });
 
-    let sha = undefined;
     let sourceJS = "";
     if (getRes.ok) {
       const fileData = await getRes.json();
-      sha = fileData.sha;
       sourceJS = decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, ""))));
-    } else {
-      sourceJS = await buildUpdatedAppJSString();
     }
 
-    const updatedJS = sourceJS.replace(
-      /const portfolioData = \{[\s\S]*?\n\};/,
-      `const portfolioData = ${JSON.stringify(portfolioData, null, 2)};`
-    );
-
+    const updatedJS = await buildUpdatedAppJSString(sourceJS);
     const base64Content = btoa(unescape(encodeURIComponent(updatedJS)));
 
     await uploadSingleFileToGitHub(
@@ -960,12 +1272,17 @@ async function publishDirectlyToGitHub() {
       token,
       "app.js",
       base64Content,
-      "Update portfolio content via CMS"
+      "Update portfolio content via Live CMS"
     );
 
-    statusEl.textContent = "✅ Published! Files & app.js are now in your GitHub repo.";
+    if (statusEl) statusEl.textContent = "✅ All changes & files published to GitHub!";
+    if (quickSaveBtn) quickSaveBtn.textContent = "✅ Saved to GitHub!";
+    setTimeout(() => {
+      if (quickSaveBtn) quickSaveBtn.textContent = "🚀 Save to GitHub";
+    }, 3000);
   } catch (err) {
-    statusEl.textContent = `❌ Error: ${err.message}`;
+    if (statusEl) statusEl.textContent = `❌ Error: ${err.message}`;
+    if (quickSaveBtn) quickSaveBtn.textContent = "❌ Error (Open CMS)";
   }
 }
 
@@ -975,6 +1292,7 @@ function renderAll() {
   renderHeroStrings();
   renderPortrait();
   renderProjects();
+  applyInlineEditability();
 }
 
 window.addEventListener("DOMContentLoaded", () => {
