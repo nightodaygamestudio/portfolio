@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Jan Jelle Klingberg (aka JJampion) | Junior Technical Game Designer</title>
+  <meta name="description" content="Portfolio of Jan Jelle Klingberg (JJampion) – Junior Technical Game Designer with active Unity & C# experience since 2016, Quest/Level/UI Design expertise, and published Steam & Google Play games." />
   <link rel="stylesheet" href="styles.css" />
   <style id="custom-user-css"></style>
 </head>
@@ -20,7 +21,7 @@
   <div class="stage-dots-nav" aria-label="Stage Navigation">
     <button class="stage-dot active" id="dot-about" onclick="switchSection('about')" data-label="01 • About Me"></button>
     <button class="stage-dot" id="dot-origin" onclick="switchSection('origin')" data-label="02 • Who Am I"></button>
-    <button class="stage-dot" id="dot-hero-projects" onclick="switchSection('hero-projects')" data-label="03 • Hero Project"></button>
+    <button class="stage-dot" id="dot-hero-projects" onclick="switchSection('hero-projects')" data-label="03 • Hero Projects"></button>
     <button class="stage-dot" id="dot-prototyping-lab" onclick="switchSection('prototyping-lab')" data-label="04 • Rapid Prototyping"></button>
   </div>
 
@@ -61,7 +62,7 @@
       <ul class="nav-links">
         <li><a id="nav-about" class="active-nav" onclick="switchSection('about')">About Me</a></li>
         <li><a id="nav-origin" onclick="switchSection('origin')">Who Am I</a></li>
-        <li><a id="nav-projects" onclick="switchSection('hero-projects')">Hero Project</a></li>
+        <li><a id="nav-projects" onclick="switchSection('hero-projects')">Hero Projects</a></li>
         <li><a id="nav-lab" onclick="switchSection('prototyping-lab')">Rapid Prototyping</a></li>
       </ul>
 
@@ -98,7 +99,9 @@
 
           <!-- 1. Centered Portrait Frame at Top -->
           <div class="portrait-center-wrapper">
-            <div class="portrait-frame-centered" id="portrait-container"></div>
+            <div class="portrait-frame-centered" id="portrait-container">
+              <img src="assets/portrait.jpg" alt="Jan Jelle Klingberg (aka JJampion)" />
+            </div>
           </div>
 
           <!-- 2. Name + aka JJampion + Phonetic -> Then Green Role Description -> Then Headline -->
@@ -110,15 +113,15 @@
 
             <div class="status-badge">
               <span class="status-dot"></span>
-              <span id="hero-status-text" data-edit-ui="heroStatus">Junior Technical Game Designer • Creator of Nightoday Game Studio</span>
+              <span id="hero-status-text" data-edit-ui="heroStatus">Junior Technical Game Designer • Systems, Quest, Puzzle &amp; UI Design</span>
             </div>
 
             <p class="hero-subtitle gradient-text" id="hero-headline" data-edit-ui="heroHeadline">
-              I don't just write concepts on paper — I ship playable systems & commercial games in record time.
+              I don't just write concepts on paper — I design deep quests, puzzles, and playable C# systems in record time.
             </p>
 
             <p class="hero-lead-centered" id="hero-lead-text" data-edit-ui="heroLead">
-              I love playing games, but I love building them even more. With active Unity experience since 2016, a formal education in Game Design & Game Production at the Games Academy, and self-published titles on Steam and Google Play under Nightoday Game Studio, I unite creative game design, rapid 3-hour prototyping, and solid technical execution.
+              I love playing games, but I love building them even more. With active Unity &amp; C# experience since 2016, formal training at the Games Academy (2024–2026), and self-published commercial titles on Steam and Google Play under Nightoday Game Studio, I unite hands-on Game Design (Systems, Quests, Lore, Puzzles &amp; UI) with rapid technical execution.
             </p>
           </div>
 
@@ -127,56 +130,59 @@
             <div class="bio-fact-card">
               <span class="bio-fact-icon">📍</span>
               <div id="fact-location" data-edit-ui="factLocation" data-edit-html="true">
-                <strong>Location:</strong> 30 years old • Roth (Middle Franconia) & near Cham (Upper Palatinate).
+                <strong>Location &amp; Mobility:</strong> Bavaria (Roth &amp; near Cham) • Preferred Bavaria &amp; Remote/Hybrid, open to Relocation Germany-wide (e.g. Hamburg) &amp; Europe.
               </div>
             </div>
             <div class="bio-fact-card">
               <span class="bio-fact-icon">🎓</span>
               <div id="fact-edu" data-edit-ui="factEdu" data-edit-html="true">
-                <strong>Education:</strong> Game Design & Game Production at Games Academy (2024–2026).
+                <strong>Education:</strong> Game Design &amp; Game Production at Games Academy (2024–2026) • Focus on Systems, Quests &amp; Level Design.
               </div>
             </div>
             <div class="bio-fact-card">
               <span class="bio-fact-icon">🌙</span>
               <div id="fact-studio" data-edit-ui="factStudio" data-edit-html="true">
-                <strong>Studio & Vision:</strong> <em>Nightoday Game Studio</em> • Fast Prototyping & Path to Lead Game Designer.
+                <strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer on the path to Lead Game Designer.
               </div>
             </div>
           </div>
 
-          <!-- 4. Key Metrics Row (Both Values & Labels are directly editable) -->
+          <!-- 4. Key Metrics Row -->
           <div class="hero-stats-row">
             <div class="stat-mini">
               <div class="stat-mini-value" id="stat-1-val" data-edit-ui="stat1Val">Since 2016</div>
-              <div class="stat-mini-label" id="stat-1-label" data-edit-ui="stat1">Active Unity License & C#</div>
+              <div class="stat-mini-label" id="stat-1-label" data-edit-ui="stat1">Active Unity &amp; C# Experience</div>
             </div>
             <div class="stat-mini">
-              <div class="stat-mini-value" id="stat-2-val" data-edit-ui="stat2Val">1st & 2x 2nd</div>
+              <div class="stat-mini-value" id="stat-2-val" data-edit-ui="stat2Val">1st &amp; 2x 2nd</div>
               <div class="stat-mini-label" id="stat-2-label" data-edit-ui="stat2">Trijam (3-Hour Game Jam)</div>
             </div>
             <div class="stat-mini">
-              <div class="stat-mini-value" id="stat-3-val" data-edit-ui="stat3Val">Steam & Play</div>
-              <div class="stat-mini-label" id="stat-3-label" data-edit-ui="stat3">Self-Published Store Pipelines</div>
+              <div class="stat-mini-value" id="stat-3-val" data-edit-ui="stat3Val">Steam &amp; Play</div>
+              <div class="stat-mini-label" id="stat-3-label" data-edit-ui="stat3">Shipped Store Pipelines</div>
             </div>
             <div class="stat-mini">
               <div class="stat-mini-value" id="stat-4-val" data-edit-ui="stat4Val">20+ Langs</div>
-              <div class="stat-mini-label" id="stat-4-label" data-edit-ui="stat4">Custom Tooling & Localization</div>
+              <div class="stat-mini-label" id="stat-4-label" data-edit-ui="stat4">Custom Tooling &amp; Localization</div>
             </div>
           </div>
 
-          <!-- 5. Core Tech Pills (Rendered dynamically from portfolioData.skillPills) -->
+          <!-- 5. Core Tech Pills -->
           <div class="skill-pills-centered" id="skill-pills-container"></div>
 
           <!-- 6. Action Buttons -->
           <div class="hero-cta-row-centered">
-            <a href="https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/" id="link-steam-btn" target="_blank" rel="noopener" class="pill-btn primary">
+            <button class="pill-btn primary" onclick="switchSection('hero-projects')">
+              🚀 <span id="cta-projects-jump" data-edit-ui="ctaProjectsJump">View Hero Projects (Steam &amp; Team) →</span>
+            </button>
+            <a href="https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/" id="link-steam-btn" target="_blank" rel="noopener" class="pill-btn">
               🎮 <span id="cta-steam" data-edit-ui="ctaSteam">Grimoire Garden on Steam</span>
             </a>
             <a href="https://jjampion.itch.io/" id="link-itch-btn" target="_blank" rel="noopener" class="pill-btn">
               🕹️ <span id="cta-itch" data-edit-ui="ctaItch">All Projects on itch.io</span>
             </a>
-            <a href="https://play.google.com/store/apps/details?id=gg.nightodaygamestudio.mc&hl=de" id="link-play-btn" target="_blank" rel="noopener" class="pill-btn">
-              📱 <span id="cta-play" data-edit-ui="ctaPlay">Google Play Store</span>
+            <a href="https://play.google.com/store/apps/dev?id=9045790172314321033" id="link-play-btn" target="_blank" rel="noopener" class="pill-btn">
+              📱 <span id="cta-play" data-edit-ui="ctaPlay">Nightoday on Google Play</span>
             </a>
             <button class="pill-btn" onclick="switchSection('origin')">
               📖 <span id="cta-origin-btn" data-edit-ui="ctaOriginBtn">Read My Origin Story →</span>
@@ -190,21 +196,21 @@
       </div>
     </section>
 
-    <!-- STAGE 02: DEDICATED "WHO AM I" & NIGHTODAY ORIGIN STORY (DIRECTLY EDITABLE) -->
+    <!-- STAGE 02: DEDICATED "WHO AM I" & NIGHTODAY ORIGIN STORY -->
     <section class="stage-section" id="origin">
       <div class="origin-stage-card liquid-glass hover-lift">
         <div class="origin-header">
           <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
-            <span class="badge highlight" id="story-badge" data-edit-ui="storyBadge">02 • Who Am I & Personal Origin</span>
+            <span class="badge highlight" id="story-badge" data-edit-ui="storyBadge">02 • Who Am I &amp; Design Philosophy</span>
             <span class="phonetic-tag" id="story-phonetic-tag" data-edit-ui="heroPhonetic">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
           </div>
           <h2 class="section-title" id="story-heading" data-edit-ui="storyHeading">
-            From Reverse Engineering & Skyrim to Nightoday Game Studio
+            From Systems Analysis &amp; Skyrim to Nightoday Game Studio
           </h2>
         </div>
 
         <div class="origin-story-body" id="story-paragraphs">
-          <!-- Populated dynamically in EN or DE via app.js (Each paragraph is directly editable!) -->
+          <!-- Populated dynamically in EN or DE via app.js -->
         </div>
 
         <div class="origin-footer-row">
@@ -212,32 +218,41 @@
             ← <span id="back-about-btn" data-edit-ui="backAboutBtn">Back to Overview</span>
           </button>
           <button class="pill-btn primary" onclick="switchSection('hero-projects')">
-            🚀 <span id="next-projects-btn" data-edit-ui="nextProjectsBtn">View Hero Project →</span>
+            🚀 <span id="next-projects-btn" data-edit-ui="nextProjectsBtn">View Hero Projects →</span>
           </button>
         </div>
       </div>
     </section>
 
-    <!-- STAGE 03: HERO PROJECT (MIDDLE-CENTERED GRIMOIRE GARDEN ON STEAM) -->
+    <!-- STAGE 03: HERO PROJECTS (1. COMMERCIAL STEAM SOLO + 2. GAMES ACADEMY TEAM HERO) -->
     <section class="stage-section" id="hero-projects">
       <div class="section-header centered-header">
         <div>
-          <div class="section-eyebrow" id="projects-eyebrow" data-edit-ui="projectsEyebrow">03 • Flagship Steam Release</div>
-          <h2 class="section-title" id="projects-heading" data-edit-ui="projectsHeading">Hero Project Spotlight</h2>
+          <div class="section-eyebrow" id="projects-eyebrow" data-edit-ui="projectsEyebrow">03 • Commercial Steam Release &amp; Team Flagship</div>
+          <h2 class="section-title" id="projects-heading" data-edit-ui="projectsHeading">Hero Projects Spotlight</h2>
         </div>
       </div>
 
       <div class="hero-project-centered-wrapper" id="hero-projects-container">
-        <!-- Populated dynamically via app.js (All texts & highlights directly editable!) -->
+        <!-- Populated dynamically via app.js (Renders both Grimoire Garden AND Shadow of Ammit) -->
+      </div>
+
+      <div class="origin-footer-row" style="max-width: 960px; margin: 22px auto 0;">
+        <button class="pill-btn" onclick="switchSection('origin')">
+          ← <span id="back-origin-btn" data-edit-ui="backOriginBtn">Back to My Story</span>
+        </button>
+        <button class="pill-btn primary" onclick="switchSection('prototyping-lab')">
+          🕹️ <span id="next-lab-btn" data-edit-ui="nextLabBtn">View Rapid Prototyping &amp; More Projects →</span>
+        </button>
       </div>
     </section>
 
-    <!-- STAGE 04: RAPID PROTOTYPING & ITCH.IO TILE GRID (UNLIMITED PROJECTS) -->
+    <!-- STAGE 04: RAPID PROTOTYPING & ITCH.IO TILE GRID -->
     <section class="stage-section" id="prototyping-lab">
       <div class="section-header">
         <div>
-          <div class="section-eyebrow" id="lab-eyebrow" data-edit-ui="labEyebrow">04 • Game Jams, Mobile & Web Architecture</div>
-          <h2 class="section-title" id="lab-heading" data-edit-ui="labHeading">Projects & Rapid Prototyping Showcase</h2>
+          <div class="section-eyebrow" id="lab-eyebrow" data-edit-ui="labEyebrow">04 • Team Projects, Game Jams, Mobile &amp; Web Architecture</div>
+          <h2 class="section-title" id="lab-heading" data-edit-ui="labHeading">Projects &amp; Rapid Prototyping Showcase</h2>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
           <button class="pill-btn primary admin-only" onclick="toggleCMS()">
@@ -252,12 +267,21 @@
       <div class="lab-grid" id="lab-projects-container">
         <!-- Populated dynamically as a responsive tile grid via app.js -->
       </div>
+
+      <div class="origin-footer-row" style="margin-top: 24px;">
+        <button class="pill-btn" onclick="switchSection('hero-projects')">
+          ← <span id="back-hero-btn" data-edit-ui="backHeroBtn">Back to Hero Projects</span>
+        </button>
+        <a href="mailto:contact@janjelle.dev" class="pill-btn primary">
+          ✉️ <span id="cta-bottom-contact" data-edit-ui="ctaBottomContact">Contact Me for Roles &amp; Interviews (contact@janjelle.dev)</span>
+        </a>
+      </div>
     </section>
 
   </main>
 
   <!-- ==========================================================================
-       FOOTER (DIRECTLY EDITABLE)
+       FOOTER
        ========================================================================== -->
   <footer>
     <div class="container">
@@ -273,7 +297,7 @@
       <div style="font-size:1.8rem;">🔐</div>
       <h3 style="font-size:1.15rem; font-weight:800;">CMS Unlock</h3>
       <p style="font-size:0.82rem; color:var(--text-secondary);">
-        Enter your admin PIN to unlock live on-page editing & portfolio management.
+        Enter your admin PIN to unlock live on-page editing &amp; portfolio management.
       </p>
       <input type="password" class="cms-input" id="admin-pin-input" placeholder="Enter PIN" style="text-align:center; font-size:1rem; letter-spacing:0.15em;" onkeydown="if(event.key==='Enter') verifyAdminPin()" />
       <div id="pin-error-msg" style="font-size:0.76rem; color:#f43f5e; font-weight:700; display:none;">Incorrect PIN.</div>
@@ -320,7 +344,7 @@
 
       <!-- 2. Portrait Image, Skill Pills & Profile Links -->
       <div class="cms-group">
-        <label>2. Portrait Photo, Skills & Profile URLs</label>
+        <label>2. Portrait Photo, Skills &amp; Profile URLs</label>
         <label>Portrait Photo (Uploads to <code>assets/</code>):</label>
         <input type="text" class="cms-input" id="cms-portrait-url" placeholder="assets/portrait.jpg" oninput="updatePortraitFromInput(this.value)" />
         <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
@@ -339,9 +363,9 @@
         <input type="text" class="cms-input" id="cms-link-email" placeholder="mailto:contact@janjelle.dev" oninput="updateLinksFromCMS()" />
       </div>
 
-      <!-- 3. Stage 03: Hero Project Editor -->
+      <!-- 3. Stage 03: Primary Hero Project Editor -->
       <div class="cms-group">
-        <label>3. Hero Project Editor (Stage 03 Spotlight)</label>
+        <label>3. Primary Hero Project Editor (Stage 03 — Note: All Hero Projects are directly editable on-page!)</label>
         <input type="text" class="cms-input" id="cms-hero-title" placeholder="Hero Project Title" />
         <input type="text" class="cms-input" id="cms-hero-badges" placeholder="Badges (comma-separated)" />
         <input type="text" class="cms-input" id="cms-hero-steam-id" placeholder="Steam App ID (e.g. 4560080)" />
@@ -358,14 +382,14 @@
 
       <!-- 4. Stage 04: Unlimited Projects & Itch.io Tile Manager -->
       <div class="cms-group">
-        <label>4. Projects & Itch.io Tiles Manager (<span id="cms-projects-count">0</span> Tiles)</label>
+        <label>4. Projects &amp; Itch.io Tiles Manager (<span id="cms-projects-count">0</span> Tiles)</label>
         <div class="cms-project-list" id="cms-project-list"></div>
 
         <hr style="border:none; border-top:1px solid var(--glass-border); margin:6px 0;" />
 
         <label id="cms-form-mode-label" style="color:var(--accent-secondary);">➕ Add New Project Tile</label>
         <input type="hidden" id="edit-proj-id" value="" />
-        <input type="text" class="cms-input" id="new-proj-title" placeholder="Game Title (e.g. Core Dump)" />
+        <input type="text" class="cms-input" id="new-proj-title" placeholder="Game Title (e.g. TFD://BREACH)" />
         <input type="text" class="cms-input" id="new-proj-badges" placeholder="Badges comma-separated (e.g. 🏆 1st Place Trijam, Unity, WebGL)" />
         <textarea class="cms-textarea" id="new-proj-pitch-en" placeholder="Short Description (English)" style="min-height:56px;"></textarea>
         <textarea class="cms-textarea" id="new-proj-pitch-de" placeholder="Kurzbeschreibung (Deutsch)" style="min-height:56px;"></textarea>
