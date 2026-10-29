@@ -1187,7 +1187,7 @@ function saveOrAddProjectTile() {
     portfolioData.labProjects.unshift({
       id: "proj-" + Date.now(),
       title,
-      badges: badges.length ? badges : ["Unity", "itch.io"];
+      badges: badges.length ? badges : ["Unity", "itch.io"],
       coverImageUrl,
       itchUrl,
       itchWidgetCode,
