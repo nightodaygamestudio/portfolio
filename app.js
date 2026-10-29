@@ -12,16 +12,17 @@ const portfolioData = {
   "links": {
     "steam": "https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/",
     "itch": "https://jjampion.itch.io/",
-    "play": "https://play.google.com/store/apps/details?id=gg.nightodaygamestudio.mc&hl=de",
+    "play": "https://play.google.com/store/apps/dev?id=9045790172314321033",
     "email": "mailto:contact@janjelle.dev"
   },
   "skillPills": [
-    "Unity (Since 2016)",
-    "C# & Reverse Engineering",
-    "GameMaker / Godot / Unreal",
-    "Single-File HTML5",
-    "Steamworks SDK",
-    "Android Studio & Play SDK"
+    "Unity Engine (Since 2016)",
+    "C# Gameplay & Systems Design",
+    "Quest, Narrative & Lore Design",
+    "Level, Puzzle & UI Design",
+    "Custom Tooling & 20+ Lang Loc",
+    "Steamworks SDK & Android SDK",
+    "Godot / Unreal / GameMaker"
   ],
   "ui": {
     "en": {
@@ -30,43 +31,48 @@ const portfolioData = {
       "navSubrole": "Junior Technical Game Designer",
       "navAbout": "About Me",
       "navOrigin": "Who Am I",
-      "navProjects": "Hero Project",
+      "navProjects": "Hero Projects",
       "navLab": "Rapid Prototyping",
       "heroName": "Jan Jelle Klingberg",
       "heroPhonetic": "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /",
-      "heroStatus": "Junior Technical Game Designer • Creator of Nightoday Game Studio",
-      "heroHeadline": "I don't just write concepts on paper — I ship playable systems & commercial games in record time.",
-      "heroLead": "I love playing games, but I love building them even more. With active Unity experience since 2016, a formal education in Game Design & Game Production at the Games Academy, and self-published titles on Steam and Google Play under Nightoday Game Studio, I unite creative game design, rapid 3-hour prototyping, and solid technical execution.",
-      "factLocation": "<strong>Location:</strong> 30 years old • Roth (Middle Franconia) & near Cham (Upper Palatinate).",
-      "factEdu": "<strong>Education:</strong> Game Design &amp; Game Production at Games Academy (2024–2026).",
-      "factStudio": "<strong>Studio & Vision:</strong> <em>Nightoday Game Studio</em> • Fast Prototyping & Path to Lead Game Designer.",
+      "heroStatus": "Junior Technical Game Designer • Systems, Quest, Puzzle & UI Design",
+      "heroHeadline": "I don't just write concepts on paper — I design deep quests, puzzles, and playable C# systems in record time.",
+      "heroLead": "I love playing games, but I love building them even more. With active Unity & C# experience since 2016, formal training at the Games Academy (2024–2026), and self-published commercial titles on Steam and Google Play under Nightoday Game Studio, I unite hands-on Game Design (Systems, Quests, Lore, Puzzles & UI) with rapid technical execution.",
+      "factLocation": "<strong>Location &amp; Mobility:</strong> Bavaria (Roth &amp; near Cham) • Preferred Bavaria &amp; Remote/Hybrid, open to Relocation Germany-wide (e.g. Hamburg) &amp; Europe.",
+      "factEdu": "<strong>Education:</strong> Game Design &amp; Game Production at Games Academy (2024–2026) • Focus on Systems, Quests &amp; Level Design.",
+      "factStudio": "<strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer on the path to Lead Game Designer.",
       "stat1Val": "Since 2016",
-      "stat1": "Active Unity License & C#",
+      "stat1": "Active Unity & C# Experience",
       "stat2Val": "1st & 2x 2nd",
       "stat2": "Trijam (3-Hour Game Jam)",
       "stat3Val": "Steam & Play",
-      "stat3": "Self-Published Store Pipelines",
+      "stat3": "Shipped Store Pipelines",
       "stat4Val": "20+ Langs",
       "stat4": "Custom Tooling & Localization",
+      "ctaProjectsJump": "View Hero Projects (Steam & Team) →",
       "ctaSteam": "Grimoire Garden on Steam",
       "ctaItch": "All Projects on itch.io",
-      "ctaPlay": "Google Play Store",
+      "ctaPlay": "Nightoday on Google Play",
       "ctaOriginBtn": "Read My Origin Story →",
       "ctaMail": "contact@janjelle.dev",
       "portraitRoleTag": "aka JJampion",
       "portraitBtn": "📷 Photo",
-      "storyBadge": "02 • Who Am I & Personal Origin",
-      "storyHeading": "From Reverse Engineering & Skyrim to Nightoday Game Studio",
+      "storyBadge": "02 • Who Am I & Design Philosophy",
+      "storyHeading": "From Systems Analysis & Skyrim to Nightoday Game Studio",
       "backAboutBtn": "Back to Overview",
-      "nextProjectsBtn": "View Hero Project →",
-      "projectsEyebrow": "03 • Flagship Steam Release",
-      "projectsHeading": "Hero Project Spotlight",
+      "nextProjectsBtn": "View Hero Projects →",
+      "backOriginBtn": "Back to My Story",
+      "nextLabBtn": "View Rapid Prototyping & More Projects →",
+      "backHeroBtn": "Back to Hero Projects",
+      "ctaBottomContact": "Contact Me for Roles & Interviews (contact@janjelle.dev)",
+      "projectsEyebrow": "03 • Commercial Steam Release & Team Flagship",
+      "projectsHeading": "Hero Projects Spotlight",
       "addProjectBtn": "Manage Projects",
-      "designHeader": "🎯 Game Design & Player Experience",
-      "techHeader": "⚙️ Technical Design & Production",
+      "designHeader": "🎯 Game Design, Quests & Player Experience",
+      "techHeader": "⚙️ Technical Design, Systems & Implementation",
       "steamWidgetLabel": "Available on Steam • Grimoire Garden: A Taskbar Tale",
       "itchOpenBtn": "Play / View Project ↗",
-      "labEyebrow": "04 • Game Jams, Mobile & Web Architecture",
+      "labEyebrow": "04 • Team Projects, Game Jams, Mobile & Web Architecture",
       "labHeading": "Projects & Rapid Prototyping Showcase",
       "visitItch": "Visit jjampion.itch.io",
       "footerText": "© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved."
@@ -77,43 +83,48 @@ const portfolioData = {
       "navSubrole": "Junior Technical Game Designer",
       "navAbout": "Über Mich",
       "navOrigin": "Wer ich bin",
-      "navProjects": "Hero-Projekt",
+      "navProjects": "Hero-Projekte",
       "navLab": "Rapid Prototyping",
       "heroName": "Jan Jelle Klingberg",
       "heroPhonetic": "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /",
-      "heroStatus": "Junior Technical Game Designer • Creator von Nightoday Game Studio",
-      "heroHeadline": "Ich baue nicht nur Konzepte auf Papier — ich liefere spielbare Systeme & fertige Releases in Rekordzeit.",
-      "heroLead": "Ich liebe es, Spiele zu spielen – aber noch mehr liebe ich es, sie zu entwickeln. Mit aktiver Unity-Erfahrung seit 2016, meiner Ausbildung in Game Design & Game Production an der Games Academy sowie eigenen Releases auf Steam und im Google Play Store unter Nightoday Game Studio verbinde ich kreatives Game Design, 3-Stunden-Prototyping und saubere technische Umsetzung.",
-      "factLocation": "<strong>Standort:</strong> 30 Jahre alt • Roth (Mittelfranken) & Raum Cham (Oberpfalz).",
-      "factEdu": "<strong>Ausbildung:</strong> Game Design & Game Production an der Games Academy (2024–2026).",
-      "factStudio": "<strong>Studio & Ziel:</strong> <em>Nightoday Game Studio</em> • Fast Prototyping & Weg zum Lead Game Designer.",
+      "heroStatus": "Junior Technical Game Designer • System-, Quest-, Rätsel- & UI-Design",
+      "heroHeadline": "Ich schreibe nicht nur Konzepte auf Papier — ich entwickle durchdachte Quests, Rätsel und spielbare C#-Systeme in Rekordzeit.",
+      "heroLead": "Ich liebe es, Spiele zu spielen – aber noch mehr liebe ich es, sie zu entwickeln. Mit aktiver Unity- und C#-Erfahrung seit 2016, meinem Abschluss an der Games Academy (2024–2026) sowie eigenen Releases auf Steam und im Google Play Store unter Nightoday Game Studio verbinde ich kreatives Game Design (Systeme, Quests, Lore, Rätsel & UI) mit sauberer technischer Umsetzung.",
+      "factLocation": "<strong>Standort &amp; Mobilität:</strong> Bayern (Roth &amp; Raum Cham) • Bevorzugt Bayern &amp; Remote/Hybrid, offen für Relocation deutschlandweit (z. B. Hamburg) &amp; Europa.",
+      "factEdu": "<strong>Ausbildung:</strong> Game Design &amp; Game Production an der Games Academy (2024–2026) • Fokus auf System-, Quest- &amp; Level-Design.",
+      "factStudio": "<strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer auf dem Weg zum Lead Game Designer.",
       "stat1Val": "Seit 2016",
-      "stat1": "Aktive Unity-Lizenz & C#",
+      "stat1": "Aktive Unity- & C#-Praxis",
       "stat2Val": "1. & 2x 2.",
       "stat2": "Trijam (3-Stunden Game Jam)",
       "stat3Val": "Steam & Play",
-      "stat3": "Eigene Steam & Play Releases",
+      "stat3": "Eigene Store-Releases",
       "stat4Val": "20+ Sprachen",
-      "stat4": "Eigenes Localization-System",
+      "stat4": "Custom Tooling & Localization",
+      "ctaProjectsJump": "Zu den Hero-Projekten (Steam & Team) →",
       "ctaSteam": "Grimoire Garden auf Steam",
       "ctaItch": "Alle Projekte auf itch.io",
-      "ctaPlay": "Google Play Store",
+      "ctaPlay": "Nightoday im Google Play Store",
       "ctaOriginBtn": "Meine Story lesen →",
       "ctaMail": "contact@janjelle.dev",
       "portraitRoleTag": "aka JJampion",
       "portraitBtn": "📷 Foto",
-      "storyBadge": "02 • Wer ich bin & Meine Geschichte",
-      "storyHeading": "Vom Reverse Engineering & Skyrim zum Nightoday Game Studio",
+      "storyBadge": "02 • Wer ich bin & Design-Philosophie",
+      "storyHeading": "Von System-Analyse & Skyrim zum Nightoday Game Studio",
       "backAboutBtn": "Zurück zur Übersicht",
-      "nextProjectsBtn": "Zum Hero-Projekt →",
-      "projectsEyebrow": "03 • Flaggschiff Steam-Release",
-      "projectsHeading": "Hero-Projekt im Fokus",
+      "nextProjectsBtn": "Zu den Hero-Projekten →",
+      "backOriginBtn": "Zurück zu meiner Story",
+      "nextLabBtn": "Zu Rapid Prototyping & weiteren Projekten →",
+      "backHeroBtn": "Zurück zu den Hero-Projekten",
+      "ctaBottomContact": "Kontakt für Stellen & Interviews (contact@janjelle.dev)",
+      "projectsEyebrow": "03 • Kommerzieller Steam-Release & Team-Flaggschiff",
+      "projectsHeading": "Hero-Projekte im Fokus",
       "addProjectBtn": "Projekte verwalten",
-      "designHeader": "🎯 Game Design & Spielerlebnis",
-      "techHeader": "⚙️ Technical Design & Production",
+      "designHeader": "🎯 Game Design, Quests & Spielerlebnis",
+      "techHeader": "⚙️ Technical Design, Systeme & Umsetzung",
       "steamWidgetLabel": "Auf Steam verfügbar • Grimoire Garden: A Taskbar Tale",
       "itchOpenBtn": "Projekt ansehen / spielen ↗",
-      "labEyebrow": "04 • Game Jams, Mobile & Web Architektur",
+      "labEyebrow": "04 • Team-Projekte, Game Jams, Mobile & Web Architektur",
       "labHeading": "Projekte & Rapid Prototyping Showcase",
       "visitItch": "Zu jjampion.itch.io",
       "footerText": "© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved."
@@ -121,35 +132,36 @@ const portfolioData = {
   },
   "originStory": {
     "en": [
-      "I am <strong>Jan Jelle Klingberg</strong>, better known as <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). I am <strong>30 years old</strong> and come from <strong>Franconia, Germany</strong> — living in <strong>Roth (Middle Franconia)</strong> and frequently in the <strong>Upper Palatinate (near Cham)</strong>. Since my childhood — actually as long as I can remember — I have been a passionate video game fan fascinated by the gaming world.",
-      "While I started working with Unity in 2016, a major technical spark came in <strong>2018</strong> when I discovered how to root Android systems. That inspired me to delve into <strong>reverse engineering of games and manipulating game values</strong> — understanding how games tick under the hood and deciding to pursue my dream of starting my own indie game studio.",
-      "<div class=\"story-quote-highlight\">\"Du sollst doch nicht schon wieder die <strong>Nacht zum Tag</strong> machen!\" — The name <strong>Nightoday Game Studio</strong> came to me easily, inspired by my mother (who often reminded me not to stay up too late, take care of my eyes, and get enough sleep) and the direct translation of 'Nacht zum Tag' (Night to Day.</div>",
-      "My second huge inspiration is the legendary <strong>Bethesda Game Studios</strong>, who practically saved my life with <em>Skyrim</em> when I lived in a children's home and only had one single hour of 'media time' per day. I invested almost every single day of that hour into that masterpiece.",
-      "My goal is to gain as much studio experience as possible and grow my career toward becoming a <strong>Lead Game Designer or Game Director</strong>. Having trained in <strong>Game Design & Game Production at the Games Academy (2024–2026)</strong> and published my own titles on Steam and Google Play under <strong>Nightoday Game Studio</strong>, I am ready to translate my passion into innovative projects that excite players. Thank you for your interest — if you have any questions or are interested in collaborating, feel free to contact me!"
+      "I am <strong>Jan Jelle Klingberg</strong>, better known as <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). I am <strong>30 years old</strong> and come from <strong>Franconia, Germany</strong> — living in <strong>Roth (Middle Franconia)</strong> and frequently in the <strong>Upper Palatinate (near Cham)</strong>. While Bavaria and Remote/Hybrid roles are my natural home base, I am fully open to <strong>relocating anywhere in Germany (such as Hamburg, Berlin, or Munich)</strong> — and in the future across Europe or internationally.",
+      "While I started working with <strong>Unity and C# in 2016</strong>, a major technical spark came in <strong>2018</strong> when I began rooting Android systems and exploring how games work under the hood. Analyzing how game values, parameters, and internal formulas shape the player experience inspired me to build my own games from scratch.",
+      "<div class=\"story-quote-highlight\">\"Du sollst doch nicht schon wieder die <strong>Nacht zum Tag</strong> machen!\" — The name <strong>Nightoday Game Studio</strong> came to me easily, inspired by my mother (who often reminded me not to stay up too late, take care of my eyes, and get enough sleep) and the direct translation of 'Nacht zum Tag' (Night to Day).</div>",
+      "My second huge inspiration is the legendary <strong>Bethesda Game Studios</strong>. When I lived in a youth home and only had one single hour of 'media time' per day, I invested almost every single day of that hour into <em>Skyrim</em>. That experience shaped my core philosophy as a Game Designer: <strong>deep worldbuilding, atmospheric lore, meaningful quests, and respecting every single minute of the player's time</strong>.",
+      "At the <strong>Games Academy (2024–2026)</strong>, I discovered where my true strength lies: I am a hands-on creator and <strong>Game Designer</strong> — not a purely administrative manager. Whether I am the sole Game Designer in a team crafting Egyptian mythology quests, pyramid puzzles, and AI patrol routes (<em>Shadow of Ammit</em>), designing complete UI and puzzle systems (<em>LineX</em>), or shipping commercial systems on Steam (<em>Grimoire Garden</em>), I thrive when turning creative design directly into playable reality."
     ],
     "de": [
-      "Ich bin <strong>Jan Jelle Klingberg</strong>, besser bekannt als <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). Ich bin <strong>30 Jahre alt</strong> und komme aus <strong>Franken</strong> – wohnhaft in <strong>Roth (Mittelfranken)</strong> und regelmäßig in der <strong>Oberpfalz (Raum Cham)</strong>. Seit meiner Kindheit – eigentlich solange ich denken kann – bin ich leidenschaftlicher Videospielfan und fasziniert von der Welt der Games.",
-      "Neben meiner aktiven Arbeit mit Unity (seit 2016) war <strong>2018</strong> ein prägender Meilenstein: Ich entdeckte das Rooten von Android-Systemen, was mich zum <strong>Reverse Engineering von Spielen und der Manipulation von Spielwerten</strong> inspirierte. Damals fasste ich den Entschluss, meinen Traum vom eigenen Indie-Game-Studio zu verwirklichen.",
+      "Ich bin <strong>Jan Jelle Klingberg</strong>, besser bekannt als <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). Ich bin <strong>30 Jahre alt</strong> und komme aus <strong>Franken</strong> – wohnhaft in <strong>Roth (Mittelfranken)</strong> und regelmäßig in der <strong>Oberpfalz (Raum Cham)</strong>. Während Bayern sowie Remote-/Hybrid-Modelle für mich optimal sind, bin ich absolut offen für eine <strong>Relocation deutschlandweit (z. B. nach Hamburg, München oder Berlin)</strong> – und mit wachsender Industrie-Erfahrung gerne auch europaweit oder international.",
+      "Neben meiner aktiven Arbeit mit <strong>Unity und C# (seit 2016)</strong> war <strong>2018</strong> ein prägender Meilenstein: Durch das Rooten von Android-Systemen begann ich mich intensiv mit der <strong>Analyse von Spielsystemen und Spielwerten unter der Haube</strong> zu beschäftigen. Zu verstehen, wie Formeln, Parameter und Datenstrukturen das Spielgefühl steuern, weckte meinen Entschluss, eigene Spiele zu entwickeln.",
       "<div class='story-quote-highlight'>„Du sollst doch nicht schon wieder die <strong>Nacht zum Tag</strong> machen!“ — Der Name <strong>Nightoday Game Studio</strong> entstand aus dieser klassischen Erinnerung meiner Mutter, nicht zu lange wach zu bleiben, auf meine Augen zu achten und genug zu schlafen. Aus der direkten Übersetzung von „Nacht zum Tag“ wurde mein Studio-Name geboren.</div>",
-      "Meine zweite große Inspiration sind die legendären <strong>Bethesda Game Studios</strong>, die mir mit <em>Skyrim</em> im Grunde das Leben gerettet haben, als ich in einem Kinderheim war und pro Tag nur eine einzige Stunde „Medienzeit“ hatte – eine Stunde, die ich fast jeden Tag in dieses Meisterwerk investierte.",
-      "Mein Ziel ist es, so viel Erfahrung wie möglich zu sammeln und meine Karriere bis zum <strong>Lead Game Designer oder Game Director</strong> auszubauen. Mit meiner Ausbildung in <strong>Game Design & Game Production an der Games Academy (2024–2026)</strong> und eigenen Releases auf Steam und im Google Play Store unter <strong>Nightoday Game Studio</strong> freue ich mich darauf, komplexe Probleme kreativ zu lösen und Spieler zu begeistern. Vielen Dank für dein Interesse – bei Fragen oder Interesse an einer Zusammenarbeit melde dich gerne jederzeit!"
+      "Meine zweite große Inspiration sind die legendären <strong>Bethesda Game Studios</strong>, die mir mit <em>Skyrim</em> in meiner Jugend während meiner Zeit im Kinderheim enorm viel gegeben haben. Damals hatte ich exakt eine einzige Stunde „Medienzeit“ pro Tag – und habe fast jede einzelne davon in <em>Skyrim</em> verbracht. Das prägt mein Design-Verständnis bis heute: <strong>Tiefes Worldbuilding, dichte Lore, spannende Quests und maximaler Respekt vor der Spielzeit des Spielers</strong>.",
+      "Während meiner Ausbildung an der <strong>Games Academy (2024–2026)</strong> wurde mir eines glasklar: Mein Herz schlägt zu 100 % für das handwerkliche <strong>Game Design &amp; Technical Design</strong> – nicht für trockenes Projektmanagement. Egal ob ich als einziger Game Designer im Team tief in die ägyptische Mythologie eintauche, Pyramiden-Rätsel entwerfe und mit dem Programmierer die KI-Routen von Ammit ausarbeite (<em>Shadow of Ammit</em>), komplette UI- und Level-Systeme baue (<em>LineX</em>) oder eigene Steam-Titel veröffentliche: Ich möchte nah am Spiel, an den Mechaniken und an der Engine arbeiten."
     ]
   },
   "heroProjects": [
     {
       "id": "grimoire-garden",
-      "title": "Grimoire Garden: A Taskbar Tale",
+      "title": "Grimoire Garden: A Taskbar Tale (Commercial Steam Release)",
       "badges": [
         "Published on Steam",
-        "Windows OS Integration",
-        "Unity (C#)",
+        "Solo Technical Game Designer",
+        "Unity (C# & Windows OS API)",
         "59 Steam Achievements"
       ],
       "coverImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4560080/header.jpg",
       "steamAppId": "4560080",
+      "itchUrl": "",
       "pitch": {
-        "en": "A cozy second-screen taskbar game blending idle farming, deep skill-tree progression, and seamless 'No-Spacebar' typing combat right at the bottom edge of your Windows desktop.",
-        "de": "Ein Cozy-Second-Screen-Taskbar-Game, das Idle-Farming, tiefgehende Skill-Tree-Progression und nahtlosen 'No-Spacebar'-Typing-Combat direkt am unteren Rand des Windows-Desktops vereint."
+        "en": "A commercial cozy second-screen taskbar game blending idle farming, deep skill-tree progression, and seamless 'No-Spacebar' typing combat right at the bottom edge of your Windows desktop.",
+        "de": "Ein kommerzielles Cozy-Second-Screen-Taskbar-Game auf Steam, das Idle-Farming, tiefgehende Skill-Tree-Progression und nahtlosen 'No-Spacebar'-Typing-Combat direkt am unteren Rand des Windows-Desktops vereint."
       },
       "designHighlights": {
         "en": [
@@ -175,12 +187,69 @@ const portfolioData = {
           "Komplette Steamworks-Pipeline: Zeitbasierte Offline-Wachstumsberechnung und 59 getrackte Steam-Achievements."
         ]
       }
+    },
+    {
+      "id": "shadow-of-ammit",
+      "title": "Shadow of Ammit (Team Hero Project • Games Academy)",
+      "badges": [
+        "🤝 Sole Game Designer in Team",
+        "Quest, Puzzle & Pyramid Layout",
+        "AI Patrol & Route Design",
+        "Egyptian Mythology & Lore"
+      ],
+      "coverImageUrl": "",
+      "steamAppId": "",
+      "itchUrl": "https://jjampion.itch.io/",
+      "pitch": {
+        "en": "An atmospheric Egyptian mythological adventure developed in an interdisciplinary team at the Games Academy. As the sole Game Designer on the team, I owned the quest design, pyramid structure, environmental puzzles, deep mythological lore, and the behavioral route design of the stalker entity Ammit.",
+        "de": "Ein atmosphärisches Abenteuer in der ägyptischen Mythologie, entwickelt im interdisziplinären Semester-Team an der Games Academy. Als einziger Game Designer im Team verantwortete ich das komplette Quest-Design, den Aufbau der Pyramide, die Rätsel-Mechaniken, die mythologische Lore sowie die Verhaltens- und Routenplanung von Ammit."
+      },
+      "designHighlights": {
+        "en": [
+          "Pyramid Architecture & Puzzle Design: Conceived the spatial layout of the pyramid, player guidance, and interconnected environmental puzzles.",
+          "Deep Egyptian Mythology & Lore: Conducted extensive research into ancient Egyptian deities (Ammit, Osiris, Horus, Ra) to weave authentic narrative and symbolism directly into quests and puzzles.",
+          "Quest Flow & Pacing: Designed the overarching quest structure to balance tense stealth/stalker encounters with rewarding puzzle exploration."
+        ],
+        "de": [
+          "Pyramiden-Aufbau & Rätsel-Design: Konzeption der räumlichen Pyramiden-Struktur, der Spielerführung sowie der ineinandergreifenden Umgebungsrätsel.",
+          "Tiefgehende Ägyptische Mythologie & Lore: Intensive Recherche rund um Osiris, Ammit, Horus und Ra, um authentische Lore und Symbolik direkt in das Quest- und Rätsel-Design einfließen zu lassen.",
+          "Quest-Ablauf & Pacing: Ausarbeitung der gesamten Quest-Struktur im Spannungsfeld zwischen Erkundung, Rätsellösung und der ständigen Bedrohung durch Ammit."
+        ]
+      },
+      "techHighlights": {
+        "en": [
+          "AI Patrol & Route Specification: Collaborated closely with the programmer to define how Ammit traverses the pyramid — specifying patrol routes, waypoint placement, and encounter triggers.",
+          "Design-to-Code Translation: Bridged creative level/quest concepts and technical implementation by translating puzzle states and route logic into clear programmer specifications.",
+          "Iterative Team Balancing: Tuned traversal timings, sightlines, and puzzle difficulty across project milestones based on team playtests."
+        ],
+        "de": [
+          "KI-Routen & Waypoint-Konzeption: Enge Zusammenarbeit mit dem Programmierer zur Umsetzung von Ammits Laufwegen durch die Pyramide (Definition von Routen, Knotenpunkten und Trigger-Abläufen).",
+          "Schnittstelle zwischen Design & Code: Übersetzung komplexer Quest-Abläufe und Rätsel-Logiken in präzise technische Vorgaben für die Programmierung.",
+          "Iteratives Balancing im Team: Kontinuierliche Abstimmung von Laufzeiten, Sichtlinien und Rätsel-Schwierigkeitsgraden durch gemeinsames Playtesting."
+        ]
+      }
     }
   ],
   "labProjects": [
     {
+      "id": "linex-games-academy",
+      "title": "LineX (Games Academy • 1st Semester Project)",
+      "badges": [
+        "🤝 Team Project",
+        "Game, Level & Puzzle Design",
+        "Complete UI Design"
+      ],
+      "coverImageUrl": "",
+      "itchUrl": "https://jjampion.itch.io/",
+      "itchWidgetCode": "",
+      "pitch": {
+        "en": "My very first semester project at the Games Academy and an all-round hands-on design showcase: I designed the complete UI from scratch, created levels and puzzle mechanics, and shaped the core Game Design.",
+        "de": "Mein allererstes Semesterprojekt an der Games Academy und ein echtes Hands-on-Design-Showcase: Hier habe ich das komplette UI entworfen, das Game Design und Level-Design verantwortet sowie die Rätsel mitgestaltet."
+      }
+    },
+    {
       "id": "core-dump",
-      "title": "Core Dump",
+      "title": "TFD://BREACH (Upcoming Android Port: Core Dump)",
       "badges": [
         "🏆 1st Place Winner (Trijam 3h Jam)",
         "Unity WebGL & Android Port",
@@ -190,8 +259,24 @@ const portfolioData = {
       "itchUrl": "https://jjampion.itch.io/",
       "itchWidgetCode": "",
       "pitch": {
-        "en": "Built in just 3 hours for the Trijam theme 'The Forbidden Door' (1st Place Winner) and expanded with an Android port. A fast-paced circular hacking shooter with 10 Security Layers, Hardcore mode, and an endless Roguelite mode.",
-        "de": "Entstanden in nur 3 Stunden zum Trijam-Thema 'The Forbidden Door' (1. Platz Gewinner) und als Android-Port umgesetzt. Ein rasanter Kreis-Arena-Shooter im ASCII-Hacker-Stil mit 10 Security-Layern und Endlos-Modus."
+        "en": "1st Place Winner built in just 3 hours for the Trijam theme 'The Forbidden Door' (TFD) and expanded into the upcoming Android port 'Core Dump'. A fast-paced circular hacking shooter with 10 Security Layers, Hardcore mode, and an endless Roguelite mode.",
+        "de": "In nur 3 Stunden zum Trijam-Thema 'The Forbidden Door' (TFD) entwickelt (1. Platz Gewinner) und für den kommenden Android-Port als 'Core Dump' ausgebaut. Rasanter Kreis-Arena-Shooter im ASCII-Hacker-Stil mit 10 Security-Layern und Endlos-Roguelite-Modus."
+      }
+    },
+    {
+      "id": "mugiwara-cowboy-play",
+      "title": "Mugiwara Cowboy (Google Play Store Live)",
+      "badges": [
+        "Published on Google Play",
+        "Nightoday Publisher Hub",
+        "Android SDK & Store Pipeline"
+      ],
+      "coverImageUrl": "",
+      "itchUrl": "https://play.google.com/store/apps/dev?id=9045790172314321033",
+      "itchWidgetCode": "",
+      "pitch": {
+        "en": "Self-published commercial Android release 'Mugiwara Cowboy' on Google Play under Nightoday Game Studio — maintaining Target SDK compliance, keystore security, and the official studio store hub where 'Core Dump' and future mobile titles will launch.",
+        "de": "Veröffentlichtes Android-Spiel 'Mugiwara Cowboy' im Google Play Store unter Nightoday Game Studio – inklusive Target-SDK-Pflege, Keystore-Management und zentraler Studio-Publisher-Seite für kommende Releases wie 'Core Dump'."
       }
     },
     {
@@ -206,13 +291,13 @@ const portfolioData = {
       "itchUrl": "https://jjampion.itch.io/",
       "itchWidgetCode": "",
       "pitch": {
-        "en": "Competitive mobile & web memory game inspired by New Super Mario Bros. DS minigames — featuring cognitive load balancing, global Play Games Leaderboards, a 20-language localization system, and custom local photo decks.",
+        "en": "Competitive mobile & web memory game inspired by New Super Mario Bros. DS minigames — featuring cognitive load balancing, global Play Games Leaderboards, a custom 20-language localization system, and custom local photo decks.",
         "de": "Kompetitives Mobile- & Web-Memory-Spiel inspiriert von den New Super Mario Bros. DS-Minispielen – inklusive 20-Sprachen-Lokalisierungssystem, Google Play Leaderboards und eigenen Foto-Kartendecks."
       }
     },
     {
       "id": "trijam-runner-ups",
-      "title": "2x 2nd Place Trijam Prototypes",
+      "title": "THE WOZ-TAC-TOE & Stick It To 'Em! (2x 2nd Place Trijam)",
       "badges": [
         "🥈 2x 2nd Place Winner",
         "3-Hour Rapid Prototyping",
@@ -224,22 +309,6 @@ const portfolioData = {
       "pitch": {
         "en": "Two award-winning 3-hour Game Jam prototypes demonstrating ultra-fast theme interpretation, immediate 'Find the Fun' iteration, and bug-free WebGL delivery under extreme time pressure.",
         "de": "Zwei preisgekrönte 3-Stunden-Prototypen beim Trijam: Fokus auf extrem schnelle Themen-Analyse, 'Find the Fun' in den ersten 30 Minuten und sauberen WebGL-Release unter Zeitdruck."
-      }
-    },
-    {
-      "id": "google-play-release",
-      "title": "Nightoday Mobile Release (Google Play Live)",
-      "badges": [
-        "Google Play Store",
-        "Live-Ops & Keystore Management",
-        "Android SDK"
-      ],
-      "coverImageUrl": "",
-      "itchUrl": "https://play.google.com/store/apps/details?id=gg.nightodaygamestudio.mc&hl=de",
-      "itchWidgetCode": "",
-      "pitch": {
-        "en": "Published commercial Android build maintained with updated Google Play Target SDK requirements, structured keystore security, and end-to-end store compliance.",
-        "de": "Selbstständig im Google Play Store veröffentlichtes Android-Spiel inklusive Pflege aktueller Target-SDK-Vorgaben, strukturiertem Keystore-Management und Store-Compliance."
       }
     },
     {
@@ -496,11 +565,9 @@ function markUnsavedIndicator() {
   }
 }
 
-// Activates contenteditable on all page elements when Admin + Live-Edit is ON
 function applyInlineEditability() {
   const canEdit = isAdminUnlocked && isInlineEditActive;
 
-  // 1. Standard UI Strings ([data-edit-ui])
   document.querySelectorAll("[data-edit-ui]").forEach(el => {
     if (canEdit) {
       el.setAttribute("contenteditable", "true");
@@ -508,9 +575,9 @@ function applyInlineEditability() {
       if (!el.dataset.boundInline) {
         el.dataset.boundInline = "true";
         el.addEventListener("click", (e) => {
-          // Prevent parent link/button navigation while editing text in admin mode
-          if (isAdminUnlocked && isInlineEditActive && el.closest("a")) {
+          if (isAdminUnlocked && isInlineEditActive && (el.closest("a") || el.closest("button"))) {
             e.preventDefault();
+            e.stopPropagation();
           }
         });
         el.addEventListener("blur", () => {
@@ -527,7 +594,6 @@ function applyInlineEditability() {
     }
   });
 
-  // 2. Dynamic Elements (Origin Story paragraphs, Skill Pills, Hero Project & Lab Tiles)
   document.querySelectorAll("[data-edit-dynamic]").forEach(el => {
     if (canEdit) {
       el.setAttribute("contenteditable", "true");
@@ -610,82 +676,107 @@ function applyTheme() {
 /* ==========================================================================
    5. RENDER FUNCTIONS (WITH FULL INLINE EDIT BINDINGS)
    ========================================================================== */
+function setTextSafe(id, text) {
+  const el = document.getElementById(id);
+  if (el && text !== undefined) el.textContent = text;
+}
+
+function setHtmlSafe(id, html) {
+  const el = document.getElementById(id);
+  if (el && html !== undefined) el.innerHTML = html;
+}
+
 function renderHeroStrings() {
   const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
 
   // Navigation & Brand
-  document.getElementById("brand-name-display").textContent = t.brandName || "Jan Jelle Klingberg";
-  document.getElementById("brand-alias-display").textContent = t.brandAlias || "aka JJampion";
-  document.getElementById("nav-subrole").textContent = t.navSubrole;
-  document.getElementById("nav-about").textContent = t.navAbout;
-  document.getElementById("nav-origin").textContent = t.navOrigin;
-  document.getElementById("nav-projects").textContent = t.navProjects;
-  document.getElementById("nav-lab").textContent = t.navLab;
+  setTextSafe("brand-name-display", t.brandName || "Jan Jelle Klingberg");
+  setTextSafe("brand-alias-display", t.brandAlias || "aka JJampion");
+  setTextSafe("nav-subrole", t.navSubrole);
+  setTextSafe("nav-about", t.navAbout);
+  setTextSafe("nav-origin", t.navOrigin);
+  setTextSafe("nav-projects", t.navProjects);
+  setTextSafe("nav-lab", t.navLab);
 
   // Stage 01: Identity & Pitch
-  document.getElementById("hero-main-name").textContent = t.heroName || "Jan Jelle Klingberg";
-  document.getElementById("hero-phonetic-tag").textContent = t.heroPhonetic || "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /";
-  document.getElementById("story-phonetic-tag").textContent = t.heroPhonetic || "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /";
-  document.getElementById("hero-status-text").textContent = t.heroStatus;
-  document.getElementById("hero-headline").textContent = t.heroHeadline;
-  document.getElementById("hero-lead-text").textContent = t.heroLead;
+  setTextSafe("hero-main-name", t.heroName || "Jan Jelle Klingberg");
+  setTextSafe("hero-phonetic-tag", t.heroPhonetic || "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /");
+  setTextSafe("story-phonetic-tag", t.heroPhonetic || "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /");
+  setTextSafe("hero-status-text", t.heroStatus);
+  setTextSafe("hero-headline", t.heroHeadline);
+  setTextSafe("hero-lead-text", t.heroLead);
 
   // Bio Facts
-  document.getElementById("fact-location").innerHTML = t.factLocation;
-  document.getElementById("fact-edu").innerHTML = t.factEdu;
-  document.getElementById("fact-studio").innerHTML = t.factStudio;
+  setHtmlSafe("fact-location", t.factLocation);
+  setHtmlSafe("fact-edu", t.factEdu);
+  setHtmlSafe("fact-studio", t.factStudio);
 
   // 4 Stats (Values + Labels)
-  document.getElementById("stat-1-val").textContent = t.stat1Val || "Since 2016";
-  document.getElementById("stat-1-label").textContent = t.stat1;
-  document.getElementById("stat-2-val").textContent = t.stat2Val || "1st & 2x 2nd";
-  document.getElementById("stat-2-label").textContent = t.stat2;
-  document.getElementById("stat-3-val").textContent = t.stat3Val || "Steam & Play";
-  document.getElementById("stat-3-label").textContent = t.stat3;
-  document.getElementById("stat-4-val").textContent = t.stat4Val || "20+ Langs";
-  document.getElementById("stat-4-label").textContent = t.stat4;
+  setTextSafe("stat-1-val", t.stat1Val || "Since 2016");
+  setTextSafe("stat-1-label", t.stat1);
+  setTextSafe("stat-2-val", t.stat2Val || "1st & 2x 2nd");
+  setTextSafe("stat-2-label", t.stat2);
+  setTextSafe("stat-3-val", t.stat3Val || "Steam & Play");
+  setTextSafe("stat-3-label", t.stat3);
+  setTextSafe("stat-4-val", t.stat4Val || "20+ Langs");
+  setTextSafe("stat-4-label", t.stat4);
 
   // Skill Pills (Editable inline)
   const pillsContainer = document.getElementById("skill-pills-container");
-  pillsContainer.innerHTML = (portfolioData.skillPills || []).map((pill, idx) =>
-    `<span class="skill-pill" data-edit-dynamic="true" onblur="updateSingleSkillPill(${idx}, this.textContent)">${pill}</span>`
-  ).join("");
-
-  // Action Buttons & External URLs
-  document.getElementById("cta-steam").textContent = t.ctaSteam;
-  document.getElementById("cta-itch").textContent = t.ctaItch;
-  document.getElementById("cta-play").textContent = t.ctaPlay;
-  document.getElementById("cta-origin-btn").textContent = t.ctaOriginBtn;
-  document.getElementById("cta-mail").textContent = t.ctaMail || "contact@janjelle.dev";
-
-  if (portfolioData.links) {
-    document.getElementById("link-steam-btn").href = portfolioData.links.steam || "#";
-    document.getElementById("link-itch-btn").href = portfolioData.links.itch || "#";
-    document.getElementById("link-play-btn").href = portfolioData.links.play || "#";
-    document.getElementById("link-mail-btn").href = portfolioData.links.email || "mailto:contact@janjelle.dev";
-    document.getElementById("visit-itch-link").href = portfolioData.links.itch || "https://jjampion.itch.io/";
+  if (pillsContainer) {
+    pillsContainer.innerHTML = (portfolioData.skillPills || []).map((pill, idx) =>
+      `<span class="skill-pill" data-edit-dynamic="true" onblur="updateSingleSkillPill(${idx}, this.textContent)">${pill}</span>`
+    ).join("");
   }
 
-  // Stage 02: Origin Story
-  document.getElementById("story-badge").textContent = t.storyBadge;
-  document.getElementById("story-heading").textContent = t.storyHeading;
-  document.getElementById("back-about-btn").textContent = t.backAboutBtn;
-  document.getElementById("next-projects-btn").textContent = t.nextProjectsBtn;
+  // Action Buttons & External URLs
+  setTextSafe("cta-projects-jump", t.ctaProjectsJump);
+  setTextSafe("cta-steam", t.ctaSteam);
+  setTextSafe("cta-itch", t.ctaItch);
+  setTextSafe("cta-play", t.ctaPlay);
+  setTextSafe("cta-origin-btn", t.ctaOriginBtn);
+  setTextSafe("cta-mail", t.ctaMail || "contact@janjelle.dev");
+
+  if (portfolioData.links) {
+    const steamBtn = document.getElementById("link-steam-btn");
+    const itchBtn = document.getElementById("link-itch-btn");
+    const playBtn = document.getElementById("link-play-btn");
+    const mailBtn = document.getElementById("link-mail-btn");
+    const visitItch = document.getElementById("visit-itch-link");
+
+    if (steamBtn) steamBtn.href = portfolioData.links.steam || "#";
+    if (itchBtn) itchBtn.href = portfolioData.links.itch || "#";
+    if (playBtn) playBtn.href = portfolioData.links.play || "#";
+    if (mailBtn) mailBtn.href = portfolioData.links.email || "mailto:contact@janjelle.dev";
+    if (visitItch) visitItch.href = portfolioData.links.itch || "https://jjampion.itch.io/";
+  }
+
+  // Stage 02, 03, 04 Headers & Navigation
+  setTextSafe("story-badge", t.storyBadge);
+  setTextSafe("story-heading", t.storyHeading);
+  setTextSafe("back-about-btn", t.backAboutBtn);
+  setTextSafe("next-projects-btn", t.nextProjectsBtn);
+  setTextSafe("back-origin-btn", t.backOriginBtn);
+  setTextSafe("next-lab-btn", t.nextLabBtn);
+  setTextSafe("back-hero-btn", t.backHeroBtn);
+  setTextSafe("cta-bottom-contact", t.ctaBottomContact);
 
   const paragraphs = (portfolioData.originStory && portfolioData.originStory[currentLang]) || portfolioData.originStory.en;
-  document.getElementById("story-paragraphs").innerHTML = paragraphs.map((p, idx) =>
-    `<div data-edit-dynamic="true" onblur="updateOriginParagraphInline(${idx}, this.innerHTML)">${p}</div>`
-  ).join("");
+  const storyContainer = document.getElementById("story-paragraphs");
+  if (storyContainer) {
+    storyContainer.innerHTML = paragraphs.map((p, idx) =>
+      `<div data-edit-dynamic="true" onblur="updateOriginParagraphInline(${idx}, this.innerHTML)">${p}</div>`
+    ).join("");
+  }
 
-  // Stage 03 & 04 Headers + Footer
-  document.getElementById("projects-eyebrow").textContent = t.projectsEyebrow;
-  document.getElementById("projects-heading").textContent = t.projectsHeading;
-  document.getElementById("add-project-top-btn").textContent = t.addProjectBtn;
+  setTextSafe("projects-eyebrow", t.projectsEyebrow);
+  setTextSafe("projects-heading", t.projectsHeading);
+  setTextSafe("add-project-top-btn", t.addProjectBtn);
 
-  document.getElementById("lab-eyebrow").textContent = t.labEyebrow;
-  document.getElementById("lab-heading").textContent = t.labHeading;
-  document.getElementById("visit-itch-label").textContent = t.visitItch;
-  document.getElementById("footer-text").textContent = t.footerText || "© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved.";
+  setTextSafe("lab-eyebrow", t.labEyebrow);
+  setTextSafe("lab-heading", t.labHeading);
+  setTextSafe("visit-itch-label", t.visitItch);
+  setTextSafe("footer-text", t.footerText || "© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved.");
 }
 
 function updateSingleSkillPill(index, newText) {
@@ -742,116 +833,139 @@ function renderProjects() {
   const heroContainer = document.getElementById("hero-projects-container");
   const labContainer = document.getElementById("lab-projects-container");
 
-  // Stage 03: Middle-Centered Flagship Hero Project (All parts inline-editable!)
-  const hero = portfolioData.heroProjects[0];
-  if (hero) {
-    const pitch = (hero.pitch && hero.pitch[currentLang]) || (hero.pitch && hero.pitch.en) || "";
-    const designList = (hero.designHighlights && hero.designHighlights[currentLang]) || (hero.designHighlights && hero.designHighlights.en) || [];
-    const techList = (hero.techHighlights && hero.techHighlights[currentLang]) || (hero.techHighlights && hero.techHighlights.en) || [];
-    const badgesHtml = (hero.badges || []).map((b, idx) =>
-      `<span class="${idx === 0 ? 'badge highlight' : 'badge'}" data-edit-dynamic="true" onblur="updateHeroBadgeInline(${idx}, this.textContent)">${b}</span>`
-    ).join("");
-    const coverUrl = resolveDisplayImageUrl(hero.coverImageUrl);
+  // Stage 03: Render ALL Hero Projects (1. Grimoire Garden Steam Solo + 2. Shadow of Ammit Team Hero)
+  if (heroContainer && Array.isArray(portfolioData.heroProjects)) {
+    heroContainer.innerHTML = portfolioData.heroProjects.map((hero, hIdx) => {
+      const pitch = (hero.pitch && hero.pitch[currentLang]) || (hero.pitch && hero.pitch.en) || "";
+      const designList = (hero.designHighlights && hero.designHighlights[currentLang]) || (hero.designHighlights && hero.designHighlights.en) || [];
+      const techList = (hero.techHighlights && hero.techHighlights[currentLang]) || (hero.techHighlights && hero.techHighlights.en) || [];
+      const badgesHtml = (hero.badges || []).map((b, idx) =>
+        `<span class="${idx === 0 ? 'badge highlight' : 'badge'}" data-edit-dynamic="true" onblur="updateHeroBadgeInline(${hIdx}, ${idx}, this.textContent)">${b}</span>`
+      ).join("");
+      const coverUrl = resolveDisplayImageUrl(hero.coverImageUrl);
 
-    heroContainer.innerHTML = `
-      <article class="project-card-centered liquid-glass hover-lift">
-        <div class="project-badges-centered">${badgesHtml}</div>
-        <h3 class="project-title" data-edit-dynamic="true" onblur="updateHeroFieldInline('title', this.textContent)">${hero.title}</h3>
-        <p class="project-pitch-centered" data-edit-dynamic="true" onblur="updateHeroFieldInline('pitch', this.textContent)">${pitch}</p>
-
-        ${coverUrl ? `<div class="hero-cover-showcase"><img src="${coverUrl}" alt="${hero.title}" loading="lazy" /></div>` : ""}
-
-        <div class="highlights-columns">
-          <div class="highlight-box">
-            <h4 data-edit-ui="designHeader">${t.designHeader}</h4>
-            <ul>${designList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline('designHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
+      let footerEmbedHtml = "";
+      if (hero.steamAppId && hero.steamAppId.trim() !== "") {
+        footerEmbedHtml = `
+          <div class="steam-widget-centered-box">
+            <span style="font-size:0.78rem; color:var(--text-muted); font-weight:700;" data-edit-ui="steamWidgetLabel">${t.steamWidgetLabel}</span>
+            <div class="iframe-centered-wrapper">
+              <iframe src="https://store.steampowered.com/widget/${hero.steamAppId}/" frameborder="0" width="646" height="190" loading="lazy"></iframe>
+            </div>
           </div>
-          <div class="highlight-box">
-            <h4 data-edit-ui="techHeader">${t.techHeader}</h4>
-            <ul>${techList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline('techHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
+        `;
+      } else if (hero.itchUrl && hero.itchUrl.trim() !== "") {
+        footerEmbedHtml = `
+          <div class="itch-launch-card" style="margin-top:8px;">
+            <div style="display:flex; align-items:center; gap:8px; min-width:0;">
+              <span class="itch-badge">itch.io • Team Project</span>
+              <span style="font-weight:800; font-size:0.88rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${hero.title}</span>
+            </div>
+            <a href="${hero.itchUrl}" target="_blank" rel="noopener" class="btn-itch">${t.itchOpenBtn}</a>
           </div>
-        </div>
+        `;
+      }
 
-        <div class="steam-widget-centered-box">
-          <span style="font-size:0.78rem; color:var(--text-muted); font-weight:700;" data-edit-ui="steamWidgetLabel">${t.steamWidgetLabel}</span>
-          <div class="iframe-centered-wrapper">
-            <iframe src="https://store.steampowered.com/widget/${hero.steamAppId || '4560080'}/" frameborder="0" width="646" height="190" loading="lazy"></iframe>
+      return `
+        <article class="project-card-centered liquid-glass hover-lift" style="margin-bottom: 24px;">
+          <div class="project-badges-centered">${badgesHtml}</div>
+          <h3 class="project-title" data-edit-dynamic="true" onblur="updateHeroFieldInline(${hIdx}, 'title', this.textContent)">${hero.title}</h3>
+          <p class="project-pitch-centered" data-edit-dynamic="true" onblur="updateHeroFieldInline(${hIdx}, 'pitch', this.textContent)">${pitch}</p>
+
+          ${coverUrl ? `<div class="hero-cover-showcase"><img src="${coverUrl}" alt="${hero.title}" loading="lazy" /></div>` : ""}
+
+          <div class="highlights-columns">
+            <div class="highlight-box">
+              <h4 data-edit-ui="designHeader">${t.designHeader}</h4>
+              <ul>${designList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline(${hIdx}, 'designHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
+            </div>
+            <div class="highlight-box">
+              <h4 data-edit-ui="techHeader">${t.techHeader}</h4>
+              <ul>${techList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline(${hIdx}, 'techHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
+            </div>
           </div>
-        </div>
-      </article>
-    `;
+
+          ${footerEmbedHtml}
+        </article>
+      `;
+    }).join("");
   }
 
-  // Stage 04: Responsive Tile Grid for Unlimited Projects (Titles & descriptions inline-editable!)
-  labContainer.innerHTML = portfolioData.labProjects.map((proj, index) => {
-    const pitch = (proj.pitch && proj.pitch[currentLang]) || (proj.pitch && proj.pitch.en) || "";
-    const badgesHtml = (proj.badges || []).map((b, bIdx) => {
-      const isAward = b.includes("1st") || b.includes("2nd") || b.includes("🏆") || b.includes("🥈");
-      return `<span class="${isAward ? 'badge award' : 'badge'}" data-edit-dynamic="true" onblur="updateLabBadgeInline(${index}, ${bIdx}, this.textContent)">${b}</span>`;
+  // Stage 04: Responsive Tile Grid for Unlimited Projects
+  if (labContainer) {
+    labContainer.innerHTML = portfolioData.labProjects.map((proj, index) => {
+      const pitch = (proj.pitch && proj.pitch[currentLang]) || (proj.pitch && proj.pitch.en) || "";
+      const badgesHtml = (proj.badges || []).map((b, bIdx) => {
+        const isAward = b.includes("1st") || b.includes("2nd") || b.includes("🏆") || b.includes("🥈") || b.includes("🤝");
+        return `<span class="${isAward ? 'badge award' : 'badge'}" data-edit-dynamic="true" onblur="updateLabBadgeInline(${index}, ${bIdx}, this.textContent)">${b}</span>`;
+      }).join("");
+
+      const coverUrl = resolveDisplayImageUrl(proj.coverImageUrl);
+      const labImageHtml = coverUrl && coverUrl.trim() !== ""
+        ? `<div class="tile-cover-frame"><img src="${coverUrl}" alt="${proj.title}" loading="lazy" /></div>`
+        : "";
+
+      const isPlayStore = (proj.itchUrl || "").includes("play.google.com");
+      const badgeLabel = isPlayStore ? "Google Play" : "itch.io";
+
+      let footerWidgetHtml = "";
+      if (proj.itchWidgetCode && proj.itchWidgetCode.trim() !== "") {
+        footerWidgetHtml = `
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div class="iframe-centered-wrapper" style="justify-content:flex-start;">${proj.itchWidgetCode}</div>
+            <button class="pill-btn admin-only" style="align-self:flex-end; padding:4px 10px; font-size:0.72rem;" onclick="editProjectInCMS(${index})">✏️ Edit Tile</button>
+          </div>
+        `;
+      } else {
+        footerWidgetHtml = `
+          <div class="itch-launch-card">
+            <div style="display:flex; align-items:center; gap:8px; min-width:0;">
+              <span class="itch-badge">${badgeLabel}</span>
+              <span style="font-weight:800; font-size:0.88rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${proj.title}</span>
+            </div>
+            <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">
+              <a href="${proj.itchUrl || 'https://jjampion.itch.io/'}" target="_blank" rel="noopener" class="btn-itch">${t.itchOpenBtn}</a>
+              <button class="pill-btn admin-only" style="padding:5px 10px; font-size:0.72rem;" onclick="editProjectInCMS(${index})">✏️</button>
+            </div>
+          </div>
+        `;
+      }
+
+      return `
+        <article class="lab-card liquid-glass hover-lift">
+          <div>
+            ${labImageHtml}
+            <div class="project-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px;">${badgesHtml}</div>
+            <h3 class="project-title" style="font-size:1.25rem; margin-bottom:6px;" data-edit-dynamic="true" onblur="updateLabFieldInline(${index}, 'title', this.textContent)">${proj.title}</h3>
+            <p style="font-size:0.88rem; color:var(--text-secondary);" data-edit-dynamic="true" onblur="updateLabFieldInline(${index}, 'pitch', this.textContent)">${pitch}</p>
+          </div>
+          ${footerWidgetHtml}
+        </article>
+      `;
     }).join("");
-
-    const coverUrl = resolveDisplayImageUrl(proj.coverImageUrl);
-    const labImageHtml = coverUrl && coverUrl.trim() !== ""
-      ? `<div class="tile-cover-frame"><img src="${coverUrl}" alt="${proj.title}" loading="lazy" /></div>`
-      : "";
-
-    let footerWidgetHtml = "";
-    if (proj.itchWidgetCode && proj.itchWidgetCode.trim() !== "") {
-      footerWidgetHtml = `
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <div class="iframe-centered-wrapper" style="justify-content:flex-start;">${proj.itchWidgetCode}</div>
-          <button class="pill-btn admin-only" style="align-self:flex-end; padding:4px 10px; font-size:0.72rem;" onclick="editProjectInCMS(${index})">✏️ Edit Tile</button>
-        </div>
-      `;
-    } else {
-      footerWidgetHtml = `
-        <div class="itch-launch-card">
-          <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-            <span class="itch-badge">itch.io</span>
-            <span style="font-weight:800; font-size:0.88rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${proj.title}</span>
-          </div>
-          <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">
-            <a href="${proj.itchUrl || 'https://jjampion.itch.io/'}" target="_blank" rel="noopener" class="btn-itch">${t.itchOpenBtn}</a>
-            <button class="pill-btn admin-only" style="padding:5px 10px; font-size:0.72rem;" onclick="editProjectInCMS(${index})">✏️</button>
-          </div>
-        </div>
-      `;
-    }
-
-    return `
-      <article class="lab-card liquid-glass hover-lift">
-        <div>
-          ${labImageHtml}
-          <div class="project-badges">${badgesHtml}</div>
-          <h3 class="project-title" style="font-size:1.25rem; margin-bottom:6px;" data-edit-dynamic="true" onblur="updateLabFieldInline(${index}, 'title', this.textContent)">${proj.title}</h3>
-          <p style="font-size:0.88rem; color:var(--text-secondary);" data-edit-dynamic="true" onblur="updateLabFieldInline(${index}, 'pitch', this.textContent)">${pitch}</p>
-        </div>
-        ${footerWidgetHtml}
-      </article>
-    `;
-  }).join("");
+  }
 
   applyInlineEditability();
 }
 
-// Inline Edit Helpers for Hero Project & Lab Project Tiles
-function updateHeroFieldInline(field, val) {
-  const hero = portfolioData.heroProjects[0];
+// Inline Edit Helpers for Hero Projects & Lab Project Tiles
+function updateHeroFieldInline(heroIdx, field, val) {
+  const hero = portfolioData.heroProjects[heroIdx];
   if (!hero) return;
   if (field === "title") hero.title = val.trim();
   if (field === "pitch") hero.pitch[currentLang] = val.trim();
   markUnsavedIndicator();
 }
 
-function updateHeroBadgeInline(badgeIdx, val) {
-  const hero = portfolioData.heroProjects[0];
+function updateHeroBadgeInline(heroIdx, badgeIdx, val) {
+  const hero = portfolioData.heroProjects[heroIdx];
   if (!hero || !hero.badges) return;
   hero.badges[badgeIdx] = val.trim();
   markUnsavedIndicator();
 }
 
-function updateHeroHighlightInline(listKey, itemIdx, val) {
-  const hero = portfolioData.heroProjects[0];
+function updateHeroHighlightInline(heroIdx, listKey, itemIdx, val) {
+  const hero = portfolioData.heroProjects[heroIdx];
   if (!hero || !hero[listKey] || !hero[listKey][currentLang]) return;
   hero[listKey][currentLang][itemIdx] = val.trim();
   markUnsavedIndicator();
@@ -900,7 +1014,6 @@ function populateCMSEditors() {
     document.getElementById("cms-link-email").value = portfolioData.links.email || "";
   }
 
-  // Hero Project Editor
   const hero = portfolioData.heroProjects[0];
   if (hero) {
     document.getElementById("cms-hero-lang-indicator").textContent = currentLang.toUpperCase();
@@ -913,7 +1026,6 @@ function populateCMSEditors() {
     document.getElementById("cms-hero-tech").value = ((hero.techHighlights && hero.techHighlights[currentLang]) || []).join("\n");
   }
 
-  // Origin Story Editor
   document.getElementById("cms-story-lang-indicator").textContent = currentLang.toUpperCase();
   const storyArr = (portfolioData.originStory && portfolioData.originStory[currentLang]) || [];
   document.getElementById("cms-origin-story-textarea").value = storyArr.join("\n\n");
@@ -1075,7 +1187,7 @@ function saveOrAddProjectTile() {
     portfolioData.labProjects.unshift({
       id: "proj-" + Date.now(),
       title,
-      badges: badges.length ? badges : ["Unity", "itch.io"],
+      badges: badges.length ? badges : ["Unity", "itch.io"];
       coverImageUrl,
       itchUrl,
       itchWidgetCode,
@@ -1250,7 +1362,6 @@ async function publishDirectlyToGitHub() {
   try {
     if (quickSaveBtn) quickSaveBtn.textContent = "⏳ Saving to GitHub...";
 
-    // 1. Upload any queued binary image files to assets/
     const filePaths = Object.keys(pendingRepoFiles);
     for (const filePath of filePaths) {
       if (statusEl) statusEl.textContent = `⏳ Uploading ${filePath}...`;
@@ -1265,7 +1376,6 @@ async function publishDirectlyToGitHub() {
       delete pendingRepoFiles[filePath];
     }
 
-    // 2. Fetch and update app.js
     if (statusEl) statusEl.textContent = "⏳ Updating app.js in repository...";
     const apiUrl = `https://api.github.com/repos/${repo}/contents/app.js`;
     const getRes = await fetch(`${apiUrl}?ref=${branch}`, {
