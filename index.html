@@ -4,39 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Jan Jelle Klingberg (aka JJampion) | Junior Technical Game Designer</title>
-  <meta name="description" content="Interactive Horizontal Portfolio of Jan Jelle Klingberg (JJampion) – Junior Technical Game Designer (Unity & C# since 2016, Quest/Level/UI Design, Steam & Google Play Releases)." />
+  <meta name="description" content="Interactive Space Portfolio of Jan Jelle Klingberg (JJampion) – Junior Technical Game Designer. Systems, Quest, Puzzle & UI Design in Unity & C# since 2016." />
   <link rel="stylesheet" href="styles.css" />
   <style id="custom-user-css"></style>
 </head>
 <body>
 
-  <!-- Interactive 60FPS Deep Galaxy Canvas Background (Reacts to Horizontal Scroll) -->
+  <!-- ========================================================================
+       DEEP SPACE GALAXY CANVAS (PARALLAX STARFIELD & NEBULA)
+       ======================================================================== -->
   <canvas id="galaxy-canvas" aria-hidden="true"></canvas>
   <div class="galaxy-vignette" aria-hidden="true"></div>
 
-  <!-- Floating Admin Status Bar (Unlocked via 5x Click on Avatar/Portrait or Ctrl+Shift+E) -->
-  <div class="admin-status-bar admin-only">
-    <button class="pill-btn" id="inline-edit-toggle-btn" onclick="toggleInlineEditMode()">
-      ✏️ Live-Edit: ON
-    </button>
-    <button class="pill-btn primary" id="quick-save-gh-btn" onclick="publishDirectlyToGitHub()">
-      🚀 Save to GitHub
-    </button>
-    <button class="pill-btn" onclick="toggleCMS()">
-      ⚙️ Open CMS
-    </button>
-    <button class="pill-btn" onclick="lockAdminMode()">
-      🔒 Lock
-    </button>
-  </div>
-
-  <!-- PERSISTENT TOP NAVIGATION BAR -->
-  <header class="navbar-wrapper">
-    <nav class="navbar glass-panel">
-      <!-- Click 5x rapidly here or on the big portrait to unlock CMS -->
-      <div class="brand" onclick="handleSecretLogoClick()" title="Jan Jelle Klingberg aka JJampion (Click 5x for CMS)">
+  <!-- ========================================================================
+       TOP ORBITAL HUD NAVIGATION BAR
+       ======================================================================== -->
+  <header class="hud-header">
+    <nav class="hud-navbar">
+      <!-- 5x Click on Brand opens CMS PIN Modal -->
+      <div class="brand" onclick="handleSecretLogoClick()" title="Jan Jelle Klingberg aka JJampion">
         <div class="brand-avatar" id="nav-avatar">JJ</div>
-        <div>
+        <div class="brand-text-col">
           <div class="brand-title-row">
             <span id="brand-name-display" data-edit-ui="brandName">Jan Jelle Klingberg</span>
             <span class="phonetic-pill" id="brand-alias-display" data-edit-ui="brandAlias">aka JJampion</span>
@@ -47,249 +35,344 @@
         </div>
       </div>
 
-      <!-- Horizontal Station Links -->
-      <ul class="nav-links">
-        <li><a id="nav-showreel" class="active-nav" onclick="scrollToStation(0)">01 • Showreel</a></li>
-        <li><a id="nav-about" onclick="scrollToStation(1)">02 • About &amp; Origin</a></li>
-        <li><a id="nav-projects" onclick="scrollToStation(2)">03 • Projects Orbit (<span id="nav-proj-count">8</span>)</a></li>
+      <!-- Horizontal Stage Telemetry Links (01 to 04) -->
+      <ul class="hud-stage-tabs">
+        <li>
+          <button class="stage-tab active" id="nav-showreel" onclick="goToStage(0)">
+            <span class="tab-idx">01</span>
+            <span id="nav-label-showreel" data-edit-ui="navShowreel">Showreel</span>
+          </button>
+        </li>
+        <li>
+          <button class="stage-tab" id="nav-about" onclick="goToStage(1)">
+            <span class="tab-idx">02</span>
+            <span id="nav-label-about" data-edit-ui="navAbout">About Me</span>
+          </button>
+        </li>
+        <li>
+          <button class="stage-tab" id="nav-origin" onclick="goToStage(2)">
+            <span class="tab-idx">03</span>
+            <span id="nav-label-origin" data-edit-ui="navOrigin">Who Am I</span>
+          </button>
+        </li>
+        <li>
+          <button class="stage-tab" id="nav-orbit" onclick="goToStage(3)">
+            <span class="tab-idx">04</span>
+            <span id="nav-label-orbit" data-edit-ui="navProjects">Project Orbit</span>
+          </button>
+        </li>
       </ul>
 
-      <div class="nav-actions">
-        <!-- Language Switcher -->
+      <!-- Right Controls: Language, Audio Mute (for Showreel), CMS -->
+      <div class="hud-actions">
+        <button class="hud-icon-btn" id="showreel-mute-btn" onclick="toggleShowreelAudio()" title="Toggle Showreel Audio">
+          <span id="mute-icon">🔇</span>
+        </button>
+
         <div class="lang-switch" title="Switch Language (English / Deutsch)">
           <button class="lang-btn active" id="lang-en-btn" onclick="setLanguage('en')">EN</button>
           <button class="lang-btn" id="lang-de-btn" onclick="setLanguage('de')">DE</button>
         </div>
 
-        <!-- Theme Switcher -->
-        <button class="pill-btn" id="theme-toggle-btn" onclick="toggleTheme()">
-          <span id="theme-icon">☀️</span>
-          <span id="theme-label">Starlight</span>
-        </button>
-
-        <!-- Direct Contact Quick Button -->
-        <a href="mailto:contact@janjelle.dev" id="nav-mail-btn" class="pill-btn primary">
-          ✉️ <span id="nav-contact-label" data-edit-ui="navContact">Contact</span>
-        </a>
-
-        <!-- CMS Button (Admin Only) -->
-        <button class="pill-btn admin-only" onclick="toggleCMS()">
+        <button class="hud-btn primary admin-only" onclick="toggleCMS()">
           ⚙️ <span>CMS</span>
         </button>
       </div>
     </nav>
   </header>
 
-  <!-- ==========================================================================
-       HORIZONTAL SCROLLING GALAXY STREAM (SCROLL WHEEL MOVES LEFT <-> RIGHT)
-       ========================================================================== -->
-  <main class="horizontal-viewport" id="horizontal-viewport">
-    <div class="horizontal-track" id="horizontal-track">
+  <!-- ========================================================================
+       FLOATING ADMIN STATUS BAR (VISIBLE WHEN CMS UNLOCKED)
+       ======================================================================== -->
+  <div class="admin-status-bar admin-only">
+    <button class="hud-btn" id="inline-edit-toggle-btn" onclick="toggleInlineEditMode()">
+      ✏️ Live-Edit: ON
+    </button>
+    <button class="hud-btn primary" id="quick-save-gh-btn" onclick="publishDirectlyToGitHub()">
+      🚀 Save to GitHub
+    </button>
+    <button class="hud-btn" onclick="toggleCMS()">
+      ⚙️ Open CMS
+    </button>
+    <button class="hud-btn" onclick="lockAdminMode()">
+      🔒 Lock
+    </button>
+  </div>
 
-      <!-- ======================================================================
-           STATION 01: FULLSCREEN SHOWREEL VIDEO INTRO
-           ====================================================================== -->
-      <section class="station station-showreel" data-station-index="0" id="station-showreel">
-        <div class="showreel-stage glass-panel">
-          <!-- Autoplay Muted Loop Background Video -->
-          <div class="showreel-video-wrapper" id="showreel-video-wrapper">
-            <video id="showreel-video" autoplay muted loop playsinline poster="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4560080/header.jpg">
-              <source id="showreel-video-source" src="assets/showreel.mp4" type="video/mp4" />
-            </video>
-            <div class="showreel-video-overlay"></div>
+  <!-- ========================================================================
+       HORIZONTAL FULLSCREEN VIEWPORT TRACK (4 x 100VW SCREENS LEFT-TO-RIGHT)
+       ======================================================================== -->
+  <div class="horizontal-viewport" id="horizontal-viewport">
+    <main class="horizontal-track" id="horizontal-track">
+
+      <!-- ====================================================================
+           STAGE 01 (0VW): FULLSCREEN VIDEO SHOWREEL
+           ==================================================================== -->
+      <section class="fullscreen-stage" id="stage-showreel" aria-label="01 Showreel">
+        <div class="showreel-media-layer">
+          <!-- Fullscreen Background Video (Plays assets/showreel.mp4 or custom URL) -->
+          <video
+            id="showreel-video"
+            class="showreel-video"
+            src="assets/showreel.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+
+          <!-- Dynamic Fallback Eye-Candy Reel (Shown automatically if showreel.mp4 is not uploaded yet) -->
+          <div class="showreel-fallback-stage" id="showreel-fallback">
+            <div class="fallback-slide active" style="background-image: url('https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4560080/header.jpg');"></div>
+            <div class="fallback-cyber-grid"></div>
           </div>
 
-          <!-- Centered Showreel HUD Overlay -->
-          <div class="showreel-hud">
-            <div class="status-badge">
-              <span class="status-dot"></span>
-              <span id="hero-status-text" data-edit-ui="heroStatus">Junior Technical Game Designer • Systems, Quest, Puzzle &amp; UI Design</span>
-            </div>
+          <div class="showreel-scrim"></div>
+        </div>
 
-            <h1 class="showreel-title">
-              <span id="hero-main-name" data-edit-ui="heroName">Jan Jelle Klingberg</span>
-              <span class="phonetic-tag" id="hero-phonetic-tag" data-edit-ui="heroPhonetic">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
-            </h1>
-
-            <p class="showreel-headline" id="hero-headline" data-edit-ui="heroHeadline">
-              I don't just write concepts on paper — I design deep quests, puzzles, and playable C# systems in record time.
-            </p>
-
-            <!-- Key Metrics Strip -->
-            <div class="showreel-stats-bar">
-              <div class="showreel-stat">
-                <span class="showreel-stat-val" id="stat-1-val" data-edit-ui="stat1Val">Since 2016</span>
-                <span class="showreel-stat-lbl" id="stat-1-label" data-edit-ui="stat1">Active Unity &amp; C# Experience</span>
-              </div>
-              <div class="showreel-stat">
-                <span class="showreel-stat-val" id="stat-2-val" data-edit-ui="stat2Val">1st &amp; 2x 2nd</span>
-                <span class="showreel-stat-lbl" id="stat-2-label" data-edit-ui="stat2">Trijam (3-Hour Game Jam)</span>
-              </div>
-              <div class="showreel-stat">
-                <span class="showreel-stat-val" id="stat-3-val" data-edit-ui="stat3Val">Steam &amp; Play</span>
-                <span class="showreel-stat-lbl" id="stat-3-label" data-edit-ui="stat3">Shipped Store Pipelines</span>
-              </div>
-              <div class="showreel-stat">
-                <span class="showreel-stat-val" id="stat-4-val" data-edit-ui="stat4Val">20+ Langs</span>
-                <span class="showreel-stat-lbl" id="stat-4-label" data-edit-ui="stat4">Custom Tooling &amp; Localization</span>
-              </div>
-            </div>
-
-            <!-- Showreel CTA Row -->
-            <div class="showreel-actions">
-              <button class="pill-btn primary" onclick="scrollToStation(1)">
-                <span id="cta-enter-about" data-edit-ui="ctaEnterAbout">About Me &amp; Origin →</span>
-              </button>
-              <button class="pill-btn" onclick="scrollToStation(2)">
-                <span id="cta-enter-projects" data-edit-ui="ctaEnterProjects">Jump to Projects Orbit →</span>
-              </button>
-              <button class="pill-btn admin-only" onclick="toggleCMS()">
-                🎬 Change Showreel Video
-              </button>
-            </div>
+        <!-- Showreel HUD Overlay Content -->
+        <div class="showreel-hud-content">
+          <div class="showreel-top-telemetry">
+            <span class="telemetry-dot"></span>
+            <span id="reel-badge" data-edit-ui="reelBadge">SHOWREEL // SYSTEMS, QUEST, PUZZLE &amp; UI DESIGN</span>
           </div>
 
-          <!-- Horizontal Scroll Hint -->
-          <div class="scroll-right-indicator" onclick="scrollToStation(1)">
-            <span id="scroll-hint-text" data-edit-ui="scrollHint">SCROLL HORIZONTALLY</span>
-            <span class="scroll-arrow">→</span>
+          <h1 class="showreel-giant-title" id="reel-title" data-edit-ui="reelTitle">
+            JAN JELLE KLINGBERG
+          </h1>
+
+          <div class="showreel-alias-row">
+            <span class="alias-tag" id="reel-alias" data-edit-ui="heroPhonetic">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
+            <span class="role-highlight" id="reel-role" data-edit-ui="heroStatus">Junior Technical Game Designer • Systems, Quest, Puzzle &amp; UI Design</span>
+          </div>
+
+          <p class="showreel-tagline" id="reel-tagline" data-edit-ui="heroHeadline">
+            I don't just write concepts on paper — I design deep quests, puzzles, and playable C# systems in record time.
+          </p>
+
+          <div class="showreel-cta-row">
+            <button class="hud-btn primary large" onclick="goToStage(3)">
+              🪐 <span id="reel-cta-orbit" data-edit-ui="ctaProjectsJump">Enter 3D Project Orbit (8 Games) →</span>
+            </button>
+            <button class="hud-btn large" onclick="goToStage(1)">
+              👤 <span id="reel-cta-about" data-edit-ui="reelCtaAbout">About Me &amp; Skills →</span>
+            </button>
+            <a href="https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/" id="reel-steam-link" target="_blank" rel="noopener" class="hud-btn large">
+              🎮 <span id="reel-cta-steam" data-edit-ui="ctaSteam">Grimoire Garden on Steam</span>
+            </a>
           </div>
         </div>
+
+        <!-- Right-Edge Horizontal Scroll Cue -->
+        <button class="scroll-right-indicator" onclick="goToStage(1)" aria-label="Scroll Right to About Me">
+          <span class="scroll-cue-text" id="scroll-cue-label" data-edit-ui="scrollCue">SCROLL TO GLIDE RIGHT</span>
+          <span class="scroll-cue-arrow">───►</span>
+        </button>
       </section>
 
-      <!-- ======================================================================
-           STATION 02: ABOUT ME, ORIGIN STORY, PORTRAIT & DIRECT CONTACT
-           ====================================================================== -->
-      <section class="station station-about" data-station-index="1" id="station-about">
-        <div class="about-galaxy-card glass-panel">
-          <div class="about-grid-layout">
+      <!-- ====================================================================
+           STAGE 02 (100VW): ABOUT ME — DEVELOPER DOSSIER
+           ==================================================================== -->
+      <section class="fullscreen-stage" id="stage-about" aria-label="02 About Me">
+        <div class="stage-inner-scroll">
+          <div class="space-panel dossier-panel">
 
-            <!-- Left Column: Portrait + Facts + Store/Contact Links -->
-            <div class="about-left-col">
-              <div class="portrait-header-row">
-                <div class="portrait-frame" id="portrait-container" onclick="handleSecretLogoClick()" title="Click 5x for CMS">
+            <!-- Top Row: Portrait Left + Identity & Pitch Right -->
+            <div class="dossier-top-grid">
+              <div class="portrait-column">
+                <div class="portrait-frame-centered" id="portrait-container" onclick="handleSecretLogoClick()" title="Click 5x for CMS">
                   <img src="assets/portrait.jpg" alt="Jan Jelle Klingberg (aka JJampion)" />
                 </div>
-                <div class="portrait-meta">
-                  <span class="eyebrow-tag" id="about-eyebrow" data-edit-ui="aboutEyebrow">02 • ABOUT &amp; CONTACT</span>
-                  <h2 class="station-heading" id="about-heading" data-edit-ui="aboutHeading">Who Am I</h2>
-                  <p class="about-lead" id="hero-lead-text" data-edit-ui="heroLead">
-                    With active Unity &amp; C# experience since 2016, formal training at the Games Academy (2024–2026), and self-published commercial titles on Steam and Google Play, I unite hands-on Game Design with rapid technical execution.
-                  </p>
-                </div>
               </div>
 
-              <!-- 3 Key Bio Facts -->
-              <div class="bio-facts-stack">
-                <div class="bio-fact-item">
-                  <span class="bio-icon">📍</span>
-                  <div id="fact-location" data-edit-ui="factLocation" data-edit-html="true">
-                    <strong>Location &amp; Mobility:</strong> Bavaria (Roth &amp; near Cham) • Preferred Bavaria &amp; Remote/Hybrid, open to Relocation Germany-wide (e.g. Hamburg) &amp; Europe.
-                  </div>
+              <div class="identity-column">
+                <div class="section-eyebrow">02 // DEVELOPER DOSSIER</div>
+                <div class="name-phonetic-row">
+                  <h2 class="hero-name-title" id="hero-main-name" data-edit-ui="heroName">Jan Jelle Klingberg</h2>
+                  <span class="phonetic-tag" id="hero-phonetic-tag" data-edit-ui="heroPhonetic">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
                 </div>
-                <div class="bio-fact-item">
-                  <span class="bio-icon">🎓</span>
-                  <div id="fact-edu" data-edit-ui="factEdu" data-edit-html="true">
-                    <strong>Education:</strong> Game Design &amp; Game Production at Games Academy (2024–2026) • Focus on Systems, Quests &amp; Level Design.
-                  </div>
-                </div>
-                <div class="bio-fact-item">
-                  <span class="bio-icon">🌙</span>
-                  <div id="fact-studio" data-edit-ui="factStudio" data-edit-html="true">
-                    <strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer on the path to Lead Game Designer.
-                  </div>
-                </div>
-              </div>
 
-              <!-- Skill Pills -->
-              <div class="skill-pills-wrap" id="skill-pills-container"></div>
+                <div class="status-badge">
+                  <span class="status-dot"></span>
+                  <span id="hero-status-text" data-edit-ui="heroStatus">Junior Technical Game Designer • Systems, Quest, Puzzle &amp; UI Design</span>
+                </div>
 
-              <!-- Direct Contact & Store Links -->
-              <div class="about-links-grid">
-                <a href="mailto:contact@janjelle.dev" id="link-mail-btn" class="pill-btn primary">
-                  ✉️ <span id="cta-mail" data-edit-ui="ctaMail">contact@janjelle.dev</span>
-                </a>
-                <a href="https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/" id="link-steam-btn" target="_blank" rel="noopener" class="pill-btn">
-                  🎮 <span id="cta-steam" data-edit-ui="ctaSteam">Grimoire Garden on Steam</span>
-                </a>
-                <a href="https://play.google.com/store/apps/dev?id=9045790172314321033" id="link-play-btn" target="_blank" rel="noopener" class="pill-btn">
-                  📱 <span id="cta-play" data-edit-ui="ctaPlay">Nightoday on Google Play</span>
-                </a>
-                <a href="https://jjampion.itch.io/" id="link-itch-btn" target="_blank" rel="noopener" class="pill-btn">
-                  🕹️ <span id="cta-itch" data-edit-ui="ctaItch">All Projects on itch.io</span>
-                </a>
+                <p class="hero-lead-text" id="hero-lead-text" data-edit-ui="heroLead">
+                  I love playing games, but I love building them even more. With active Unity &amp; C# experience since 2016, formal training at the Games Academy (2024–2026), and self-published commercial titles on Steam and Google Play under Nightoday Game Studio, I unite hands-on Game Design (Systems, Quests, Lore, Puzzles &amp; UI) with rapid technical execution.
+                </p>
               </div>
             </div>
 
-            <!-- Right Column: Origin Story & Design Philosophy -->
-            <div class="about-right-col">
-              <div class="origin-box">
-                <div class="origin-box-header">
-                  <span class="eyebrow-tag" id="story-badge" data-edit-ui="storyBadge">ORIGIN STORY &amp; MINDSET</span>
-                  <h3 class="origin-box-title" id="story-heading" data-edit-ui="storyHeading">
-                    From Systems Analysis &amp; Skyrim to Nightoday Game Studio
-                  </h3>
-                </div>
-                <div class="origin-paragraphs-scroll" id="story-paragraphs">
-                  <!-- Populated dynamically via app.js -->
+            <!-- 3 Key Bio Facts -->
+            <div class="bio-facts-grid">
+              <div class="bio-fact-card">
+                <span class="bio-fact-icon">📍</span>
+                <div id="fact-location" data-edit-ui="factLocation" data-edit-html="true">
+                  <strong>Location &amp; Mobility:</strong> Bavaria (Roth &amp; near Cham) • Preferred Bavaria &amp; Remote/Hybrid, open to Relocation Germany-wide (e.g. Hamburg) &amp; Europe.
                 </div>
               </div>
+              <div class="bio-fact-card">
+                <span class="bio-fact-icon">🎓</span>
+                <div id="fact-edu" data-edit-ui="factEdu" data-edit-html="true">
+                  <strong>Education:</strong> Game Design &amp; Game Production at Games Academy (2024–2026) • Focus on Systems, Quests &amp; Level Design.
+                </div>
+              </div>
+              <div class="bio-fact-card">
+                <span class="bio-fact-icon">🌙</span>
+                <div id="fact-studio" data-edit-ui="factStudio" data-edit-html="true">
+                  <strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer on the path to Lead Game Designer.
+                </div>
+              </div>
+            </div>
 
-              <div class="about-bottom-nav">
-                <button class="pill-btn" onclick="scrollToStation(0)">
-                  ← <span id="back-showreel-btn" data-edit-ui="backShowreelBtn">Showreel</span>
-                </button>
-                <button class="pill-btn primary" onclick="scrollToStation(2)">
-                  <span id="next-projects-btn" data-edit-ui="nextProjectsBtn">Scroll Right to Projects Orbit →</span>
-                </button>
+            <!-- 4 Key Metrics -->
+            <div class="hero-stats-row">
+              <div class="stat-mini">
+                <div class="stat-mini-value" id="stat-1-val" data-edit-ui="stat1Val">Since 2016</div>
+                <div class="stat-mini-label" id="stat-1-label" data-edit-ui="stat1">Active Unity &amp; C# Experience</div>
               </div>
+              <div class="stat-mini">
+                <div class="stat-mini-value" id="stat-2-val" data-edit-ui="stat2Val">1st &amp; 2x 2nd</div>
+                <div class="stat-mini-label" id="stat-2-label" data-edit-ui="stat2">Trijam (3-Hour Game Jam)</div>
+              </div>
+              <div class="stat-mini">
+                <div class="stat-mini-value" id="stat-3-val" data-edit-ui="stat3Val">Steam &amp; Play</div>
+                <div class="stat-mini-label" id="stat-3-label" data-edit-ui="stat3">Shipped Store Pipelines</div>
+              </div>
+              <div class="stat-mini">
+                <div class="stat-mini-value" id="stat-4-val" data-edit-ui="stat4Val">20+ Langs</div>
+                <div class="stat-mini-label" id="stat-4-label" data-edit-ui="stat4">Custom Tooling &amp; Localization</div>
+              </div>
+            </div>
+
+            <!-- Skill Pills -->
+            <div class="skill-pills-row" id="skill-pills-container"></div>
+
+            <!-- Direct Links & Stage Navigation -->
+            <div class="dossier-actions-row">
+              <a href="https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/" id="link-steam-btn" target="_blank" rel="noopener" class="hud-btn">
+                🎮 <span id="cta-steam" data-edit-ui="ctaSteam">Grimoire Garden on Steam</span>
+              </a>
+              <a href="https://jjampion.itch.io/" id="link-itch-btn" target="_blank" rel="noopener" class="hud-btn">
+                🕹️ <span id="cta-itch" data-edit-ui="ctaItch">All Projects on itch.io</span>
+              </a>
+              <a href="https://play.google.com/store/apps/dev?id=9045790172314321033" id="link-play-btn" target="_blank" rel="noopener" class="hud-btn">
+                📱 <span id="cta-play" data-edit-ui="ctaPlay">Nightoday on Google Play</span>
+              </a>
+              <a href="mailto:contact@janjelle.dev" id="link-mail-btn" class="hud-btn">
+                ✉️ <span id="cta-mail" data-edit-ui="ctaMail">contact@janjelle.dev</span>
+              </a>
+              <button class="hud-btn primary" onclick="goToStage(2)">
+                📖 <span id="cta-origin-btn" data-edit-ui="ctaOriginBtn">Read My Origin Story →</span>
+              </button>
             </div>
 
           </div>
         </div>
       </section>
 
-      <!-- ======================================================================
-           STATIONS 03 TO N: DYNAMIC CENTERED PROJECT SPOTLIGHT CARDS
-           (Each project in portfolioData.projects gets its own horizontal station!)
-           ====================================================================== -->
-      <div id="projects-stations-wrapper" class="projects-stations-wrapper">
-        <!-- Populated dynamically via app.js -->
-      </div>
+      <!-- ====================================================================
+           STAGE 03 (200VW): WHO AM I — PERSONAL ORIGIN & DESIGN PHILOSOPHY
+           ==================================================================== -->
+      <section class="fullscreen-stage" id="stage-origin" aria-label="03 Who Am I">
+        <div class="stage-inner-scroll">
+          <div class="space-panel origin-panel">
+            <div class="origin-header">
+              <div class="origin-meta-row">
+                <span class="section-eyebrow" id="story-badge" data-edit-ui="storyBadge">03 // WHO AM I &amp; DESIGN PHILOSOPHY</span>
+                <span class="phonetic-tag" id="story-phonetic-tag" data-edit-ui="heroPhonetic">aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /</span>
+              </div>
+              <h2 class="section-title" id="story-heading" data-edit-ui="storyHeading">
+                From Systems Analysis &amp; Skyrim to Nightoday Game Studio
+              </h2>
+            </div>
 
+            <div class="origin-story-body" id="story-paragraphs">
+              <!-- Populated dynamically in EN or DE via app.js -->
+            </div>
+
+            <div class="origin-footer-row">
+              <button class="hud-btn" onclick="goToStage(1)">
+                ◄ <span id="back-about-btn" data-edit-ui="backAboutBtn">Back to About Me</span>
+              </button>
+              <button class="hud-btn primary" onclick="goToStage(3)">
+                🪐 <span id="next-projects-btn" data-edit-ui="nextProjectsBtn">Launch 3D Project Orbit →</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           STAGE 04 (300VW): 3D TIRE-TREAD HORIZONTAL PROJECT ORBIT
+           ==================================================================== -->
+      <section class="fullscreen-stage" id="stage-orbit" aria-label="04 Project Orbit">
+        <div class="orbit-stage-layout">
+
+          <!-- Top Header & Wheel Controls -->
+          <div class="orbit-hud-top">
+            <div>
+              <div class="section-eyebrow" id="orbit-eyebrow" data-edit-ui="projectsEyebrow">04 // 3D HORIZONTAL PROJECT ORBIT (TIRE-TREAD VIEW)</div>
+              <h2 class="orbit-main-title" id="orbit-heading" data-edit-ui="projectsHeading">Interactive Game &amp; Systems Showcase</h2>
+            </div>
+
+            <div class="orbit-controls-bar">
+              <button class="hud-btn" onclick="rotateOrbit(-1)" title="Rotate Tire Left (Previous Project)">
+                ◄ <span id="orbit-prev-label" data-edit-ui="orbitPrev">Prev</span>
+              </button>
+              <div class="orbit-counter">
+                <span id="orbit-active-num">01</span> / <span id="orbit-total-num">08</span>
+              </div>
+              <button class="hud-btn primary" onclick="rotateOrbit(1)" title="Rotate Tire Right (Next Project)">
+                <span id="orbit-next-label" data-edit-ui="orbitNext">Next</span> ►
+              </button>
+              <button class="hud-btn admin-only" onclick="toggleCMS()">
+                ➕ <span id="add-project-top-btn" data-edit-ui="addProjectBtn">Manage</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 3D TIRE VIEWPORT (CLIPPED/FADED EDGES + 3D CYLINDER WHEEL) -->
+          <div class="tire-orbit-viewport" id="tire-orbit-viewport">
+            <div class="tire-orbit-scene" id="tire-orbit-scene">
+              <div class="tire-orbit-wheel" id="tire-orbit-wheel">
+                <!-- All 8 Project Cards are positioned in a 3D circle via app.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Selector Dots for the Projects on the Tire -->
+          <div class="orbit-bottom-bar">
+            <div class="orbit-index-pills" id="orbit-index-pills"></div>
+            <div class="orbit-hint-text" id="orbit-hint-label" data-edit-ui="orbitHint">
+              Scroll wheel, drag horizontally, or use ◄ / ► to spin the project tire
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ========================================================================
+       BOTTOM HORIZONTAL PROGRESS BAR & TELEMETRY FOOTER
+       ======================================================================== -->
+  <footer class="hud-footer">
+    <div class="footer-progress-track">
+      <div class="footer-progress-fill" id="stage-progress-fill"></div>
     </div>
-  </main>
-
-  <!-- ==========================================================================
-       BOTTOM GALAXY TIMELINE / STATION NAVIGATOR
-       ========================================================================== -->
-  <footer class="bottom-hud-bar">
-    <div class="bottom-hud-inner glass-panel">
-      <button class="hud-step-btn" onclick="stepHorizontalStation(-1)" title="Previous Station (Left Arrow)">←</button>
-      <div class="station-dots-track" id="station-dots-track">
-        <!-- Populated dynamically based on total stations -->
-      </div>
-      <button class="hud-step-btn" onclick="stepHorizontalStation(1)" title="Next Station (Right Arrow)">→</button>
-      <div class="hud-copyright" id="footer-text" data-edit-ui="footerText">
-        © 2026 J.J.Klingberg
-      </div>
+    <div class="footer-meta-row">
+      <span id="footer-text" data-edit-ui="footerText">© 2026 Jan Jelle Klingberg (JJampion). All rights reserved.</span>
+      <span class="footer-coords" id="stage-coords-readout">SECTOR 01 // 04 — SHOWREEL</span>
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       PROJECT DEEP-DIVE CASE STUDY PAGE OVERLAY (OPENS ON CLICKING ANY PROJECT)
-       ========================================================================== -->
-  <div class="deepdive-backdrop" id="deepdive-backdrop" onclick="if(event.target===this) closeProjectDeepDive()">
-    <div class="deepdive-modal glass-panel" id="deepdive-modal">
-      <!-- Populated dynamically when clicking a project -->
-    </div>
-  </div>
-
-  <!-- ==========================================================================
+  <!-- ========================================================================
        CMS UNLOCK MODAL (SHA-256 Protected)
-       ========================================================================== -->
+       ======================================================================== -->
   <div class="pin-modal-backdrop" id="pin-modal-backdrop">
-    <div class="pin-modal glass-panel">
+    <div class="pin-modal space-panel">
       <div style="font-size:1.8rem;">🔐</div>
       <h3 style="font-size:1.15rem; font-weight:800;">CMS Unlock</h3>
       <p style="font-size:0.82rem; color:var(--text-secondary);">
@@ -298,24 +381,24 @@
       <input type="password" class="cms-input" id="admin-pin-input" placeholder="Enter PIN" style="text-align:center; font-size:1rem; letter-spacing:0.15em;" onkeydown="if(event.key==='Enter') verifyAdminPin()" />
       <div id="pin-error-msg" style="font-size:0.76rem; color:#f43f5e; font-weight:700; display:none;">Incorrect PIN.</div>
       <div style="display:flex; gap:8px; justify-content:center; margin-top:4px;">
-        <button class="pill-btn" onclick="closePinModal()">Cancel</button>
-        <button class="pill-btn primary" onclick="verifyAdminPin()">Unlock</button>
+        <button class="hud-btn" onclick="closePinModal()">Cancel</button>
+        <button class="hud-btn primary" onclick="verifyAdminPin()">Unlock</button>
       </div>
     </div>
   </div>
 
-  <!-- ==========================================================================
-       INTEGRATED CMS STUDIO DRAWER (FULL NO-CODE CONTROL)
-       ========================================================================== -->
+  <!-- ========================================================================
+       INTEGRATED CMS STUDIO DRAWER
+       ======================================================================== -->
   <div class="cms-drawer-backdrop" id="cms-backdrop">
     <div class="cms-drawer">
       <div style="display:flex; justify-content:space-between; align-items:center;">
-        <h3 style="font-size:1.2rem; font-weight:800;">⚙️ Galaxy Portfolio CMS</h3>
-        <button class="pill-btn" onclick="toggleCMS()">✕ Close</button>
+        <h3 style="font-size:1.15rem; font-weight:800;">⚙️ Space Portfolio CMS</h3>
+        <button class="hud-btn" onclick="toggleCMS()">✕ Close</button>
       </div>
 
-      <div style="padding:10px 14px; border-radius:8px; background:rgba(0, 229, 153, 0.12); border:1px solid rgba(0, 229, 153, 0.35); font-size:0.78rem; color:var(--text-secondary);">
-        💡 <strong>Tip:</strong> When unlocked, you can click directly on <strong>any text on the page or inside any Project Deep-Dive</strong> to edit it live, then click <strong>Publish to GitHub</strong>!
+      <div style="padding:10px 14px; border-radius:8px; background:rgba(0, 229, 153, 0.10); border:1px solid rgba(0, 229, 153, 0.30); font-size:0.78rem; color:var(--text-secondary);">
+        💡 <strong>Tip:</strong> When unlocked, click directly on <strong>any text on the page</strong> (including inside the 3D Project Orbit) to rewrite it in EN or DE, then click <strong>Publish to GitHub</strong>!
       </div>
 
       <!-- 1. Repository Deployment -->
@@ -325,31 +408,31 @@
         <input type="text" class="cms-input" id="gh-branch" placeholder="Branch (e.g. main)" value="main" />
         <input type="password" class="cms-input" id="gh-token" placeholder="GitHub Personal Access Token (github_pat_...)" />
         <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:4px;">
-          <button class="pill-btn primary" style="flex:1; justify-content:center;" onclick="publishDirectlyToGitHub()">
+          <button class="hud-btn primary" style="flex:1; justify-content:center;" onclick="publishDirectlyToGitHub()">
             🚀 Publish to GitHub
           </button>
-          <button class="pill-btn" onclick="exportAppJS()">
+          <button class="hud-btn" onclick="exportAppJS()">
             ⬇️ Download app.js
           </button>
         </div>
-        <div id="gh-status-msg" style="font-size:0.76rem; font-family:var(--font-mono); color:var(--accent-primary);"></div>
+        <div id="gh-status-msg" style="font-size:0.75rem; font-family:var(--font-mono); color:var(--accent-primary);"></div>
       </div>
 
-      <!-- 2. Showreel Video, Portrait, Skills & Links -->
+      <!-- 2. Showreel Video, Portrait Photo & Profile Links -->
       <div class="cms-group">
-        <label>2. Showreel Video, Portrait, Skills &amp; Store URLs</label>
+        <label>2. Fullscreen Showreel Video, Portrait &amp; Links</label>
         <label>Showreel Video Path / URL (e.g. <code>assets/showreel.mp4</code>):</label>
-        <input type="text" class="cms-input" id="cms-showreel-url" placeholder="assets/showreel.mp4" oninput="updateShowreelUrlFromCMS(this.value)" />
-        <input type="file" id="cms-showreel-file" accept="video/mp4,video/webm" style="font-size:0.76rem;" onchange="handleShowreelVideoUpload(event)" />
-        <div id="showreel-upload-hint" style="font-size:0.73rem; color:var(--accent-primary);"></div>
+        <input type="text" class="cms-input" id="cms-showreel-url" placeholder="assets/showreel.mp4" oninput="updateShowreelFromInput(this.value)" />
+        <input type="file" id="cms-showreel-file" accept="video/mp4,video/webm" style="font-size:0.75rem;" onchange="handleShowreelFileUpload(event)" />
+        <div id="showreel-upload-hint" style="font-size:0.72rem; color:var(--accent-primary);"></div>
 
-        <label>Portrait Photo (<code>assets/portrait.jpg</code>):</label>
+        <label>Portrait Photo (Uploads to <code>assets/</code>):</label>
         <input type="text" class="cms-input" id="cms-portrait-url" placeholder="assets/portrait.jpg" oninput="updatePortraitFromInput(this.value)" />
         <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-          <input type="file" id="cms-portrait-file" accept="image/*" style="font-size:0.76rem; max-width:240px;" onchange="handlePortraitFileUpload(event)" />
-          <button class="pill-btn" onclick="updatePortraitFromInput('')">Reset</button>
+          <input type="file" id="cms-portrait-file" accept="image/*" style="font-size:0.75rem; max-width:240px;" onchange="handlePortraitFileUpload(event)" />
+          <button class="hud-btn" onclick="updatePortraitFromInput('')">Reset</button>
         </div>
-        <div id="portrait-upload-hint" style="font-size:0.73rem; color:var(--accent-primary);"></div>
+        <div id="portrait-upload-hint" style="font-size:0.72rem; color:var(--accent-primary);"></div>
 
         <label>Skill Pills (Comma-separated):</label>
         <input type="text" class="cms-input" id="cms-skill-pills" placeholder="Unity (Since 2016), C#, ..." oninput="updateSkillPillsFromCMS(this.value)" />
@@ -361,71 +444,69 @@
         <input type="text" class="cms-input" id="cms-link-email" placeholder="mailto:contact@janjelle.dev" oninput="updateLinksFromCMS()" />
       </div>
 
-      <!-- 3. Horizontal Projects Orbit & Deep-Dive Manager -->
+      <!-- 3. Primary Hero Project Editor -->
       <div class="cms-group">
-        <label>3. Projects Orbit &amp; Deep-Dive Manager (<span id="cms-projects-count">0</span> Projects)</label>
+        <label>3. Flagship Hero Project Editor (<span id="cms-hero-lang-indicator">EN</span>)</label>
+        <input type="text" class="cms-input" id="cms-hero-title" placeholder="Hero Project Title" />
+        <input type="text" class="cms-input" id="cms-hero-badges" placeholder="Badges (comma-separated)" />
+        <input type="text" class="cms-input" id="cms-hero-steam-id" placeholder="Steam App ID (e.g. 4560080)" />
+        <input type="text" class="cms-input" id="cms-hero-img" placeholder="Hero Cover Image URL or assets/..." />
+        <input type="file" id="cms-hero-img-file" accept="image/*" style="font-size:0.75rem;" onchange="handleHeroImageFileUpload(event)" />
+        <textarea class="cms-textarea" id="cms-hero-pitch" placeholder="Hero Pitch"></textarea>
+        <label>Game Design Highlights (One per line):</label>
+        <textarea class="cms-textarea" id="cms-hero-design"></textarea>
+        <label>Technical Highlights (One per line):</label>
+        <textarea class="cms-textarea" id="cms-hero-tech"></textarea>
+        <button class="hud-btn primary" onclick="saveHeroProjectFromCMS()">💾 Apply Hero Changes</button>
+      </div>
+
+      <!-- 4. Orbit Projects Manager -->
+      <div class="cms-group">
+        <label>4. Additional Orbit Projects Manager (<span id="cms-projects-count">0</span> Projects)</label>
         <div class="cms-project-list" id="cms-project-list"></div>
 
         <hr style="border:none; border-top:1px solid var(--glass-border); margin:6px 0;" />
 
-        <label id="cms-form-mode-label" style="color:var(--accent-secondary);">➕ Add / Edit Project Station</label>
+        <label id="cms-form-mode-label" style="color:var(--accent-secondary);">➕ Add / Edit Orbit Project</label>
         <input type="hidden" id="edit-proj-id" value="" />
-        <input type="text" class="cms-input" id="new-proj-title" placeholder="Project Title (e.g. Shadow of Ammit)" />
-        <input type="text" class="cms-input" id="new-proj-subtitle" placeholder="Role / Context Subtitle (e.g. Sole Game Designer • Team of 6)" />
-        <input type="text" class="cms-input" id="new-proj-badges" placeholder="Badges comma-separated (e.g. Published on Steam, Unity C#)" />
-
-        <label>Short Spotlight Pitch (Active Language: <span id="cms-proj-lang-lbl">EN</span>):</label>
-        <textarea class="cms-textarea" id="new-proj-pitch" placeholder="Short summary shown on the centered horizontal card..." style="min-height:54px;"></textarea>
-
-        <label>🛠 What I Did / Role &amp; Contributions (One bullet per line):</label>
-        <textarea class="cms-textarea" id="new-proj-what" placeholder="Designed the complete pyramid layout..." style="min-height:68px;"></textarea>
-
-        <label>⚠️ Challenges &amp; Difficulties (One bullet per line):</label>
-        <textarea class="cms-textarea" id="new-proj-challenges" placeholder="Synchronizing AI patrol routes with puzzle triggers..." style="min-height:68px;"></textarea>
-
-        <label>⚡ What Went Smoothly / Strengths (One bullet per line):</label>
-        <textarea class="cms-textarea" id="new-proj-easy" placeholder="Fast prototyping of core mechanics in Unity..." style="min-height:68px;"></textarea>
-
-        <label>💡 Key Learnings &amp; Takeaways (One bullet per line):</label>
-        <textarea class="cms-textarea" id="new-proj-learned" placeholder="Clear visual communication with programmers saves iteration time..." style="min-height:68px;"></textarea>
-
-        <label>Cover Image (URL or Upload to <code>assets/projects/</code>):</label>
-        <input type="text" class="cms-input" id="new-proj-img" placeholder="assets/projects/cover.jpg or https://..." />
-        <input type="file" id="new-proj-img-file" accept="image/*" style="font-size:0.76rem;" onchange="handleProjectImageFileUpload(event)" />
-
-        <label>Store / Project URL &amp; Optional Steam App ID:</label>
-        <input type="text" class="cms-input" id="new-proj-link" placeholder="https://jjampion.itch.io/..." />
-        <input type="text" class="cms-input" id="new-proj-steam-id" placeholder="Steam App ID (e.g. 4560080 — optional)" />
+        <input type="text" class="cms-input" id="new-proj-title" placeholder="Game Title (e.g. LineX)" />
+        <input type="text" class="cms-input" id="new-proj-badges" placeholder="Badges comma-separated" />
+        <textarea class="cms-textarea" id="new-proj-pitch-en" placeholder="Short Description (English)"></textarea>
+        <textarea class="cms-textarea" id="new-proj-pitch-de" placeholder="Kurzbeschreibung (Deutsch)"></textarea>
+        <input type="text" class="cms-input" id="new-proj-img" placeholder="Cover Image URL or assets/projects/..." />
+        <input type="file" id="new-proj-img-file" accept="image/*" style="font-size:0.75rem;" onchange="handleProjectImageFileUpload(event)" />
+        <input type="text" class="cms-input" id="new-proj-link" placeholder="Direct Itch.io / Store URL" />
+        <textarea class="cms-textarea" id="new-proj-widget" placeholder="Optional: Itch.io <iframe> Widget Code"></textarea>
 
         <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <button class="pill-btn primary" style="flex:1;" onclick="saveOrAddProjectStation()">
-            💾 <span id="cms-save-proj-btn-text">Save Project Station</span>
+          <button class="hud-btn primary" style="flex:1;" onclick="saveOrAddProjectTile()">
+            💾 <span id="cms-save-proj-btn-text">Save Project to Orbit</span>
           </button>
-          <button class="pill-btn" onclick="resetProjectForm()">Clear / New</button>
+          <button class="hud-btn" onclick="resetProjectForm()">Clear</button>
         </div>
       </div>
 
-      <!-- 4. Origin Story Editor -->
+      <!-- 5. Origin Story Editor -->
       <div class="cms-group">
-        <label>4. "Who Am I" Origin Story Editor (Active Language: <span id="cms-story-lang-indicator">EN</span>)</label>
+        <label>5. "Who Am I" Story Editor (<span id="cms-story-lang-indicator">EN</span>)</label>
         <textarea class="cms-textarea" id="cms-origin-story-textarea" style="min-height:130px;"></textarea>
-        <button class="pill-btn" onclick="saveOriginStoryFromCMS()">💾 Update Origin Story Text</button>
+        <button class="hud-btn" onclick="saveOriginStoryFromCMS()">💾 Update Origin Story</button>
       </div>
 
-      <!-- 5. Security: Change Admin PIN -->
+      <!-- 6. Security PIN -->
       <div class="cms-group">
-        <label>5. Change Admin PIN (SHA-256 Encrypted)</label>
+        <label>6. Change Admin PIN (SHA-256)</label>
         <div style="display:flex; gap:8px;">
-          <input type="password" class="cms-input" id="cms-new-pin" placeholder="New PIN / Password" />
-          <button class="pill-btn" onclick="updateAdminPinHash()">Set Hash</button>
+          <input type="password" class="cms-input" id="cms-new-pin" placeholder="New PIN" />
+          <button class="hud-btn" onclick="updateAdminPinHash()">Set Hash</button>
         </div>
-        <div id="pin-hash-status" style="font-size:0.74rem; color:var(--accent-primary);"></div>
+        <div id="pin-hash-status" style="font-size:0.72rem; color:var(--accent-primary);"></div>
       </div>
 
-      <!-- 6. Custom CSS -->
+      <!-- 7. Custom CSS -->
       <div class="cms-group">
-        <label>6. Custom CSS Override</label>
-        <textarea class="cms-textarea" id="cms-custom-css" placeholder="/* Add custom CSS rules here */" oninput="applyCustomCSS(this.value)"></textarea>
+        <label>7. Custom CSS Override</label>
+        <textarea class="cms-textarea" id="cms-custom-css" placeholder="/* Custom CSS */" oninput="applyCustomCSS(this.value)"></textarea>
       </div>
     </div>
   </div>
