@@ -1,11 +1,12 @@
 /* ==========================================================================
-   JAN JELLE KLINGBERG (aka JJAMPION) — FULL LIVE-EDIT CMS CONTROLLER (app.js)
+   JAN JELLE KLINGBERG (aka JJAMPION) — SPACE HORIZONTAL & 3D TIRE ORBIT ENGINE
    ========================================================================== */
 
 // === PORTFOLIO_DATA_START ===
 const portfolioData = {
   "defaultLang": "en",
   "defaultTheme": "dark",
+  "showreelVideoUrl": "assets/showreel.mp4",
   "portraitImageUrl": "assets/portrait.jpg",
   "adminPinHash": "",
   "customCSS": "",
@@ -29,10 +30,14 @@ const portfolioData = {
       "brandName": "Jan Jelle Klingberg",
       "brandAlias": "aka JJampion",
       "navSubrole": "Junior Technical Game Designer",
+      "navShowreel": "Showreel",
       "navAbout": "About Me",
       "navOrigin": "Who Am I",
-      "navProjects": "Hero Projects",
-      "navLab": "Rapid Prototyping",
+      "navProjects": "Project Orbit",
+      "reelBadge": "SHOWREEL // SYSTEMS, QUEST, PUZZLE & UI DESIGN",
+      "reelTitle": "JAN JELLE KLINGBERG",
+      "reelCtaAbout": "About Me & Skills →",
+      "scrollCue": "SCROLL TO GLIDE RIGHT",
       "heroName": "Jan Jelle Klingberg",
       "heroPhonetic": "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /",
       "heroStatus": "Junior Technical Game Designer • Systems, Quest, Puzzle & UI Design",
@@ -49,7 +54,7 @@ const portfolioData = {
       "stat3": "Shipped Store Pipelines",
       "stat4Val": "20+ Langs",
       "stat4": "Custom Tooling & Localization",
-      "ctaProjectsJump": "View Hero Projects (Steam & Team) →",
+      "ctaProjectsJump": "Enter 3D Project Orbit (8 Games) →",
       "ctaSteam": "Grimoire Garden on Steam",
       "ctaItch": "All Projects on itch.io",
       "ctaPlay": "Nightoday on Google Play",
@@ -57,34 +62,34 @@ const portfolioData = {
       "ctaMail": "contact@janjelle.dev",
       "portraitRoleTag": "aka JJampion",
       "portraitBtn": "📷 Photo",
-      "storyBadge": "02 • Who Am I & Design Philosophy",
+      "storyBadge": "03 // WHO AM I & DESIGN PHILOSOPHY",
       "storyHeading": "From Systems Analysis & Skyrim to Nightoday Game Studio",
-      "backAboutBtn": "Back to Overview",
-      "nextProjectsBtn": "View Hero Projects →",
-      "backOriginBtn": "Back to My Story",
-      "nextLabBtn": "View Rapid Prototyping & More Projects →",
-      "backHeroBtn": "Back to Hero Projects",
-      "ctaBottomContact": "Contact Me for Roles & Interviews (contact@janjelle.dev)",
-      "projectsEyebrow": "03 • Commercial Steam Release & Team Flagship",
-      "projectsHeading": "Hero Projects Spotlight",
-      "addProjectBtn": "Manage Projects",
+      "backAboutBtn": "Back to About Me",
+      "nextProjectsBtn": "Launch 3D Project Orbit →",
+      "projectsEyebrow": "04 // 3D HORIZONTAL PROJECT ORBIT (TIRE-TREAD VIEW)",
+      "projectsHeading": "Interactive Game & Systems Showcase",
+      "orbitPrev": "Prev",
+      "orbitNext": "Next",
+      "orbitHint": "Scroll wheel, drag horizontally, or use ◄ / ► to spin the project tire",
+      "addProjectBtn": "Manage",
       "designHeader": "🎯 Game Design, Quests & Player Experience",
       "techHeader": "⚙️ Technical Design, Systems & Implementation",
       "steamWidgetLabel": "Available on Steam • Grimoire Garden: A Taskbar Tale",
-      "itchOpenBtn": "Play / View Project ↗",
-      "labEyebrow": "04 • Team Projects, Game Jams, Mobile & Web Architecture",
-      "labHeading": "Projects & Rapid Prototyping Showcase",
-      "visitItch": "Visit jjampion.itch.io",
-      "footerText": "© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved."
+      "itchOpenBtn": "Play / Open Store Page ↗",
+      "footerText": "© 2026 Jan Jelle Klingberg (JJampion). All rights reserved."
     },
     "de": {
       "brandName": "Jan Jelle Klingberg",
       "brandAlias": "aka JJampion",
       "navSubrole": "Junior Technical Game Designer",
+      "navShowreel": "Showreel",
       "navAbout": "Über Mich",
       "navOrigin": "Wer ich bin",
-      "navProjects": "Hero-Projekte",
-      "navLab": "Rapid Prototyping",
+      "navProjects": "Projekt-Orbit",
+      "reelBadge": "SHOWREEL // SYSTEM-, QUEST-, RÄTSEL- & UI-DESIGN",
+      "reelTitle": "JAN JELLE KLINGBERG",
+      "reelCtaAbout": "Über Mich & Skills →",
+      "scrollCue": "SCROLLEN ZUM WEITERGLEITEN",
       "heroName": "Jan Jelle Klingberg",
       "heroPhonetic": "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /",
       "heroStatus": "Junior Technical Game Designer • System-, Quest-, Rätsel- & UI-Design",
@@ -101,7 +106,7 @@ const portfolioData = {
       "stat3": "Eigene Store-Releases",
       "stat4Val": "20+ Sprachen",
       "stat4": "Custom Tooling & Localization",
-      "ctaProjectsJump": "Zu den Hero-Projekten (Steam & Team) →",
+      "ctaProjectsJump": "Zum 3D Projekt-Orbit (8 Spiele) →",
       "ctaSteam": "Grimoire Garden auf Steam",
       "ctaItch": "Alle Projekte auf itch.io",
       "ctaPlay": "Nightoday im Google Play Store",
@@ -109,25 +114,21 @@ const portfolioData = {
       "ctaMail": "contact@janjelle.dev",
       "portraitRoleTag": "aka JJampion",
       "portraitBtn": "📷 Foto",
-      "storyBadge": "02 • Wer ich bin & Design-Philosophie",
+      "storyBadge": "03 // WER ICH BIN & DESIGN-PHILOSOPHIE",
       "storyHeading": "Von System-Analyse & Skyrim zum Nightoday Game Studio",
-      "backAboutBtn": "Zurück zur Übersicht",
-      "nextProjectsBtn": "Zu den Hero-Projekten →",
-      "backOriginBtn": "Zurück zu meiner Story",
-      "nextLabBtn": "Zu Rapid Prototyping & weiteren Projekten →",
-      "backHeroBtn": "Zurück zu den Hero-Projekten",
-      "ctaBottomContact": "Kontakt für Stellen & Interviews (contact@janjelle.dev)",
-      "projectsEyebrow": "03 • Kommerzieller Steam-Release & Team-Flaggschiff",
-      "projectsHeading": "Hero-Projekte im Fokus",
-      "addProjectBtn": "Projekte verwalten",
+      "backAboutBtn": "Zurück zu Über Mich",
+      "nextProjectsBtn": "Zum 3D Projekt-Orbit →",
+      "projectsEyebrow": "04 // HORIZONTALER 3D-PROJEKT-ORBIT (REIFEN-ANSICHT)",
+      "projectsHeading": "Interaktives Game- & System-Showcase",
+      "orbitPrev": "Zurück",
+      "orbitNext": "Weiter",
+      "orbitHint": "Mausrad drehen, horizontal ziehen oder ◄ / ► nutzen, um das Projekt-Rad zu drehen",
+      "addProjectBtn": "Verwalten",
       "designHeader": "🎯 Game Design, Quests & Spielerlebnis",
       "techHeader": "⚙️ Technical Design, Systeme & Umsetzung",
       "steamWidgetLabel": "Auf Steam verfügbar • Grimoire Garden: A Taskbar Tale",
-      "itchOpenBtn": "Projekt ansehen / spielen ↗",
-      "labEyebrow": "04 • Team-Projekte, Game Jams, Mobile & Web Architektur",
-      "labHeading": "Projekte & Rapid Prototyping Showcase",
-      "visitItch": "Zu jjampion.itch.io",
-      "footerText": "© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved."
+      "itchOpenBtn": "Spielen / Store-Seite öffnen ↗",
+      "footerText": "© 2026 Jan Jelle Klingberg (JJampion). Alle Rechte vorbehalten."
     }
   },
   "originStory": {
@@ -158,7 +159,7 @@ const portfolioData = {
       ],
       "coverImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4560080/header.jpg",
       "steamAppId": "4560080",
-      "itchUrl": "",
+      "itchUrl": "https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/",
       "pitch": {
         "en": "A commercial cozy second-screen taskbar game blending idle farming, deep skill-tree progression, and seamless 'No-Spacebar' typing combat right at the bottom edge of your Windows desktop.",
         "de": "Ein kommerzielles Cozy-Second-Screen-Taskbar-Game auf Steam, das Idle-Farming, tiefgehende Skill-Tree-Progression und nahtlosen 'No-Spacebar'-Typing-Combat direkt am unteren Rand des Windows-Desktops vereint."
@@ -331,118 +332,563 @@ const portfolioData = {
 };
 // === PORTFOLIO_DATA_END ===
 
-const stageOrder = ["about", "origin", "hero-projects", "prototyping-lab"];
+/* ==========================================================================
+   GLOBAL STATE
+   ========================================================================== */
 let currentLang = portfolioData.defaultLang || "en";
-let currentTheme = portfolioData.defaultTheme || "dark";
-let currentSection = "about";
+let currentStageIdx = 0; // 0: Showreel, 1: About, 2: Origin, 3: 3D Project Orbit
+let activeOrbitIndex = 0; // Active project on the 3D Tire Orbit
+let isStageTransitioning = false;
 let isAdminUnlocked = false;
 let isInlineEditActive = true;
-let isStageTransitioning = false;
 
 let pendingRepoFiles = {};
 let localPreviewBlobUrls = {};
 
+// Parallax velocity for the Galaxy Starfield
+let starfieldTargetOffsetX = 0;
+let starfieldCurrentOffsetX = 0;
+
 /* ==========================================================================
-   1. STAGE NAVIGATION + SCROLL-TO-SWITCH
+   1. DEEP SPACE GALAXY STARFIELD ENGINE (INSPIRED BY #8 EVRIM TÖRE)
    ========================================================================== */
-function switchSection(sectionId) {
-  if (!stageOrder.includes(sectionId)) return;
-  currentSection = sectionId;
+function initGalaxyCanvas() {
+  const canvas = document.getElementById("galaxy-canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
 
-  const navMap = {
-    "about": "nav-about",
-    "origin": "nav-origin",
-    "hero-projects": "nav-projects",
-    "prototyping-lab": "nav-lab"
-  };
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
 
-  stageOrder.forEach(id => {
-    const el = document.getElementById(id);
-    const navEl = document.getElementById(navMap[id]);
-    const dotEl = document.getElementById(`dot-${id}`);
-    if (!el) return;
+  const starCount = Math.min(240, Math.floor((width * height) / 7000));
+  const stars = [];
 
-    if (id === sectionId) {
-      el.classList.add("active-section");
-      el.classList.remove("is-entered");
-      if (navEl) navEl.classList.add("active-nav");
-      if (dotEl) dotEl.classList.add("active");
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          el.classList.add("is-entered");
-        });
-      });
-    } else {
-      el.classList.remove("active-section", "is-entered");
-      if (navEl) navEl.classList.remove("active-nav");
-      if (dotEl) dotEl.classList.remove("active");
-    }
+  for (let i = 0; i < starCount; i++) {
+    stars.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: Math.random() * 1.65 + 0.3,
+      depth: Math.random() * 0.85 + 0.15, // Parallax depth layer
+      alpha: Math.random() * 0.75 + 0.2,
+      twinkleSpeed: (Math.random() * 0.018 + 0.004) * (Math.random() < 0.5 ? 1 : -1),
+      hue: Math.random() < 0.25 ? 160 : (Math.random() < 0.5 ? 198 : 220)
+    });
+  }
+
+  window.addEventListener("resize", () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
   });
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  function renderGalaxy() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Smoothly interpolate parallax offset when switching stages or spinning the wheel
+    starfieldCurrentOffsetX += (starfieldTargetOffsetX - starfieldCurrentOffsetX) * 0.06;
+
+    for (let i = 0; i < stars.length; i++) {
+      const s = stars[i];
+      s.alpha += s.twinkleSpeed;
+      if (s.alpha > 0.95 || s.alpha < 0.15) s.twinkleSpeed *= -1;
+
+      // Subtle continuous cosmic drift + horizontal parallax
+      s.x -= 0.08 * s.depth;
+      if (s.x < 0) s.x += width;
+
+      let drawX = (s.x - starfieldCurrentOffsetX * s.depth) % width;
+      if (drawX < 0) drawX += width;
+
+      ctx.beginPath();
+      ctx.arc(drawX, s.y, s.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${s.hue}, 80%, 88%, ${s.alpha})`;
+      ctx.fill();
+    }
+
+    requestAnimationFrame(renderGalaxy);
+  }
+
+  requestAnimationFrame(renderGalaxy);
 }
 
-function stepStage(direction) {
-  const idx = stageOrder.indexOf(currentSection);
-  const nextIdx = idx + direction;
-  if (nextIdx < 0 || nextIdx >= stageOrder.length) return;
-  isStageTransitioning = true;
-  switchSection(stageOrder[nextIdx]);
-  setTimeout(() => { isStageTransitioning = false; }, 650);
+/* ==========================================================================
+   2. HORIZONTAL FULLSCREEN STAGE NAVIGATION (LEFT-TO-RIGHT)
+   ========================================================================== */
+const stageNames = [
+  "SECTOR 01 // 04 — SHOWREEL",
+  "SECTOR 02 // 04 — ABOUT ME",
+  "SECTOR 03 // 04 — ORIGIN STORY",
+  "SECTOR 04 // 04 — 3D PROJECT ORBIT"
+];
+
+function goToStage(index) {
+  const clamped = Math.max(0, Math.min(3, index));
+  currentStageIdx = clamped;
+
+  const track = document.getElementById("horizontal-track");
+  if (track) {
+    track.style.transform = `translate3d(-${clamped * 100}vw, 0, 0)`;
+  }
+
+  // Shift starfield parallax
+  starfieldTargetOffsetX = clamped * 260 + activeOrbitIndex * 55;
+
+  // Update Top HUD Stage Tabs
+  const tabIds = ["nav-showreel", "nav-about", "nav-origin", "nav-orbit"];
+  tabIds.forEach((id, idx) => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle("active", idx === clamped);
+  });
+
+  // Update Footer Progress Bar & Telemetry
+  const progressFill = document.getElementById("stage-progress-fill");
+  if (progressFill) {
+    progressFill.style.width = `${((clamped + 1) / 4) * 100}%`;
+  }
+  const coordsEl = document.getElementById("stage-coords-readout");
+  if (coordsEl) {
+    coordsEl.textContent = stageNames[clamped] || "";
+  }
 }
 
-let wheelAccumulator = 0;
-let wheelResetTimer = null;
+/* ==========================================================================
+   3. 3D TIRE-TREAD HORIZONTAL PROJECT ORBIT ("AUTOREIFEN-KARUSSELL")
+   ========================================================================== */
+function getCombinedOrbitProjects() {
+  const heroes = (portfolioData.heroProjects || []).map((p, idx) => ({
+    ...p,
+    _source: "hero",
+    _sourceIdx: idx
+  }));
+  const labs = (portfolioData.labProjects || []).map((p, idx) => ({
+    ...p,
+    _source: "lab",
+    _sourceIdx: idx
+  }));
+  return [...heroes, ...labs];
+}
+
+function rotateOrbit(stepDirection) {
+  const allProjects = getCombinedOrbitProjects();
+  const total = allProjects.length;
+  if (!total) return;
+
+  activeOrbitIndex = (activeOrbitIndex + stepDirection + total) % total;
+  starfieldTargetOffsetX = currentStageIdx * 260 + activeOrbitIndex * 55;
+  updateOrbitWheelTransforms();
+}
+
+function selectOrbitProject(targetIndex) {
+  const allProjects = getCombinedOrbitProjects();
+  if (!allProjects.length) return;
+  activeOrbitIndex = ((targetIndex % allProjects.length) + allProjects.length) % allProjects.length;
+  starfieldTargetOffsetX = currentStageIdx * 260 + activeOrbitIndex * 55;
+  updateOrbitWheelTransforms();
+}
+
+function updateOrbitWheelTransforms() {
+  const cards = document.querySelectorAll(".orbit-project-card");
+  const dots = document.querySelectorAll(".orbit-pill-dot");
+  const total = cards.length;
+  if (!total) return;
+
+  // Tire radius in 3D space
+  const radius = Math.min(window.innerWidth * 0.62, 820);
+  const angleStepDeg = 360 / total;
+
+  cards.forEach((card, i) => {
+    // Shortest circular distance around the tire (-total/2 to +total/2)
+    let diff = i - activeOrbitIndex;
+    if (diff > total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
+
+    const absDiff = Math.abs(diff);
+    const thetaDeg = diff * angleStepDeg;
+    const thetaRad = (thetaDeg * Math.PI) / 180;
+
+    // Cylindrical Tire-Tread coordinates:
+    // At diff = 0 -> x = 0, z = 0, rotateY = 0deg (Front tread facing user)
+    // At diff = ±1 -> angled left/right on the tire circumference and pushed back in Z
+    const x = Math.sin(thetaRad) * radius;
+    const z = (Math.cos(thetaRad) - 1) * radius;
+    const rotateY = thetaDeg;
+
+    let opacity = 0;
+    let blurPx = 0;
+    let pointerEvents = "none";
+    let zIndex = 10 - Math.round(absDiff);
+
+    if (absDiff === 0) {
+      opacity = 1;
+      blurPx = 0;
+      pointerEvents = "auto";
+      zIndex = 50;
+    } else if (absDiff === 1) {
+      // Immediate left/right neighbors on the tire: partially visible & semi-transparent
+      opacity = 0.34;
+      blurPx = 1.5;
+      pointerEvents = "auto";
+      zIndex = 30;
+    } else if (absDiff === 2) {
+      // Next outer neighbors: nearly invisible silhouette wrapping around the tire
+      opacity = 0.07;
+      blurPx = 4;
+      pointerEvents = "none";
+      zIndex = 15;
+    } else {
+      // Back side of the tire
+      opacity = 0;
+      blurPx = 6;
+      pointerEvents = "none";
+      zIndex = 1;
+    }
+
+    card.style.transform = `translate3d(${x.toFixed(1)}px, 0px, ${z.toFixed(1)}px) rotateY(${rotateY.toFixed(1)}deg)`;
+    card.style.opacity = opacity;
+    card.style.filter = blurPx > 0 ? `blur(${blurPx}px) brightness(0.65)` : "none";
+    card.style.pointerEvents = pointerEvents;
+    card.style.zIndex = zIndex;
+    card.classList.toggle("is-front", absDiff === 0);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === activeOrbitIndex);
+  });
+
+  setTextSafe("orbit-active-num", String(activeOrbitIndex + 1).padStart(2, "0"));
+  setTextSafe("orbit-total-num", String(total).padStart(2, "0"));
+}
+
+/* ==========================================================================
+   4. MOUSE WHEEL -> HORIZONTAL STAGE & ORBIT WHEEL CONTROLLER
+   ========================================================================== */
+let wheelAccum = 0;
+let wheelTimeout = null;
 
 window.addEventListener("wheel", (e) => {
   const cmsOpen = document.getElementById("cms-backdrop").classList.contains("open");
   const pinOpen = document.getElementById("pin-modal-backdrop").classList.contains("open");
   if (cmsOpen || pinOpen || isStageTransitioning) return;
 
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-  const atTop = scrollTop <= 6;
-  const atBottom = scrollTop >= maxScroll - 6;
-
-  if (e.deltaY > 0 && !atBottom) { wheelAccumulator = 0; return; }
-  if (e.deltaY < 0 && !atTop) { wheelAccumulator = 0; return; }
-
-  wheelAccumulator += e.deltaY;
-  clearTimeout(wheelResetTimer);
-  wheelResetTimer = setTimeout(() => { wheelAccumulator = 0; }, 220);
-
-  if (wheelAccumulator > 95) {
-    wheelAccumulator = 0;
-    stepStage(1);
-  } else if (wheelAccumulator < -95) {
-    wheelAccumulator = 0;
-    stepStage(-1);
+  // Check if user is scrolling inside an overflowing text container
+  const scrollableParent = e.target.closest(".stage-inner-scroll, .orbit-project-card.is-front");
+  if (scrollableParent) {
+    const canScrollDown = scrollableParent.scrollTop + scrollableParent.clientHeight < scrollableParent.scrollHeight - 4;
+    const canScrollUp = scrollableParent.scrollTop > 4;
+    if ((e.deltaY > 0 && canScrollDown) || (e.deltaY < 0 && canScrollUp)) {
+      wheelAccum = 0;
+      return;
+    }
   }
-}, { passive: true });
 
-let touchStartY = 0;
-window.addEventListener("touchstart", (e) => {
-  if (e.touches.length === 1) touchStartY = e.touches[0].clientY;
-}, { passive: true });
+  const delta = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+  wheelAccum += delta;
 
-window.addEventListener("touchend", (e) => {
-  const cmsOpen = document.getElementById("cms-backdrop").classList.contains("open");
-  const pinOpen = document.getElementById("pin-modal-backdrop").classList.contains("open");
-  if (cmsOpen || pinOpen || isStageTransitioning || !e.changedTouches.length) return;
+  clearTimeout(wheelTimeout);
+  wheelTimeout = setTimeout(() => { wheelAccum = 0; }, 200);
 
-  const deltaY = touchStartY - e.changedTouches[0].clientY;
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  if (Math.abs(wheelAccum) < 80) return;
 
-  if (deltaY > 75 && scrollTop >= maxScroll - 10) {
-    stepStage(1);
-  } else if (deltaY < -75 && scrollTop <= 10) {
-    stepStage(-1);
+  const dir = wheelAccum > 0 ? 1 : -1;
+  wheelAccum = 0;
+  isStageTransitioning = true;
+
+  // On Stage 04 (Project Orbit), scrolling rotates the 3D Project Tire!
+  // If on the first project and scrolling up, glide back left to Stage 03.
+  if (currentStageIdx === 3) {
+    if (dir < 0 && activeOrbitIndex === 0) {
+      goToStage(2);
+    } else {
+      rotateOrbit(dir);
+    }
+  } else {
+    goToStage(currentStageIdx + dir);
   }
+
+  setTimeout(() => { isStageTransitioning = false; }, 520);
 }, { passive: true });
+
+// Drag / Swipe support on the 3D Tire Orbit Viewport
+function initOrbitDragAndKeys() {
+  const viewport = document.getElementById("tire-orbit-viewport");
+  if (!viewport) return;
+
+  let dragStartX = null;
+
+  viewport.addEventListener("pointerdown", (e) => {
+    if (e.target.closest("a, button, iframe, [contenteditable='true']")) return;
+    dragStartX = e.clientX;
+  });
+
+  window.addEventListener("pointerup", (e) => {
+    if (dragStartX === null) return;
+    const dx = e.clientX - dragStartX;
+    dragStartX = null;
+    if (Math.abs(dx) > 55) {
+      rotateOrbit(dx < 0 ? 1 : -1);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    updateOrbitWheelTransforms();
+  });
+}
 
 /* ==========================================================================
-   2. SHA-256 CMS UNLOCK & DIRECT ON-PAGE LIVE TEXT EDITING
+   5. SHOWREEL VIDEO & AUDIO CONTROLLER
+   ========================================================================== */
+function initShowreelVideo() {
+  const video = document.getElementById("showreel-video");
+  if (!video) return;
+
+  const configuredUrl = resolveDisplayImageUrl(portfolioData.showreelVideoUrl || "assets/showreel.mp4");
+  if (video.getAttribute("src") !== configuredUrl) {
+    video.src = configuredUrl;
+  }
+
+  video.addEventListener("loadeddata", () => {
+    video.classList.add("video-ready");
+  });
+
+  video.addEventListener("error", () => {
+    video.classList.remove("video-ready");
+  });
+}
+
+function toggleShowreelAudio() {
+  const video = document.getElementById("showreel-video");
+  const icon = document.getElementById("mute-icon");
+  if (!video) return;
+  video.muted = !video.muted;
+  if (icon) {
+    icon.textContent = video.muted ? "🔇" : "🔊";
+  }
+}
+
+/* ==========================================================================
+   6. RENDER FUNCTIONS (CONTENT, PORTRAIT & 3D ORBIT CARDS)
+   ========================================================================== */
+function setTextSafe(id, text) {
+  const el = document.getElementById(id);
+  if (el && text !== undefined) el.textContent = text;
+}
+
+function setHtmlSafe(id, html) {
+  const el = document.getElementById(id);
+  if (el && html !== undefined) el.innerHTML = html;
+}
+
+function resolveDisplayImageUrl(path) {
+  if (!path) return "";
+  if (localPreviewBlobUrls[path]) return localPreviewBlobUrls[path];
+  return path;
+}
+
+function renderHeroStrings() {
+  const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
+
+  // Top HUD Bar
+  setTextSafe("brand-name-display", t.brandName);
+  setTextSafe("brand-alias-display", t.brandAlias);
+  setTextSafe("nav-subrole", t.navSubrole);
+  setTextSafe("nav-label-showreel", t.navShowreel || "Showreel");
+  setTextSafe("nav-label-about", t.navAbout);
+  setTextSafe("nav-label-origin", t.navOrigin);
+  setTextSafe("nav-label-orbit", t.navProjects);
+
+  // Stage 01: Fullscreen Showreel
+  setTextSafe("reel-badge", t.reelBadge);
+  setTextSafe("reel-title", t.reelTitle || t.heroName);
+  setTextSafe("reel-alias", t.heroPhonetic);
+  setTextSafe("reel-role", t.heroStatus);
+  setTextSafe("reel-tagline", t.heroHeadline);
+  setTextSafe("reel-cta-orbit", t.ctaProjectsJump);
+  setTextSafe("reel-cta-about", t.reelCtaAbout);
+  setTextSafe("reel-cta-steam", t.ctaSteam);
+  setTextSafe("scroll-cue-label", t.scrollCue);
+
+  // Stage 02: About Me Dossier
+  setTextSafe("hero-main-name", t.heroName);
+  setTextSafe("hero-phonetic-tag", t.heroPhonetic);
+  setTextSafe("story-phonetic-tag", t.heroPhonetic);
+  setTextSafe("hero-status-text", t.heroStatus);
+  setTextSafe("hero-lead-text", t.heroLead);
+
+  setHtmlSafe("fact-location", t.factLocation);
+  setHtmlSafe("fact-edu", t.factEdu);
+  setHtmlSafe("fact-studio", t.factStudio);
+
+  setTextSafe("stat-1-val", t.stat1Val);
+  setTextSafe("stat-1-label", t.stat1);
+  setTextSafe("stat-2-val", t.stat2Val);
+  setTextSafe("stat-2-label", t.stat2);
+  setTextSafe("stat-3-val", t.stat3Val);
+  setTextSafe("stat-3-label", t.stat3);
+  setTextSafe("stat-4-val", t.stat4Val);
+  setTextSafe("stat-4-label", t.stat4);
+
+  const pillsContainer = document.getElementById("skill-pills-container");
+  if (pillsContainer) {
+    pillsContainer.innerHTML = (portfolioData.skillPills || []).map((pill, idx) =>
+      `<span class="skill-pill" data-edit-dynamic="true" onblur="updateSingleSkillPill(${idx}, this.textContent)">${pill}</span>`
+    ).join("");
+  }
+
+  setTextSafe("cta-steam", t.ctaSteam);
+  setTextSafe("cta-itch", t.ctaItch);
+  setTextSafe("cta-play", t.ctaPlay);
+  setTextSafe("cta-origin-btn", t.ctaOriginBtn);
+  setTextSafe("cta-mail", t.ctaMail);
+
+  if (portfolioData.links) {
+    const steamBtn = document.getElementById("link-steam-btn");
+    const reelSteam = document.getElementById("reel-steam-link");
+    const itchBtn = document.getElementById("link-itch-btn");
+    const playBtn = document.getElementById("link-play-btn");
+    const mailBtn = document.getElementById("link-mail-btn");
+
+    if (steamBtn) steamBtn.href = portfolioData.links.steam || "#";
+    if (reelSteam) reelSteam.href = portfolioData.links.steam || "#";
+    if (itchBtn) itchBtn.href = portfolioData.links.itch || "#";
+    if (playBtn) playBtn.href = portfolioData.links.play || "#";
+    if (mailBtn) mailBtn.href = portfolioData.links.email || "mailto:contact@janjelle.dev";
+  }
+
+  // Stage 03: Who Am I
+  setTextSafe("story-badge", t.storyBadge);
+  setTextSafe("story-heading", t.storyHeading);
+  setTextSafe("back-about-btn", t.backAboutBtn);
+  setTextSafe("next-projects-btn", t.nextProjectsBtn);
+
+  const paragraphs = (portfolioData.originStory && portfolioData.originStory[currentLang]) || portfolioData.originStory.en;
+  const storyContainer = document.getElementById("story-paragraphs");
+  if (storyContainer) {
+    storyContainer.innerHTML = paragraphs.map((p, idx) =>
+      `<div data-edit-dynamic="true" onblur="updateOriginParagraphInline(${idx}, this.innerHTML)">${p}</div>`
+    ).join("");
+  }
+
+  // Stage 04: 3D Project Orbit Headers
+  setTextSafe("orbit-eyebrow", t.projectsEyebrow);
+  setTextSafe("orbit-heading", t.projectsHeading);
+  setTextSafe("orbit-prev-label", t.orbitPrev);
+  setTextSafe("orbit-next-label", t.orbitNext);
+  setTextSafe("orbit-hint-label", t.orbitHint);
+  setTextSafe("add-project-top-btn", t.addProjectBtn);
+  setTextSafe("footer-text", t.footerText);
+}
+
+function renderPortrait() {
+  const container = document.getElementById("portrait-container");
+  const navAvatar = document.getElementById("nav-avatar");
+  const displayUrl = resolveDisplayImageUrl(portfolioData.portraitImageUrl);
+
+  if (displayUrl && displayUrl.trim() !== "") {
+    container.innerHTML = `<img src="${displayUrl}" alt="Jan Jelle Klingberg (aka JJampion)" onerror="this.parentElement.innerHTML='<div style=\\'font-family:var(--font-mono);font-weight:800;color:var(--accent-primary);\\'>JJK</div>'" />`;
+    navAvatar.innerHTML = `<img src="${displayUrl}" alt="JJK" onerror="this.parentElement.textContent='JJ'" />`;
+  } else {
+    container.innerHTML = `<div style="font-family:var(--font-mono);font-size:1.4rem;font-weight:800;color:var(--accent-primary);">JJK</div>`;
+    navAvatar.textContent = "JJ";
+  }
+}
+
+function renderOrbitProjects() {
+  const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
+  const wheelEl = document.getElementById("tire-orbit-wheel");
+  const pillsEl = document.getElementById("orbit-index-pills");
+  if (!wheelEl || !pillsEl) return;
+
+  const allProjects = getCombinedOrbitProjects();
+  if (activeOrbitIndex >= allProjects.length) activeOrbitIndex = 0;
+
+  wheelEl.innerHTML = allProjects.map((proj, idx) => {
+    const isHero = proj._source === "hero";
+    const sIdx = proj._sourceIdx;
+    const pitch = (proj.pitch && proj.pitch[currentLang]) || (proj.pitch && proj.pitch.en) || "";
+    const coverUrl = resolveDisplayImageUrl(proj.coverImageUrl);
+
+    const badgesHtml = (proj.badges || []).map((b, bIdx) => {
+      const isAward = b.includes("1st") || b.includes("2nd") || b.includes("🏆") || b.includes("🥈") || b.includes("🤝");
+      const blurHandler = isHero
+        ? `updateHeroBadgeInline(${sIdx}, ${bIdx}, this.textContent)`
+        : `updateLabBadgeInline(${sIdx}, ${bIdx}, this.textContent)`;
+      return `<span class="${bIdx === 0 && isHero ? 'badge highlight' : (isAward ? 'badge award' : 'badge')}" data-edit-dynamic="true" onblur="${blurHandler}">${b}</span>`;
+    }).join("");
+
+    const titleBlur = isHero
+      ? `updateHeroFieldInline(${sIdx}, 'title', this.textContent)`
+      : `updateLabFieldInline(${sIdx}, 'title', this.textContent)`;
+
+    const pitchBlur = isHero
+      ? `updateHeroFieldInline(${sIdx}, 'pitch', this.textContent)`
+      : `updateLabFieldInline(${sIdx}, 'pitch', this.textContent)`;
+
+    // Design & Tech Columns if available (e.g. Grimoire Garden & Shadow of Ammit)
+    const designList = (proj.designHighlights && proj.designHighlights[currentLang]) || (proj.designHighlights && proj.designHighlights.en) || [];
+    const techList = (proj.techHighlights && proj.techHighlights[currentLang]) || (proj.techHighlights && proj.techHighlights.en) || [];
+
+    let highlightsHtml = "";
+    if (designList.length || techList.length) {
+      highlightsHtml = `
+        <div class="highlights-columns">
+          <div class="highlight-box">
+            <h4>${t.designHeader}</h4>
+            <ul>${designList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline(${sIdx}, 'designHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
+          </div>
+          <div class="highlight-box">
+            <h4>${t.techHeader}</h4>
+            <ul>${techList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline(${sIdx}, 'techHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
+          </div>
+        </div>
+      `;
+    }
+
+    // Store / Action Link
+    const targetUrl = proj.itchUrl || (proj.steamAppId ? `https://store.steampowered.com/app/${proj.steamAppId}/` : "https://jjampion.itch.io/");
+    const isSteam = Boolean(proj.steamAppId);
+    const isPlay = targetUrl.includes("play.google.com");
+    const platformLabel = isSteam ? "STEAM STORE" : (isPlay ? "GOOGLE PLAY HUB" : "ITCH.IO BUILD");
+
+    return `
+      <article class="orbit-project-card" onclick="if(${idx} !== activeOrbitIndex) selectOrbitProject(${idx})">
+        <div class="orbit-card-top">
+          <div class="project-badges-row">${badgesHtml}</div>
+          <span class="phonetic-tag">#0${idx + 1} // ${platformLabel}</span>
+        </div>
+
+        <div class="orbit-card-header-grid ${coverUrl ? 'has-cover' : ''}">
+          ${coverUrl ? `<div class="orbit-cover-thumb"><img src="${coverUrl}" alt="${proj.title}" loading="lazy" /></div>` : ""}
+          <div>
+            <h3 class="project-title" data-edit-dynamic="true" onblur="${titleBlur}">${proj.title}</h3>
+            <p class="project-pitch" data-edit-dynamic="true" onblur="${pitchBlur}">${pitch}</p>
+          </div>
+        </div>
+
+        ${highlightsHtml}
+
+        <div class="orbit-card-footer">
+          <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--text-muted);">
+            ${isSteam ? t.steamWidgetLabel : proj.title}
+          </span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <a href="${targetUrl}" target="_blank" rel="noopener" class="hud-btn primary">${t.itchOpenBtn}</a>
+            ${!isHero ? `<button class="hud-btn admin-only" onclick="editProjectInCMS(${sIdx})">✏️</button>` : ""}
+          </div>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  pillsEl.innerHTML = allProjects.map((proj, idx) => {
+    const shortName = proj.title.split("(")[0].trim();
+    return `<button class="orbit-pill-dot ${idx === activeOrbitIndex ? 'active' : ''}" onclick="selectOrbitProject(${idx})">0${idx + 1} • ${shortName}</button>`;
+  }).join("");
+
+  updateOrbitWheelTransforms();
+  applyInlineEditability();
+}
+
+/* ==========================================================================
+   7. INLINE EDITING & CMS FUNCTIONS
    ========================================================================== */
 let logoClickCount = 0;
 let logoClickTimer = null;
@@ -469,12 +915,12 @@ window.addEventListener("keydown", (e) => {
   const activeTag = activeEl ? activeEl.tagName.toLowerCase() : "";
   if (["input", "textarea", "select"].includes(activeTag) || (activeEl && activeEl.isContentEditable)) return;
 
-  if (e.key === "PageDown") {
-    e.preventDefault();
-    stepStage(1);
-  } else if (e.key === "PageUp") {
-    e.preventDefault();
-    stepStage(-1);
+  if (e.key === "ArrowRight") {
+    if (currentStageIdx === 3) rotateOrbit(1);
+    else goToStage(currentStageIdx + 1);
+  } else if (e.key === "ArrowLeft") {
+    if (currentStageIdx === 3 && activeOrbitIndex > 0) rotateOrbit(-1);
+    else goToStage(currentStageIdx - 1);
   }
 });
 
@@ -537,7 +983,7 @@ async function updateAdminPinHash() {
   }
   portfolioData.adminPinHash = await computeSHA256Hex(newPin);
   document.getElementById("cms-new-pin").value = "";
-  statusEl.textContent = "✓ SHA-256 hash generated! Click 'Publish to GitHub' above to save.";
+  statusEl.textContent = "✓ SHA-256 hash generated! Click 'Publish to GitHub' to save.";
 }
 
 function lockAdminMode() {
@@ -560,9 +1006,7 @@ function toggleInlineEditMode() {
 
 function markUnsavedIndicator() {
   const saveBtn = document.getElementById("quick-save-gh-btn");
-  if (saveBtn) {
-    saveBtn.innerHTML = "🚀 Save Changes to GitHub *";
-  }
+  if (saveBtn) saveBtn.innerHTML = "🚀 Save Changes to GitHub *";
 }
 
 function applyInlineEditability() {
@@ -604,40 +1048,6 @@ function applyInlineEditability() {
   });
 }
 
-/* ==========================================================================
-   3. AMBIENT SPOTLIGHT TRACKING
-   ========================================================================== */
-let rafPending = false;
-window.addEventListener("pointermove", (e) => {
-  if (e.pointerType === "touch" || rafPending) return;
-  const card = e.target.closest(".liquid-glass");
-  if (!card) return;
-  rafPending = true;
-  requestAnimationFrame(() => {
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
-    card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
-    rafPending = false;
-  });
-}, { passive: true });
-
-document.addEventListener("visibilitychange", () => {
-  document.body.classList.toggle("tab-hidden", document.hidden);
-});
-
-/* ==========================================================================
-   4. LANGUAGE & THEME CONTROLLERS (PEARL / OBSIDIAN)
-   ========================================================================== */
-function triggerMorphAnimation(targetId, callback) {
-  const box = document.getElementById(targetId);
-  if (!box) { callback(); return; }
-  box.classList.add("morphing");
-  setTimeout(() => {
-    callback();
-    box.classList.remove("morphing");
-  }, 150);
-}
-
 function setLanguage(lang) {
   currentLang = lang;
   portfolioData.defaultLang = lang;
@@ -646,137 +1056,10 @@ function setLanguage(lang) {
   document.getElementById("lang-en-btn").classList.toggle("active", lang === "en");
   document.getElementById("lang-de-btn").classList.toggle("active", lang === "de");
 
-  triggerMorphAnimation("about-morph-box", () => {
-    renderAll();
-    if (document.getElementById("cms-backdrop").classList.contains("open")) {
-      populateCMSEditors();
-    }
-  });
-}
-
-function toggleTheme() {
-  currentTheme = currentTheme === "dark" ? "light" : "dark";
-  portfolioData.defaultTheme = currentTheme;
-  applyTheme();
-}
-
-function applyTheme() {
-  document.documentElement.setAttribute("data-theme", currentTheme);
-  const icon = document.getElementById("theme-icon");
-  const label = document.getElementById("theme-label");
-  if (currentTheme === "dark") {
-    icon.textContent = "☀️";
-    label.textContent = "Pearl";
-  } else {
-    icon.textContent = "🌙";
-    label.textContent = "Obsidian";
+  renderAll();
+  if (document.getElementById("cms-backdrop").classList.contains("open")) {
+    populateCMSEditors();
   }
-}
-
-/* ==========================================================================
-   5. RENDER FUNCTIONS (WITH FULL INLINE EDIT BINDINGS)
-   ========================================================================== */
-function setTextSafe(id, text) {
-  const el = document.getElementById(id);
-  if (el && text !== undefined) el.textContent = text;
-}
-
-function setHtmlSafe(id, html) {
-  const el = document.getElementById(id);
-  if (el && html !== undefined) el.innerHTML = html;
-}
-
-function renderHeroStrings() {
-  const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
-
-  // Navigation & Brand
-  setTextSafe("brand-name-display", t.brandName || "Jan Jelle Klingberg");
-  setTextSafe("brand-alias-display", t.brandAlias || "aka JJampion");
-  setTextSafe("nav-subrole", t.navSubrole);
-  setTextSafe("nav-about", t.navAbout);
-  setTextSafe("nav-origin", t.navOrigin);
-  setTextSafe("nav-projects", t.navProjects);
-  setTextSafe("nav-lab", t.navLab);
-
-  // Stage 01: Identity & Pitch
-  setTextSafe("hero-main-name", t.heroName || "Jan Jelle Klingberg");
-  setTextSafe("hero-phonetic-tag", t.heroPhonetic || "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /");
-  setTextSafe("story-phonetic-tag", t.heroPhonetic || "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /");
-  setTextSafe("hero-status-text", t.heroStatus);
-  setTextSafe("hero-headline", t.heroHeadline);
-  setTextSafe("hero-lead-text", t.heroLead);
-
-  // Bio Facts
-  setHtmlSafe("fact-location", t.factLocation);
-  setHtmlSafe("fact-edu", t.factEdu);
-  setHtmlSafe("fact-studio", t.factStudio);
-
-  // 4 Stats (Values + Labels)
-  setTextSafe("stat-1-val", t.stat1Val || "Since 2016");
-  setTextSafe("stat-1-label", t.stat1);
-  setTextSafe("stat-2-val", t.stat2Val || "1st & 2x 2nd");
-  setTextSafe("stat-2-label", t.stat2);
-  setTextSafe("stat-3-val", t.stat3Val || "Steam & Play");
-  setTextSafe("stat-3-label", t.stat3);
-  setTextSafe("stat-4-val", t.stat4Val || "20+ Langs");
-  setTextSafe("stat-4-label", t.stat4);
-
-  // Skill Pills (Editable inline)
-  const pillsContainer = document.getElementById("skill-pills-container");
-  if (pillsContainer) {
-    pillsContainer.innerHTML = (portfolioData.skillPills || []).map((pill, idx) =>
-      `<span class="skill-pill" data-edit-dynamic="true" onblur="updateSingleSkillPill(${idx}, this.textContent)">${pill}</span>`
-    ).join("");
-  }
-
-  // Action Buttons & External URLs
-  setTextSafe("cta-projects-jump", t.ctaProjectsJump);
-  setTextSafe("cta-steam", t.ctaSteam);
-  setTextSafe("cta-itch", t.ctaItch);
-  setTextSafe("cta-play", t.ctaPlay);
-  setTextSafe("cta-origin-btn", t.ctaOriginBtn);
-  setTextSafe("cta-mail", t.ctaMail || "contact@janjelle.dev");
-
-  if (portfolioData.links) {
-    const steamBtn = document.getElementById("link-steam-btn");
-    const itchBtn = document.getElementById("link-itch-btn");
-    const playBtn = document.getElementById("link-play-btn");
-    const mailBtn = document.getElementById("link-mail-btn");
-    const visitItch = document.getElementById("visit-itch-link");
-
-    if (steamBtn) steamBtn.href = portfolioData.links.steam || "#";
-    if (itchBtn) itchBtn.href = portfolioData.links.itch || "#";
-    if (playBtn) playBtn.href = portfolioData.links.play || "#";
-    if (mailBtn) mailBtn.href = portfolioData.links.email || "mailto:contact@janjelle.dev";
-    if (visitItch) visitItch.href = portfolioData.links.itch || "https://jjampion.itch.io/";
-  }
-
-  // Stage 02, 03, 04 Headers & Navigation
-  setTextSafe("story-badge", t.storyBadge);
-  setTextSafe("story-heading", t.storyHeading);
-  setTextSafe("back-about-btn", t.backAboutBtn);
-  setTextSafe("next-projects-btn", t.nextProjectsBtn);
-  setTextSafe("back-origin-btn", t.backOriginBtn);
-  setTextSafe("next-lab-btn", t.nextLabBtn);
-  setTextSafe("back-hero-btn", t.backHeroBtn);
-  setTextSafe("cta-bottom-contact", t.ctaBottomContact);
-
-  const paragraphs = (portfolioData.originStory && portfolioData.originStory[currentLang]) || portfolioData.originStory.en;
-  const storyContainer = document.getElementById("story-paragraphs");
-  if (storyContainer) {
-    storyContainer.innerHTML = paragraphs.map((p, idx) =>
-      `<div data-edit-dynamic="true" onblur="updateOriginParagraphInline(${idx}, this.innerHTML)">${p}</div>`
-    ).join("");
-  }
-
-  setTextSafe("projects-eyebrow", t.projectsEyebrow);
-  setTextSafe("projects-heading", t.projectsHeading);
-  setTextSafe("add-project-top-btn", t.addProjectBtn);
-
-  setTextSafe("lab-eyebrow", t.labEyebrow);
-  setTextSafe("lab-heading", t.labHeading);
-  setTextSafe("visit-itch-label", t.visitItch);
-  setTextSafe("footer-text", t.footerText || "© 2026 J.J.Klingberg. Trademarks belong to their respective owners. All rights reserved.");
 }
 
 function updateSingleSkillPill(index, newText) {
@@ -792,163 +1075,11 @@ function updateSingleSkillPill(index, newText) {
 }
 
 function updateOriginParagraphInline(index, newHtml) {
-  if (!portfolioData.originStory[currentLang]) {
-    portfolioData.originStory[currentLang] = [];
-  }
+  if (!portfolioData.originStory[currentLang]) portfolioData.originStory[currentLang] = [];
   portfolioData.originStory[currentLang][index] = newHtml.trim();
   markUnsavedIndicator();
 }
 
-function resolveDisplayImageUrl(path) {
-  if (!path) return "";
-  if (localPreviewBlobUrls[path]) return localPreviewBlobUrls[path];
-  return path;
-}
-
-function renderPortrait() {
-  const container = document.getElementById("portrait-container");
-  const navAvatar = document.getElementById("nav-avatar");
-  const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
-  const displayUrl = resolveDisplayImageUrl(portfolioData.portraitImageUrl);
-
-  if (displayUrl && displayUrl.trim() !== "") {
-    container.innerHTML = `<img src="${displayUrl}" alt="Jan Jelle Klingberg (aka JJampion)" onerror="this.parentElement.innerHTML='<div class=\\'portrait-visitor-monogram\\'><div class=\\'portrait-initials-ring\\'>JJK</div><div style=\\'font-size:0.74rem; font-weight:800;\\'>aka JJampion</div></div>'" />`;
-    navAvatar.innerHTML = `<img src="${displayUrl}" alt="JJK" onerror="this.parentElement.textContent='JJ'" />`;
-  } else {
-    container.innerHTML = `
-      <div class="portrait-visitor-monogram">
-        <div class="portrait-initials-ring">JJK</div>
-        <div style="font-size:0.74rem; color:var(--text-secondary); font-weight:800;">${t.portraitRoleTag}</div>
-        <button class="pill-btn admin-only" style="padding:4px 10px; font-size:0.7rem;" onclick="document.getElementById('cms-portrait-file').click()">
-          ${t.portraitBtn}
-        </button>
-      </div>
-    `;
-    navAvatar.textContent = "JJ";
-  }
-}
-
-function renderProjects() {
-  const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
-  const heroContainer = document.getElementById("hero-projects-container");
-  const labContainer = document.getElementById("lab-projects-container");
-
-  // Stage 03: Render ALL Hero Projects (1. Grimoire Garden Steam Solo + 2. Shadow of Ammit Team Hero)
-  if (heroContainer && Array.isArray(portfolioData.heroProjects)) {
-    heroContainer.innerHTML = portfolioData.heroProjects.map((hero, hIdx) => {
-      const pitch = (hero.pitch && hero.pitch[currentLang]) || (hero.pitch && hero.pitch.en) || "";
-      const designList = (hero.designHighlights && hero.designHighlights[currentLang]) || (hero.designHighlights && hero.designHighlights.en) || [];
-      const techList = (hero.techHighlights && hero.techHighlights[currentLang]) || (hero.techHighlights && hero.techHighlights.en) || [];
-      const badgesHtml = (hero.badges || []).map((b, idx) =>
-        `<span class="${idx === 0 ? 'badge highlight' : 'badge'}" data-edit-dynamic="true" onblur="updateHeroBadgeInline(${hIdx}, ${idx}, this.textContent)">${b}</span>`
-      ).join("");
-      const coverUrl = resolveDisplayImageUrl(hero.coverImageUrl);
-
-      let footerEmbedHtml = "";
-      if (hero.steamAppId && hero.steamAppId.trim() !== "") {
-        footerEmbedHtml = `
-          <div class="steam-widget-centered-box">
-            <span style="font-size:0.78rem; color:var(--text-muted); font-weight:700;" data-edit-ui="steamWidgetLabel">${t.steamWidgetLabel}</span>
-            <div class="iframe-centered-wrapper">
-              <iframe src="https://store.steampowered.com/widget/${hero.steamAppId}/" frameborder="0" width="646" height="190" loading="lazy"></iframe>
-            </div>
-          </div>
-        `;
-      } else if (hero.itchUrl && hero.itchUrl.trim() !== "") {
-        footerEmbedHtml = `
-          <div class="itch-launch-card" style="margin-top:8px;">
-            <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-              <span class="itch-badge">itch.io • Team Project</span>
-              <span style="font-weight:800; font-size:0.88rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${hero.title}</span>
-            </div>
-            <a href="${hero.itchUrl}" target="_blank" rel="noopener" class="btn-itch">${t.itchOpenBtn}</a>
-          </div>
-        `;
-      }
-
-      return `
-        <article class="project-card-centered liquid-glass hover-lift" style="margin-bottom: 24px;">
-          <div class="project-badges-centered">${badgesHtml}</div>
-          <h3 class="project-title" data-edit-dynamic="true" onblur="updateHeroFieldInline(${hIdx}, 'title', this.textContent)">${hero.title}</h3>
-          <p class="project-pitch-centered" data-edit-dynamic="true" onblur="updateHeroFieldInline(${hIdx}, 'pitch', this.textContent)">${pitch}</p>
-
-          ${coverUrl ? `<div class="hero-cover-showcase"><img src="${coverUrl}" alt="${hero.title}" loading="lazy" /></div>` : ""}
-
-          <div class="highlights-columns">
-            <div class="highlight-box">
-              <h4 data-edit-ui="designHeader">${t.designHeader}</h4>
-              <ul>${designList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline(${hIdx}, 'designHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
-            </div>
-            <div class="highlight-box">
-              <h4 data-edit-ui="techHeader">${t.techHeader}</h4>
-              <ul>${techList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline(${hIdx}, 'techHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
-            </div>
-          </div>
-
-          ${footerEmbedHtml}
-        </article>
-      `;
-    }).join("");
-  }
-
-  // Stage 04: Responsive Tile Grid for Unlimited Projects
-  if (labContainer) {
-    labContainer.innerHTML = portfolioData.labProjects.map((proj, index) => {
-      const pitch = (proj.pitch && proj.pitch[currentLang]) || (proj.pitch && proj.pitch.en) || "";
-      const badgesHtml = (proj.badges || []).map((b, bIdx) => {
-        const isAward = b.includes("1st") || b.includes("2nd") || b.includes("🏆") || b.includes("🥈") || b.includes("🤝");
-        return `<span class="${isAward ? 'badge award' : 'badge'}" data-edit-dynamic="true" onblur="updateLabBadgeInline(${index}, ${bIdx}, this.textContent)">${b}</span>`;
-      }).join("");
-
-      const coverUrl = resolveDisplayImageUrl(proj.coverImageUrl);
-      const labImageHtml = coverUrl && coverUrl.trim() !== ""
-        ? `<div class="tile-cover-frame"><img src="${coverUrl}" alt="${proj.title}" loading="lazy" /></div>`
-        : "";
-
-      const isPlayStore = (proj.itchUrl || "").includes("play.google.com");
-      const badgeLabel = isPlayStore ? "Google Play" : "itch.io";
-
-      let footerWidgetHtml = "";
-      if (proj.itchWidgetCode && proj.itchWidgetCode.trim() !== "") {
-        footerWidgetHtml = `
-          <div style="display:flex; flex-direction:column; gap:8px;">
-            <div class="iframe-centered-wrapper" style="justify-content:flex-start;">${proj.itchWidgetCode}</div>
-            <button class="pill-btn admin-only" style="align-self:flex-end; padding:4px 10px; font-size:0.72rem;" onclick="editProjectInCMS(${index})">✏️ Edit Tile</button>
-          </div>
-        `;
-      } else {
-        footerWidgetHtml = `
-          <div class="itch-launch-card">
-            <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-              <span class="itch-badge">${badgeLabel}</span>
-              <span style="font-weight:800; font-size:0.88rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${proj.title}</span>
-            </div>
-            <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">
-              <a href="${proj.itchUrl || 'https://jjampion.itch.io/'}" target="_blank" rel="noopener" class="btn-itch">${t.itchOpenBtn}</a>
-              <button class="pill-btn admin-only" style="padding:5px 10px; font-size:0.72rem;" onclick="editProjectInCMS(${index})">✏️</button>
-            </div>
-          </div>
-        `;
-      }
-
-      return `
-        <article class="lab-card liquid-glass hover-lift">
-          <div>
-            ${labImageHtml}
-            <div class="project-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px;">${badgesHtml}</div>
-            <h3 class="project-title" style="font-size:1.25rem; margin-bottom:6px;" data-edit-dynamic="true" onblur="updateLabFieldInline(${index}, 'title', this.textContent)">${proj.title}</h3>
-            <p style="font-size:0.88rem; color:var(--text-secondary);" data-edit-dynamic="true" onblur="updateLabFieldInline(${index}, 'pitch', this.textContent)">${pitch}</p>
-          </div>
-          ${footerWidgetHtml}
-        </article>
-      `;
-    }).join("");
-  }
-
-  applyInlineEditability();
-}
-
-// Inline Edit Helpers for Hero Projects & Lab Project Tiles
 function updateHeroFieldInline(heroIdx, field, val) {
   const hero = portfolioData.heroProjects[heroIdx];
   if (!hero) return;
@@ -990,11 +1121,10 @@ function updateLabBadgeInline(projIdx, badgeIdx, val) {
 }
 
 /* ==========================================================================
-   6. CMS STUDIO DRAWER CONTROLLERS
+   8. CMS DRAWER & GITHUB API DEPLOYMENT
    ========================================================================== */
 function openCMSDrawerDirectly() {
-  const backdrop = document.getElementById("cms-backdrop");
-  backdrop.classList.add("open");
+  document.getElementById("cms-backdrop").classList.add("open");
   populateCMSEditors();
   renderCMSProjectList();
   document.getElementById("gh-repo").value = localStorage.getItem("jjk_gh_repo") || "nightodaygamestudio/portfolio";
@@ -1003,6 +1133,9 @@ function openCMSDrawerDirectly() {
 }
 
 function populateCMSEditors() {
+  const showreelInput = document.getElementById("cms-showreel-url");
+  if (showreelInput) showreelInput.value = portfolioData.showreelVideoUrl || "assets/showreel.mp4";
+
   document.getElementById("cms-portrait-url").value = portfolioData.portraitImageUrl || "";
   document.getElementById("cms-skill-pills").value = (portfolioData.skillPills || []).join(", ");
   document.getElementById("cms-custom-css").value = portfolioData.customCSS || "";
@@ -1029,6 +1162,33 @@ function populateCMSEditors() {
   document.getElementById("cms-story-lang-indicator").textContent = currentLang.toUpperCase();
   const storyArr = (portfolioData.originStory && portfolioData.originStory[currentLang]) || [];
   document.getElementById("cms-origin-story-textarea").value = storyArr.join("\n\n");
+}
+
+function updateShowreelFromInput(url) {
+  portfolioData.showreelVideoUrl = url.trim();
+  initShowreelVideo();
+  markUnsavedIndicator();
+}
+
+function handleShowreelFileUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const ext = (file.name.split(".").pop() || "mp4").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const repoPath = `assets/showreel.${ext}`;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const base64Data = e.target.result.split(",")[1];
+    pendingRepoFiles[repoPath] = base64Data;
+    localPreviewBlobUrls[repoPath] = URL.createObjectURL(file);
+
+    portfolioData.showreelVideoUrl = repoPath;
+    document.getElementById("cms-showreel-url").value = repoPath;
+    document.getElementById("showreel-upload-hint").textContent = `✓ Queued '${repoPath}'. Click 'Publish to GitHub' to upload.`;
+    initShowreelVideo();
+    markUnsavedIndicator();
+  };
+  reader.readAsDataURL(file);
 }
 
 function updateSkillPillsFromCMS(val) {
@@ -1059,7 +1219,7 @@ function saveHeroProjectFromCMS() {
   hero.pitch[currentLang] = document.getElementById("cms-hero-pitch").value.trim();
   hero.designHighlights[currentLang] = document.getElementById("cms-hero-design").value.split("\n").map(s => s.trim()).filter(Boolean);
   hero.techHighlights[currentLang] = document.getElementById("cms-hero-tech").value.split("\n").map(s => s.trim()).filter(Boolean);
-  renderProjects();
+  renderOrbitProjects();
   markUnsavedIndicator();
 }
 
@@ -1092,10 +1252,10 @@ function renderCMSProjectList() {
   countEl.textContent = portfolioData.labProjects.length;
   listEl.innerHTML = portfolioData.labProjects.map((proj, idx) => `
     <div class="cms-project-item">
-      <span class="cms-project-item-title">${idx + 1}. ${proj.title}</span>
-      <div class="cms-item-actions">
-        <button class="cms-mini-btn" title="Move Up" onclick="moveProjectTile(${idx}, -1)">↑</button>
-        <button class="cms-mini-btn" title="Move Down" onclick="moveProjectTile(${idx}, 1)">↓</button>
+      <span style="font-weight:700; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${idx + 1}. ${proj.title}</span>
+      <div style="display:flex; gap:4px;">
+        <button class="cms-mini-btn" onclick="moveProjectTile(${idx}, -1)">↑</button>
+        <button class="cms-mini-btn" onclick="moveProjectTile(${idx}, 1)">↓</button>
         <button class="cms-mini-btn" onclick="editProjectInCMS(${idx})">Edit</button>
         <button class="cms-mini-btn" style="color:#f43f5e;" onclick="deleteProjectTile(${idx})">🗑️</button>
       </div>
@@ -1109,7 +1269,7 @@ function moveProjectTile(index, direction) {
   const temp = portfolioData.labProjects[index];
   portfolioData.labProjects[index] = portfolioData.labProjects[targetIdx];
   portfolioData.labProjects[targetIdx] = temp;
-  renderProjects();
+  renderOrbitProjects();
   renderCMSProjectList();
   markUnsavedIndicator();
 }
@@ -1119,7 +1279,7 @@ function deleteProjectTile(index) {
   if (!proj) return;
   if (!confirm(`Delete project "${proj.title}"?`)) return;
   portfolioData.labProjects.splice(index, 1);
-  renderProjects();
+  renderOrbitProjects();
   renderCMSProjectList();
   markUnsavedIndicator();
 }
@@ -1143,7 +1303,7 @@ function editProjectInCMS(index) {
   document.getElementById("new-proj-widget").value = proj.itchWidgetCode || "";
 
   document.getElementById("cms-form-mode-label").textContent = `✏️ Editing: ${proj.title}`;
-  document.getElementById("cms-save-proj-btn-text").textContent = "Update Project Tile";
+  document.getElementById("cms-save-proj-btn-text").textContent = "Update Orbit Project";
 }
 
 function resetProjectForm() {
@@ -1157,8 +1317,8 @@ function resetProjectForm() {
   document.getElementById("new-proj-link").value = "";
   document.getElementById("new-proj-widget").value = "";
 
-  document.getElementById("cms-form-mode-label").textContent = "➕ Add New Project Tile";
-  document.getElementById("cms-save-proj-btn-text").textContent = "Add Project to Grid";
+  document.getElementById("cms-form-mode-label").textContent = "➕ Add / Edit Orbit Project";
+  document.getElementById("cms-save-proj-btn-text").textContent = "Save Project to Orbit";
 }
 
 function saveOrAddProjectTile() {
@@ -1195,7 +1355,7 @@ function saveOrAddProjectTile() {
     });
   }
 
-  renderProjects();
+  renderOrbitProjects();
   renderCMSProjectList();
   resetProjectForm();
   markUnsavedIndicator();
@@ -1400,7 +1560,7 @@ async function publishDirectlyToGitHub() {
       token,
       "app.js",
       base64Content,
-      "Update portfolio content via Live CMS"
+      "Update portfolio content via Space CMS"
     );
 
     if (statusEl) statusEl.textContent = "✅ All changes & files published to GitHub!";
@@ -1415,19 +1575,23 @@ async function publishDirectlyToGitHub() {
 }
 
 function renderAll() {
-  applyTheme();
   applyCustomCSS(portfolioData.customCSS || "");
+  initShowreelVideo();
   renderHeroStrings();
   renderPortrait();
-  renderProjects();
+  renderOrbitProjects();
   applyInlineEditability();
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+  initGalaxyCanvas();
+  initOrbitDragAndKeys();
+
   const params = new URLSearchParams(window.location.search);
   if (params.get("admin") === "1") {
     openPinModal();
   }
+
   setLanguage(portfolioData.defaultLang || "en");
-  switchSection("about");
+  goToStage(0);
 });
