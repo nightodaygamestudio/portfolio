@@ -32,7 +32,7 @@ const portfolioData = {
       "navShowreel": "Showreel",
       "navAbout": "About Me",
       "navOrigin": "Who Am I",
-      "navProjects": "Project Orbit",
+      "navProjects": "Projects",
       "reelBadge": "Junior Technical Game Designer",
       "reelTitle": "JAN JELLE KLINGBERG",
       "reelCtaAbout": "About Me & Skills →",
@@ -51,7 +51,7 @@ const portfolioData = {
       "stat2": "3-Hour Game Jam",
       "stat3Val": "Steam & Google Play Store",
       "stat3": "Shipped Store Pipelines",
-      "ctaProjectsJump": "Enter 3D Project Orbit (8 Games) →",
+      "ctaProjectsJump": "Explore Projects (8 Games) →",
       "ctaSteam": "Grimoire Garden on Steam",
       "ctaItch": "All Projects on itch.io",
       "ctaPlay": "Nightoday on Google Play",
@@ -59,14 +59,10 @@ const portfolioData = {
       "ctaMail": "contact@janjelle.dev",
       "portraitRoleTag": "aka JJampion",
       "portraitBtn": "Photo",
-      "storyBadge": "03 // WHO AM I & DESIGN PHILOSOPHY",
       "storyHeading": "From Systems Analysis & Skyrim to Nightoday Game Studio",
       "backAboutBtn": "Back to About Me",
-      "nextProjectsBtn": "Launch 3D Project Orbit →",
-      "projectsEyebrow": "04 // 3D HORIZONTAL PROJECT ORBIT (TIRE-TREAD VIEW)",
+      "nextProjectsBtn": "Explore Projects →",
       "projectsHeading": "Interactive Game & Systems Showcase",
-      "orbitPrev": "Prev",
-      "orbitNext": "Next",
       "orbitHint": "Scroll wheel, drag horizontally, or use ◄ / ► to spin the project tire",
       "addProjectBtn": "Manage",
       "designHeader": "Game Design, Quests & Player Experience",
@@ -81,7 +77,7 @@ const portfolioData = {
       "navShowreel": "Showreel",
       "navAbout": "Über Mich",
       "navOrigin": "Wer ich bin",
-      "navProjects": "Projekt-Orbit",
+      "navProjects": "Projekte",
       "reelBadge": "Junior Technical Game Designer",
       "reelTitle": "JAN JELLE KLINGBERG",
       "reelCtaAbout": "Über Mich & Skills →",
@@ -100,7 +96,7 @@ const portfolioData = {
       "stat2": "3-Stunden Game Jam",
       "stat3Val": "Steam & Google Play Store",
       "stat3": "Eigene Store-Releases",
-      "ctaProjectsJump": "Zum 3D Projekt-Orbit (8 Spiele) →",
+      "ctaProjectsJump": "Zu den Projekten (8 Spiele) →",
       "ctaSteam": "Grimoire Garden auf Steam",
       "ctaItch": "Alle Projekte auf itch.io",
       "ctaPlay": "Nightoday im Google Play Store",
@@ -108,14 +104,10 @@ const portfolioData = {
       "ctaMail": "contact@janjelle.dev",
       "portraitRoleTag": "aka JJampion",
       "portraitBtn": "Foto",
-      "storyBadge": "03 // WER ICH BIN & DESIGN-PHILOSOPHIE",
       "storyHeading": "Von System-Analyse & Skyrim zum Nightoday Game Studio",
       "backAboutBtn": "Zurück zu Über Mich",
-      "nextProjectsBtn": "Zum 3D Projekt-Orbit →",
-      "projectsEyebrow": "04 // HORIZONTALER 3D-PROJEKT-ORBIT (REIFEN-ANSICHT)",
+      "nextProjectsBtn": "Zu den Projekten →",
       "projectsHeading": "Interaktives Game- & System-Showcase",
-      "orbitPrev": "Zurück",
-      "orbitNext": "Weiter",
       "orbitHint": "Mausrad drehen, horizontal ziehen oder ◄ / ► nutzen, um das Projekt-Rad zu drehen",
       "addProjectBtn": "Verwalten",
       "designHeader": "Game Design, Quests & Spielerlebnis",
@@ -432,10 +424,10 @@ function goToStage(index) {
     if (el) el.classList.toggle("active", idx === clamped);
   });
 
-  // Update Footer Progress Bar
+  // Update Footer Progress Bar (0% on Stage 0 Showreel, fills from Stage 1 About Me onwards)
   const progressFill = document.getElementById("stage-progress-fill");
   if (progressFill) {
-    progressFill.style.width = `${((clamped + 1) / 4) * 100}%`;
+    progressFill.style.width = `${(clamped / 3) * 100}%`;
   }
 }
 
@@ -475,13 +467,15 @@ function selectOrbitProject(targetIndex) {
 }
 
 function updateOrbitWheelTransforms() {
+  const wheelEl = document.getElementById("tire-orbit-wheel");
   const cards = document.querySelectorAll(".orbit-project-card");
-  const dots = document.querySelectorAll(".orbit-pill-dot");
   const total = cards.length;
   if (!total) return;
 
-  // Tire radius in 3D space
-  const radius = Math.min(window.innerWidth * 0.62, 820);
+  // Dynamic circumscribed tire radius so angled side cards never overlap or slice into the front card
+  const cardWidth = (wheelEl && wheelEl.offsetWidth) || Math.min(760, window.innerWidth * 0.84);
+  const halfStepRad = Math.PI / Math.max(total, 4);
+  const radius = ((cardWidth + 72) / 2) / Math.tan(halfStepRad);
   const angleStepDeg = 360 / total;
 
   cards.forEach((card, i) => {
@@ -496,7 +490,7 @@ function updateOrbitWheelTransforms() {
 
     // Cylindrical Tire-Tread coordinates:
     // At diff = 0 -> x = 0, z = 0, rotateY = 0deg (Front tread facing user)
-    // At diff = ±1 -> angled left/right on the tire circumference and pushed back in Z
+    // At diff = ±1 -> angled left/right outside the front card bounds and pushed back in Z
     const x = Math.sin(thetaRad) * radius;
     const z = (Math.cos(thetaRad) - 1) * radius;
     const rotateY = thetaDeg;
@@ -512,14 +506,14 @@ function updateOrbitWheelTransforms() {
       pointerEvents = "auto";
       zIndex = 50;
     } else if (absDiff === 1) {
-      // Immediate left/right neighbors on the tire: partially visible & semi-transparent
+      // Immediate left/right neighbors on the tire: cleanly outside the front card without overlap
       opacity = 0.34;
       blurPx = 1.5;
       pointerEvents = "auto";
       zIndex = 30;
     } else if (absDiff === 2) {
       // Next outer neighbors: nearly invisible silhouette wrapping around the tire
-      opacity = 0.07;
+      opacity = 0.06;
       blurPx = 4;
       pointerEvents = "none";
       zIndex = 15;
@@ -537,10 +531,6 @@ function updateOrbitWheelTransforms() {
     card.style.pointerEvents = pointerEvents;
     card.style.zIndex = zIndex;
     card.classList.toggle("is-front", absDiff === 0);
-  });
-
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === activeOrbitIndex);
   });
 
   setTextSafe("orbit-active-num", String(activeOrbitIndex + 1).padStart(2, "0"));
@@ -698,7 +688,6 @@ function renderHeroStrings() {
 
   // Stage 02: About Me Dossier
   setTextSafe("hero-main-name", t.heroName);
-  setTextSafe("story-phonetic-tag", t.heroPhonetic);
   setTextSafe("hero-status-text", t.heroStatus);
   setTextSafe("hero-lead-text", t.heroLead);
 
@@ -741,7 +730,6 @@ function renderHeroStrings() {
   }
 
   // Stage 03: Who Am I
-  setTextSafe("story-badge", t.storyBadge);
   setTextSafe("story-heading", t.storyHeading);
   setTextSafe("back-about-btn", t.backAboutBtn);
   setTextSafe("next-projects-btn", t.nextProjectsBtn);
@@ -754,11 +742,8 @@ function renderHeroStrings() {
     ).join("");
   }
 
-  // Stage 04: 3D Project Orbit Headers
-  setTextSafe("orbit-eyebrow", t.projectsEyebrow);
+  // Stage 04: Projects Headers
   setTextSafe("orbit-heading", t.projectsHeading);
-  setTextSafe("orbit-prev-label", t.orbitPrev);
-  setTextSafe("orbit-next-label", t.orbitNext);
   setTextSafe("orbit-hint-label", t.orbitHint);
   setTextSafe("add-project-top-btn", t.addProjectBtn);
   setTextSafe("footer-text", t.footerText);
@@ -781,8 +766,7 @@ function renderPortrait() {
 function renderOrbitProjects() {
   const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
   const wheelEl = document.getElementById("tire-orbit-wheel");
-  const pillsEl = document.getElementById("orbit-index-pills");
-  if (!wheelEl || !pillsEl) return;
+  if (!wheelEl) return;
 
   const allProjects = getCombinedOrbitProjects();
   if (activeOrbitIndex >= allProjects.length) activeOrbitIndex = 0;
@@ -863,11 +847,6 @@ function renderOrbitProjects() {
         </div>
       </article>
     `;
-  }).join("");
-
-  pillsEl.innerHTML = allProjects.map((proj, idx) => {
-    const shortName = proj.title.split("(")[0].trim();
-    return `<button class="orbit-pill-dot ${idx === activeOrbitIndex ? 'active' : ''}" onclick="selectOrbitProject(${idx})">0${idx + 1} • ${shortName}</button>`;
   }).join("");
 
   updateOrbitWheelTransforms();

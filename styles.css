@@ -573,7 +573,7 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   display: grid;
   grid-template-columns: 165px 1fr;
   gap: 24px;
-  align-items: center;
+  align-items: start;
 }
 
 .portrait-frame-centered {
@@ -622,7 +622,8 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 .hero-name-title {
   font-size: clamp(1.65rem, 3vw, 2.3rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.05;
+  margin-top: -2px;
 }
 
 .status-badge {
@@ -738,15 +739,6 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   display: flex;
   flex-direction: column;
   gap: 18px;
-}
-
-.origin-meta-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 6px;
 }
 
 .section-title {
@@ -872,7 +864,6 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 .tire-orbit-scene {
   width: 100%;
   height: 100%;
-  perspective: 1700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -882,7 +873,7 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   position: relative;
   width: min(760px, 84vw);
   height: min(520px, 68vh);
-  transform-style: preserve-3d;
+  perspective: 1700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -896,9 +887,7 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   overflow-y: auto;
   padding: clamp(18px, 2.4vw, 28px);
   border-radius: var(--radius-lg);
-  background: rgba(11, 16, 28, 0.92);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: #0b101c;
   border: 1px solid var(--glass-border);
   border-top: 1px solid var(--glass-border-top);
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.85);
@@ -916,6 +905,9 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 }
 
 .orbit-project-card.is-front {
+  background: rgba(11, 16, 28, 0.985);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-color: rgba(0, 229, 153, 0.45);
   box-shadow:
     0 0 0 1px rgba(0, 229, 153, 0.2),
@@ -1052,38 +1044,6 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   gap: 8px;
 }
 
-.orbit-index-pills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-}
-
-.orbit-pill-dot {
-  border: 1px solid var(--glass-border);
-  background: rgba(15, 21, 35, 0.75);
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.orbit-pill-dot:hover {
-  color: var(--text-primary);
-  border-color: var(--glass-border-top);
-}
-
-.orbit-pill-dot.active {
-  background: var(--accent-primary);
-  color: #020604;
-  border-color: transparent;
-  font-weight: 700;
-}
-
 .orbit-hint-text {
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -1111,7 +1071,7 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 }
 
 .footer-progress-fill {
-  width: 25%;
+  width: 0%;
   height: 100%;
   background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
   transition: width 0.6s var(--ease-cinematic);
