@@ -90,6 +90,23 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   z-index: 200;
   padding: 0 clamp(14px, 3vw, 36px);
   pointer-events: none;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  transition:
+    opacity 0.45s var(--ease-cinematic),
+    transform 0.45s var(--ease-cinematic),
+    visibility 0.45s;
+}
+
+.hud-header.is-hidden {
+  opacity: 0;
+  transform: translateY(-24px);
+  visibility: hidden;
+}
+
+.hud-header.is-hidden .hud-navbar {
+  pointer-events: none;
 }
 
 .hud-navbar {
@@ -191,13 +208,6 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   transition: all 0.25s ease;
 }
 
-.stage-tab .tab-idx {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--accent-secondary);
-  opacity: 0.7;
-}
-
 .stage-tab:hover {
   color: var(--text-primary);
   background: rgba(255, 255, 255, 0.04);
@@ -208,11 +218,6 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   color: var(--text-primary);
   border-color: var(--accent-primary);
   box-shadow: 0 0 16px rgba(0, 229, 153, 0.18);
-}
-
-.stage-tab.active .tab-idx {
-  color: var(--accent-primary);
-  opacity: 1;
 }
 
 .hud-actions {
@@ -1118,19 +1123,15 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 }
 
 .footer-meta-row {
-  max-width: 1380px;
-  margin: 0 auto;
+  width: 100%;
   padding: 6px clamp(16px, 3vw, 36px);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   font-family: var(--font-mono);
   font-size: 0.68rem;
   color: var(--text-muted);
-}
-
-.footer-coords {
-  color: var(--accent-secondary);
 }
 
 /* ==========================================================================
@@ -1295,8 +1296,7 @@ body.admin-unlocked.inline-edit-active [contenteditable="true"]:focus {
   }
 
   .brand-subrole,
-  .scroll-right-indicator,
-  .footer-coords {
+  .scroll-right-indicator {
     display: none;
   }
 

@@ -76,7 +76,7 @@ const portfolioData = {
       "techHeader": "⚙️ Technical Design, Systems & Implementation",
       "steamWidgetLabel": "Available on Steam • Grimoire Garden: A Taskbar Tale",
       "itchOpenBtn": "Play / Open Store Page ↗",
-      "footerText": "© 2026 Jan Jelle Klingberg (JJampion). All rights reserved."
+      "footerText": "© 2026 Jan Jelle Klingberg. All rights reserved."
     },
     "de": {
       "brandName": "Jan Jelle Klingberg",
@@ -128,7 +128,7 @@ const portfolioData = {
       "techHeader": "⚙️ Technical Design, Systeme & Umsetzung",
       "steamWidgetLabel": "Auf Steam verfügbar • Grimoire Garden: A Taskbar Tale",
       "itchOpenBtn": "Spielen / Store-Seite öffnen ↗",
-      "footerText": "© 2026 Jan Jelle Klingberg (JJampion). Alle Rechte vorbehalten."
+      "footerText": "© 2026 Jan Jelle Klingberg. Alle Rechte vorbehalten."
     }
   },
   "originStory": {
@@ -413,13 +413,6 @@ function initGalaxyCanvas() {
 /* ==========================================================================
    2. HORIZONTAL FULLSCREEN STAGE NAVIGATION (LEFT-TO-RIGHT)
    ========================================================================== */
-const stageNames = [
-  "SECTOR 01 // 04 — SHOWREEL",
-  "SECTOR 02 // 04 — ABOUT ME",
-  "SECTOR 03 // 04 — ORIGIN STORY",
-  "SECTOR 04 // 04 — 3D PROJECT ORBIT"
-];
-
 function goToStage(index) {
   const clamped = Math.max(0, Math.min(3, index));
   currentStageIdx = clamped;
@@ -427,6 +420,12 @@ function goToStage(index) {
   const track = document.getElementById("horizontal-track");
   if (track) {
     track.style.transform = `translate3d(-${clamped * 100}vw, 0, 0)`;
+  }
+
+  // Hide Top HUD Header on Stage 0 (Showreel), show from Stage 1 (About Me) onwards
+  const hudHeader = document.getElementById("hud-header");
+  if (hudHeader) {
+    hudHeader.classList.toggle("is-hidden", clamped === 0);
   }
 
   // Shift starfield parallax
@@ -439,14 +438,10 @@ function goToStage(index) {
     if (el) el.classList.toggle("active", idx === clamped);
   });
 
-  // Update Footer Progress Bar & Telemetry
+  // Update Footer Progress Bar
   const progressFill = document.getElementById("stage-progress-fill");
   if (progressFill) {
     progressFill.style.width = `${((clamped + 1) / 4) * 100}%`;
-  }
-  const coordsEl = document.getElementById("stage-coords-readout");
-  if (coordsEl) {
-    coordsEl.textContent = stageNames[clamped] || "";
   }
 }
 

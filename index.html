@@ -19,7 +19,7 @@
   <!-- ========================================================================
        TOP ORBITAL HUD NAVIGATION BAR
        ======================================================================== -->
-  <header class="hud-header">
+  <header class="hud-header is-hidden" id="hud-header">
     <nav class="hud-navbar">
       <!-- 5x Click on Brand opens CMS PIN Modal -->
       <div class="brand" onclick="handleSecretLogoClick()" title="Jan Jelle Klingberg aka JJampion">
@@ -35,29 +35,25 @@
         </div>
       </div>
 
-      <!-- Horizontal Stage Telemetry Links (01 to 04) -->
+      <!-- Horizontal Stage Links -->
       <ul class="hud-stage-tabs">
         <li>
           <button class="stage-tab active" id="nav-showreel" onclick="goToStage(0)">
-            <span class="tab-idx">01</span>
             <span id="nav-label-showreel" data-edit-ui="navShowreel">Showreel</span>
           </button>
         </li>
         <li>
           <button class="stage-tab" id="nav-about" onclick="goToStage(1)">
-            <span class="tab-idx">02</span>
             <span id="nav-label-about" data-edit-ui="navAbout">About Me</span>
           </button>
         </li>
         <li>
           <button class="stage-tab" id="nav-origin" onclick="goToStage(2)">
-            <span class="tab-idx">03</span>
             <span id="nav-label-origin" data-edit-ui="navOrigin">Who Am I</span>
           </button>
         </li>
         <li>
           <button class="stage-tab" id="nav-orbit" onclick="goToStage(3)">
-            <span class="tab-idx">04</span>
             <span id="nav-label-orbit" data-edit-ui="navProjects">Project Orbit</span>
           </button>
         </li>
@@ -363,8 +359,7 @@
       <div class="footer-progress-fill" id="stage-progress-fill"></div>
     </div>
     <div class="footer-meta-row">
-      <span id="footer-text" data-edit-ui="footerText">© 2026 Jan Jelle Klingberg (JJampion). All rights reserved.</span>
-      <span class="footer-coords" id="stage-coords-readout">SECTOR 01 // 04 — SHOWREEL</span>
+      <span id="footer-text" data-edit-ui="footerText">© 2026 Jan Jelle Klingberg. All rights reserved.</span>
     </div>
   </footer>
 
