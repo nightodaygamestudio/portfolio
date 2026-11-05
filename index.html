@@ -23,7 +23,7 @@
     <nav class="hud-navbar">
       <!-- 5x Click on Brand opens CMS PIN Modal -->
       <div class="brand" onclick="handleSecretLogoClick()" title="Jan Jelle Klingberg">
-        <div class="brand-avatar" id="nav-avatar">JJ</div>
+        <div class="brand-avatar" id="nav-avatar"><img src="assets/portrait.jpg" alt="JJK" /></div>
         <div class="brand-text-col">
           <div class="brand-title-row">
             <span id="brand-name-display" data-edit-ui="brandName">Jan Jelle Klingberg</span>
@@ -58,12 +58,8 @@
         </li>
       </ul>
 
-      <!-- Right Controls: Language, Audio Mute (for Showreel), CMS -->
+      <!-- Right Controls: Language & CMS -->
       <div class="hud-actions">
-        <button class="hud-icon-btn" id="showreel-mute-btn" onclick="toggleShowreelAudio()" title="Toggle Showreel Audio">
-          <span id="mute-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg></span>
-        </button>
-
         <div class="lang-switch" title="Switch Language (English / Deutsch)">
           <button class="lang-btn active" id="lang-en-btn" onclick="setLanguage('en')">EN</button>
           <button class="lang-btn" id="lang-de-btn" onclick="setLanguage('de')">DE</button>
