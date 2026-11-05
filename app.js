@@ -480,7 +480,7 @@ const portfolioData = {
     },
     {
       "id": "trijam-runner-ups",
-      "title": "THE WOZ-TAC-TOE & Stick It To 'Em!",
+      "title": "THE WOZ-TAC-TOE",
       "storeType": "itch",
       "storeUrl": "https://jjampion.itch.io/",
       "coverImageUrl": "",
@@ -532,7 +532,7 @@ const portfolioData = {
     },
     {
       "id": "single-file-html-engines",
-      "title": "Single-File HTML5 & Multi-Engine Prototypes",
+      "title": "Stick It To 'Em!",
       "storeType": "itch",
       "storeUrl": "https://jjampion.itch.io/",
       "coverImageUrl": "",
