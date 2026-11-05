@@ -779,11 +779,13 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
    8. STAGE 04: 3D TIRE-TREAD HORIZONTAL PROJECT ORBIT ("AUTOREIFEN-KARUSSELL")
    ========================================================================== */
 #stage-orbit {
+  position: relative;
   padding-top: 72px;
   padding-bottom: 42px;
 }
 
 .orbit-stage-layout {
+  position: relative;
   width: 100%;
   max-width: 1440px;
   height: 100%;
@@ -793,19 +795,11 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   gap: 10px;
 }
 
-.orbit-hud-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 0 12px;
-}
-
-.orbit-main-title {
-  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
-  font-weight: 800;
+.orbit-admin-bar {
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  z-index: 70;
 }
 
 /* Outer Viewport with Edge Cut/Fade Masking so left/right cards slice out cleanly */
@@ -813,7 +807,7 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   position: relative;
   flex: 1;
   width: 100%;
-  min-height: 440px;
+  min-height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -854,43 +848,40 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 
 .tire-orbit-wheel {
   position: relative;
-  width: min(760px, 84vw);
-  height: min(520px, 68vh);
+  width: min(740px, 84vw);
+  height: clamp(275px, 38vh, 320px);
   perspective: 1700px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Individual Project Card on the 3D Tire Circumference */
+/* Uniform Project Preview Card on the 3D Tire Circumference */
 .orbit-project-card {
   position: absolute;
   width: 100%;
-  max-height: 100%;
-  overflow-y: auto;
-  padding: clamp(18px, 2.4vw, 28px);
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
   border-radius: var(--radius-lg);
   background: #0b101c;
   border: 1px solid var(--glass-border);
   border-top: 1px solid var(--glass-border-top);
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.85);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  cursor: pointer;
+  user-select: none;
   backface-visibility: hidden;
   transform-origin: center center;
   transition:
     transform 0.72s var(--ease-cinematic),
     opacity 0.72s var(--ease-cinematic),
     filter 0.72s var(--ease-cinematic),
-    border-color 0.35s ease;
-  scrollbar-width: thin;
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .orbit-project-card.is-front {
-  background: rgba(11, 16, 28, 0.985);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: #0b101c;
   border-color: rgba(0, 229, 153, 0.45);
   box-shadow:
     0 0 0 1px rgba(0, 229, 153, 0.2),
@@ -898,12 +889,85 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
     0 0 50px rgba(0, 229, 153, 0.10);
 }
 
-.orbit-card-top {
+.orbit-project-card.is-front:hover {
+  border-color: var(--accent-primary);
+  box-shadow:
+    0 0 0 1px rgba(0, 229, 153, 0.38),
+    0 32px 86px rgba(0, 0, 0, 0.95),
+    0 0 60px rgba(0, 229, 153, 0.16);
+}
+
+/* Left-Flush Full-Height Artwork Fading in Transparency Toward the Right */
+.orbit-card-art-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 64%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 14%,
+    rgba(0, 0, 0, 0.76) 36%,
+    rgba(0, 0, 0, 0.28) 68%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 14%,
+    rgba(0, 0, 0, 0.76) 36%,
+    rgba(0, 0, 0, 0.28) 68%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.orbit-card-art-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 35% center;
+  display: block;
+  transition: transform 0.65s var(--ease-cinematic);
+}
+
+.orbit-project-card.is-front:hover .orbit-card-art-bg img {
+  transform: scale(1.035);
+}
+
+.orbit-card-noart-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 38%;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 0% 50%, rgba(0, 229, 153, 0.12), rgba(56, 189, 248, 0.05) 48%, transparent 78%);
+}
+
+.orbit-card-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: clamp(22px, 2.8vw, 30px) clamp(24px, 3.2vw, 34px);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.orbit-project-card.has-cover .orbit-card-content {
+  padding-left: clamp(190px, 36%, 275px);
+}
+
+.orbit-card-text-group {
+  min-height: 0;
 }
 
 .project-badges-row {
@@ -935,45 +999,28 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   color: var(--accent-warning);
 }
 
-.orbit-card-header-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  align-items: center;
-}
-
-.orbit-card-header-grid.has-cover {
-  grid-template-columns: 220px 1fr;
-}
-
-.orbit-cover-thumb {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  border: 1px solid var(--glass-border-top);
-  background: #05070c;
-}
-
-.orbit-cover-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 .project-title {
-  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-size: clamp(1.2rem, 1.95vw, 1.55rem);
   font-weight: 800;
   color: var(--text-primary);
-  line-height: 1.2;
+  line-height: 1.22;
+  text-shadow: 0 2px 14px rgba(4, 6, 12, 0.92);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .project-pitch {
-  font-size: 0.88rem;
+  font-size: 0.87rem;
   color: var(--text-secondary);
-  line-height: 1.58;
-  margin-top: 6px;
+  line-height: 1.56;
+  margin-top: 8px;
+  text-shadow: 0 2px 12px rgba(4, 6, 12, 0.92);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .highlights-columns {
@@ -982,8 +1029,12 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   gap: 12px;
 }
 
+.highlights-columns.single-col {
+  grid-template-columns: 1fr;
+}
+
 .highlight-box {
-  padding: 12px 14px;
+  padding: 14px 16px;
   border-radius: var(--radius-sm);
   background: rgba(15, 22, 38, 0.85);
   border: 1px solid var(--glass-border);
@@ -1001,13 +1052,13 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 }
 
 .highlight-box ul {
-  padding-left: 15px;
-  font-size: 0.79rem;
+  padding-left: 16px;
+  font-size: 0.82rem;
   color: var(--text-secondary);
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  line-height: 1.48;
+  gap: 6px;
+  line-height: 1.52;
 }
 
 .orbit-card-footer {
@@ -1016,7 +1067,217 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
-  padding-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.orbit-card-details-cue {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-secondary);
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.orbit-project-card.is-front:hover .orbit-card-details-cue {
+  color: var(--accent-primary);
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   PROJECT ONE-PAGER DETAIL MODAL
+   ========================================================================== */
+.project-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 5, 10, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 900;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(14px, 3vw, 34px);
+}
+
+.project-modal-backdrop.open {
+  display: flex;
+}
+
+.project-modal {
+  position: relative;
+  width: min(940px, 100%);
+  max-height: min(88dvh, 860px);
+  border-radius: var(--radius-lg);
+  background: #0a0f1a;
+  border: 1px solid rgba(0, 229, 153, 0.38);
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.92),
+    0 0 60px rgba(0, 229, 153, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 30;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--glass-border-top);
+  background: rgba(8, 12, 22, 0.9);
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.project-modal-close:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(0, 229, 153, 0.14);
+}
+
+.project-modal-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-modal-header {
+  position: relative;
+  padding: clamp(24px, 3vw, 32px);
+  padding-right: 64px;
+  border-bottom: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.project-modal-header.has-cover {
+  padding-left: clamp(200px, 32%, 285px);
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-modal-art-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 55%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.9) 18%,
+    rgba(0, 0, 0, 0.42) 56%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.9) 18%,
+    rgba(0, 0, 0, 0.42) 56%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.project-modal-art-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 35% center;
+  display: block;
+}
+
+.project-modal-header-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-modal-title {
+  font-size: clamp(1.35rem, 2.3vw, 1.85rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  text-shadow: 0 2px 14px rgba(4, 6, 12, 0.9);
+}
+
+.project-modal-overview {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.62;
+  text-shadow: 0 2px 12px rgba(4, 6, 12, 0.85);
+}
+
+.project-modal-body {
+  padding: clamp(20px, 2.6vw, 28px) clamp(24px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.project-modal-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 10px;
+}
+
+.project-modal-meta-card {
+  padding: 11px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(16, 23, 40, 0.85);
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.project-modal-meta-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.project-modal-meta-value {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.38;
+}
+
+.project-modal-widget {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.project-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 14px;
   border-top: 1px solid var(--glass-border);
 }
 
@@ -1221,8 +1482,7 @@ body.admin-unlocked.inline-edit-active [contenteditable="true"]:focus {
   .dossier-top-grid,
   .bio-facts-grid,
   .hero-stats-row,
-  .highlights-columns,
-  .orbit-card-header-grid.has-cover {
+  .highlights-columns {
     grid-template-columns: 1fr;
   }
 
@@ -1243,5 +1503,22 @@ body.admin-unlocked.inline-edit-active [contenteditable="true"]:focus {
   .tire-orbit-viewport {
     mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  }
+}
+
+@media (max-width: 720px) {
+  .tire-orbit-wheel {
+    height: clamp(295px, 46vh, 345px);
+  }
+
+  .orbit-project-card.has-cover .orbit-card-content,
+  .project-modal-header.has-cover {
+    padding-left: 22px;
+  }
+
+  .orbit-card-art-bg,
+  .project-modal-art-bg {
+    width: 100%;
+    opacity: 0.34;
   }
 }

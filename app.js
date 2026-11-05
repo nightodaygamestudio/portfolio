@@ -62,13 +62,20 @@ const portfolioData = {
       "storyHeading": "From Systems Analysis & Skyrim to Nightoday Game Studio",
       "backAboutBtn": "Back to About Me",
       "nextProjectsBtn": "Explore Projects →",
-      "projectsHeading": "Interactive Game & Systems Showcase",
-      "orbitHint": "Scroll wheel, drag horizontally, or use ◄ / ► to spin the project tire",
+      "orbitHint": "Scroll wheel, drag horizontally, or use ◄ / ► to spin the project tire • Click a project for details",
       "addProjectBtn": "Manage",
-      "designHeader": "Game Design, Quests & Player Experience",
-      "techHeader": "Technical Design, Systems & Implementation",
-      "steamWidgetLabel": "Available on Steam • Grimoire Garden: A Taskbar Tale",
-      "itchOpenBtn": "Play / Open Store Page ↗",
+      "cardDetailsCue": "Click for Project Details →",
+      "storeBtnSteam": "View on Steam ↗",
+      "storeBtnItch": "View on itch.io ↗",
+      "storeBtnPlay": "Google Play Store ↗",
+      "storeBtnCustom": "Open Project Link ↗",
+      "modalTeamLabel": "Team Size",
+      "modalTimeframeLabel": "Timeframe",
+      "modalRoleLabel": "My Role",
+      "modalEngineLabel": "Engine & Tech",
+      "designHeader": "What I Did — Game Design & Contributions",
+      "techHeader": "Technical Implementation & Systems",
+      "modalCloseBtn": "Close",
       "footerText": "© 2026 Jan Jelle Klingberg. All rights reserved. • All trademarks belong to their respective owners."
     },
     "de": {
@@ -107,13 +114,20 @@ const portfolioData = {
       "storyHeading": "Von System-Analyse & Skyrim zum Nightoday Game Studio",
       "backAboutBtn": "Zurück zu Über Mich",
       "nextProjectsBtn": "Zu den Projekten →",
-      "projectsHeading": "Interaktives Game- & System-Showcase",
-      "orbitHint": "Mausrad drehen, horizontal ziehen oder ◄ / ► nutzen, um das Projekt-Rad zu drehen",
+      "orbitHint": "Mausrad drehen, horizontal ziehen oder ◄ / ► nutzen • Projekt anklicken für alle Details",
       "addProjectBtn": "Verwalten",
-      "designHeader": "Game Design, Quests & Spielerlebnis",
-      "techHeader": "Technical Design, Systeme & Umsetzung",
-      "steamWidgetLabel": "Auf Steam verfügbar • Grimoire Garden: A Taskbar Tale",
-      "itchOpenBtn": "Spielen / Store-Seite öffnen ↗",
+      "cardDetailsCue": "Klicken für Projekt-Details →",
+      "storeBtnSteam": "Auf Steam ansehen ↗",
+      "storeBtnItch": "Auf itch.io ansehen ↗",
+      "storeBtnPlay": "Google Play Store ↗",
+      "storeBtnCustom": "Projekt-Link öffnen ↗",
+      "modalTeamLabel": "Teamgröße",
+      "modalTimeframeLabel": "Zeitraum",
+      "modalRoleLabel": "Meine Rolle",
+      "modalEngineLabel": "Engine & Technik",
+      "designHeader": "Meine Aufgaben — Game Design & Beiträge",
+      "techHeader": "Technische Umsetzung & Systeme",
+      "modalCloseBtn": "Schließen",
       "footerText": "© 2026 Jan Jelle Klingberg. Alle Rechte vorbehalten. • Alle Marken gehören ihren jeweiligen Eigentümern."
     }
   },
@@ -133,22 +147,39 @@ const portfolioData = {
       "Während meiner Ausbildung an der <strong>Games Academy (2024–2026)</strong> wurde mir eines glasklar: Mein Herz schlägt zu 100 % für das handwerkliche <strong>Game Design &amp; Technical Design</strong> – nicht für trockenes Projektmanagement. Egal ob ich als einziger Game Designer im Team tief in die ägyptische Mythologie eintauche, Pyramiden-Rätsel entwerfe und mit dem Programmierer die KI-Routen von Ammit ausarbeite (<em>Shadow of Ammit</em>), komplette UI- und Level-Systeme baue (<em>LineX</em>) oder eigene Steam-Titel veröffentliche: Ich möchte nah am Spiel, an den Mechaniken und an der Engine arbeiten."
     ]
   },
-  "heroProjects": [
+  "projects": [
     {
       "id": "grimoire-garden",
-      "title": "Grimoire Garden: A Taskbar Tale (Commercial Steam Release)",
+      "title": "Grimoire Garden: A Taskbar Tale",
+      "storeType": "steam",
+      "storeUrl": "https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/",
+      "coverImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4560080/header.jpg",
+      "engineTech": "Unity (C#), Windows OS API, Steamworks SDK",
       "badges": [
         "Published on Steam",
         "Solo Technical Game Designer",
         "Unity (C# & Windows OS API)",
         "59 Steam Achievements"
       ],
-      "coverImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4560080/header.jpg",
-      "steamAppId": "4560080",
-      "itchUrl": "https://store.steampowered.com/app/4560080/Grimoire_Garden_A_Taskbar_Tale/",
       "pitch": {
         "en": "A commercial cozy second-screen taskbar game blending idle farming, deep skill-tree progression, and seamless 'No-Spacebar' typing combat right at the bottom edge of your Windows desktop.",
         "de": "Ein kommerzielles Cozy-Second-Screen-Taskbar-Game auf Steam, das Idle-Farming, tiefgehende Skill-Tree-Progression und nahtlosen 'No-Spacebar'-Typing-Combat direkt am unteren Rand des Windows-Desktops vereint."
+      },
+      "teamSize": {
+        "en": "Solo Developer (Nightoday Game Studio)",
+        "de": "Solo-Entwickler (Nightoday Game Studio)"
+      },
+      "timeframe": {
+        "en": "Commercial Steam Release (2025 – 2026)",
+        "de": "Kommerzieller Steam-Release (2025 – 2026)"
+      },
+      "myRole": {
+        "en": "Solo Game Designer, Systems Programmer & Publisher",
+        "de": "Solo Game Designer, Systems Programmer & Publisher"
+      },
+      "overview": {
+        "en": "Developed and self-published under Nightoday Game Studio, Grimoire Garden lives directly on the Windows taskbar as an interactive cozy companion game — allowing players to seamlessly alternate between relaxed background farming and active skill-based combat.",
+        "de": "Unter Nightoday Game Studio eigenständig entwickelt und auf Steam veröffentlicht: Grimoire Garden läuft direkt am unteren Rand des Windows-Desktops und verbindet entspanntes Second-Screen-Farming nahtlos mit aktiven Minigames und tiefer Meta-Progression."
       },
       "designHighlights": {
         "en": [
@@ -173,21 +204,39 @@ const portfolioData = {
           "Global Input Hooks & Panic-Button: Erfasst globale Klicks/Tastenanschläge außerhalb des Spiels zum Ausbrüten von Jack Jr. Inklusive Ctrl+Alt+I Boss-Button (versteckt Spiel + Taskbar-Icon sofort).",
           "Komplette Steamworks-Pipeline: Zeitbasierte Offline-Wachstumsberechnung und 59 getrackte Steam-Achievements."
         ]
-      }
+      },
+      "itchWidgetCode": ""
     },
     {
       "id": "shadow-of-ammit",
-      "title": "Shadow of Ammit (Team Hero Project • Games Academy)",
+      "title": "Shadow of Ammit",
+      "storeType": "itch",
+      "storeUrl": "https://jjampion.itch.io/",
+      "coverImageUrl": "",
+      "engineTech": "Unity Engine, Quest & AI Route Design",
       "badges": [
         "Sole Game Designer in Team",
         "Quest, Puzzle & Pyramid Layout",
         "AI Patrol & Route Design",
         "Egyptian Mythology & Lore"
       ],
-      "coverImageUrl": "",
-      "steamAppId": "",
-      "itchUrl": "https://jjampion.itch.io/",
       "pitch": {
+        "en": "An atmospheric Egyptian mythological adventure developed at the Games Academy. As the sole Game Designer on the team, I owned quest design, pyramid layout, environmental puzzles, lore, and Ammit's patrol routes.",
+        "de": "Ein atmosphärisches Abenteuer in der ägyptischen Mythologie an der Games Academy. Als einziger Game Designer im Team verantwortete ich Quests, Pyramiden-Aufbau, Rätsel, Lore sowie Ammits KI-Routen."
+      },
+      "teamSize": {
+        "en": "Interdisciplinary Semester Team (Games Academy)",
+        "de": "Interdisziplinäres Semester-Team (Games Academy)"
+      },
+      "timeframe": {
+        "en": "Games Academy Semester Project (2024 – 2026)",
+        "de": "Semesterprojekt an der Games Academy (2024 – 2026)"
+      },
+      "myRole": {
+        "en": "Sole Game Designer (Quests, Level/Pyramid, Puzzles, Lore & AI Routes)",
+        "de": "Einziger Game Designer (Quests, Pyramiden-Layout, Rätsel, Lore & KI-Routen)"
+      },
+      "overview": {
         "en": "An atmospheric Egyptian mythological adventure developed in an interdisciplinary team at the Games Academy. As the sole Game Designer on the team, I owned the quest design, pyramid structure, environmental puzzles, deep mythological lore, and the behavioral route design of the stalker entity Ammit.",
         "de": "Ein atmosphärisches Abenteuer in der ägyptischen Mythologie, entwickelt im interdisziplinären Semester-Team an der Games Academy. Als einziger Game Designer im Team verantwortete ich das komplette Quest-Design, den Aufbau der Pyramide, die Rätsel-Mechaniken, die mythologische Lore sowie die Verhaltens- und Routenplanung von Ammit."
       },
@@ -214,105 +263,322 @@ const portfolioData = {
           "Schnittstelle zwischen Design & Code: Übersetzung komplexer Quest-Abläufe und Rätsel-Logiken in präzise technische Vorgaben für die Programmierung.",
           "Iteratives Balancing im Team: Kontinuierliche Abstimmung von Laufzeiten, Sichtlinien und Rätsel-Schwierigkeitsgraden durch gemeinsames Playtesting."
         ]
-      }
-    }
-  ],
-  "labProjects": [
+      },
+      "itchWidgetCode": ""
+    },
     {
       "id": "linex-games-academy",
-      "title": "LineX (Games Academy • 1st Semester Project)",
+      "title": "LineX",
+      "storeType": "itch",
+      "storeUrl": "https://jjampion.itch.io/",
+      "coverImageUrl": "",
+      "engineTech": "Unity (C#), UI & Puzzle Systems",
       "badges": [
         "Team Project",
         "Game, Level & Puzzle Design",
         "Complete UI Design"
       ],
-      "coverImageUrl": "",
-      "itchUrl": "https://jjampion.itch.io/",
-      "itchWidgetCode": "",
       "pitch": {
-        "en": "My very first semester project at the Games Academy and an all-round hands-on design showcase: I designed the complete UI from scratch, created levels and puzzle mechanics, and shaped the core Game Design.",
-        "de": "Mein allererstes Semesterprojekt an der Games Academy und ein echtes Hands-on-Design-Showcase: Hier habe ich das komplette UI entworfen, das Game Design und Level-Design verantwortet sowie die Rätsel mitgestaltet."
-      }
+        "en": "My first semester project at the Games Academy and an all-round hands-on design showcase: I designed the complete UI from scratch, created levels and puzzle mechanics, and shaped the core Game Design.",
+        "de": "Mein erstes Semesterprojekt an der Games Academy: Hier habe ich das komplette UI von Grund auf entworfen, das Game- und Level-Design mitgestaltet sowie die Rätsel-Mechaniken ausgearbeitet."
+      },
+      "teamSize": {
+        "en": "1st Semester Team (Games Academy)",
+        "de": "1. Semester-Team (Games Academy)"
+      },
+      "timeframe": {
+        "en": "1st Semester • Games Academy (2024)",
+        "de": "1. Semester • Games Academy (2024)"
+      },
+      "myRole": {
+        "en": "Game Designer, Level/Puzzle Designer & Complete UI Designer",
+        "de": "Game Designer, Level-/Rätsel-Designer & kompletter UI-Designer"
+      },
+      "overview": {
+        "en": "Built during my very first semester at the Games Academy, LineX served as a comprehensive hands-on foundation in collaborative development — combining core puzzle mechanics, structured level progression, and a clean user interface built from scratch.",
+        "de": "Im ersten Semester an der Games Academy entstanden: Bei LineX übernahm ich neben zentralen Aufgaben im Game-, Level- und Rätsel-Design die vollständige Konzeption und Gestaltung des gesamten User Interfaces."
+      },
+      "designHighlights": {
+        "en": [
+          "Complete UI/UX Ownership: Designed all menus, HUD feedback, and visual clarity cues from scratch.",
+          "Level & Puzzle Design: Created playable puzzle stages with clear onboarding and escalating challenge curves.",
+          "Core Game Design Iteration: Collaborated with the team to refine rules, player feedback, and pacing."
+        ],
+        "de": [
+          "Komplette UI/UX-Verantwortung: Entwurf sämtlicher Menüs, HUD-Elemente und visueller Spieler-Rückmeldungen.",
+          "Level- & Rätsel-Design: Aufbau spielbarer Level mit klarer Einführung neuer Mechaniken und steigender Lernkurve.",
+          "Iteratives Core Game Design: Enge Abstimmung im Team zur Verfeinerung der Spielregeln und des Spielgefühls."
+        ]
+      },
+      "techHighlights": {
+        "en": [
+          "UI Implementation & Flow: Structured responsive screen states, transitions, and interactive UI prefabs in Unity."
+        ],
+        "de": [
+          "UI-Umsetzung & Screen-Flow: Strukturierung der Menü-Zustände, Übergänge und interaktiven UI-Elemente in Unity."
+        ]
+      },
+      "itchWidgetCode": ""
     },
     {
       "id": "core-dump",
-      "title": "TFD://BREACH (Upcoming Android Port: Core Dump)",
+      "title": "TFD://BREACH (Core Dump)",
+      "storeType": "itch",
+      "storeUrl": "https://jjampion.itch.io/",
+      "coverImageUrl": "",
+      "engineTech": "Unity (C#), WebGL & Android SDK",
       "badges": [
         "1st Place Winner (Trijam 3h Jam)",
         "Unity WebGL & Android Port",
         "ASCII Matrix Look"
       ],
-      "coverImageUrl": "",
-      "itchUrl": "https://jjampion.itch.io/",
-      "itchWidgetCode": "",
       "pitch": {
-        "en": "1st Place Winner built in just 3 hours for the Trijam theme 'The Forbidden Door' (TFD) and expanded into the upcoming Android port 'Core Dump'. A fast-paced circular hacking shooter with 10 Security Layers, Hardcore mode, and an endless Roguelite mode.",
-        "de": "In nur 3 Stunden zum Trijam-Thema 'The Forbidden Door' (TFD) entwickelt (1. Platz Gewinner) und für den kommenden Android-Port als 'Core Dump' ausgebaut. Rasanter Kreis-Arena-Shooter im ASCII-Hacker-Stil mit 10 Security-Layern und Endlos-Roguelite-Modus."
-      }
+        "en": "1st Place Winner built in just 3 hours for the Trijam theme 'The Forbidden Door' and expanded into the upcoming Android port 'Core Dump' — a circular ASCII hacking shooter with 10 Security Layers and Roguelite mode.",
+        "de": "1. Platz beim Trijam (in nur 3 Stunden zum Thema 'The Forbidden Door' entwickelt) und zum kommenden Android-Port 'Core Dump' ausgebaut: Rasanter Kreis-Arena-Shooter im ASCII-Hacker-Stil mit 10 Security-Layern."
+      },
+      "teamSize": {
+        "en": "Solo Developer",
+        "de": "Solo-Entwickler"
+      },
+      "timeframe": {
+        "en": "3 Hours (Trijam Prototype) + Ongoing Android Port",
+        "de": "3 Stunden (Trijam-Prototyp) + Android-Ausbau"
+      },
+      "myRole": {
+        "en": "Solo Game Designer & C# Gameplay Programmer",
+        "de": "Solo Game Designer & C# Gameplay Programmer"
+      },
+      "overview": {
+        "en": "Originally created in strictly 3 hours for Trijam ('The Forbidden Door'), TFD://BREACH won 1st Place and is now being expanded into the full mobile release 'Core Dump' featuring 10 Security Layers, Hardcore mode, and endless Roguelite runs.",
+        "de": "Ursprünglich in exakt 3 Stunden für den Trijam ('The Forbidden Door') entwickelt und mit dem 1. Platz ausgezeichnet. Aktuell wird das Projekt unter dem Titel 'Core Dump' für Android um 10 Security-Layer, Hardcore-Modus und Endlos-Roguelite-Mechaniken erweitert."
+      },
+      "designHighlights": {
+        "en": [
+          "360° Circular Arena Combat: Fast-paced radial movement and breach-the-core shooting loop with immediate arcade game feel.",
+          "Expanded Progression ('Core Dump'): 10 escalating Security Layers, risk-reward Hardcore rules, and replayable Roguelite upgrades."
+        ],
+        "de": [
+          "360°-Kreis-Arena-Gameplay: Direkte, präzise Steuerung mit sofort greifbarem Arcade-Flow rund um den geschützten Systemkern.",
+          "Erweiterte Progression ('Core Dump'): 10 eskalierende Security-Layer, Hardcore-Modus und wiederspielbare Roguelite-Upgrades."
+        ]
+      },
+      "techHighlights": {
+        "en": [
+          "Ultra-Rapid C# Prototyping: Delivered a complete, polished, bug-free WebGL loop within the 180-minute Trijam limit.",
+          "Mobile Touch & Android Porting: Adapted controls, performance, and UI scaling for smooth mobile play."
+        ],
+        "de": [
+          "Ultra-Rapid C# Prototyping: Vollständiger, fehlerfreier WebGL-Loop innerhalb des 180-Minuten-Limits umgesetzt.",
+          "Android-Portierung: Anpassung von Touch-Steuerung, Performance und UI-Skalierung für Mobile-Geräte."
+        ]
+      },
+      "itchWidgetCode": ""
     },
     {
       "id": "mugiwara-cowboy-play",
-      "title": "Mugiwara Cowboy (Google Play Store Live)",
+      "title": "Mugiwara Cowboy",
+      "storeType": "play",
+      "storeUrl": "https://play.google.com/store/apps/dev?id=9045790172314321033",
+      "coverImageUrl": "",
+      "engineTech": "Unity (C#), Android SDK, Google Play Console",
       "badges": [
         "Published on Google Play",
         "Nightoday Publisher Hub",
         "Android SDK & Store Pipeline"
       ],
-      "coverImageUrl": "",
-      "itchUrl": "https://play.google.com/store/apps/dev?id=9045790172314321033",
-      "itchWidgetCode": "",
       "pitch": {
-        "en": "Self-published commercial Android release 'Mugiwara Cowboy' on Google Play under Nightoday Game Studio — maintaining Target SDK compliance, keystore security, and the official studio store hub where 'Core Dump' and future mobile titles will launch.",
-        "de": "Veröffentlichtes Android-Spiel 'Mugiwara Cowboy' im Google Play Store unter Nightoday Game Studio – inklusive Target-SDK-Pflege, Keystore-Management und zentraler Studio-Publisher-Seite für kommende Releases wie 'Core Dump'."
-      }
+        "en": "Self-published commercial Android release on the Google Play Store under Nightoday Game Studio — managing full store release pipelines, Target SDK compliance, and mobile UX.",
+        "de": "Kommerzielles Android-Release im Google Play Store unter Nightoday Game Studio – inklusive kompletter Store-Pipeline, Target-SDK-Pflege, Keystore-Sicherheit und Mobile-UX."
+      },
+      "teamSize": {
+        "en": "Solo Developer (Nightoday Game Studio)",
+        "de": "Solo-Entwickler (Nightoday Game Studio)"
+      },
+      "timeframe": {
+        "en": "Live Commercial Android Release",
+        "de": "Veröffentlichtes Android-Spiel (Live)"
+      },
+      "myRole": {
+        "en": "Solo Game Designer, Developer & Mobile Publisher",
+        "de": "Solo Game Designer, Entwickler & Mobile Publisher"
+      },
+      "overview": {
+        "en": "Shipped live on Google Play under Nightoday Game Studio, Mugiwara Cowboy established my end-to-end commercial mobile publishing pipeline from gameplay and touch UX to Play Console compliance and live updates.",
+        "de": "Mit Mugiwara Cowboy habe ich unter Nightoday Game Studio die komplette kommerzielle Google-Play-Pipeline von Gameplay-Design und Touch-Steuerung bis zu Signierung, Altersfreigaben und laufenden Target-SDK-Updates aufgebaut."
+      },
+      "designHighlights": {
+        "en": [
+          "Mobile-First Session Design: Pick-up-and-play pacing tailored for short mobile sessions and responsive touch input."
+        ],
+        "de": [
+          "Mobile-First Session-Design: Direkt zugängliche Spielrunden und klare visuelle Lesbarkeit auf Smartphones."
+        ]
+      },
+      "techHighlights": {
+        "en": [
+          "End-to-End Google Play Pipeline: App bundle signing, Target API compliance, device testing, and live store management."
+        ],
+        "de": [
+          "Komplette Google-Play-Pipeline: AAB-Build-Prozess, Keystore-Verwaltung, Target-SDK-Updates und Store-Betreuung."
+        ]
+      },
+      "itchWidgetCode": ""
     },
     {
       "id": "pair-pursuit",
       "title": "Pair Pursuit",
+      "storeType": "itch",
+      "storeUrl": "https://jjampion.itch.io/",
+      "coverImageUrl": "",
+      "engineTech": "Unity (C#), Play Games Services, Custom Localization",
       "badges": [
         "Google Play & itch.io",
         "Custom 20-Language Localization",
         "Local Photo UGC"
       ],
-      "coverImageUrl": "",
-      "itchUrl": "https://jjampion.itch.io/",
-      "itchWidgetCode": "",
       "pitch": {
-        "en": "Competitive mobile & web memory game inspired by New Super Mario Bros. DS minigames — featuring cognitive load balancing, global Play Games Leaderboards, a custom 20-language localization system, and custom local photo decks.",
-        "de": "Kompetitives Mobile- & Web-Memory-Spiel inspiriert von den New Super Mario Bros. DS-Minispielen – inklusive 20-Sprachen-Lokalisierungssystem, Google Play Leaderboards und eigenen Foto-Kartendecks."
-      }
+        "en": "Competitive mobile & web memory game inspired by New Super Mario Bros. DS minigames — featuring cognitive load balancing, Play Games Leaderboards, 20-language localization, and custom local photo decks.",
+        "de": "Kompetitives Mobile- & Web-Memory-Spiel inspiriert von den New Super Mario Bros. DS-Minispielen – mit 20-Sprachen-Lokalisierung, Google Play Leaderboards und eigenen Foto-Kartendecks."
+      },
+      "teamSize": {
+        "en": "Solo Developer",
+        "de": "Solo-Entwickler"
+      },
+      "timeframe": {
+        "en": "Multi-Platform Release (Android & WebGL)",
+        "de": "Multi-Plattform-Projekt (Android & WebGL)"
+      },
+      "myRole": {
+        "en": "Solo Game Designer, UI Designer & Tools/Systems Programmer",
+        "de": "Solo Game Designer, UI-Designer & System-Programmierer"
+      },
+      "overview": {
+        "en": "Inspired by the addictive minigames of New Super Mario Bros. DS, Pair Pursuit elevates classic memory matching with competitive scoring, cognitive difficulty curves, player-created photo card decks, and custom 20-language support.",
+        "de": "Inspiriert von den Minispielen aus New Super Mario Bros. DS erweitert Pair Pursuit klassisches Memory um kompetitives Highscore-Balancing, eigene lokale Foto-Kartendecks sowie ein selbst entwickeltes Lokalisierungssystem für 20 Sprachen."
+      },
+      "designHighlights": {
+        "en": [
+          "Cognitive Load & Score Balancing: Tuned board sizes, combo multipliers, and timer pressure for high replayability.",
+          "User-Generated Photo Decks: Allows players to turn their own local device photos into custom playable card sets."
+        ],
+        "de": [
+          "Kognitives Schwierigkeits- & Score-Balancing: Abgestimmte Spielfeldgrößen, Combo-Multiplikatoren und Zeitdruck.",
+          "Eigene Foto-Kartendecks (UGC): Spieler können eigene Bilder direkt vom Gerät als spielbare Kartensets nutzen."
+        ]
+      },
+      "techHighlights": {
+        "en": [
+          "Custom 20-Language Localization Architecture: Lightweight runtime localization pipeline supporting 20+ languages.",
+          "Online Leaderboards & Cross-Build Delivery: Integrated Google Play Games Services alongside browser WebGL builds."
+        ],
+        "de": [
+          "Eigenes 20-Sprachen-Lokalisierungssystem: Schlanke Runtime-Architektur für über 20 Sprachen.",
+          "Leaderboards & Cross-Plattform-Build: Anbindung von Google Play Games Leaderboards sowie WebGL-Export."
+        ]
+      },
+      "itchWidgetCode": ""
     },
     {
       "id": "trijam-runner-ups",
-      "title": "THE WOZ-TAC-TOE & Stick It To 'Em! (2x 2nd Place Trijam)",
+      "title": "THE WOZ-TAC-TOE & Stick It To 'Em!",
+      "storeType": "itch",
+      "storeUrl": "https://jjampion.itch.io/",
+      "coverImageUrl": "",
+      "engineTech": "Unity (C#) & HTML5/WebGL",
       "badges": [
         "2x 2nd Place Winner",
         "3-Hour Rapid Prototyping",
         "Unity & WebGL"
       ],
-      "coverImageUrl": "",
-      "itchUrl": "https://jjampion.itch.io/",
-      "itchWidgetCode": "",
       "pitch": {
-        "en": "Two award-winning 3-hour Game Jam prototypes demonstrating ultra-fast theme interpretation, immediate 'Find the Fun' iteration, and bug-free WebGL delivery under extreme time pressure.",
-        "de": "Zwei preisgekrönte 3-Stunden-Prototypen beim Trijam: Fokus auf extrem schnelle Themen-Analyse, 'Find the Fun' in den ersten 30 Minuten und sauberen WebGL-Release unter Zeitdruck."
-      }
+        "en": "Two award-winning 3-hour Trijam prototypes (2x 2nd Place) demonstrating ultra-fast theme interpretation, immediate 'Find the Fun' iteration, and polished WebGL delivery under extreme time pressure.",
+        "de": "Zwei preisgekrönte 3-Stunden-Prototypen beim Trijam (2x 2. Platz): Fokus auf blitzschnelle Themen-Umsetzung, 'Find the Fun' in den ersten 30 Minuten und sauberen WebGL-Release."
+      },
+      "teamSize": {
+        "en": "Solo Developer",
+        "de": "Solo-Entwickler"
+      },
+      "timeframe": {
+        "en": "3 Hours Each (Trijam Game Jams)",
+        "de": "Jeweils 3 Stunden (Trijam Game Jams)"
+      },
+      "myRole": {
+        "en": "Solo Game Designer & Rapid Prototyper",
+        "de": "Solo Game Designer & Rapid Prototyper"
+      },
+      "overview": {
+        "en": "Both THE WOZ-TAC-TOE and Stick It To 'Em! earned 2nd Place finishes in the 3-hour Trijam — proving repeatable ability to scope tightly, find a memorable twist on familiar mechanics, and ship a complete loop in 180 minutes.",
+        "de": "Sowohl THE WOZ-TAC-TOE als auch Stick It To 'Em! erreichten jeweils den 2. Platz beim 3-Stunden-Trijam und zeigen meine Stärke im präzisen Scoping, ungewöhnlichen Mechanik-Twists und schnellem C#-Prototyping."
+      },
+      "designHighlights": {
+        "en": [
+          "Strict 180-Minute Scoping: Core mechanic playable within the first 30 minutes, leaving dedicated time for juice, audio, and balancing.",
+          "Twist-Driven Mechanics: Subverting familiar rules (such as Tic-Tac-Toe and arcade sticking physics) into fresh micro-experiences."
+        ],
+        "de": [
+          "Konsequentes 180-Minuten-Scoping: Spielbarer Kern in den ersten 30 Minuten, um gezielt Zeit für Game Feel, Audio und Balancing zu sichern.",
+          "Mechanik-Twists: Bekannte Grundregeln mit überraschenden Wendungen zu eigenständigen Kurzspielen kombiniert."
+        ]
+      },
+      "techHighlights": {
+        "en": [
+          "Zero-Friction WebGL Deployment: Instant browser playability on itch.io with clean state resets and feedback."
+        ],
+        "de": [
+          "Sauberer WebGL-Build: Direkt im Browser auf itch.io spielbar inklusive flüssigem Restart-Loop."
+        ]
+      },
+      "itchWidgetCode": ""
     },
     {
       "id": "single-file-html-engines",
-      "title": "Single-File HTML5 & Multi-Engine Experiments",
+      "title": "Single-File HTML5 & Multi-Engine Prototypes",
+      "storeType": "itch",
+      "storeUrl": "https://jjampion.itch.io/",
+      "coverImageUrl": "",
+      "engineTech": "Vanilla HTML5/JS/CSS, Godot, Unreal Engine, GameMaker 2",
       "badges": [
         "Vanilla HTML/JS/CSS",
         "Godot / Unreal / GameMaker 2",
         "Zero-Dependency"
       ],
-      "coverImageUrl": "",
-      "itchUrl": "https://jjampion.itch.io/",
-      "itchWidgetCode": "",
       "pitch": {
-        "en": "Self-contained web games built inside a single HTML file without external engine overhead, plus cross-engine prototypes exploring Godot, Unreal Engine, and GameMaker Studio 2.",
-        "de": "Komplette Web-Games innerhalb einer einzigen HTML-Datei ohne Engine-Abhängigkeiten sowie Ausflüge in Godot, Unreal Engine und GameMaker Studio 2."
-      }
+        "en": "Self-contained web games built inside a single zero-dependency HTML file, alongside cross-engine prototypes exploring Godot, Unreal Engine, and GameMaker Studio 2.",
+        "de": "Komplette Web-Games innerhalb einer einzigen HTML-Datei ohne externe Abhängigkeiten sowie Engine-Prototypen in Godot, Unreal Engine und GameMaker Studio 2."
+      },
+      "teamSize": {
+        "en": "Solo Developer",
+        "de": "Solo-Entwickler"
+      },
+      "timeframe": {
+        "en": "Ongoing R&D & Prototyping Lab",
+        "de": "Fortlaufendes R&D- & Prototyping-Labor"
+      },
+      "myRole": {
+        "en": "Technical Game Designer & Multi-Engine Explorer",
+        "de": "Technical Game Designer & Multi-Engine-Entwickler"
+      },
+      "overview": {
+        "en": "Beyond Unity and C#, I regularly build self-contained single-file HTML5/JS games and test gameplay workflows in Godot, Unreal Engine, and GameMaker Studio 2 so I can adapt quickly to any studio tech stack.",
+        "de": "Über Unity und C# hinaus entwickle ich regelmäßig komplett eigenständige Single-File-HTML5-Spiele und erprobe Workflows in Godot, Unreal Engine und GameMaker Studio 2, um mich schnell in jede Studio-Pipeline einzuarbeiten."
+      },
+      "designHighlights": {
+        "en": [
+          "Engine-Agnostic Systems Thinking: Translating core feel, camera, input, and state machines cleanly across different engines."
+        ],
+        "de": [
+          "Engine-übergreifendes Systemdenken: Übertragung von Steuerung, Spielgefühl und State-Machines auf verschiedenste Engines."
+        ]
+      },
+      "techHighlights": {
+        "en": [
+          "Zero-Dependency Single-File Architecture: Rendering, audio synthesis, input handling, and game state packed into one portable HTML file."
+        ],
+        "de": [
+          "Zero-Dependency Single-File-Architektur: Rendering, Logik und Input komplett portabel in einer einzigen HTML-Datei gebündelt."
+        ]
+      },
+      "itchWidgetCode": ""
     }
   ]
 };
@@ -325,6 +591,10 @@ let currentLang = portfolioData.defaultLang || "en";
 let currentStageIdx = 0; // 0: Showreel, 1: About, 2: Origin, 3: 3D Project Orbit
 let activeOrbitIndex = 0; // Active project on the 3D Tire Orbit
 let cumulativeOrbitSteps = 0; // Unwrapped step counter for seamless endless starfield parallax
+let activeModalProjectIndex = null; // Currently opened project in the One-Pager Modal
+let didOrbitDrag = false; // Prevents drag-to-spin from accidentally triggering click-to-open modal
+let cmsProjLang = "en"; // Active language tab inside the CMS Project Editor
+let cmsProjDraft = null; // Draft localized fields when switching EN/DE in the CMS Project Editor
 let isStageTransitioning = false;
 let isAdminUnlocked = false;
 let isInlineEditActive = true;
@@ -436,17 +706,13 @@ function goToStage(index) {
    3. 3D TIRE-TREAD HORIZONTAL PROJECT ORBIT ("AUTOREIFEN-KARUSSELL")
    ========================================================================== */
 function getCombinedOrbitProjects() {
-  const heroes = (portfolioData.heroProjects || []).map((p, idx) => ({
-    ...p,
-    _source: "hero",
-    _sourceIdx: idx
-  }));
-  const labs = (portfolioData.labProjects || []).map((p, idx) => ({
-    ...p,
-    _source: "lab",
-    _sourceIdx: idx
-  }));
-  return [...heroes, ...labs];
+  if (!Array.isArray(portfolioData.projects)) {
+    portfolioData.projects = [
+      ...(portfolioData.heroProjects || []),
+      ...(portfolioData.labProjects || [])
+    ];
+  }
+  return portfolioData.projects;
 }
 
 function rotateOrbit(stepDirection) {
@@ -553,10 +819,12 @@ let wheelTimeout = null;
 window.addEventListener("wheel", (e) => {
   const cmsOpen = document.getElementById("cms-backdrop").classList.contains("open");
   const pinOpen = document.getElementById("pin-modal-backdrop").classList.contains("open");
-  if (cmsOpen || pinOpen || isStageTransitioning) return;
+  const modalBackdrop = document.getElementById("project-modal-backdrop");
+  const modalOpen = modalBackdrop && modalBackdrop.classList.contains("open");
+  if (cmsOpen || pinOpen || modalOpen || isStageTransitioning) return;
 
   // Check if user is scrolling inside an overflowing text container
-  const scrollableParent = e.target.closest(".stage-inner-scroll, .orbit-project-card.is-front");
+  const scrollableParent = e.target.closest(".stage-inner-scroll");
   if (scrollableParent) {
     const canScrollDown = scrollableParent.scrollTop + scrollableParent.clientHeight < scrollableParent.scrollHeight - 4;
     const canScrollUp = scrollableParent.scrollTop > 4;
@@ -599,6 +867,14 @@ function initOrbitDragAndKeys() {
   viewport.addEventListener("pointerdown", (e) => {
     if (e.target.closest("a, button, iframe, [contenteditable='true']")) return;
     dragStartX = e.clientX;
+    didOrbitDrag = false;
+  });
+
+  window.addEventListener("pointermove", (e) => {
+    if (dragStartX === null) return;
+    if (Math.abs(e.clientX - dragStartX) > 12) {
+      didOrbitDrag = true;
+    }
   });
 
   window.addEventListener("pointerup", (e) => {
@@ -608,6 +884,9 @@ function initOrbitDragAndKeys() {
     if (Math.abs(dx) > 55) {
       rotateOrbit(dx < 0 ? 1 : -1);
     }
+    setTimeout(() => {
+      didOrbitDrag = false;
+    }, 60);
   });
 
   window.addEventListener("resize", () => {
@@ -733,7 +1012,6 @@ function renderHeroStrings() {
   }
 
   // Stage 04: Projects Headers
-  setTextSafe("orbit-heading", t.projectsHeading);
   setTextSafe("orbit-hint-label", t.orbitHint);
   setTextSafe("add-project-top-btn", t.addProjectBtn);
   setTextSafe("footer-text", t.footerText);
@@ -753,6 +1031,33 @@ function renderPortrait() {
   }
 }
 
+function escapeHtmlAttr(str) {
+  return String(str || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function resolveProjectStoreType(proj) {
+  if (proj.storeType) return proj.storeType;
+  const rawUrl = proj.storeUrl || proj.itchUrl || "";
+  if (proj.steamAppId || rawUrl.includes("steampowered.com")) return "steam";
+  if (rawUrl.includes("play.google.com")) return "play";
+  if (rawUrl.includes("itch.io")) return "itch";
+  return rawUrl ? "custom" : "none";
+}
+
+function resolveProjectStoreUrl(proj) {
+  if (proj.storeUrl !== undefined) return proj.storeUrl;
+  if (proj.itchUrl) return proj.itchUrl;
+  if (proj.steamAppId) return `https://store.steampowered.com/app/${proj.steamAppId}/`;
+  return "";
+}
+
+function getStoreButtonLabel(storeType, t) {
+  if (storeType === "steam") return t.storeBtnSteam || "View on Steam ↗";
+  if (storeType === "play") return t.storeBtnPlay || "Google Play Store ↗";
+  if (storeType === "itch") return t.storeBtnItch || "View on itch.io ↗";
+  return t.storeBtnCustom || "Open Project Link ↗";
+}
+
 function renderOrbitProjects() {
   const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
   const wheelEl = document.getElementById("tire-orbit-wheel");
@@ -762,77 +1067,32 @@ function renderOrbitProjects() {
   if (activeOrbitIndex >= allProjects.length) activeOrbitIndex = 0;
 
   wheelEl.innerHTML = allProjects.map((proj, idx) => {
-    const isHero = proj._source === "hero";
-    const sIdx = proj._sourceIdx;
     const pitch = (proj.pitch && proj.pitch[currentLang]) || (proj.pitch && proj.pitch.en) || "";
     const coverUrl = resolveDisplayImageUrl(proj.coverImageUrl);
-
-    const badgesHtml = (proj.badges || []).map((b, bIdx) => {
-      const isAward = b.includes("1st") || b.includes("2nd") || b.includes("Team");
-      const blurHandler = isHero
-        ? `updateHeroBadgeInline(${sIdx}, ${bIdx}, this.textContent)`
-        : `updateLabBadgeInline(${sIdx}, ${bIdx}, this.textContent)`;
-      return `<span class="${bIdx === 0 && isHero ? 'badge highlight' : (isAward ? 'badge award' : 'badge')}" data-edit-dynamic="true" onblur="${blurHandler}">${b}</span>`;
-    }).join("");
-
-    const titleBlur = isHero
-      ? `updateHeroFieldInline(${sIdx}, 'title', this.textContent)`
-      : `updateLabFieldInline(${sIdx}, 'title', this.textContent)`;
-
-    const pitchBlur = isHero
-      ? `updateHeroFieldInline(${sIdx}, 'pitch', this.textContent)`
-      : `updateLabFieldInline(${sIdx}, 'pitch', this.textContent)`;
-
-    // Design & Tech Columns if available (e.g. Grimoire Garden & Shadow of Ammit)
-    const designList = (proj.designHighlights && proj.designHighlights[currentLang]) || (proj.designHighlights && proj.designHighlights.en) || [];
-    const techList = (proj.techHighlights && proj.techHighlights[currentLang]) || (proj.techHighlights && proj.techHighlights.en) || [];
-
-    let highlightsHtml = "";
-    if (designList.length || techList.length) {
-      highlightsHtml = `
-        <div class="highlights-columns">
-          <div class="highlight-box">
-            <h4>${t.designHeader}</h4>
-            <ul>${designList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline(${sIdx}, 'designHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
-          </div>
-          <div class="highlight-box">
-            <h4>${t.techHeader}</h4>
-            <ul>${techList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateHeroHighlightInline(${sIdx}, 'techHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
-          </div>
-        </div>
-      `;
-    }
-
-    // Store / Action Link
-    const targetUrl = proj.itchUrl || (proj.steamAppId ? `https://store.steampowered.com/app/${proj.steamAppId}/` : "https://jjampion.itch.io/");
-    const isSteam = Boolean(proj.steamAppId);
-    const isPlay = targetUrl.includes("play.google.com");
-    const platformLabel = isSteam ? "STEAM STORE" : (isPlay ? "GOOGLE PLAY HUB" : "ITCH.IO BUILD");
+    const storeType = resolveProjectStoreType(proj);
+    const targetUrl = resolveProjectStoreUrl(proj);
+    const showStoreBtn = storeType !== "none" && Boolean(targetUrl);
+    const storeBtnLabel = getStoreButtonLabel(storeType, t);
 
     return `
-      <article class="orbit-project-card" onclick="if(${idx} !== activeOrbitIndex) selectOrbitProject(${idx})">
-        <div class="orbit-card-top">
-          <div class="project-badges-row">${badgesHtml}</div>
-          <span class="phonetic-tag">#0${idx + 1} // ${platformLabel}</span>
-        </div>
-
-        <div class="orbit-card-header-grid ${coverUrl ? 'has-cover' : ''}">
-          ${coverUrl ? `<div class="orbit-cover-thumb"><img src="${coverUrl}" alt="${proj.title}" loading="lazy" /></div>` : ""}
-          <div>
-            <h3 class="project-title" data-edit-dynamic="true" onblur="${titleBlur}">${proj.title}</h3>
-            <p class="project-pitch" data-edit-dynamic="true" onblur="${pitchBlur}">${pitch}</p>
+      <article class="orbit-project-card ${coverUrl ? 'has-cover' : ''}" onclick="handleOrbitCardClick(event, ${idx})">
+        ${coverUrl
+          ? `<div class="orbit-card-art-bg"><img src="${coverUrl}" alt="${escapeHtmlAttr(proj.title)}" loading="lazy" /></div>`
+          : `<div class="orbit-card-noart-glow"></div>`
+        }
+        <div class="orbit-card-content">
+          <div class="orbit-card-text-group">
+            <h3 class="project-title" data-edit-dynamic="true" onblur="updateProjectFieldInline(${idx}, 'title', this.textContent)">${proj.title}</h3>
+            <p class="project-pitch" data-edit-dynamic="true" onblur="updateProjectFieldInline(${idx}, 'pitch', this.textContent)">${pitch}</p>
           </div>
-        </div>
 
-        ${highlightsHtml}
-
-        <div class="orbit-card-footer">
-          <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--text-muted);">
-            ${isSteam ? t.steamWidgetLabel : proj.title}
-          </span>
-          <div style="display:flex; gap:8px; align-items:center;">
-            <a href="${targetUrl}" target="_blank" rel="noopener" class="hud-btn primary">${t.itchOpenBtn}</a>
-            ${!isHero ? `<button class="hud-btn admin-only" onclick="editProjectInCMS(${sIdx})">Edit</button>` : ""}
+          <div class="orbit-card-footer">
+            <span class="orbit-card-details-cue">${t.cardDetailsCue || "Click for Project Details →"}</span>
+            <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+              ${showStoreBtn ? `<a href="${escapeHtmlAttr(targetUrl)}" target="_blank" rel="noopener" class="hud-btn primary" onclick="event.stopPropagation()">${storeBtnLabel}</a>` : ""}
+              <button type="button" class="hud-btn admin-only" onclick="event.stopPropagation(); openProjectModal(${idx})">Modal</button>
+              <button type="button" class="hud-btn admin-only" onclick="event.stopPropagation(); editProjectInCMS(${idx})">Edit</button>
+            </div>
           </div>
         </div>
       </article>
@@ -841,6 +1101,171 @@ function renderOrbitProjects() {
 
   updateOrbitWheelTransforms();
   applyInlineEditability();
+
+  if (activeModalProjectIndex !== null) {
+    renderOpenProjectModal();
+  }
+}
+
+function handleOrbitCardClick(event, idx) {
+  if (didOrbitDrag) return;
+  if (event.target.closest("a, button")) return;
+  if (isAdminUnlocked && isInlineEditActive && event.target.closest("[contenteditable='true']")) return;
+
+  if (idx !== activeOrbitIndex) {
+    selectOrbitProject(idx);
+  } else {
+    openProjectModal(idx);
+  }
+}
+
+function openProjectModal(idx) {
+  const allProjects = getCombinedOrbitProjects();
+  if (!allProjects[idx]) return;
+  activeModalProjectIndex = idx;
+  renderOpenProjectModal();
+
+  const backdrop = document.getElementById("project-modal-backdrop");
+  if (backdrop) {
+    backdrop.classList.add("open");
+  }
+  const scrollEl = document.getElementById("project-modal-content");
+  if (scrollEl) {
+    scrollEl.scrollTop = 0;
+  }
+}
+
+function renderOpenProjectModal() {
+  if (activeModalProjectIndex === null) return;
+  const allProjects = getCombinedOrbitProjects();
+  const proj = allProjects[activeModalProjectIndex];
+  const container = document.getElementById("project-modal-content");
+  if (!proj || !container) return;
+
+  const idx = activeModalProjectIndex;
+  const t = portfolioData.ui[currentLang] || portfolioData.ui.en;
+  const coverUrl = resolveDisplayImageUrl(proj.coverImageUrl);
+  const storeType = resolveProjectStoreType(proj);
+  const targetUrl = resolveProjectStoreUrl(proj);
+  const showStoreBtn = storeType !== "none" && Boolean(targetUrl);
+  const storeBtnLabel = getStoreButtonLabel(storeType, t);
+
+  const overviewText =
+    (proj.overview && proj.overview[currentLang]) ||
+    (proj.overview && proj.overview.en) ||
+    (proj.pitch && proj.pitch[currentLang]) ||
+    (proj.pitch && proj.pitch.en) ||
+    "";
+
+  const teamVal = (proj.teamSize && proj.teamSize[currentLang]) || (proj.teamSize && proj.teamSize.en) || "";
+  const timeframeVal = (proj.timeframe && proj.timeframe[currentLang]) || (proj.timeframe && proj.timeframe.en) || "";
+  const roleVal = (proj.myRole && proj.myRole[currentLang]) || (proj.myRole && proj.myRole.en) || "";
+  const engineVal = proj.engineTech || "";
+
+  const badgesHtml = (proj.badges || []).map((b, bIdx) => {
+    const isAward = b.includes("1st") || b.includes("2nd") || b.includes("Team");
+    const cls = bIdx === 0 ? "badge highlight" : (isAward ? "badge award" : "badge");
+    return `<span class="${cls}" data-edit-dynamic="true" onblur="updateProjectBadgeInline(${idx}, ${bIdx}, this.textContent)">${b}</span>`;
+  }).join("");
+
+  const metaItems = [];
+  if (teamVal || isAdminUnlocked) {
+    metaItems.push(`
+      <div class="project-modal-meta-card">
+        <div class="project-modal-meta-label">${t.modalTeamLabel || "Team Size"}</div>
+        <div class="project-modal-meta-value" data-edit-dynamic="true" onblur="updateProjectFieldInline(${idx}, 'teamSize', this.textContent)">${teamVal || "—"}</div>
+      </div>
+    `);
+  }
+  if (timeframeVal || isAdminUnlocked) {
+    metaItems.push(`
+      <div class="project-modal-meta-card">
+        <div class="project-modal-meta-label">${t.modalTimeframeLabel || "Timeframe"}</div>
+        <div class="project-modal-meta-value" data-edit-dynamic="true" onblur="updateProjectFieldInline(${idx}, 'timeframe', this.textContent)">${timeframeVal || "—"}</div>
+      </div>
+    `);
+  }
+  if (roleVal || isAdminUnlocked) {
+    metaItems.push(`
+      <div class="project-modal-meta-card">
+        <div class="project-modal-meta-label">${t.modalRoleLabel || "My Role"}</div>
+        <div class="project-modal-meta-value" data-edit-dynamic="true" onblur="updateProjectFieldInline(${idx}, 'myRole', this.textContent)">${roleVal || "—"}</div>
+      </div>
+    `);
+  }
+  if (engineVal || isAdminUnlocked) {
+    metaItems.push(`
+      <div class="project-modal-meta-card">
+        <div class="project-modal-meta-label">${t.modalEngineLabel || "Engine & Tech"}</div>
+        <div class="project-modal-meta-value" data-edit-dynamic="true" onblur="updateProjectFieldInline(${idx}, 'engineTech', this.textContent)">${engineVal || "—"}</div>
+      </div>
+    `);
+  }
+
+  const designList = (proj.designHighlights && proj.designHighlights[currentLang]) || (proj.designHighlights && proj.designHighlights.en) || [];
+  const techList = (proj.techHighlights && proj.techHighlights[currentLang]) || (proj.techHighlights && proj.techHighlights.en) || [];
+
+  let highlightsHtml = "";
+  if (designList.length || techList.length) {
+    const singleCol = !(designList.length && techList.length);
+    highlightsHtml = `
+      <div class="highlights-columns ${singleCol ? 'single-col' : ''}">
+        ${designList.length ? `
+          <div class="highlight-box">
+            <h4>${t.designHeader}</h4>
+            <ul>${designList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateProjectHighlightInline(${idx}, 'designHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
+          </div>
+        ` : ""}
+        ${techList.length ? `
+          <div class="highlight-box">
+            <h4>${t.techHeader}</h4>
+            <ul>${techList.map((item, i) => `<li data-edit-dynamic="true" onblur="updateProjectHighlightInline(${idx}, 'techHighlights', ${i}, this.textContent)">${item}</li>`).join("")}</ul>
+          </div>
+        ` : ""}
+      </div>
+    `;
+  }
+
+  container.innerHTML = `
+    <div class="project-modal-header ${coverUrl ? 'has-cover' : ''}">
+      ${coverUrl ? `<div class="project-modal-art-bg"><img src="${coverUrl}" alt="${escapeHtmlAttr(proj.title)}" /></div>` : ""}
+      <div class="project-modal-header-inner">
+        ${badgesHtml ? `<div class="project-badges-row">${badgesHtml}</div>` : ""}
+        <h2 class="project-modal-title" id="project-modal-title" data-edit-dynamic="true" onblur="updateProjectFieldInline(${idx}, 'title', this.textContent)">${proj.title}</h2>
+        <p class="project-modal-overview" data-edit-dynamic="true" onblur="updateProjectFieldInline(${idx}, 'overview', this.textContent)">${overviewText}</p>
+      </div>
+    </div>
+
+    <div class="project-modal-body">
+      ${metaItems.length ? `<div class="project-modal-meta-grid">${metaItems.join("")}</div>` : ""}
+      ${highlightsHtml}
+      ${proj.itchWidgetCode ? `<div class="project-modal-widget">${proj.itchWidgetCode}</div>` : ""}
+
+      <div class="project-modal-footer">
+        <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+          ${showStoreBtn ? `<a href="${escapeHtmlAttr(targetUrl)}" target="_blank" rel="noopener" class="hud-btn primary">${storeBtnLabel}</a>` : ""}
+          <button type="button" class="hud-btn admin-only" onclick="closeProjectModal(); editProjectInCMS(${idx})">Edit in CMS</button>
+        </div>
+        <button type="button" class="hud-btn" onclick="closeProjectModal()">${t.modalCloseBtn || "Close"}</button>
+      </div>
+    </div>
+  `;
+
+  applyInlineEditability();
+}
+
+function closeProjectModal() {
+  activeModalProjectIndex = null;
+  const backdrop = document.getElementById("project-modal-backdrop");
+  if (backdrop) {
+    backdrop.classList.remove("open");
+  }
+}
+
+function handleProjectModalBackdropClick(event) {
+  if (event.target.id === "project-modal-backdrop") {
+    closeProjectModal();
+  }
 }
 
 /* ==========================================================================
@@ -866,6 +1291,28 @@ window.addEventListener("keydown", (e) => {
     openPinModal();
     return;
   }
+
+  const modalBackdrop = document.getElementById("project-modal-backdrop");
+  const modalOpen = modalBackdrop && modalBackdrop.classList.contains("open");
+  const pinOpen = document.getElementById("pin-modal-backdrop").classList.contains("open");
+  const cmsOpen = document.getElementById("cms-backdrop").classList.contains("open");
+
+  if (e.key === "Escape") {
+    if (modalOpen) {
+      closeProjectModal();
+      return;
+    }
+    if (pinOpen) {
+      closePinModal();
+      return;
+    }
+    if (cmsOpen) {
+      toggleCMS();
+      return;
+    }
+  }
+
+  if (modalOpen || pinOpen || cmsOpen) return;
 
   const activeEl = document.activeElement;
   const activeTag = activeEl ? activeEl.tagName.toLowerCase() : "";
@@ -1036,53 +1483,108 @@ function updateOriginParagraphInline(index, newHtml) {
   markUnsavedIndicator();
 }
 
-function updateHeroFieldInline(heroIdx, field, val) {
-  const hero = portfolioData.heroProjects[heroIdx];
-  if (!hero) return;
-  if (field === "title") hero.title = val.trim();
-  if (field === "pitch") hero.pitch[currentLang] = val.trim();
-  markUnsavedIndicator();
-}
-
-function updateHeroBadgeInline(heroIdx, badgeIdx, val) {
-  const hero = portfolioData.heroProjects[heroIdx];
-  if (!hero || !hero.badges) return;
-  hero.badges[badgeIdx] = val.trim();
-  markUnsavedIndicator();
-}
-
-function updateHeroHighlightInline(heroIdx, listKey, itemIdx, val) {
-  const hero = portfolioData.heroProjects[heroIdx];
-  if (!hero || !hero[listKey] || !hero[listKey][currentLang]) return;
-  hero[listKey][currentLang][itemIdx] = val.trim();
-  markUnsavedIndicator();
-}
-
-function updateLabFieldInline(projIdx, field, val) {
-  const proj = portfolioData.labProjects[projIdx];
+function updateProjectFieldInline(projIdx, field, val) {
+  const projects = getCombinedOrbitProjects();
+  const proj = projects[projIdx];
   if (!proj) return;
-  if (field === "title") proj.title = val.trim();
-  if (field === "pitch") {
-    if (!proj.pitch) proj.pitch = { en: "", de: "" };
-    proj.pitch[currentLang] = val.trim();
+  const cleaned = val.trim();
+
+  if (field === "title") {
+    proj.title = cleaned;
+    renderOrbitProjects();
+  } else if (field === "engineTech") {
+    proj.engineTech = cleaned;
+  } else if (["pitch", "overview", "teamSize", "timeframe", "myRole"].includes(field)) {
+    if (!proj[field]) proj[field] = { en: "", de: "" };
+    proj[field][currentLang] = cleaned;
+    if (field === "pitch") renderOrbitProjects();
   }
   markUnsavedIndicator();
 }
 
-function updateLabBadgeInline(projIdx, badgeIdx, val) {
-  const proj = portfolioData.labProjects[projIdx];
+function updateProjectBadgeInline(projIdx, badgeIdx, val) {
+  const projects = getCombinedOrbitProjects();
+  const proj = projects[projIdx];
   if (!proj || !proj.badges) return;
   proj.badges[badgeIdx] = val.trim();
+  markUnsavedIndicator();
+}
+
+function updateProjectHighlightInline(projIdx, listKey, itemIdx, val) {
+  const projects = getCombinedOrbitProjects();
+  const proj = projects[projIdx];
+  if (!proj) return;
+  if (!proj[listKey]) proj[listKey] = { en: [], de: [] };
+  if (!proj[listKey][currentLang]) proj[listKey][currentLang] = [...(proj[listKey].en || [])];
+  proj[listKey][currentLang][itemIdx] = val.trim();
   markUnsavedIndicator();
 }
 
 /* ==========================================================================
    8. CMS DRAWER & GITHUB API DEPLOYMENT
    ========================================================================== */
+function createEmptyCMSProjectDraft() {
+  return {
+    en: { pitch: "", teamSize: "", timeframe: "", myRole: "", overview: "", design: "", tech: "" },
+    de: { pitch: "", teamSize: "", timeframe: "", myRole: "", overview: "", design: "", tech: "" }
+  };
+}
+
+function syncActiveCMSProjectLangToDraft() {
+  if (!cmsProjDraft) cmsProjDraft = createEmptyCMSProjectDraft();
+  const bucket = cmsProjDraft[cmsProjLang];
+  if (!bucket) return;
+
+  const pitchEl = document.getElementById("new-proj-pitch");
+  if (!pitchEl) return;
+
+  bucket.pitch = pitchEl.value;
+  bucket.teamSize = document.getElementById("new-proj-team").value;
+  bucket.timeframe = document.getElementById("new-proj-timeframe").value;
+  bucket.myRole = document.getElementById("new-proj-role").value;
+  bucket.overview = document.getElementById("new-proj-overview").value;
+  bucket.design = document.getElementById("new-proj-design").value;
+  bucket.tech = document.getElementById("new-proj-tech").value;
+}
+
+function loadCMSProjectLangFromDraft(lang) {
+  if (!cmsProjDraft) cmsProjDraft = createEmptyCMSProjectDraft();
+  cmsProjLang = lang;
+
+  const enBtn = document.getElementById("cms-proj-lang-en");
+  const deBtn = document.getElementById("cms-proj-lang-de");
+  if (enBtn) enBtn.classList.toggle("active", lang === "en");
+  if (deBtn) deBtn.classList.toggle("active", lang === "de");
+
+  document.querySelectorAll(".cms-proj-lang-tag").forEach(el => {
+    el.textContent = lang.toUpperCase();
+  });
+
+  const bucket = cmsProjDraft[lang] || createEmptyCMSProjectDraft()[lang];
+  const pitchEl = document.getElementById("new-proj-pitch");
+  if (!pitchEl) return;
+
+  pitchEl.value = bucket.pitch || "";
+  document.getElementById("new-proj-team").value = bucket.teamSize || "";
+  document.getElementById("new-proj-timeframe").value = bucket.timeframe || "";
+  document.getElementById("new-proj-role").value = bucket.myRole || "";
+  document.getElementById("new-proj-overview").value = bucket.overview || "";
+  document.getElementById("new-proj-design").value = bucket.design || "";
+  document.getElementById("new-proj-tech").value = bucket.tech || "";
+}
+
+function setCMSProjectLang(lang) {
+  syncActiveCMSProjectLangToDraft();
+  loadCMSProjectLangFromDraft(lang);
+}
+
 function openCMSDrawerDirectly() {
   document.getElementById("cms-backdrop").classList.add("open");
   populateCMSEditors();
   renderCMSProjectList();
+  if (!cmsProjDraft) {
+    resetProjectForm();
+  }
   document.getElementById("gh-repo").value = localStorage.getItem("jjk_gh_repo") || "nightodaygamestudio/portfolio";
   document.getElementById("gh-branch").value = localStorage.getItem("jjk_gh_branch") || "main";
   document.getElementById("gh-token").value = localStorage.getItem("jjk_gh_token") || "";
@@ -1101,18 +1603,6 @@ function populateCMSEditors() {
     document.getElementById("cms-link-itch").value = portfolioData.links.itch || "";
     document.getElementById("cms-link-play").value = portfolioData.links.play || "";
     document.getElementById("cms-link-email").value = portfolioData.links.email || "";
-  }
-
-  const hero = portfolioData.heroProjects[0];
-  if (hero) {
-    document.getElementById("cms-hero-lang-indicator").textContent = currentLang.toUpperCase();
-    document.getElementById("cms-hero-title").value = hero.title || "";
-    document.getElementById("cms-hero-badges").value = (hero.badges || []).join(", ");
-    document.getElementById("cms-hero-steam-id").value = hero.steamAppId || "4560080";
-    document.getElementById("cms-hero-img").value = hero.coverImageUrl || "";
-    document.getElementById("cms-hero-pitch").value = (hero.pitch && hero.pitch[currentLang]) || "";
-    document.getElementById("cms-hero-design").value = ((hero.designHighlights && hero.designHighlights[currentLang]) || []).join("\n");
-    document.getElementById("cms-hero-tech").value = ((hero.techHighlights && hero.techHighlights[currentLang]) || []).join("\n");
   }
 
   document.getElementById("cms-story-lang-indicator").textContent = currentLang.toUpperCase();
@@ -1165,20 +1655,6 @@ function updateLinksFromCMS() {
   markUnsavedIndicator();
 }
 
-function saveHeroProjectFromCMS() {
-  const hero = portfolioData.heroProjects[0];
-  if (!hero) return;
-  hero.title = document.getElementById("cms-hero-title").value.trim();
-  hero.badges = document.getElementById("cms-hero-badges").value.split(",").map(s => s.trim()).filter(Boolean);
-  hero.steamAppId = document.getElementById("cms-hero-steam-id").value.trim();
-  hero.coverImageUrl = document.getElementById("cms-hero-img").value.trim();
-  hero.pitch[currentLang] = document.getElementById("cms-hero-pitch").value.trim();
-  hero.designHighlights[currentLang] = document.getElementById("cms-hero-design").value.split("\n").map(s => s.trim()).filter(Boolean);
-  hero.techHighlights[currentLang] = document.getElementById("cms-hero-tech").value.split("\n").map(s => s.trim()).filter(Boolean);
-  renderOrbitProjects();
-  markUnsavedIndicator();
-}
-
 function saveOriginStoryFromCMS() {
   const raw = document.getElementById("cms-origin-story-textarea").value;
   portfolioData.originStory[currentLang] = raw.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
@@ -1205,36 +1681,43 @@ function renderCMSProjectList() {
   const countEl = document.getElementById("cms-projects-count");
   if (!listEl) return;
 
-  countEl.textContent = portfolioData.labProjects.length;
-  listEl.innerHTML = portfolioData.labProjects.map((proj, idx) => `
+  const projects = getCombinedOrbitProjects();
+  if (countEl) countEl.textContent = projects.length;
+
+  listEl.innerHTML = projects.map((proj, idx) => `
     <div class="cms-project-item">
       <span style="font-weight:700; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${idx + 1}. ${proj.title}</span>
-      <div style="display:flex; gap:4px;">
-        <button class="cms-mini-btn" onclick="moveProjectTile(${idx}, -1)">↑</button>
-        <button class="cms-mini-btn" onclick="moveProjectTile(${idx}, 1)">↓</button>
-        <button class="cms-mini-btn" onclick="editProjectInCMS(${idx})">Edit</button>
-        <button class="cms-mini-btn" style="color:#f43f5e;" onclick="deleteProjectTile(${idx})">Delete</button>
+      <div style="display:flex; gap:4px; flex-shrink:0;">
+        <button type="button" class="cms-mini-btn" onclick="moveProjectTile(${idx}, -1)">↑</button>
+        <button type="button" class="cms-mini-btn" onclick="moveProjectTile(${idx}, 1)">↓</button>
+        <button type="button" class="cms-mini-btn" onclick="editProjectInCMS(${idx})">Edit</button>
+        <button type="button" class="cms-mini-btn" style="color:#f43f5e;" onclick="deleteProjectTile(${idx})">Delete</button>
       </div>
     </div>
   `).join("");
 }
 
 function moveProjectTile(index, direction) {
+  const projects = getCombinedOrbitProjects();
   const targetIdx = index + direction;
-  if (targetIdx < 0 || targetIdx >= portfolioData.labProjects.length) return;
-  const temp = portfolioData.labProjects[index];
-  portfolioData.labProjects[index] = portfolioData.labProjects[targetIdx];
-  portfolioData.labProjects[targetIdx] = temp;
+  if (targetIdx < 0 || targetIdx >= projects.length) return;
+  const temp = projects[index];
+  projects[index] = projects[targetIdx];
+  projects[targetIdx] = temp;
+  if (activeOrbitIndex === index) activeOrbitIndex = targetIdx;
+  else if (activeOrbitIndex === targetIdx) activeOrbitIndex = index;
   renderOrbitProjects();
   renderCMSProjectList();
   markUnsavedIndicator();
 }
 
 function deleteProjectTile(index) {
-  const proj = portfolioData.labProjects[index];
+  const projects = getCombinedOrbitProjects();
+  const proj = projects[index];
   if (!proj) return;
   if (!confirm(`Delete project "${proj.title}"?`)) return;
-  portfolioData.labProjects.splice(index, 1);
+  projects.splice(index, 1);
+  if (activeOrbitIndex >= projects.length) activeOrbitIndex = 0;
   renderOrbitProjects();
   renderCMSProjectList();
   markUnsavedIndicator();
@@ -1245,70 +1728,169 @@ function editProjectInCMS(index) {
     openPinModal();
     return;
   }
-  openCMSDrawerDirectly();
-  const proj = portfolioData.labProjects[index];
+  const projects = getCombinedOrbitProjects();
+  const proj = projects[index];
   if (!proj) return;
+
+  cmsProjDraft = {
+    en: {
+      pitch: (proj.pitch && proj.pitch.en) || "",
+      teamSize: (proj.teamSize && proj.teamSize.en) || "",
+      timeframe: (proj.timeframe && proj.timeframe.en) || "",
+      myRole: (proj.myRole && proj.myRole.en) || "",
+      overview: (proj.overview && proj.overview.en) || (proj.pitch && proj.pitch.en) || "",
+      design: ((proj.designHighlights && proj.designHighlights.en) || []).join("\n"),
+      tech: ((proj.techHighlights && proj.techHighlights.en) || []).join("\n")
+    },
+    de: {
+      pitch: (proj.pitch && proj.pitch.de) || "",
+      teamSize: (proj.teamSize && proj.teamSize.de) || "",
+      timeframe: (proj.timeframe && proj.timeframe.de) || "",
+      myRole: (proj.myRole && proj.myRole.de) || "",
+      overview: (proj.overview && proj.overview.de) || (proj.pitch && proj.pitch.de) || "",
+      design: ((proj.designHighlights && proj.designHighlights.de) || []).join("\n"),
+      tech: ((proj.techHighlights && proj.techHighlights.de) || []).join("\n")
+    }
+  };
+
+  openCMSDrawerDirectly();
 
   document.getElementById("edit-proj-id").value = proj.id;
   document.getElementById("new-proj-title").value = proj.title || "";
-  document.getElementById("new-proj-badges").value = (proj.badges || []).join(", ");
-  document.getElementById("new-proj-pitch-en").value = (proj.pitch && proj.pitch.en) || "";
-  document.getElementById("new-proj-pitch-de").value = (proj.pitch && proj.pitch.de) || "";
   document.getElementById("new-proj-img").value = proj.coverImageUrl || "";
-  document.getElementById("new-proj-link").value = proj.itchUrl || "";
+  document.getElementById("new-proj-img-file").value = "";
+  document.getElementById("proj-img-upload-hint").textContent = "";
+  document.getElementById("new-proj-store-type").value = resolveProjectStoreType(proj);
+  document.getElementById("new-proj-link").value = resolveProjectStoreUrl(proj);
+  document.getElementById("new-proj-engine").value = proj.engineTech || "";
+  document.getElementById("new-proj-badges").value = (proj.badges || []).join(", ");
   document.getElementById("new-proj-widget").value = proj.itchWidgetCode || "";
 
+  loadCMSProjectLangFromDraft(currentLang);
+
   document.getElementById("cms-form-mode-label").textContent = `Editing: ${proj.title}`;
-  document.getElementById("cms-save-proj-btn-text").textContent = "Update Orbit Project";
+  document.getElementById("cms-save-proj-btn-text").textContent = "Update Project";
+
+  const formLabel = document.getElementById("cms-form-mode-label");
+  if (formLabel) formLabel.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 function resetProjectForm() {
-  document.getElementById("edit-proj-id").value = "";
+  cmsProjDraft = createEmptyCMSProjectDraft();
+
+  const editIdEl = document.getElementById("edit-proj-id");
+  if (!editIdEl) return;
+
+  editIdEl.value = "";
   document.getElementById("new-proj-title").value = "";
-  document.getElementById("new-proj-badges").value = "";
-  document.getElementById("new-proj-pitch-en").value = "";
-  document.getElementById("new-proj-pitch-de").value = "";
   document.getElementById("new-proj-img").value = "";
   document.getElementById("new-proj-img-file").value = "";
+  document.getElementById("proj-img-upload-hint").textContent = "";
+  document.getElementById("new-proj-store-type").value = "itch";
   document.getElementById("new-proj-link").value = "";
+  document.getElementById("new-proj-engine").value = "";
+  document.getElementById("new-proj-badges").value = "";
   document.getElementById("new-proj-widget").value = "";
 
-  document.getElementById("cms-form-mode-label").textContent = "Add / Edit Orbit Project";
-  document.getElementById("cms-save-proj-btn-text").textContent = "Save Project to Orbit";
+  loadCMSProjectLangFromDraft(currentLang);
+
+  document.getElementById("cms-form-mode-label").textContent = "Add New Project";
+  document.getElementById("cms-save-proj-btn-text").textContent = "Add Project to Orbit";
 }
 
 function saveOrAddProjectTile() {
+  syncActiveCMSProjectLangToDraft();
+
   const editId = document.getElementById("edit-proj-id").value.trim();
   const title = document.getElementById("new-proj-title").value.trim();
   if (!title) return;
 
-  const badges = document.getElementById("new-proj-badges").value.split(",").map(s => s.trim()).filter(Boolean);
-  const pitchEn = document.getElementById("new-proj-pitch-en").value.trim();
-  const pitchDe = document.getElementById("new-proj-pitch-de").value.trim() || pitchEn;
   const coverImageUrl = document.getElementById("new-proj-img").value.trim();
-  const itchUrl = document.getElementById("new-proj-link").value.trim() || "https://jjampion.itch.io/";
+  const storeType = document.getElementById("new-proj-store-type").value;
+  const storeUrl = document.getElementById("new-proj-link").value.trim();
+  const engineTech = document.getElementById("new-proj-engine").value.trim();
+  const badges = document.getElementById("new-proj-badges").value.split(",").map(s => s.trim()).filter(Boolean);
   const itchWidgetCode = document.getElementById("new-proj-widget").value.trim();
 
+  const en = cmsProjDraft.en;
+  const de = cmsProjDraft.de;
+
+  const parseLines = (raw) => String(raw || "").split("\n").map(s => s.trim()).filter(Boolean);
+
+  const pitchObj = {
+    en: en.pitch.trim() || de.pitch.trim(),
+    de: de.pitch.trim() || en.pitch.trim()
+  };
+  const teamObj = {
+    en: en.teamSize.trim() || de.teamSize.trim(),
+    de: de.teamSize.trim() || en.teamSize.trim()
+  };
+  const timeframeObj = {
+    en: en.timeframe.trim() || de.timeframe.trim(),
+    de: de.timeframe.trim() || en.timeframe.trim()
+  };
+  const roleObj = {
+    en: en.myRole.trim() || de.myRole.trim(),
+    de: de.myRole.trim() || en.myRole.trim()
+  };
+  const overviewObj = {
+    en: en.overview.trim() || de.overview.trim() || pitchObj.en,
+    de: de.overview.trim() || en.overview.trim() || pitchObj.de
+  };
+
+  const designEn = parseLines(en.design);
+  const designDe = parseLines(de.design);
+  const techEn = parseLines(en.tech);
+  const techDe = parseLines(de.tech);
+
+  const designObj = {
+    en: designEn.length ? designEn : designDe,
+    de: designDe.length ? designDe : designEn
+  };
+  const techObj = {
+    en: techEn.length ? techEn : techDe,
+    de: techDe.length ? techDe : techEn
+  };
+
+  const projects = getCombinedOrbitProjects();
+
   if (editId) {
-    const existing = portfolioData.labProjects.find(p => p.id === editId);
+    const existing = projects.find(p => p.id === editId);
     if (existing) {
       existing.title = title;
-      existing.badges = badges.length ? badges : ["Unity", "itch.io"];
       existing.coverImageUrl = coverImageUrl;
-      existing.itchUrl = itchUrl;
+      existing.storeType = storeType;
+      existing.storeUrl = storeUrl;
+      existing.engineTech = engineTech;
+      existing.badges = badges;
       existing.itchWidgetCode = itchWidgetCode;
-      existing.pitch = { en: pitchEn, de: pitchDe };
+      existing.pitch = pitchObj;
+      existing.teamSize = teamObj;
+      existing.timeframe = timeframeObj;
+      existing.myRole = roleObj;
+      existing.overview = overviewObj;
+      existing.designHighlights = designObj;
+      existing.techHighlights = techObj;
     }
   } else {
-    portfolioData.labProjects.unshift({
+    projects.unshift({
       id: "proj-" + Date.now(),
       title,
-      badges: badges.length ? badges : ["Unity", "itch.io"],
+      storeType,
+      storeUrl,
       coverImageUrl,
-      itchUrl,
-      itchWidgetCode,
-      pitch: { en: pitchEn, de: pitchDe }
+      engineTech,
+      badges,
+      pitch: pitchObj,
+      teamSize: teamObj,
+      timeframe: timeframeObj,
+      myRole: roleObj,
+      overview: overviewObj,
+      designHighlights: designObj,
+      techHighlights: techObj,
+      itchWidgetCode
     });
+    activeOrbitIndex = 0;
   }
 
   renderOrbitProjects();
@@ -1345,23 +1927,6 @@ function handlePortraitFileUpload(event) {
   reader.readAsDataURL(file);
 }
 
-function handleHeroImageFileUpload(event) {
-  const file = event.target.files[0];
-  if (!file) return;
-  const cleanName = file.name.toLowerCase().replace(/[^a-z0-9.]/g, "-");
-  const repoPath = `assets/projects/${cleanName}`;
-
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    const base64Data = e.target.result.split(",")[1];
-    pendingRepoFiles[repoPath] = base64Data;
-    localPreviewBlobUrls[repoPath] = URL.createObjectURL(file);
-    document.getElementById("cms-hero-img").value = repoPath;
-    markUnsavedIndicator();
-  };
-  reader.readAsDataURL(file);
-}
-
 function handleProjectImageFileUpload(event) {
   const file = event.target.files[0];
   if (!file) return;
@@ -1374,6 +1939,8 @@ function handleProjectImageFileUpload(event) {
     pendingRepoFiles[repoPath] = base64Data;
     localPreviewBlobUrls[repoPath] = URL.createObjectURL(file);
     document.getElementById("new-proj-img").value = repoPath;
+    const hintEl = document.getElementById("proj-img-upload-hint");
+    if (hintEl) hintEl.textContent = `✓ Queued '${repoPath}'. Click 'Update/Add Project' and then 'Publish to GitHub' to upload.`;
     markUnsavedIndicator();
   };
   reader.readAsDataURL(file);

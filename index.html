@@ -285,10 +285,8 @@
       <section class="fullscreen-stage" id="stage-orbit" aria-label="Projects">
         <div class="orbit-stage-layout">
 
-          <!-- Top Header -->
-          <div class="orbit-hud-top">
-            <h2 class="orbit-main-title" id="orbit-heading" data-edit-ui="projectsHeading">Interactive Game &amp; Systems Showcase</h2>
-            <button class="hud-btn admin-only" onclick="toggleCMS()">
+          <div class="orbit-admin-bar admin-only">
+            <button class="hud-btn" onclick="toggleCMS()">
               <span id="add-project-top-btn" data-edit-ui="addProjectBtn">Manage</span>
             </button>
           </div>
@@ -297,7 +295,7 @@
           <div class="tire-orbit-viewport" id="tire-orbit-viewport">
             <div class="tire-orbit-scene" id="tire-orbit-scene">
               <div class="tire-orbit-wheel" id="tire-orbit-wheel">
-                <!-- All 8 Project Cards are positioned in a 3D circle via app.js -->
+                <!-- All Project Cards are positioned in a uniform 3D circle via app.js -->
               </div>
             </div>
           </div>
@@ -326,6 +324,18 @@
       <span id="footer-text" data-edit-ui="footerText">© 2026 Jan Jelle Klingberg. All rights reserved. • All trademarks belong to their respective owners.</span>
     </div>
   </footer>
+
+  <!-- ========================================================================
+       PROJECT ONE-PAGER DETAIL MODAL
+       ======================================================================== -->
+  <div class="project-modal-backdrop" id="project-modal-backdrop" onclick="handleProjectModalBackdropClick(event)">
+    <div class="project-modal space-panel" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <button class="project-modal-close" id="project-modal-close-btn" onclick="closeProjectModal()" aria-label="Close project details">✕</button>
+      <div class="project-modal-scroll" id="project-modal-content">
+        <!-- Populated dynamically when clicking a project card -->
+      </div>
+    </div>
+  </div>
 
   <!-- ========================================================================
        CMS UNLOCK MODAL (SHA-256 Protected)
@@ -402,58 +412,115 @@
         <input type="text" class="cms-input" id="cms-link-email" placeholder="mailto:contact@janjelle.dev" oninput="updateLinksFromCMS()" />
       </div>
 
-      <!-- 3. Primary Hero Project Editor -->
+      <!-- 3. Unified Projects & One-Pager Modal Manager -->
       <div class="cms-group">
-        <label>3. Flagship Hero Project Editor (<span id="cms-hero-lang-indicator">EN</span>)</label>
-        <input type="text" class="cms-input" id="cms-hero-title" placeholder="Hero Project Title" />
-        <input type="text" class="cms-input" id="cms-hero-badges" placeholder="Badges (comma-separated)" />
-        <input type="text" class="cms-input" id="cms-hero-steam-id" placeholder="Steam App ID (e.g. 4560080)" />
-        <input type="text" class="cms-input" id="cms-hero-img" placeholder="Hero Cover Image URL or assets/..." />
-        <input type="file" id="cms-hero-img-file" accept="image/*" style="font-size:0.75rem;" onchange="handleHeroImageFileUpload(event)" />
-        <textarea class="cms-textarea" id="cms-hero-pitch" placeholder="Hero Pitch"></textarea>
-        <label>Game Design Highlights (One per line):</label>
-        <textarea class="cms-textarea" id="cms-hero-design"></textarea>
-        <label>Technical Highlights (One per line):</label>
-        <textarea class="cms-textarea" id="cms-hero-tech"></textarea>
-        <button class="hud-btn primary" onclick="saveHeroProjectFromCMS()">Apply Hero Changes</button>
-      </div>
-
-      <!-- 4. Orbit Projects Manager -->
-      <div class="cms-group">
-        <label>4. Additional Orbit Projects Manager (<span id="cms-projects-count">0</span> Projects)</label>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;">
+          <label style="color:var(--accent-primary);">3. Projects &amp; One-Pager Modal Manager (<span id="cms-projects-count">0</span>)</label>
+          <button class="cms-mini-btn" onclick="resetProjectForm()">+ New Project</button>
+        </div>
         <div class="cms-project-list" id="cms-project-list"></div>
 
         <hr style="border:none; border-top:1px solid var(--glass-border); margin:6px 0;" />
 
-        <label id="cms-form-mode-label" style="color:var(--accent-secondary);">Add / Edit Orbit Project</label>
-        <input type="hidden" id="edit-proj-id" value="" />
-        <input type="text" class="cms-input" id="new-proj-title" placeholder="Game Title (e.g. LineX)" />
-        <input type="text" class="cms-input" id="new-proj-badges" placeholder="Badges comma-separated" />
-        <textarea class="cms-textarea" id="new-proj-pitch-en" placeholder="Short Description (English)"></textarea>
-        <textarea class="cms-textarea" id="new-proj-pitch-de" placeholder="Kurzbeschreibung (Deutsch)"></textarea>
-        <input type="text" class="cms-input" id="new-proj-img" placeholder="Cover Image URL or assets/projects/..." />
-        <input type="file" id="new-proj-img-file" accept="image/*" style="font-size:0.75rem;" onchange="handleProjectImageFileUpload(event)" />
-        <input type="text" class="cms-input" id="new-proj-link" placeholder="Direct Itch.io / Store URL" />
-        <textarea class="cms-textarea" id="new-proj-widget" placeholder="Optional: Itch.io <iframe> Widget Code"></textarea>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;">
+          <label id="cms-form-mode-label" style="color:var(--accent-secondary);">Add New Project</label>
+          <div class="hud-lang-switch" id="cms-proj-lang-switch">
+            <button type="button" class="active" id="cms-proj-lang-en" onclick="setCMSProjectLang('en')">EN</button>
+            <button type="button" id="cms-proj-lang-de" onclick="setCMSProjectLang('de')">DE</button>
+          </div>
+        </div>
 
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <button class="hud-btn primary" style="flex:1;" onclick="saveOrAddProjectTile()">
-            <span id="cms-save-proj-btn-text">Save Project to Orbit</span>
+        <input type="hidden" id="edit-proj-id" value="" />
+
+        <label>Game Title:</label>
+        <input type="text" class="cms-input" id="new-proj-title" placeholder="Game Title (e.g. Grimoire Garden: A Taskbar Tale)" />
+
+        <label>Orbit Card Left Background Image (URL or Upload to <code>assets/projects/</code>):</label>
+        <input type="text" class="cms-input" id="new-proj-img" placeholder="https://... or assets/projects/header.jpg" />
+        <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+          <input type="file" id="new-proj-img-file" accept="image/*" style="font-size:0.75rem; max-width:240px;" onchange="handleProjectImageFileUpload(event)" />
+          <button type="button" class="cms-mini-btn" onclick="document.getElementById('new-proj-img').value=''; document.getElementById('proj-img-upload-hint').textContent='';">Clear Image</button>
+        </div>
+        <div id="proj-img-upload-hint" style="font-size:0.72rem; color:var(--accent-primary);"></div>
+
+        <div style="display:grid; grid-template-columns: 165px 1fr; gap:8px;">
+          <div>
+            <label>Store Platform:</label>
+            <select class="cms-input" id="new-proj-store-type">
+              <option value="itch">itch.io</option>
+              <option value="steam">Steam</option>
+              <option value="play">Google Play Store</option>
+              <option value="custom">Custom Link</option>
+              <option value="none">No Link</option>
+            </select>
+          </div>
+          <div>
+            <label>Store / Project URL:</label>
+            <input type="text" class="cms-input" id="new-proj-link" placeholder="https://..." />
+          </div>
+        </div>
+
+        <label>Orbit Preview Short Description (<span class="cms-proj-lang-tag">EN</span>):</label>
+        <textarea class="cms-textarea" id="new-proj-pitch" placeholder="Concise teaser shown on the uniform 3D Orbit preview card..."></textarea>
+
+        <hr style="border:none; border-top:1px dashed var(--glass-border); margin:4px 0;" />
+        <label style="color:var(--accent-primary);">One-Pager Modal Details (<span class="cms-proj-lang-tag">EN</span>)</label>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
+          <div>
+            <label>Team Size (<span class="cms-proj-lang-tag">EN</span>):</label>
+            <input type="text" class="cms-input" id="new-proj-team" placeholder="e.g. Solo or 6 People" />
+          </div>
+          <div>
+            <label>Timeframe (<span class="cms-proj-lang-tag">EN</span>):</label>
+            <input type="text" class="cms-input" id="new-proj-timeframe" placeholder="e.g. Oct 2025 – Mar 2026" />
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
+          <div>
+            <label>My Role (<span class="cms-proj-lang-tag">EN</span>):</label>
+            <input type="text" class="cms-input" id="new-proj-role" placeholder="e.g. Technical Game Designer" />
+          </div>
+          <div>
+            <label>Engine &amp; Tools:</label>
+            <input type="text" class="cms-input" id="new-proj-engine" placeholder="e.g. Unity (C#), Steamworks" />
+          </div>
+        </div>
+
+        <label>Modal Header Badges (Comma-separated, optional):</label>
+        <input type="text" class="cms-input" id="new-proj-badges" placeholder="Published on Steam, Quest &amp; Puzzle Design, ..." />
+
+        <label>Detailed Project Overview (<span class="cms-proj-lang-tag">EN</span>):</label>
+        <textarea class="cms-textarea" id="new-proj-overview" style="min-height:76px;" placeholder="Detailed overview displayed at the top of the One-Pager modal..."></textarea>
+
+        <label>What I Did — Game Design &amp; Contributions (One bullet per line, <span class="cms-proj-lang-tag">EN</span>):</label>
+        <textarea class="cms-textarea" id="new-proj-design" style="min-height:84px;" placeholder="Quest &amp; puzzle design...&#10;Level layout &amp; pacing..."></textarea>
+
+        <label>Technical Implementation &amp; Systems (One bullet per line, optional, <span class="cms-proj-lang-tag">EN</span>):</label>
+        <textarea class="cms-textarea" id="new-proj-tech" style="min-height:84px;" placeholder="C# gameplay systems...&#10;AI patrol routes..."></textarea>
+
+        <label>Optional: Embedded Store / itch.io <code>&lt;iframe&gt;</code> Widget Code:</label>
+        <textarea class="cms-textarea" id="new-proj-widget" style="min-height:48px;" placeholder="Optional <iframe> embed shown inside the One-Pager modal"></textarea>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:4px;">
+          <button class="hud-btn primary" style="flex:1; justify-content:center;" onclick="saveOrAddProjectTile()">
+            <span id="cms-save-proj-btn-text">Add Project to Orbit</span>
           </button>
-          <button class="hud-btn" onclick="resetProjectForm()">Clear</button>
+          <button class="hud-btn" onclick="resetProjectForm()">Reset Form</button>
         </div>
       </div>
 
-      <!-- 5. Origin Story Editor -->
+      <!-- 4. Origin Story Editor -->
       <div class="cms-group">
-        <label>5. "Who Am I" Story Editor (<span id="cms-story-lang-indicator">EN</span>)</label>
+        <label>4. "Who Am I" Story Editor (<span id="cms-story-lang-indicator">EN</span>)</label>
         <textarea class="cms-textarea" id="cms-origin-story-textarea" style="min-height:130px;"></textarea>
         <button class="hud-btn" onclick="saveOriginStoryFromCMS()">Update Origin Story</button>
       </div>
 
-      <!-- 6. Security PIN -->
+      <!-- 5. Security PIN -->
       <div class="cms-group">
-        <label>6. Change Admin PIN (SHA-256)</label>
+        <label>5. Change Admin PIN (SHA-256)</label>
         <div style="display:flex; gap:8px;">
           <input type="password" class="cms-input" id="cms-new-pin" placeholder="New PIN" />
           <button class="hud-btn" onclick="updateAdminPinHash()">Set Hash</button>
@@ -461,9 +528,9 @@
         <div id="pin-hash-status" style="font-size:0.72rem; color:var(--accent-primary);"></div>
       </div>
 
-      <!-- 7. Custom CSS -->
+      <!-- 6. Custom CSS -->
       <div class="cms-group">
-        <label>7. Custom CSS Override</label>
+        <label>6. Custom CSS Override</label>
         <textarea class="cms-textarea" id="cms-custom-css" placeholder="/* Custom CSS */" oninput="applyCustomCSS(this.value)"></textarea>
       </div>
     </div>
