@@ -41,7 +41,7 @@ const portfolioData = {
       "heroPhonetic": "aka JJampion • / ˈdʒeɪˈtʃæm.pi.ən /",
       "heroStatus": "Junior Technical Game Designer • Systems, Quest, Puzzle & UI Design",
       "heroHeadline": "I don't just write concepts on paper — I design deep quests, puzzles, and playable C# systems in record time.",
-      "heroLead": "I love playing games, but I love building them even more. With active Unity & C# experience since 2016, formal training at the Games Academy (2024–2026), and self-published commercial titles on Steam and Google Play under Nightoday Game Studio, I unite hands-on Game Design (Systems, Quests, Lore, Puzzles & UI) with rapid technical execution.",
+      "heroLead": "I love playing games, but I love building them even more. With active Unity & C# experience since 2016, formal training at the Games Academy (2024–2026), and self-published titles on Steam and Google Play under Nightoday Game Studio, I unite hands-on Game Design (Systems, Quests, Lore, Puzzles & UI) with rapid technical execution.",
       "factLocation": "<strong>Location &amp; Mobility:</strong> Bavaria (Roth &amp; near Cham) • Preferred Bavaria &amp; Remote/Hybrid, open to Relocation Germany-wide (e.g. Hamburg) &amp; Europe.",
       "factEdu": "<strong>Education:</strong> Game Design &amp; Game Production at Games Academy (2024–2026) • Focus on Systems, Quests &amp; Level Design.",
       "factStudio": "<strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer on the path to Game Director.",
@@ -51,7 +51,7 @@ const portfolioData = {
       "stat2": "3-Hour Game Jam",
       "stat3Val": "Steam & Google Play Store",
       "stat3": "Shipped Store Pipelines",
-      "ctaProjectsJump": "Explore Projects (8 Games) →",
+      "ctaProjectsJump": "Explore Projects (11 Games) →",
       "ctaSteam": "Grimoire Garden on Steam",
       "ctaItch": "All Projects on itch.io",
       "ctaPlay": "Nightoday on Google Play",
@@ -103,7 +103,7 @@ const portfolioData = {
       "stat2": "3-Stunden Game Jam",
       "stat3Val": "Steam & Google Play Store",
       "stat3": "Eigene Store-Releases",
-      "ctaProjectsJump": "Zu den Projekten (8 Spiele) →",
+      "ctaProjectsJump": "Zu den Projekten (11 Spiele) →",
       "ctaSteam": "Grimoire Garden auf Steam",
       "ctaItch": "Alle Projekte auf itch.io",
       "ctaPlay": "Nightoday im Google Play Store",
@@ -137,7 +137,7 @@ const portfolioData = {
       "While I started working with <strong>Unity and C# in 2016</strong>, a major technical spark came in <strong>2018</strong> when I began rooting Android systems and exploring how games work under the hood. Analyzing how game values, parameters, and internal formulas shape the player experience inspired me to build my own games from scratch.",
       "<div class=\"story-quote-highlight\"><p>“Du sollst doch nicht schon wieder die <strong>Nacht zum Tag</strong> machen!”</p><p>It’s something my mother always used to say to me, which means: “You’re not pulling another all-nighter, are you?!”</p><p>So the name <strong>Nightoday Game Studio</strong> came to me naturally, inspired by my mother, who often reminded me not to stay up too late, take care of my eyes, and get enough sleep. It also draws inspiration from the direct translation of the German phrase “Nacht zum Tag” (Night to Day).</p><p>Which, to be fair, pretty much describes my sleep schedule to this day. What can I say? I’ve always been a night owl.</p></div>",
       "My second huge inspiration is the legendary <strong>Bethesda Game Studios</strong>. When I lived in a youth home and only had one single hour of 'media time' per day, I invested almost every single day of that hour into <em>Skyrim</em>. That experience shaped my core philosophy as a Game Designer: <strong>deep worldbuilding, atmospheric lore, meaningful quests, and respecting every single minute of the player's time</strong>.",
-      "At the <strong>Games Academy (2024–2026)</strong>, I discovered where my true strength lies: I am a hands-on creator and <strong>Game Designer</strong> — not a purely administrative manager. Whether I am the sole Game Designer in a team crafting Egyptian mythology quests, pyramid puzzles, and AI patrol routes (<em>Shadow of Ammit</em>), designing complete UI and puzzle systems (<em>LineX</em>), or shipping commercial systems on Steam (<em>Grimoire Garden</em>), I thrive when turning creative design directly into playable reality."
+      "At the <strong>Games Academy (2024–2026)</strong>, I discovered where my true strength lies: I am a hands-on creator and <strong>Game Designer</strong> — not a purely administrative manager. Whether I am the sole Game Designer in a team crafting Egyptian mythology quests, pyramid puzzles, and AI patrol routes (<em>Shadow of Ammit</em>), designing complete UI and puzzle systems (<em>LineX</em>), or shipping full games on Steam (<em>Grimoire Garden</em>), I thrive when turning creative design directly into playable reality."
     ],
     "de": [
       "Ich bin <strong>Jan Jelle Klingberg</strong>, besser bekannt als <strong>JJampion</strong> (<code>/ ˈdʒeɪˈtʃæm.pi.ən /</code>). Ich bin <strong>30 Jahre alt</strong> und komme aus <strong>Franken</strong> – wohnhaft in <strong>Roth (Mittelfranken)</strong> und regelmäßig in der <strong>Oberpfalz (Raum Cham)</strong>. Während Bayern sowie Remote-/Hybrid-Modelle für mich optimal sind, bin ich absolut offen für eine <strong>Relocation deutschlandweit (z. B. nach Hamburg, München oder Berlin)</strong> – und mit wachsender Industrie-Erfahrung gerne auch europaweit oder international.",
@@ -156,30 +156,30 @@ const portfolioData = {
       "coverImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4560080/header.jpg",
       "engineTech": "Unity (C#), Windows OS API, Steamworks SDK",
       "badges": [
-        "Published on Steam",
+        "Free-to-Play on Steam",
         "Solo Technical Game Designer",
         "Unity (C# & Windows OS API)",
         "59 Steam Achievements"
       ],
       "pitch": {
-        "en": "A commercial cozy second-screen taskbar game blending idle farming, deep skill-tree progression, and seamless 'No-Spacebar' typing combat right at the bottom edge of your Windows desktop.",
-        "de": "Ein kommerzielles Cozy-Second-Screen-Taskbar-Game auf Steam, das Idle-Farming, tiefgehende Skill-Tree-Progression und nahtlosen 'No-Spacebar'-Typing-Combat direkt am unteren Rand des Windows-Desktops vereint."
+        "en": "Published Free-to-Play on Steam: a cozy second-screen taskbar game blending idle farming, deep skill-tree progression, and seamless 'No-Spacebar' typing combat right at the bottom edge of your Windows desktop.",
+        "de": "Free-to-Play auf Steam veröffentlicht: Ein Cozy-Second-Screen-Taskbar-Game, das Idle-Farming, tiefgehende Skill-Tree-Progression und nahtlosen 'No-Spacebar'-Typing-Combat direkt am unteren Rand des Windows-Desktops vereint."
       },
       "teamSize": {
         "en": "Solo Developer (Nightoday Game Studio)",
         "de": "Solo-Entwickler (Nightoday Game Studio)"
       },
       "timeframe": {
-        "en": "Commercial Steam Release (2025 – 2026)",
-        "de": "Kommerzieller Steam-Release (2025 – 2026)"
+        "en": "Free-to-Play Steam Release (2025 – 2026)",
+        "de": "Free-to-Play Steam-Release (2025 – 2026)"
       },
       "myRole": {
         "en": "Solo Game Designer, Systems Programmer & Publisher",
         "de": "Solo Game Designer, Systems Programmer & Publisher"
       },
       "overview": {
-        "en": "Developed and self-published under Nightoday Game Studio, Grimoire Garden lives directly on the Windows taskbar as an interactive cozy companion game — allowing players to seamlessly alternate between relaxed background farming and active skill-based combat.",
-        "de": "Unter Nightoday Game Studio eigenständig entwickelt und auf Steam veröffentlicht: Grimoire Garden läuft direkt am unteren Rand des Windows-Desktops und verbindet entspanntes Second-Screen-Farming nahtlos mit aktiven Minigames und tiefer Meta-Progression."
+        "en": "Developed and self-published Free-to-Play on Steam under Nightoday Game Studio, Grimoire Garden lives directly on the Windows taskbar as an interactive cozy companion game — allowing players to seamlessly alternate between relaxed background farming and active skill-based combat.",
+        "de": "Unter Nightoday Game Studio eigenständig entwickelt und Free-to-Play auf Steam veröffentlicht: Grimoire Garden läuft direkt am unteren Rand des Windows-Desktops und verbindet entspanntes Second-Screen-Farming nahtlos mit aktiven Minigames und tiefer Meta-Progression."
       },
       "designHighlights": {
         "en": [
@@ -208,10 +208,67 @@ const portfolioData = {
       "itchWidgetCode": ""
     },
     {
+      "id": "epitaph-silvering",
+      "title": "Epitaph: Silvering",
+      "storeType": "itch",
+      "storeUrl": "https://jjampion.itch.io/epitaph-silvering",
+      "coverImageUrl": "",
+      "engineTech": "3D First-Person Shooter • Wave AI, Survival Economy & Easter Egg Systems",
+      "badges": [
+        "Upcoming First Commercial Release",
+        "Most Ambitious Solo FPS",
+        "CoD: Zombies Inspired",
+        "Active Development"
+      ],
+      "pitch": {
+        "en": "My largest, most ambitious solo project to date and upcoming first commercial release: a dark First-Person Shooter love letter to classic Call of Duty: Zombies — surviving relentless waves of werewolves in Necropolis while uncovering hidden Easter Eggs.",
+        "de": "Mein bisher aufwendigstes, größtes Solo-Projekt und geplanter erster kommerzieller Release: Ein düsterer First-Person-Shooter als Liebesbrief an klassisches Call of Duty: Zombies – überlebe Werwolf-Wellen in Necropolis und entdecke geheime Easter Eggs."
+      },
+      "teamSize": {
+        "en": "Solo Developer (Nightoday Game Studio)",
+        "de": "Solo-Entwickler (Nightoday Game Studio)"
+      },
+      "timeframe": {
+        "en": "Playable Build on itch.io • Full Production Resuming on Custom Dev PC",
+        "de": "Prototyp auf itch.io • Volle Weiterentwicklung mit neuem Game-Dev-PC"
+      },
+      "myRole": {
+        "en": "Solo Game Designer, Level/Quest Designer & Gameplay Developer",
+        "de": "Solo Game Designer, Level-/Easter-Egg-Designer & Gameplay-Entwickler"
+      },
+      "overview": {
+        "en": "Epitaph: Silvering is my most elaborate and ambitious solo game to date, planned as my first paid commercial release (following my Free-to-Play Steam debut Grimoire Garden). Crafted as a love letter to classic round-based Call of Duty: Zombies, players fight to survive escalating waves of werewolves inside the eerie Necropolis while hunting down hidden Easter Eggs and environmental secrets. An early build is playable on itch.io, with full-scale production resuming as soon as my custom-built Game Development PC is finished.",
+        "de": "Epitaph: Silvering ist mein bis dato größtes und ambitioniertestes Solo-Projekt und als mein erster kostenpflichtiger kommerzieller Release geplant (nachdem ich Grimoire Garden Free-to-Play auf Steam veröffentlicht habe). Als atmosphärischer Solo-FPS-Liebesbrief an den klassischen Call of Duty: Zombies-Modus kämpft man in der düsteren Necropolis gegen immer stärkere Werwolf-Wellen und deckt versteckte Easter Eggs auf. Ein früher Build ist auf itch.io spielbar; sobald mein erster selbstgebauter Game-Development-PC fertiggestellt ist, wird das Projekt mit voller Leistung und genügend Speicherplatz weitergeführt."
+      },
+      "designHighlights": {
+        "en": [
+          "Round-Based Werewolf Survival: Escalating wave composition, spatial kiting routes, and high-tension resource decisions inspired by classic CoD: Zombies.",
+          "Necropolis Map & Progression Loop: Interconnected combat zones, point-based progression, and risk-reward survival pacing.",
+          "Hidden Easter Eggs & Lore Secrets: Multi-step environmental secrets woven into Necropolis for dedicated players to uncover."
+        ],
+        "de": [
+          "Rundenbasierter Werwolf-Survival-Loop: Eskalierende Wellen-Dynamik, durchdachte Laufwege und Ressourcen-Entscheidungen im Stil von klassischem CoD: Zombies.",
+          "Necropolis-Levelstruktur & Progression: Vernetzte Kampf-Areale, Punkte-Ökonomie und intensives Risiko-Belohnungs-Pacing.",
+          "Versteckte Easter Eggs & Geheimnisse: Mehrstufige Geheimnisse und Lore-Details in Necropolis für aufmerksame Entdecker."
+        ]
+      },
+      "techHighlights": {
+        "en": [
+          "First-Person Combat & Wave Spawner Systems: Responsive solo FPS weapon handling paired with dynamic wave state management and enemy pathfinding.",
+          "Scalable Production Architecture: Built for long-term commercial expansion as soon as dedicated workstation hardware assembly concludes."
+        ],
+        "de": [
+          "First-Person-Combat & Wellen-Logik: Direktes FPS-Trefferfeedback kombiniert mit dynamischem Wave-Spawning und Gegner-Navigation.",
+          "Skalierbare Projekt-Architektur: Ausgelegt auf den Ausbau zum vollwertigen kommerziellen Release auf meiner neuen Game-Dev-Workstation."
+        ]
+      },
+      "itchWidgetCode": ""
+    },
+    {
       "id": "shadow-of-ammit",
       "title": "Shadow of Ammit",
       "storeType": "itch",
-      "storeUrl": "https://jjampion.itch.io/",
+      "storeUrl": "https://games-academy.itch.io/shadow-of-ammit",
       "coverImageUrl": "",
       "engineTech": "Unity Engine, Quest & AI Route Design",
       "badges": [
@@ -221,12 +278,12 @@ const portfolioData = {
         "Egyptian Mythology & Lore"
       ],
       "pitch": {
-        "en": "An atmospheric Egyptian mythological adventure developed at the Games Academy. As the sole Game Designer on the team, I owned quest design, pyramid layout, environmental puzzles, lore, and Ammit's patrol routes.",
-        "de": "Ein atmosphärisches Abenteuer in der ägyptischen Mythologie an der Games Academy. Als einziger Game Designer im Team verantwortete ich Quests, Pyramiden-Aufbau, Rätsel, Lore sowie Ammits KI-Routen."
+        "en": "An atmospheric 3D Egyptian mythological puzzle & extraction adventure developed at the Games Academy. As the sole Game Designer on the team, I owned quest design, pyramid layout, environmental puzzles, lore, and Ammit's patrol routes.",
+        "de": "Ein atmosphärisches 3D-Abenteuer in der ägyptischen Mythologie an der Games Academy. Als einziger Game Designer im Team verantwortete ich Quests, Pyramiden-Aufbau, Rätsel, Lore sowie Ammits KI-Routen."
       },
       "teamSize": {
-        "en": "Interdisciplinary Semester Team (Games Academy)",
-        "de": "Interdisziplinäres Semester-Team (Games Academy)"
+        "en": "5-Person Interdisciplinary Team (Games Academy)",
+        "de": "5-köpfiges interdisziplinäres Team (Games Academy)"
       },
       "timeframe": {
         "en": "Games Academy Semester Project (2024 – 2026)",
@@ -237,8 +294,8 @@ const portfolioData = {
         "de": "Einziger Game Designer (Quests, Pyramiden-Layout, Rätsel, Lore & KI-Routen)"
       },
       "overview": {
-        "en": "An atmospheric Egyptian mythological adventure developed in an interdisciplinary team at the Games Academy. As the sole Game Designer on the team, I owned the quest design, pyramid structure, environmental puzzles, deep mythological lore, and the behavioral route design of the stalker entity Ammit.",
-        "de": "Ein atmosphärisches Abenteuer in der ägyptischen Mythologie, entwickelt im interdisziplinären Semester-Team an der Games Academy. Als einziger Game Designer im Team verantwortete ich das komplette Quest-Design, den Aufbau der Pyramide, die Rätsel-Mechaniken, die mythologische Lore sowie die Verhaltens- und Routenplanung von Ammit."
+        "en": "An atmospheric 3D third-person Egyptian mythological adventure developed in an interdisciplinary team at the Games Academy. Trapped inside an ancient labyrinthine pyramid, players solve interconnected puzzles and evade deadly traps while being hunted by Ammit. As the sole Game Designer on the team, I owned the quest design, pyramid structure, environmental puzzles, mythological lore, and Ammit's patrol route design.",
+        "de": "Ein atmosphärisches 3D-Third-Person-Abenteuer in der ägyptischen Mythologie, entwickelt im interdisziplinären Semester-Team an der Games Academy. Als einziger Game Designer im Team verantwortete ich das komplette Quest-Design, den Aufbau der Pyramide, die Rätsel-Mechaniken, die mythologische Lore sowie die Verhaltens- und Routenplanung von Ammit."
       },
       "designHighlights": {
         "en": [
@@ -270,52 +327,156 @@ const portfolioData = {
       "id": "linex-games-academy",
       "title": "LineX",
       "storeType": "itch",
-      "storeUrl": "https://jjampion.itch.io/",
+      "storeUrl": "https://games-academy.itch.io/linex",
       "coverImageUrl": "",
-      "engineTech": "Unity (C#), UI & Puzzle Systems",
+      "engineTech": "Unity (C#), Complete UI/UX & Racing-Puzzle Systems",
       "badges": [
-        "Team Project",
-        "Game, Level & Puzzle Design",
-        "Complete UI Design"
+        "1st Semester Team Project",
+        "Complete UI Art & UX Design",
+        "Hovercar Racing & Shortcut Puzzles"
       ],
       "pitch": {
-        "en": "My first semester project at the Games Academy and an all-round hands-on design showcase: I designed the complete UI from scratch, created levels and puzzle mechanics, and shaped the core Game Design.",
-        "de": "Mein erstes Semesterprojekt an der Games Academy: Hier habe ich das komplette UI von Grund auf entworfen, das Game- und Level-Design mitgestaltet sowie die Rätsel-Mechaniken ausgearbeitet."
+        "en": "My first semester project at the Games Academy: a high-speed jungle hovercar racer with strategic on-the-fly shortcut puzzles, where I designed the complete UI from scratch, contributed to Game/Puzzle Design, and supported production.",
+        "de": "Mein erstes Semesterprojekt an der Games Academy: Ein rasantes Jungle-Hovercar-Rennspiel mit strategischen Shortcut-Rätseln, für das ich das komplette UI entworfen sowie Game-/Rätsel-Design und Produktion mitgestaltet habe."
       },
       "teamSize": {
-        "en": "1st Semester Team (Games Academy)",
-        "de": "1. Semester-Team (Games Academy)"
+        "en": "5 Team Members ('Pit Stop Pandas' • Games Academy)",
+        "de": "5 Teammitglieder ('Pit Stop Pandas' • Games Academy)"
       },
       "timeframe": {
-        "en": "1st Semester • Games Academy (2024)",
-        "de": "1. Semester • Games Academy (2024)"
+        "en": "1st Semester • Games Academy (August 2024)",
+        "de": "1. Semester • Games Academy (August 2024)"
       },
       "myRole": {
-        "en": "Game Designer, Level/Puzzle Designer & Complete UI Designer",
-        "de": "Game Designer, Level-/Rätsel-Designer & kompletter UI-Designer"
+        "en": "Complete UI/UX Designer & Artist, Game/Puzzle Design & Producer",
+        "de": "Kompletter UI/UX-Designer & Artist, Game-/Rätsel-Design & Producer"
       },
       "overview": {
-        "en": "Built during my very first semester at the Games Academy, LineX served as a comprehensive hands-on foundation in collaborative development — combining core puzzle mechanics, structured level progression, and a clean user interface built from scratch.",
-        "de": "Im ersten Semester an der Games Academy entstanden: Bei LineX übernahm ich neben zentralen Aufgaben im Game-, Level- und Rätsel-Design die vollständige Konzeption und Gestaltung des gesamten User Interfaces."
+        "en": "Developed in our 5-person student team 'Pit Stop Pandas' during my first semester at the Games Academy, LineX blends high-speed hovercar time-trial racing in a lush jungle setting with strategic puzzle elements — letting players trigger energy boosts and solve puzzles mid-race to unlock faster shortcuts.",
+        "de": "Im 5-köpfigen Studierendenteam 'Pit Stop Pandas' im ersten Semester an der Games Academy entstanden: LineX kombiniert rasantes Hovercar-Zeitfahren im Dschungel-Setting mit strategischen Rätsel-Elementen, über die Spieler während der Fahrt Energie-Boosts nutzen und Abkürzungen freischalten."
       },
       "designHighlights": {
         "en": [
-          "Complete UI/UX Ownership: Designed all menus, HUD feedback, and visual clarity cues from scratch.",
-          "Level & Puzzle Design: Created playable puzzle stages with clear onboarding and escalating challenge curves.",
-          "Core Game Design Iteration: Collaborated with the team to refine rules, player feedback, and pacing."
+          "Complete UI Art & UX Ownership: Designed all menus, racing HUD readouts, boost/timer displays, and visual feedback from scratch.",
+          "High-Speed Racing Meets Shortcut Puzzles: Helped shape the risk-reward interplay between pure racing lines and solving mid-track puzzles to open faster routes.",
+          "Team Coordination & Iteration: Supported milestone organization and cross-discipline alignment across design, 3D art, and programming."
         ],
         "de": [
-          "Komplette UI/UX-Verantwortung: Entwurf sämtlicher Menüs, HUD-Elemente und visueller Spieler-Rückmeldungen.",
-          "Level- & Rätsel-Design: Aufbau spielbarer Level mit klarer Einführung neuer Mechaniken und steigender Lernkurve.",
-          "Iteratives Core Game Design: Enge Abstimmung im Team zur Verfeinerung der Spielregeln und des Spielgefühls."
+          "Komplette UI-Art- & UX-Verantwortung: Vollständiger Entwurf aller Menüs, Racing-HUD-Anzeigen, Timer- und Boost-Elemente von Grund auf.",
+          "Kombination aus Racing & Shortcut-Rätseln: Mitgestaltung des Zusammenspiels aus schneller Ideallinie und dem Lösen von Strecken-Rätseln für Abkürzungen.",
+          "Team-Koordination & Iteration: Unterstützung in der Producer-Rolle sowie enge Abstimmung zwischen Design, 3D-Art und Programmierung."
         ]
       },
       "techHighlights": {
         "en": [
-          "UI Implementation & Flow: Structured responsive screen states, transitions, and interactive UI prefabs in Unity."
+          "Unity UI Prefabs & Controller Flow: Structured responsive screen states and HUD readability for both Keyboard and Xbox Controller play."
         ],
         "de": [
-          "UI-Umsetzung & Screen-Flow: Strukturierung der Menü-Zustände, Übergänge und interaktiven UI-Elemente in Unity."
+          "Unity-UI-Umsetzung & Controller-Support: Aufbau sauberer Menü-Zustände und klarer HUD-Lesbarkeit bei hohem Tempo für Tastatur und Xbox-Controller."
+        ]
+      },
+      "itchWidgetCode": ""
+    },
+    {
+      "id": "kingsroad-prototype",
+      "title": "Kingsroad Prototype",
+      "storeType": "itch",
+      "storeUrl": "https://jjampion.itch.io/kingsroad-prototype",
+      "coverImageUrl": "",
+      "engineTech": "Unity (C#), Card Deck & Real-Time Lane AI Systems",
+      "badges": [
+        "Card-Based RTS",
+        "Lane-Pushing Strategy",
+        "Systems & Balancing Prototype"
+      ],
+      "pitch": {
+        "en": "KINGSROAD — a card-based real-time strategy lane-pushing prototype blending tactical deck & resource management with automated lane clashes, unit counter-play, and dynamic battlefield pressure.",
+        "de": "KINGSROAD – ein kartenbasierter Echtzeit-Strategie- & Lane-Pushing-Prototyp, der taktisches Deck- und Ressourcen-Management mit automatisierten Lane-Kämpfen und dynamischem Konter-Gameplay verbindet."
+      },
+      "teamSize": {
+        "en": "Solo Developer",
+        "de": "Solo-Entwickler"
+      },
+      "timeframe": {
+        "en": "Solo Systems & Strategy Prototype",
+        "de": "Solo-System- & Strategie-Prototyp"
+      },
+      "myRole": {
+        "en": "Solo Game & Systems Designer, C# Gameplay Programmer",
+        "de": "Solo Game & Systems Designer, C# Gameplay Programmer"
+      },
+      "overview": {
+        "en": "Subtitled 'The Card-Based Real-Time Strategy Lane-Pushing Game', Kingsroad Prototype explores the intersection of deckbuilding card tactics and real-time lane warfare — challenging players to read enemy lane momentum, manage deployment costs, and time unit summons or tactical effects for maximum lane control.",
+        "de": "Unter dem Untertitel 'The Card-Based Real-Time Strategy Lane-Pushing Game' verbindet Kingsroad Prototype taktisches Kartenspiel mit Echtzeit-Lane-Strategie: Spieler analysieren den gegnerischen Druck auf den Lanes, haushalten mit Kartenkosten und setzen Einheiten gezielt als Konter ein."
+      },
+      "designHighlights": {
+        "en": [
+          "Card-Driven Tactical Deployment: Replaced high-APM unit micro with meaningful hand management, play timing, and resource economy.",
+          "Real-Time Lane Momentum & Counter-Play: Designed unit roles and lane-pushing pressure so every card played creates clear push-and-pull decisions."
+        ],
+        "de": [
+          "Kartenbasierte Echtzeit-Taktik: Fokus auf sinnvolle Handkarten-Entscheidungen, Ressourcen-Timing und strategische Konter statt reinem Klick-Micro.",
+          "Lane-Momentum & Einheiten-Rollen: Abstimmung von Angriffs-, Verteidigungs- und Push-Dynamiken entlang klar lesbarer Kampflinien."
+        ]
+      },
+      "techHighlights": {
+        "en": [
+          "Modular Card & Unit Spawning Architecture: Data-driven C# card definitions coupled with automated lane navigation, target acquisition, and combat resolution."
+        ],
+        "de": [
+          "Modulare Karten- & Lane-KI-Architektur: Datengetriebene C#-Kartenlogik kombiniert mit automatischer Lane-Bewegung, Zielerfassung und Kampfauflösung."
+        ]
+      },
+      "itchWidgetCode": ""
+    },
+    {
+      "id": "inkbound-chronicles",
+      "title": "Inkbound: Chronicles",
+      "storeType": "itch",
+      "storeUrl": "https://jjampion.itch.io/inkbound",
+      "coverImageUrl": "",
+      "engineTech": "Unity (C#), 2D Platformer & Boss Encounter Systems",
+      "badges": [
+        "Craftpix Indie Jam #1",
+        "Dark Fantasy 2D Platformer",
+        "Lich King Boss Encounter"
+      ],
+      "pitch": {
+        "en": "A dark fantasy 2D platformer created for Craftpix Indie Jam #1 — dive into the pages of a cursed tome and battle the Lich King in a focused, atmospheric boss encounter.",
+        "de": "Ein Dark-Fantasy-2D-Platformer für den Craftpix Indie Jam #1 – tauche in das Innere eines verfluchten Buches ein und stelle dich dem Lich King im atmosphärischen Bosskampf."
+      },
+      "teamSize": {
+        "en": "Solo Developer",
+        "de": "Solo-Entwickler"
+      },
+      "timeframe": {
+        "en": "Craftpix Indie Jam #1 (2026)",
+        "de": "Craftpix Indie Jam #1 (2026)"
+      },
+      "myRole": {
+        "en": "Solo Game Designer & C# Gameplay Programmer",
+        "de": "Solo Game Designer & C# Gameplay Programmer"
+      },
+      "overview": {
+        "en": "Created for Craftpix Indie Jam #1 (2026), Inkbound: Chronicles casts players into a dark fantasy world hidden inside a cursed book to confront the Lich King. When real-life time constraints arose mid-jam, I decisively re-scoped a planned multi-page adventure into a playable finale boss vertical slice so the core atmosphere and combat shipped on deadline.",
+        "de": "Für den Craftpix Indie Jam #1 (2026) entwickelt: In Inkbound: Chronicles betritt der Spieler die düstere Fantasy-Welt eines verfluchten Buches, um den Lich King zu bezwingen. Aufgrund knapper Zeit im Alltag während des Jams habe ich das ursprünglich mehrteilige Buch-Abenteuer gezielt auf eine fokussierte, spielbare Version des finalen Bosskampfs zugeschnitten."
+      },
+      "designHighlights": {
+        "en": [
+          "Cursed Tome Fantasy & Boss Focus: Framed 2D platforming combat around uncovering a dark tome culminating in the Lich King encounter.",
+          "Pragmatic Production Scoping: Prioritized a complete, playable boss fight loop over unfinished filler stages under tight jam constraints."
+        ],
+        "de": [
+          "Verfluchtes-Buch-Setting & Boss-Fokus: Atmosphärisches Dark-Fantasy-Konzept rund um den Kampf gegen den Lich King.",
+          "Konsequentes Jam-Scoping: Bewusste Fokussierung auf einen spielbaren, runden Boss-Encounter innerhalb begrenzter Entwicklungszeit."
+        ]
+      },
+      "techHighlights": {
+        "en": [
+          "2D Platformer Controls & Boss State Logic: Responsive WASD/Spacebar movement, animations, visual effects, and Lich King combat states in Unity."
+        ],
+        "de": [
+          "2D-Platformer-Steuerung & Boss-Logik: Direkte Bewegung, Animationen, visuelle Effekte und Angriffsabläufe in Unity (C#)."
         ]
       },
       "itchWidgetCode": ""
@@ -324,33 +485,33 @@ const portfolioData = {
       "id": "core-dump",
       "title": "TFD://BREACH (Core Dump)",
       "storeType": "itch",
-      "storeUrl": "https://jjampion.itch.io/",
+      "storeUrl": "https://jjampion.itch.io/tfdbreach",
       "coverImageUrl": "",
       "engineTech": "Unity (C#), WebGL & Android SDK",
       "badges": [
-        "1st Place Winner (Trijam 3h Jam)",
+        "1st Place Winner (Trijam #375)",
         "Unity WebGL & Android Port",
         "ASCII Matrix Look"
       ],
       "pitch": {
-        "en": "1st Place Winner built in just 3 hours for the Trijam theme 'The Forbidden Door' and expanded into the upcoming Android port 'Core Dump' — a circular ASCII hacking shooter with 10 Security Layers and Roguelite mode.",
-        "de": "1. Platz beim Trijam (in nur 3 Stunden zum Thema 'The Forbidden Door' entwickelt) und zum kommenden Android-Port 'Core Dump' ausgebaut: Rasanter Kreis-Arena-Shooter im ASCII-Hacker-Stil mit 10 Security-Layern."
+        "en": "1st Place Winner built in just 3 hours for Trijam #375 ('The Forbidden Door') and expanded into the upcoming Android port 'Core Dump' — a circular ASCII hacking shooter with 10 Security Layers and Roguelite mode.",
+        "de": "1. Platz beim Trijam #375 (in nur 3 Stunden zum Thema 'The Forbidden Door' entwickelt) und zum kommenden Android-Port 'Core Dump' ausgebaut: Rasanter Kreis-Arena-Shooter im ASCII-Hacker-Stil mit 10 Security-Layern."
       },
       "teamSize": {
         "en": "Solo Developer",
         "de": "Solo-Entwickler"
       },
       "timeframe": {
-        "en": "3 Hours (Trijam Prototype) + Ongoing Android Port",
-        "de": "3 Stunden (Trijam-Prototyp) + Android-Ausbau"
+        "en": "3 Hours (Trijam #375) + Ongoing Android Port",
+        "de": "3 Stunden (Trijam #375) + Android-Ausbau"
       },
       "myRole": {
         "en": "Solo Game Designer & C# Gameplay Programmer",
         "de": "Solo Game Designer & C# Gameplay Programmer"
       },
       "overview": {
-        "en": "Originally created in strictly 3 hours for Trijam ('The Forbidden Door'), TFD://BREACH won 1st Place and is now being expanded into the full mobile release 'Core Dump' featuring 10 Security Layers, Hardcore mode, and endless Roguelite runs.",
-        "de": "Ursprünglich in exakt 3 Stunden für den Trijam ('The Forbidden Door') entwickelt und mit dem 1. Platz ausgezeichnet. Aktuell wird das Projekt unter dem Titel 'Core Dump' für Android um 10 Security-Layer, Hardcore-Modus und Endlos-Roguelite-Mechaniken erweitert."
+        "en": "Originally created in strictly 3 hours for Trijam #375 ('The Forbidden Door'), TFD://BREACH won 1st Place and is now being expanded into the full mobile release 'Core Dump' featuring 10 Security Layers, Hardcore mode, and endless Roguelite runs.",
+        "de": "Ursprünglich in exakt 3 Stunden für den Trijam #375 ('The Forbidden Door') entwickelt und mit dem 1. Platz ausgezeichnet. Aktuell wird das Projekt unter dem Titel 'Core Dump' für Android um 10 Security-Layer, Hardcore-Modus und Endlos-Roguelite-Mechaniken erweitert."
       },
       "designHighlights": {
         "en": [
@@ -387,15 +548,15 @@ const portfolioData = {
         "Android SDK & Store Pipeline"
       ],
       "pitch": {
-        "en": "Self-published commercial Android release on the Google Play Store under Nightoday Game Studio — managing full store release pipelines, Target SDK compliance, and mobile UX.",
-        "de": "Kommerzielles Android-Release im Google Play Store unter Nightoday Game Studio – inklusive kompletter Store-Pipeline, Target-SDK-Pflege, Keystore-Sicherheit und Mobile-UX."
+        "en": "Self-published Android release on the Google Play Store under Nightoday Game Studio — managing full store release pipelines, Target SDK compliance, keystore security, and mobile UX.",
+        "de": "Veröffentlichtes Android-Spiel im Google Play Store unter Nightoday Game Studio – inklusive kompletter Store-Pipeline, Target-SDK-Pflege, Keystore-Sicherheit und Mobile-UX."
       },
       "teamSize": {
         "en": "Solo Developer (Nightoday Game Studio)",
         "de": "Solo-Entwickler (Nightoday Game Studio)"
       },
       "timeframe": {
-        "en": "Live Commercial Android Release",
+        "en": "Live Android Release on Google Play",
         "de": "Veröffentlichtes Android-Spiel (Live)"
       },
       "myRole": {
@@ -403,8 +564,8 @@ const portfolioData = {
         "de": "Solo Game Designer, Entwickler & Mobile Publisher"
       },
       "overview": {
-        "en": "Shipped live on Google Play under Nightoday Game Studio, Mugiwara Cowboy established my end-to-end commercial mobile publishing pipeline from gameplay and touch UX to Play Console compliance and live updates.",
-        "de": "Mit Mugiwara Cowboy habe ich unter Nightoday Game Studio die komplette kommerzielle Google-Play-Pipeline von Gameplay-Design und Touch-Steuerung bis zu Signierung, Altersfreigaben und laufenden Target-SDK-Updates aufgebaut."
+        "en": "Shipped live on Google Play under Nightoday Game Studio, Mugiwara Cowboy established my end-to-end mobile publishing pipeline from gameplay and touch UX to Play Console compliance and live updates.",
+        "de": "Mit Mugiwara Cowboy habe ich unter Nightoday Game Studio die komplette Google-Play-Pipeline von Gameplay-Design und Touch-Steuerung bis zu Signierung, Altersfreigaben und laufenden Target-SDK-Updates aufgebaut."
       },
       "designHighlights": {
         "en": [
@@ -428,7 +589,7 @@ const portfolioData = {
       "id": "pair-pursuit",
       "title": "Pair Pursuit",
       "storeType": "itch",
-      "storeUrl": "https://jjampion.itch.io/",
+      "storeUrl": "https://jjampion.itch.io/pair-pursuit",
       "coverImageUrl": "",
       "engineTech": "Unity (C#), Play Games Services, Custom Localization",
       "badges": [
@@ -479,103 +640,105 @@ const portfolioData = {
       "itchWidgetCode": ""
     },
     {
-      "id": "trijam-runner-ups",
+      "id": "the-woz-tac-toe",
       "title": "THE WOZ-TAC-TOE",
       "storeType": "itch",
-      "storeUrl": "https://jjampion.itch.io/",
+      "storeUrl": "https://jjampion.itch.io/the-woz-tac-toe",
       "coverImageUrl": "",
       "engineTech": "Unity (C#) & HTML5/WebGL",
       "badges": [
-        "2x 2nd Place Winner",
-        "3-Hour Rapid Prototyping",
-        "Unity & WebGL"
+        "2nd Place Winner (Trijam #379)",
+        "3-Hour Rapid Prototype",
+        "Arcade Strategy / Puzzle"
       ],
       "pitch": {
-        "en": "Two award-winning 3-hour Trijam prototypes (2x 2nd Place) demonstrating ultra-fast theme interpretation, immediate 'Find the Fun' iteration, and polished WebGL delivery under extreme time pressure.",
-        "de": "Zwei preisgekrönte 3-Stunden-Prototypen beim Trijam (2x 2. Platz): Fokus auf blitzschnelle Themen-Umsetzung, 'Find the Fun' in den ersten 30 Minuten und sauberen WebGL-Release."
+        "en": "2nd Place Winner in Trijam #379 — built in strictly 3 hours for the theme 'Extreme Tic-Tac-Toe', twisting classic 3x3 grid strategy into a fast-paced retro-computing arcade challenge.",
+        "de": "2. Platz beim Trijam #379 – in exakt 3 Stunden zum Thema 'Extreme Tic-Tac-Toe' entwickelt: Klassische 3x3-Taktik neu interpretiert als rasantes Retro-Tech-Strategie-Duell."
       },
       "teamSize": {
         "en": "Solo Developer",
         "de": "Solo-Entwickler"
       },
       "timeframe": {
-        "en": "3 Hours Each (Trijam Game Jams)",
-        "de": "Jeweils 3 Stunden (Trijam Game Jams)"
+        "en": "3 Hours • Trijam #379 (July 2026)",
+        "de": "3 Stunden • Trijam #379 (Juli 2026)"
       },
       "myRole": {
-        "en": "Solo Game Designer & Rapid Prototyper",
-        "de": "Solo Game Designer & Rapid Prototyper"
+        "en": "Solo Game Designer & C# Rapid Prototyper",
+        "de": "Solo Game Designer & C# Rapid Prototyper"
       },
       "overview": {
-        "en": "Both THE WOZ-TAC-TOE and Stick It To 'Em! earned 2nd Place finishes in the 3-hour Trijam — proving repeatable ability to scope tightly, find a memorable twist on familiar mechanics, and ship a complete loop in 180 minutes.",
-        "de": "Sowohl THE WOZ-TAC-TOE als auch Stick It To 'Em! erreichten jeweils den 2. Platz beim 3-Stunden-Trijam und zeigen meine Stärke im präzisen Scoping, ungewöhnlichen Mechanik-Twists und schnellem C#-Prototyping."
+        "en": "Created in strictly 180 minutes for Trijam #379 under the theme 'Extreme Tic-Tac-Toe', THE WOZ-TAC-TOE earned 2nd Place overall — taking universally familiar 3x3 grid tactics and escalating them with unorthodox arcade pressure and tongue-in-cheek retro-tech flair.",
+        "de": "In strikten 180 Minuten für den Trijam #379 zum Thema 'Extreme Tic-Tac-Toe' entwickelt und mit dem 2. Platz ausgezeichnet: THE WOZ-TAC-TOE bricht die bekannten 3x3-Grundregeln mit eskalierenden Arcade-Bedingungen und charmantem Retro-Computing-Stil auf."
       },
       "designHighlights": {
         "en": [
-          "Strict 180-Minute Scoping: Core mechanic playable within the first 30 minutes, leaving dedicated time for juice, audio, and balancing.",
-          "Twist-Driven Mechanics: Subverting familiar rules (such as Tic-Tac-Toe and arcade sticking physics) into fresh micro-experiences."
+          "Extreme Tic-Tac-Toe Rule Twist: Subverted solved 3x3 grid play into a tense, reactive arcade-puzzle loop with immediate clarity.",
+          "Strict 180-Minute Jam Scoping: Core tactical twist playable within the first 30 minutes, leaving time for UI feedback, audio juice, and balancing."
         ],
         "de": [
-          "Konsequentes 180-Minuten-Scoping: Spielbarer Kern in den ersten 30 Minuten, um gezielt Zeit für Game Feel, Audio und Balancing zu sichern.",
-          "Mechanik-Twists: Bekannte Grundregeln mit überraschenden Wendungen zu eigenständigen Kurzspielen kombiniert."
+          "Extreme-Tic-Tac-Toe-Twist: Verwandlung des bekannten 3x3-Prinzips in eine dynamische, sofort verständliche Arcade-Strategie-Runde.",
+          "Präzises 180-Minuten-Scoping: Spielbarer Kern in den ersten 30 Minuten, um gezielt Zeit für Feedback, Polish und Balancing zu sichern."
         ]
       },
       "techHighlights": {
         "en": [
-          "Zero-Friction WebGL Deployment: Instant browser playability on itch.io with clean state resets and feedback."
+          "Grid State & AI Logic in C#: Clean turn/board evaluation, instant round resets, and zero-friction WebGL browser deployment on itch.io."
         ],
         "de": [
-          "Sauberer WebGL-Build: Direkt im Browser auf itch.io spielbar inklusive flüssigem Restart-Loop."
+          "Spielfeld- & Gegner-Logik in C#: Saubere Auswertung der Spielzustände, sofortiger Restart-Loop und flüssiger WebGL-Build für itch.io."
         ]
       },
       "itchWidgetCode": ""
     },
     {
-      "id": "single-file-html-engines",
+      "id": "stick-it-to-em",
       "title": "Stick It To 'Em!",
       "storeType": "itch",
-      "storeUrl": "https://jjampion.itch.io/",
+      "storeUrl": "https://jjampion.itch.io/stick-it-to-em",
       "coverImageUrl": "",
-      "engineTech": "Vanilla HTML5/JS/CSS, Godot, Unreal Engine, GameMaker 2",
+      "engineTech": "Unity (C#) & HTML5/WebGL",
       "badges": [
-        "Vanilla HTML/JS/CSS",
-        "Godot / Unreal / GameMaker 2",
-        "Zero-Dependency"
+        "2nd Place Winner (Trijam #387)",
+        "2D Action Platformer",
+        "3-Hour Rapid Prototype"
       ],
       "pitch": {
-        "en": "Self-contained web games built inside a single zero-dependency HTML file, alongside cross-engine prototypes exploring Godot, Unreal Engine, and GameMaker Studio 2.",
-        "de": "Komplette Web-Games innerhalb einer einzigen HTML-Datei ohne externe Abhängigkeiten sowie Engine-Prototypen in Godot, Unreal Engine und GameMaker Studio 2."
+        "en": "2nd Place Winner in Trijam #387 — a snappy 2D action platformer built in just 3 hours around two signature abilities: 'Geki' (a wall-shattering power kick) and 'Kage' (a shadow-shifting dash).",
+        "de": "2. Platz beim Trijam #387 – ein knackiger 2D-Action-Platformer, in nur 3 Stunden rund um zwei Spezialfähigkeiten entwickelt: 'Geki' (wandbrechender Power-Kick) und 'Kage' (Schatten-Dash)."
       },
       "teamSize": {
         "en": "Solo Developer",
         "de": "Solo-Entwickler"
       },
       "timeframe": {
-        "en": "Ongoing R&D & Prototyping Lab",
-        "de": "Fortlaufendes R&D- & Prototyping-Labor"
+        "en": "3 Hours • Trijam #387 (August 2026)",
+        "de": "3 Stunden • Trijam #387 (August 2026)"
       },
       "myRole": {
-        "en": "Technical Game Designer & Multi-Engine Explorer",
-        "de": "Technical Game Designer & Multi-Engine-Entwickler"
+        "en": "Solo Game Designer & C# Rapid Prototyper",
+        "de": "Solo Game Designer & C# Rapid Prototyper"
       },
       "overview": {
-        "en": "Beyond Unity and C#, I regularly build self-contained single-file HTML5/JS games and test gameplay workflows in Godot, Unreal Engine, and GameMaker Studio 2 so I can adapt quickly to any studio tech stack.",
-        "de": "Über Unity und C# hinaus entwickle ich regelmäßig komplett eigenständige Single-File-HTML5-Spiele und erprobe Workflows in Godot, Unreal Engine und GameMaker Studio 2, um mich schnell in jede Studio-Pipeline einzuarbeiten."
+        "en": "Built in strictly 3 hours for Trijam #387 where it won 2nd Place, Stick It To 'Em! is a fast-paced 2D platformer centered around chaining two contrasting special moves: 'Geki', a forceful kick that smashes breakable walls, and 'Kage', a shadow transformation dash that phases past hazards and obstacles.",
+        "de": "In nur 3 Stunden für den Trijam #387 entwickelt und mit dem 2. Platz prämiert: Stick It To 'Em! ist ein dynamischer 2D-Platformer, dessen Level-Flow auf dem Zusammenspiel zweier Spezialfähigkeiten aufbaut – 'Geki' (ein wuchtiger Tritt zum Durchbrechen von Wänden) und 'Kage' (ein Schatten-Dash zum Durchqueren von Hindernissen)."
       },
       "designHighlights": {
         "en": [
-          "Engine-Agnostic Systems Thinking: Translating core feel, camera, input, and state machines cleanly across different engines."
+          "Dual-Ability Synergy ('Geki' & 'Kage'): Paired destructive impact (breaking walls via Geki) with evasive precision (shadow-dashing hazards via Kage).",
+          "Flow-Oriented 2D Obstacle Design: Structured platforming challenges to reward readable, rhythmic switching between both abilities."
         ],
         "de": [
-          "Engine-übergreifendes Systemdenken: Übertragung von Steuerung, Spielgefühl und State-Machines auf verschiedenste Engines."
+          "Fähigkeiten-Synergie ('Geki' & 'Kage'): Kontrast aus wuchtiger Zerstörung (Wände brechen mit Geki) und präzisem Ausweichen (Schatten-Dash mit Kage).",
+          "Rhythmisches Hindernis-Design: Level-Abschnitte gezielt auf flüssiges Kombinieren beider Moves innerhalb des 3-Stunden-Rahmens ausgelegt."
         ]
       },
       "techHighlights": {
         "en": [
-          "Zero-Dependency Single-File Architecture: Rendering, audio synthesis, input handling, and game state packed into one portable HTML file."
+          "Snappy 2D Character Controller in C#: Custom dash/collision state switching, destructible wall triggers, and bug-free WebGL browser delivery in 180 minutes."
         ],
         "de": [
-          "Zero-Dependency Single-File-Architektur: Rendering, Logik und Input komplett portabel in einer einzigen HTML-Datei gebündelt."
+          "Direkter 2D-Character-Controller in C#: Sauberer Wechsel der Kollisions-Zustände beim Schatten-Dash, zerstörbare Wände und stabiler WebGL-Release."
         ]
       },
       "itchWidgetCode": ""
