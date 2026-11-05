@@ -28,7 +28,6 @@ const portfolioData = {
   "ui": {
     "en": {
       "brandName": "Jan Jelle Klingberg",
-      "brandAlias": "aka JJampion",
       "navSubrole": "Junior Technical Game Designer",
       "navShowreel": "Showreel",
       "navAbout": "About Me",
@@ -80,7 +79,6 @@ const portfolioData = {
     },
     "de": {
       "brandName": "Jan Jelle Klingberg",
-      "brandAlias": "aka JJampion",
       "navSubrole": "Junior Technical Game Designer",
       "navShowreel": "Showreel",
       "navAbout": "Über Mich",
@@ -683,7 +681,6 @@ function renderHeroStrings() {
 
   // Top HUD Bar
   setTextSafe("brand-name-display", t.brandName);
-  setTextSafe("brand-alias-display", t.brandAlias);
   setTextSafe("nav-subrole", t.navSubrole);
   setTextSafe("nav-label-showreel", t.navShowreel || "Showreel");
   setTextSafe("nav-label-about", t.navAbout);

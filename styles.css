@@ -170,7 +170,6 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
   color: var(--text-muted);
 }
 
-.phonetic-pill,
 .phonetic-tag {
   font-family: var(--font-mono);
   font-size: 0.68rem;
