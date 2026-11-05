@@ -452,15 +452,15 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 .showreel-top-telemetry {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.03em;
   color: var(--accent-primary);
   background: rgba(0, 229, 153, 0.10);
   border: 1px solid rgba(0, 229, 153, 0.35);
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 4px;
 }
 
@@ -495,19 +495,15 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 }
 
 .alias-tag {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-mono);
   font-size: 0.82rem;
   color: var(--accent-secondary);
   background: rgba(56, 189, 248, 0.10);
   border: 1px solid rgba(56, 189, 248, 0.30);
-  padding: 4px 12px;
+  padding: 5px 12px;
   border-radius: 4px;
-}
-
-.role-highlight {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--text-primary);
 }
 
 .showreel-tagline {
@@ -698,7 +694,7 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 
 .stat-mini-value {
   font-family: var(--font-mono);
-  font-size: clamp(0.98rem, 1.35vw, 1.15rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.08rem);
   font-weight: 800;
   color: var(--text-primary);
 }

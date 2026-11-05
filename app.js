@@ -33,7 +33,7 @@ const portfolioData = {
       "navAbout": "About Me",
       "navOrigin": "Who Am I",
       "navProjects": "Project Orbit",
-      "reelBadge": "SHOWREEL // SYSTEMS, QUEST, PUZZLE & UI DESIGN",
+      "reelBadge": "Junior Technical Game Designer",
       "reelTitle": "JAN JELLE KLINGBERG",
       "reelCtaAbout": "About Me & Skills →",
       "scrollCue": "SCROLL TO GLIDE RIGHT",
@@ -47,8 +47,8 @@ const portfolioData = {
       "factStudio": "<strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer on the path to Game Director.",
       "stat1Val": "Since 2016",
       "stat1": "Active Unity & C# Experience",
-      "stat2Val": "1st & 2x 2nd Winner",
-      "stat2": "Trijam (3-Hour Game Jam)",
+      "stat2Val": "Trijam Winner & 2x 2nd Place",
+      "stat2": "3-Hour Game Jam",
       "stat3Val": "Steam & Google Play Store",
       "stat3": "Shipped Store Pipelines",
       "ctaProjectsJump": "Enter 3D Project Orbit (8 Games) →",
@@ -58,7 +58,7 @@ const portfolioData = {
       "ctaOriginBtn": "Read My Origin Story →",
       "ctaMail": "contact@janjelle.dev",
       "portraitRoleTag": "aka JJampion",
-      "portraitBtn": "📷 Photo",
+      "portraitBtn": "Photo",
       "storyBadge": "03 // WHO AM I & DESIGN PHILOSOPHY",
       "storyHeading": "From Systems Analysis & Skyrim to Nightoday Game Studio",
       "backAboutBtn": "Back to About Me",
@@ -69,8 +69,8 @@ const portfolioData = {
       "orbitNext": "Next",
       "orbitHint": "Scroll wheel, drag horizontally, or use ◄ / ► to spin the project tire",
       "addProjectBtn": "Manage",
-      "designHeader": "🎯 Game Design, Quests & Player Experience",
-      "techHeader": "⚙️ Technical Design, Systems & Implementation",
+      "designHeader": "Game Design, Quests & Player Experience",
+      "techHeader": "Technical Design, Systems & Implementation",
       "steamWidgetLabel": "Available on Steam • Grimoire Garden: A Taskbar Tale",
       "itchOpenBtn": "Play / Open Store Page ↗",
       "footerText": "© 2026 Jan Jelle Klingberg. All rights reserved. • All trademarks belong to their respective owners."
@@ -82,7 +82,7 @@ const portfolioData = {
       "navAbout": "Über Mich",
       "navOrigin": "Wer ich bin",
       "navProjects": "Projekt-Orbit",
-      "reelBadge": "SHOWREEL // SYSTEM-, QUEST-, RÄTSEL- & UI-DESIGN",
+      "reelBadge": "Junior Technical Game Designer",
       "reelTitle": "JAN JELLE KLINGBERG",
       "reelCtaAbout": "Über Mich & Skills →",
       "scrollCue": "SCROLLEN ZUM WEITERGLEITEN",
@@ -96,8 +96,8 @@ const portfolioData = {
       "factStudio": "<strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer auf dem Weg zum Game Director.",
       "stat1Val": "Seit 2016",
       "stat1": "Aktive Unity- & C#-Praxis",
-      "stat2Val": "1. & 2x 2. Gewinner",
-      "stat2": "Trijam (3-Stunden Game Jam)",
+      "stat2Val": "Trijam-Gewinner & 2x 2. Platz",
+      "stat2": "3-Stunden Game Jam",
       "stat3Val": "Steam & Google Play Store",
       "stat3": "Eigene Store-Releases",
       "ctaProjectsJump": "Zum 3D Projekt-Orbit (8 Spiele) →",
@@ -107,7 +107,7 @@ const portfolioData = {
       "ctaOriginBtn": "Meine Story lesen →",
       "ctaMail": "contact@janjelle.dev",
       "portraitRoleTag": "aka JJampion",
-      "portraitBtn": "📷 Foto",
+      "portraitBtn": "Foto",
       "storyBadge": "03 // WER ICH BIN & DESIGN-PHILOSOPHIE",
       "storyHeading": "Von System-Analyse & Skyrim zum Nightoday Game Studio",
       "backAboutBtn": "Zurück zu Über Mich",
@@ -118,8 +118,8 @@ const portfolioData = {
       "orbitNext": "Weiter",
       "orbitHint": "Mausrad drehen, horizontal ziehen oder ◄ / ► nutzen, um das Projekt-Rad zu drehen",
       "addProjectBtn": "Verwalten",
-      "designHeader": "🎯 Game Design, Quests & Spielerlebnis",
-      "techHeader": "⚙️ Technical Design, Systeme & Umsetzung",
+      "designHeader": "Game Design, Quests & Spielerlebnis",
+      "techHeader": "Technical Design, Systeme & Umsetzung",
       "steamWidgetLabel": "Auf Steam verfügbar • Grimoire Garden: A Taskbar Tale",
       "itchOpenBtn": "Spielen / Store-Seite öffnen ↗",
       "footerText": "© 2026 Jan Jelle Klingberg. Alle Rechte vorbehalten. • Alle Marken gehören ihren jeweiligen Eigentümern."
@@ -187,7 +187,7 @@ const portfolioData = {
       "id": "shadow-of-ammit",
       "title": "Shadow of Ammit (Team Hero Project • Games Academy)",
       "badges": [
-        "🤝 Sole Game Designer in Team",
+        "Sole Game Designer in Team",
         "Quest, Puzzle & Pyramid Layout",
         "AI Patrol & Route Design",
         "Egyptian Mythology & Lore"
@@ -230,7 +230,7 @@ const portfolioData = {
       "id": "linex-games-academy",
       "title": "LineX (Games Academy • 1st Semester Project)",
       "badges": [
-        "🤝 Team Project",
+        "Team Project",
         "Game, Level & Puzzle Design",
         "Complete UI Design"
       ],
@@ -246,7 +246,7 @@ const portfolioData = {
       "id": "core-dump",
       "title": "TFD://BREACH (Upcoming Android Port: Core Dump)",
       "badges": [
-        "🏆 1st Place Winner (Trijam 3h Jam)",
+        "1st Place Winner (Trijam 3h Jam)",
         "Unity WebGL & Android Port",
         "ASCII Matrix Look"
       ],
@@ -294,7 +294,7 @@ const portfolioData = {
       "id": "trijam-runner-ups",
       "title": "THE WOZ-TAC-TOE & Stick It To 'Em! (2x 2nd Place Trijam)",
       "badges": [
-        "🥈 2x 2nd Place Winner",
+        "2x 2nd Place Winner",
         "3-Hour Rapid Prototyping",
         "Unity & WebGL"
       ],
@@ -643,13 +643,16 @@ function initShowreelVideo() {
   });
 }
 
+const ICON_SPEAKER_MUTED = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>`;
+const ICON_SPEAKER_UNMUTED = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>`;
+
 function toggleShowreelAudio() {
   const video = document.getElementById("showreel-video");
   const icon = document.getElementById("mute-icon");
   if (!video) return;
   video.muted = !video.muted;
   if (icon) {
-    icon.textContent = video.muted ? "🔇" : "🔊";
+    icon.innerHTML = video.muted ? ICON_SPEAKER_MUTED : ICON_SPEAKER_UNMUTED;
   }
 }
 
@@ -687,7 +690,6 @@ function renderHeroStrings() {
   setTextSafe("reel-badge", t.reelBadge);
   setTextSafe("reel-title", t.reelTitle || t.heroName);
   setTextSafe("reel-alias", t.heroPhonetic);
-  setTextSafe("reel-role", t.heroStatus);
   setTextSafe("reel-tagline", t.heroHeadline);
   setTextSafe("reel-cta-orbit", t.ctaProjectsJump);
   setTextSafe("reel-cta-about", t.reelCtaAbout);
@@ -696,7 +698,6 @@ function renderHeroStrings() {
 
   // Stage 02: About Me Dossier
   setTextSafe("hero-main-name", t.heroName);
-  setTextSafe("hero-phonetic-tag", t.heroPhonetic);
   setTextSafe("story-phonetic-tag", t.heroPhonetic);
   setTextSafe("hero-status-text", t.heroStatus);
   setTextSafe("hero-lead-text", t.heroLead);
@@ -769,7 +770,7 @@ function renderPortrait() {
   const displayUrl = resolveDisplayImageUrl(portfolioData.portraitImageUrl);
 
   if (displayUrl && displayUrl.trim() !== "") {
-    container.innerHTML = `<img src="${displayUrl}" alt="Jan Jelle Klingberg (aka JJampion)" onerror="this.parentElement.innerHTML='<div style=\\'font-family:var(--font-mono);font-weight:800;color:var(--accent-primary);\\'>JJK</div>'" />`;
+    container.innerHTML = `<img src="${displayUrl}" alt="Jan Jelle Klingberg" onerror="this.parentElement.innerHTML='<div style=\\'font-family:var(--font-mono);font-weight:800;color:var(--accent-primary);\\'>JJK</div>'" />`;
     navAvatar.innerHTML = `<img src="${displayUrl}" alt="JJK" onerror="this.parentElement.textContent='JJ'" />`;
   } else {
     container.innerHTML = `<div style="font-family:var(--font-mono);font-size:1.4rem;font-weight:800;color:var(--accent-primary);">JJK</div>`;
@@ -793,7 +794,7 @@ function renderOrbitProjects() {
     const coverUrl = resolveDisplayImageUrl(proj.coverImageUrl);
 
     const badgesHtml = (proj.badges || []).map((b, bIdx) => {
-      const isAward = b.includes("1st") || b.includes("2nd") || b.includes("🏆") || b.includes("🥈") || b.includes("🤝");
+      const isAward = b.includes("1st") || b.includes("2nd") || b.includes("Team");
       const blurHandler = isHero
         ? `updateHeroBadgeInline(${sIdx}, ${bIdx}, this.textContent)`
         : `updateLabBadgeInline(${sIdx}, ${bIdx}, this.textContent)`;
@@ -857,7 +858,7 @@ function renderOrbitProjects() {
           </span>
           <div style="display:flex; gap:8px; align-items:center;">
             <a href="${targetUrl}" target="_blank" rel="noopener" class="hud-btn primary">${t.itchOpenBtn}</a>
-            ${!isHero ? `<button class="hud-btn admin-only" onclick="editProjectInCMS(${sIdx})">✏️</button>` : ""}
+            ${!isHero ? `<button class="hud-btn admin-only" onclick="editProjectInCMS(${sIdx})">Edit</button>` : ""}
           </div>
         </div>
       </article>
@@ -985,14 +986,14 @@ function toggleInlineEditMode() {
   document.body.classList.toggle("inline-edit-active", isInlineEditActive);
   const btn = document.getElementById("inline-edit-toggle-btn");
   if (btn) {
-    btn.textContent = isInlineEditActive ? "✏️ Live-Edit: ON" : "✏️ Live-Edit: OFF";
+    btn.textContent = isInlineEditActive ? "Live-Edit: ON" : "Live-Edit: OFF";
   }
   applyInlineEditability();
 }
 
 function markUnsavedIndicator() {
   const saveBtn = document.getElementById("quick-save-gh-btn");
-  if (saveBtn) saveBtn.innerHTML = "🚀 Save Changes to GitHub *";
+  if (saveBtn) saveBtn.innerHTML = "Save Changes to GitHub *";
 }
 
 function applyInlineEditability() {
@@ -1243,7 +1244,7 @@ function renderCMSProjectList() {
         <button class="cms-mini-btn" onclick="moveProjectTile(${idx}, -1)">↑</button>
         <button class="cms-mini-btn" onclick="moveProjectTile(${idx}, 1)">↓</button>
         <button class="cms-mini-btn" onclick="editProjectInCMS(${idx})">Edit</button>
-        <button class="cms-mini-btn" style="color:#f43f5e;" onclick="deleteProjectTile(${idx})">🗑️</button>
+        <button class="cms-mini-btn" style="color:#f43f5e;" onclick="deleteProjectTile(${idx})">Delete</button>
       </div>
     </div>
   `).join("");
@@ -1288,7 +1289,7 @@ function editProjectInCMS(index) {
   document.getElementById("new-proj-link").value = proj.itchUrl || "";
   document.getElementById("new-proj-widget").value = proj.itchWidgetCode || "";
 
-  document.getElementById("cms-form-mode-label").textContent = `✏️ Editing: ${proj.title}`;
+  document.getElementById("cms-form-mode-label").textContent = `Editing: ${proj.title}`;
   document.getElementById("cms-save-proj-btn-text").textContent = "Update Orbit Project";
 }
 
@@ -1303,7 +1304,7 @@ function resetProjectForm() {
   document.getElementById("new-proj-link").value = "";
   document.getElementById("new-proj-widget").value = "";
 
-  document.getElementById("cms-form-mode-label").textContent = "➕ Add / Edit Orbit Project";
+  document.getElementById("cms-form-mode-label").textContent = "Add / Edit Orbit Project";
   document.getElementById("cms-save-proj-btn-text").textContent = "Save Project to Orbit";
 }
 
@@ -1497,7 +1498,7 @@ async function publishDirectlyToGitHub() {
 
   if (!repo || !token) {
     openCMSDrawerDirectly();
-    if (statusEl) statusEl.textContent = "⚠️ Please enter Repository and GitHub Token first.";
+    if (statusEl) statusEl.textContent = "Please enter Repository and GitHub Token first.";
     return;
   }
 
@@ -1506,11 +1507,11 @@ async function publishDirectlyToGitHub() {
   localStorage.setItem("jjk_gh_token", token);
 
   try {
-    if (quickSaveBtn) quickSaveBtn.textContent = "⏳ Saving to GitHub...";
+    if (quickSaveBtn) quickSaveBtn.textContent = "Saving to GitHub...";
 
     const filePaths = Object.keys(pendingRepoFiles);
     for (const filePath of filePaths) {
-      if (statusEl) statusEl.textContent = `⏳ Uploading ${filePath}...`;
+      if (statusEl) statusEl.textContent = `Uploading ${filePath}...`;
       await uploadSingleFileToGitHub(
         repo,
         branch,
@@ -1522,7 +1523,7 @@ async function publishDirectlyToGitHub() {
       delete pendingRepoFiles[filePath];
     }
 
-    if (statusEl) statusEl.textContent = "⏳ Updating app.js in repository...";
+    if (statusEl) statusEl.textContent = "Updating app.js in repository...";
     const apiUrl = `https://api.github.com/repos/${repo}/contents/app.js`;
     const getRes = await fetch(`${apiUrl}?ref=${branch}`, {
       headers: {
@@ -1549,14 +1550,14 @@ async function publishDirectlyToGitHub() {
       "Update portfolio content via Space CMS"
     );
 
-    if (statusEl) statusEl.textContent = "✅ All changes & files published to GitHub!";
-    if (quickSaveBtn) quickSaveBtn.textContent = "✅ Saved to GitHub!";
+    if (statusEl) statusEl.textContent = "All changes & files published to GitHub!";
+    if (quickSaveBtn) quickSaveBtn.textContent = "Saved to GitHub!";
     setTimeout(() => {
-      if (quickSaveBtn) quickSaveBtn.textContent = "🚀 Save to GitHub";
+      if (quickSaveBtn) quickSaveBtn.textContent = "Save to GitHub";
     }, 3000);
   } catch (err) {
-    if (statusEl) statusEl.textContent = `❌ Error: ${err.message}`;
-    if (quickSaveBtn) quickSaveBtn.textContent = "❌ Error (Open CMS)";
+    if (statusEl) statusEl.textContent = `Error: ${err.message}`;
+    if (quickSaveBtn) quickSaveBtn.textContent = "Error (Open CMS)";
   }
 }
 
