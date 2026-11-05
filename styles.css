@@ -795,8 +795,9 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 
 .orbit-hud-top {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   flex-wrap: wrap;
   gap: 12px;
   padding: 0 12px;
@@ -805,23 +806,6 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 .orbit-main-title {
   font-size: clamp(1.3rem, 2.2vw, 1.75rem);
   font-weight: 800;
-}
-
-.orbit-controls-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.orbit-counter {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--glass-border);
-  color: var(--accent-primary);
 }
 
 /* Outer Viewport with Edge Cut/Fade Masking so left/right cards slice out cleanly */

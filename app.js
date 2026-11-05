@@ -324,6 +324,7 @@ const portfolioData = {
 let currentLang = portfolioData.defaultLang || "en";
 let currentStageIdx = 0; // 0: Showreel, 1: About, 2: Origin, 3: 3D Project Orbit
 let activeOrbitIndex = 0; // Active project on the 3D Tire Orbit
+let cumulativeOrbitSteps = 0; // Unwrapped step counter for seamless endless starfield parallax
 let isStageTransitioning = false;
 let isAdminUnlocked = false;
 let isInlineEditActive = true;
@@ -414,8 +415,8 @@ function goToStage(index) {
     hudHeader.classList.toggle("is-hidden", clamped === 0);
   }
 
-  // Shift starfield parallax
-  starfieldTargetOffsetX = clamped * 260 + activeOrbitIndex * 55;
+  // Shift starfield parallax seamlessly using unwrapped orbit steps
+  starfieldTargetOffsetX = clamped * 260 + cumulativeOrbitSteps * 55;
 
   // Update Top HUD Stage Tabs
   const tabIds = ["nav-showreel", "nav-about", "nav-origin", "nav-orbit"];
@@ -453,16 +454,25 @@ function rotateOrbit(stepDirection) {
   const total = allProjects.length;
   if (!total) return;
 
+  cumulativeOrbitSteps += stepDirection;
   activeOrbitIndex = (activeOrbitIndex + stepDirection + total) % total;
-  starfieldTargetOffsetX = currentStageIdx * 260 + activeOrbitIndex * 55;
+  starfieldTargetOffsetX = currentStageIdx * 260 + cumulativeOrbitSteps * 55;
   updateOrbitWheelTransforms();
 }
 
 function selectOrbitProject(targetIndex) {
   const allProjects = getCombinedOrbitProjects();
-  if (!allProjects.length) return;
-  activeOrbitIndex = ((targetIndex % allProjects.length) + allProjects.length) % allProjects.length;
-  starfieldTargetOffsetX = currentStageIdx * 260 + activeOrbitIndex * 55;
+  const total = allProjects.length;
+  if (!total) return;
+
+  const normalizedTarget = ((targetIndex % total) + total) % total;
+  let diff = normalizedTarget - activeOrbitIndex;
+  if (diff > total / 2) diff -= total;
+  if (diff < -total / 2) diff += total;
+
+  cumulativeOrbitSteps += diff;
+  activeOrbitIndex = normalizedTarget;
+  starfieldTargetOffsetX = currentStageIdx * 260 + cumulativeOrbitSteps * 55;
   updateOrbitWheelTransforms();
 }
 
@@ -532,9 +542,6 @@ function updateOrbitWheelTransforms() {
     card.style.zIndex = zIndex;
     card.classList.toggle("is-front", absDiff === 0);
   });
-
-  setTextSafe("orbit-active-num", String(activeOrbitIndex + 1).padStart(2, "0"));
-  setTextSafe("orbit-total-num", String(total).padStart(2, "0"));
 }
 
 /* ==========================================================================
@@ -571,14 +578,10 @@ window.addEventListener("wheel", (e) => {
   wheelAccum = 0;
   isStageTransitioning = true;
 
-  // On Stage 04 (Project Orbit), scrolling rotates the 3D Project Tire!
-  // If on the first project and scrolling up, glide back left to Stage 03.
+  // On Stage 04 (Projects), scrolling infinitely spins the 3D Project Tire in both directions.
+  // Returning to earlier stages happens explicitly via the Top HUD Header Bar.
   if (currentStageIdx === 3) {
-    if (dir < 0 && activeOrbitIndex === 0) {
-      goToStage(2);
-    } else {
-      rotateOrbit(dir);
-    }
+    rotateOrbit(dir);
   } else {
     goToStage(currentStageIdx + dir);
   }
@@ -872,7 +875,7 @@ window.addEventListener("keydown", (e) => {
     if (currentStageIdx === 3) rotateOrbit(1);
     else goToStage(currentStageIdx + 1);
   } else if (e.key === "ArrowLeft") {
-    if (currentStageIdx === 3 && activeOrbitIndex > 0) rotateOrbit(-1);
+    if (currentStageIdx === 3) rotateOrbit(-1);
     else goToStage(currentStageIdx - 1);
   }
 });
