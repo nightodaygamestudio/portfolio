@@ -684,7 +684,7 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 
 .hero-stats-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
@@ -698,7 +698,7 @@ p, li, h1, h2, h3, h4, span, div[data-edit-dynamic] {
 
 .stat-mini-value {
   font-family: var(--font-mono);
-  font-size: 1.15rem;
+  font-size: clamp(0.98rem, 1.35vw, 1.15rem);
   font-weight: 800;
   color: var(--text-primary);
 }
@@ -1281,13 +1281,10 @@ body.admin-unlocked.inline-edit-active [contenteditable="true"]:focus {
 @media (max-width: 960px) {
   .dossier-top-grid,
   .bio-facts-grid,
+  .hero-stats-row,
   .highlights-columns,
   .orbit-card-header-grid.has-cover {
     grid-template-columns: 1fr;
-  }
-
-  .hero-stats-row {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .hud-navbar {

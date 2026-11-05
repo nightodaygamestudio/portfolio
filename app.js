@@ -44,15 +44,13 @@ const portfolioData = {
       "heroLead": "I love playing games, but I love building them even more. With active Unity & C# experience since 2016, formal training at the Games Academy (2024–2026), and self-published commercial titles on Steam and Google Play under Nightoday Game Studio, I unite hands-on Game Design (Systems, Quests, Lore, Puzzles & UI) with rapid technical execution.",
       "factLocation": "<strong>Location &amp; Mobility:</strong> Bavaria (Roth &amp; near Cham) • Preferred Bavaria &amp; Remote/Hybrid, open to Relocation Germany-wide (e.g. Hamburg) &amp; Europe.",
       "factEdu": "<strong>Education:</strong> Game Design &amp; Game Production at Games Academy (2024–2026) • Focus on Systems, Quests &amp; Level Design.",
-      "factStudio": "<strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer on the path to Lead Game Designer.",
+      "factStudio": "<strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer on the path to Game Director.",
       "stat1Val": "Since 2016",
       "stat1": "Active Unity & C# Experience",
-      "stat2Val": "1st & 2x 2nd",
+      "stat2Val": "1st & 2x 2nd Winner",
       "stat2": "Trijam (3-Hour Game Jam)",
-      "stat3Val": "Steam & Play",
+      "stat3Val": "Steam & Google Play Store",
       "stat3": "Shipped Store Pipelines",
-      "stat4Val": "20+ Langs",
-      "stat4": "Custom Tooling & Localization",
       "ctaProjectsJump": "Enter 3D Project Orbit (8 Games) →",
       "ctaSteam": "Grimoire Garden on Steam",
       "ctaItch": "All Projects on itch.io",
@@ -75,7 +73,7 @@ const portfolioData = {
       "techHeader": "⚙️ Technical Design, Systems & Implementation",
       "steamWidgetLabel": "Available on Steam • Grimoire Garden: A Taskbar Tale",
       "itchOpenBtn": "Play / Open Store Page ↗",
-      "footerText": "© 2026 Jan Jelle Klingberg. All rights reserved."
+      "footerText": "© 2026 Jan Jelle Klingberg. All rights reserved. • All trademarks belong to their respective owners."
     },
     "de": {
       "brandName": "Jan Jelle Klingberg",
@@ -95,15 +93,13 @@ const portfolioData = {
       "heroLead": "Ich liebe es, Spiele zu spielen – aber noch mehr liebe ich es, sie zu entwickeln. Mit aktiver Unity- und C#-Erfahrung seit 2016, meinem Abschluss an der Games Academy (2024–2026) sowie eigenen Releases auf Steam und im Google Play Store unter Nightoday Game Studio verbinde ich kreatives Game Design (Systeme, Quests, Lore, Rätsel & UI) mit sauberer technischer Umsetzung.",
       "factLocation": "<strong>Standort &amp; Mobilität:</strong> Bayern (Roth &amp; Raum Cham) • Bevorzugt Bayern &amp; Remote/Hybrid, offen für Relocation deutschlandweit (z. B. Hamburg) &amp; Europa.",
       "factEdu": "<strong>Ausbildung:</strong> Game Design &amp; Game Production an der Games Academy (2024–2026) • Fokus auf System-, Quest- &amp; Level-Design.",
-      "factStudio": "<strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer auf dem Weg zum Lead Game Designer.",
+      "factStudio": "<strong>Studio &amp; Vision:</strong> <em>Nightoday Game Studio</em> • Hands-on Technical Game Designer auf dem Weg zum Game Director.",
       "stat1Val": "Seit 2016",
       "stat1": "Aktive Unity- & C#-Praxis",
-      "stat2Val": "1. & 2x 2.",
+      "stat2Val": "1. & 2x 2. Gewinner",
       "stat2": "Trijam (3-Stunden Game Jam)",
-      "stat3Val": "Steam & Play",
+      "stat3Val": "Steam & Google Play Store",
       "stat3": "Eigene Store-Releases",
-      "stat4Val": "20+ Sprachen",
-      "stat4": "Custom Tooling & Localization",
       "ctaProjectsJump": "Zum 3D Projekt-Orbit (8 Spiele) →",
       "ctaSteam": "Grimoire Garden auf Steam",
       "ctaItch": "Alle Projekte auf itch.io",
@@ -126,7 +122,7 @@ const portfolioData = {
       "techHeader": "⚙️ Technical Design, Systeme & Umsetzung",
       "steamWidgetLabel": "Auf Steam verfügbar • Grimoire Garden: A Taskbar Tale",
       "itchOpenBtn": "Spielen / Store-Seite öffnen ↗",
-      "footerText": "© 2026 Jan Jelle Klingberg. Alle Rechte vorbehalten."
+      "footerText": "© 2026 Jan Jelle Klingberg. Alle Rechte vorbehalten. • Alle Marken gehören ihren jeweiligen Eigentümern."
     }
   },
   "originStory": {
@@ -715,8 +711,6 @@ function renderHeroStrings() {
   setTextSafe("stat-2-label", t.stat2);
   setTextSafe("stat-3-val", t.stat3Val);
   setTextSafe("stat-3-label", t.stat3);
-  setTextSafe("stat-4-val", t.stat4Val);
-  setTextSafe("stat-4-label", t.stat4);
 
   const pillsContainer = document.getElementById("skill-pills-container");
   if (pillsContainer) {
