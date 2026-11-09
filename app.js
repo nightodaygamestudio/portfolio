@@ -4,7 +4,7 @@
 
 // === PORTFOLIO_DATA_START ===
 const portfolioData = {
-  "defaultLang": "en",
+  "defaultLang": "de",
   "defaultTheme": "dark",
   "showreelVideoUrl": "assets/showreel.mp4",
   "portraitImageUrl": "assets/portrait.jpg",
